@@ -1,0 +1,459 @@
+Date/Time: 29-11-2013 17:25:34
+Title: Ocorreu erro ao tentar adicionar a porta na base de dados
+Message: Collection was modified; enumeration operation may not execute.
+Exception Description: 
+System.InvalidOperationException: Collection was modified; enumeration operation may not execute.
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   at System.Collections.Generic.List`1.Enumerator.MoveNext()
+   at System.Data.Objects.ObjectStateManager.PerformAdd(IList`1 entries)
+   at System.Data.Objects.ObjectStateManager.DetectChanges()
+   at System.Data.Objects.ObjectContext.DetectChanges()
+   at System.Data.Entity.Internal.InternalContext.DetectChanges(Boolean force)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at mz.betainteractive.sigeas.Views.DeviceManagement.DoorAdd.AddDoor() in J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Views\DeviceManagment\DoorAdd.cs:line 96
+===========================================================================================
+
+Date/Time: 29-11-2013 17:29:39
+Title: Ocorreu erro ao tentar adicionar a porta na base de dados
+Message: Collection was modified; enumeration operation may not execute.
+Exception Description: 
+System.InvalidOperationException: Collection was modified; enumeration operation may not execute.
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   at System.Collections.Generic.List`1.Enumerator.MoveNext()
+   at System.Data.Objects.ObjectStateManager.PerformAdd(IList`1 entries)
+   at System.Data.Objects.ObjectStateManager.DetectChanges()
+   at System.Data.Objects.ObjectContext.DetectChanges()
+   at System.Data.Entity.Internal.InternalContext.DetectChanges(Boolean force)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at mz.betainteractive.sigeas.Views.DeviceManagement.DoorAdd.AddDoor() in J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Views\DeviceManagment\DoorAdd.cs:line 96
+===========================================================================================
+
+Date/Time: 02-12-2013 08:35:14
+Title: Ocorreu erro ao tentar adicionar a porta na base de dados
+Message: Collection was modified; enumeration operation may not execute.
+Exception Description: 
+System.InvalidOperationException: Collection was modified; enumeration operation may not execute.
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   at System.Collections.Generic.List`1.Enumerator.MoveNext()
+   at System.Data.Objects.ObjectStateManager.PerformAdd(IList`1 entries)
+   at System.Data.Objects.ObjectStateManager.DetectChanges()
+   at System.Data.Objects.ObjectContext.DetectChanges()
+   at System.Data.Entity.Internal.InternalContext.DetectChanges(Boolean force)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at mz.betainteractive.sigeas.Views.DeviceManagement.DoorAdd.AddDoor() in J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Views\DeviceManagment\DoorAdd.cs:line 96
+===========================================================================================
+
+Date/Time: 02-12-2013 11:36:04
+Title: Ocorreu erro ao tentar gravar o perfil de horário na base de dados
+Message: Multiplicity constraint violated. The role 'HorarioDia_HorarioSemana_Source' of the relationship 'mz.betainteractive.sigeas.Models.HorarioDia_HorarioSemana' has multiplicity 1 or 0..1.
+Exception Description: 
+System.InvalidOperationException: Multiplicity constraint violated. The role 'HorarioDia_HorarioSemana_Source' of the relationship 'mz.betainteractive.sigeas.Models.HorarioDia_HorarioSemana' has multiplicity 1 or 0..1.
+   at System.Data.Objects.DataClasses.EntityReference`1.AddToLocalCache(IEntityWrapper wrappedEntity, Boolean applyConstraints)
+   at System.Data.Objects.EntityEntry.TakeSnapshotOfSingleRelationship(RelatedEnd relatedEnd, NavigationProperty n, Object o)
+   at System.Data.Objects.EntityEntry.TakeSnapshotOfRelationships()
+   at System.Data.Objects.Internal.EntityWrapperWithoutRelationships`1.TakeSnapshotOfRelationships(EntityEntry entry)
+   at System.Data.Objects.ObjectContext.AddSingleObject(EntitySet entitySet, IEntityWrapper wrappedEntity, String argumentName)
+   at System.Data.Objects.DataClasses.RelatedEnd.AddEntityToObjectStateManager(IEntityWrapper wrappedEntity, Boolean doAttach)
+   at System.Data.Objects.DataClasses.RelatedEnd.AddGraphToObjectStateManager(IEntityWrapper wrappedEntity, Boolean relationshipAlreadyExists, Boolean addRelationshipAsUnchanged, Boolean doAttach)
+   at System.Data.Objects.DataClasses.RelatedEnd.IncludeEntity(IEntityWrapper wrappedEntity, Boolean addRelationshipAsUnchanged, Boolean doAttach)
+   at System.Data.Objects.DataClasses.EntityReference`1.Include(Boolean addRelationshipAsUnchanged, Boolean doAttach)
+   at System.Data.Objects.DataClasses.RelationshipManager.AddRelatedEntitiesToObjectStateManager(Boolean doAttach)
+   at System.Data.Objects.ObjectContext.AddObject(String entitySetName, Object entity)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.<>c__DisplayClass5.<Add>b__4()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at mz.betainteractive.sigeas.Views.Horarios.FrmHorarioSemanal.GravarHorario() in J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Views\Horarios\FrmHorarioSemanal.cs:line 976
+===========================================================================================
+
+Date/Time: 13-12-2013 11:07:08
+Title: Error
+Message: Keyword not supported: 'port'.
+Exception Description: 
+System.ArgumentException: Keyword not supported: 'port'.
+   at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(String connectionString, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(String value)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at System.Data.Entity.Infrastructure.SqlConnectionFactory.CreateConnection(String nameOrConnectionString)
+   at System.Data.Entity.Internal.LazyInternalConnection.Initialize()
+   at System.Data.Entity.Internal.LazyInternalConnection.get_ProviderName()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.CreateObjectContextForDdlOps()
+   at System.Data.Entity.Database.CreateIfNotExists()
+   at mz.betainteractive.sigeas.Models.SystemManager.BeginDatabase() in J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Models\SystemManager.cs:line 73
+===========================================================================================
+
+Date/Time: 07-01-2014 10:41:33
+Title: Error
+Message: An error occurred while getting provider information from the database. This can be caused by Entity Framework using an incorrect connection string. Check the inner exceptions for details and ensure that the connection string is correct.
+Exception Description: 
+System.Data.ProviderIncompatibleException: An error occurred while getting provider information from the database. This can be caused by Entity Framework using an incorrect connection string. Check the inner exceptions for details and ensure that the connection string is correct. ---> System.Data.ProviderIncompatibleException: The provider did not return a ProviderManifestToken string. ---> Npgsql.NpgsqlException: Failed to establish a connection to '127.0.0.1'. ---> System.Exception: Failed to establish a connection to '127.0.0.1'.
+   at Npgsql.NpgsqlClosedState.Open(NpgsqlConnector context) in c:\C#Apps\github.npgsql.Npgsql.stock\src\Npgsql\NpgsqlClosedState.cs:line 171
+   --- End of inner exception stack trace ---
+   at Npgsql.NpgsqlClosedState.Open(NpgsqlConnector context) in c:\C#Apps\github.npgsql.Npgsql.stock\src\Npgsql\NpgsqlClosedState.cs:line 232
+   at Npgsql.NpgsqlConnector.Open() in c:\C#Apps\github.npgsql.Npgsql.stock\src\Npgsql\NpgsqlConnector.cs:line 677
+   at Npgsql.NpgsqlConnectorPool.GetPooledConnector(NpgsqlConnection Connection) in c:\C#Apps\github.npgsql.Npgsql.stock\src\Npgsql\NpgsqlConnectorPool.cs:line 445
+   at Npgsql.NpgsqlConnectorPool.RequestPooledConnectorInternal(NpgsqlConnection Connection) in c:\C#Apps\github.npgsql.Npgsql.stock\src\Npgsql\NpgsqlConnectorPool.cs:line 250
+   at Npgsql.NpgsqlConnectorPool.RequestPooledConnector(NpgsqlConnection Connection) in c:\C#Apps\github.npgsql.Npgsql.stock\src\Npgsql\NpgsqlConnectorPool.cs:line 195
+   at Npgsql.NpgsqlConnectorPool.RequestConnector(NpgsqlConnection Connection) in c:\C#Apps\github.npgsql.Npgsql.stock\src\Npgsql\NpgsqlConnectorPool.cs:line 179
+   at Npgsql.NpgsqlConnection.Open() in c:\C#Apps\github.npgsql.Npgsql.stock\src\Npgsql\NpgsqlConnection.cs:line 536
+   at Npgsql.NpgsqlServices.GetDbProviderManifestToken(DbConnection connection) in c:\C#Apps\github.npgsql.Npgsql.stock\src\Npgsql\NpgsqlServices.cs:line 89
+   at System.Data.Common.DbProviderServices.GetProviderManifestToken(DbConnection connection)
+   --- End of inner exception stack trace ---
+   at System.Data.Common.DbProviderServices.GetProviderManifestToken(DbConnection connection)
+   at System.Data.Entity.ModelConfiguration.Utilities.DbProviderServicesExtensions.GetProviderManifestTokenChecked(DbProviderServices providerServices, DbConnection connection)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.ModelConfiguration.Utilities.DbProviderServicesExtensions.GetProviderManifestTokenChecked(DbProviderServices providerServices, DbConnection connection)
+   at System.Data.Entity.ModelConfiguration.Utilities.DbConnectionExtensions.GetProviderInfo(DbConnection connection, DbProviderManifest& providerManifest)
+   at System.Data.Entity.DbModelBuilder.Build(DbConnection providerConnection)
+   at System.Data.Entity.Internal.LazyInternalContext.CreateModel(LazyInternalContext internalContext)
+   at System.Data.Entity.Internal.RetryLazy`2.GetValue(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.LazyInternalContext.MarkDatabaseInitialized()
+   at System.Data.Entity.Database.Initialize(Boolean force)
+   at mz.betainteractive.sigeas.Models.SystemManager.BeginDatabase() in J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Models\SystemManager.cs:line 72
+===========================================================================================
+
+Date/Time: 13-01-2014 11:25:56
+Title: Error
+Message: An error occurred while getting provider information from the database. This can be caused by Entity Framework using an incorrect connection string. Check the inner exceptions for details and ensure that the connection string is correct.
+Exception Description: 
+System.Data.ProviderIncompatibleException: An error occurred while getting provider information from the database. This can be caused by Entity Framework using an incorrect connection string. Check the inner exceptions for details and ensure that the connection string is correct. ---> System.Data.ProviderIncompatibleException: The provider did not return a ProviderManifestToken string. ---> Npgsql.NpgsqlException: Failed to establish a connection to '127.0.0.1'. ---> System.Exception: Failed to establish a connection to '127.0.0.1'.
+   at Npgsql.NpgsqlClosedState.Open(NpgsqlConnector context) in c:\C#Apps\github.npgsql.Npgsql.stock\src\Npgsql\NpgsqlClosedState.cs:line 171
+   --- End of inner exception stack trace ---
+   at Npgsql.NpgsqlClosedState.Open(NpgsqlConnector context) in c:\C#Apps\github.npgsql.Npgsql.stock\src\Npgsql\NpgsqlClosedState.cs:line 232
+   at Npgsql.NpgsqlConnector.Open() in c:\C#Apps\github.npgsql.Npgsql.stock\src\Npgsql\NpgsqlConnector.cs:line 677
+   at Npgsql.NpgsqlConnectorPool.GetPooledConnector(NpgsqlConnection Connection) in c:\C#Apps\github.npgsql.Npgsql.stock\src\Npgsql\NpgsqlConnectorPool.cs:line 445
+   at Npgsql.NpgsqlConnectorPool.RequestPooledConnectorInternal(NpgsqlConnection Connection) in c:\C#Apps\github.npgsql.Npgsql.stock\src\Npgsql\NpgsqlConnectorPool.cs:line 250
+   at Npgsql.NpgsqlConnectorPool.RequestPooledConnector(NpgsqlConnection Connection) in c:\C#Apps\github.npgsql.Npgsql.stock\src\Npgsql\NpgsqlConnectorPool.cs:line 195
+   at Npgsql.NpgsqlConnectorPool.RequestConnector(NpgsqlConnection Connection) in c:\C#Apps\github.npgsql.Npgsql.stock\src\Npgsql\NpgsqlConnectorPool.cs:line 179
+   at Npgsql.NpgsqlConnection.Open() in c:\C#Apps\github.npgsql.Npgsql.stock\src\Npgsql\NpgsqlConnection.cs:line 536
+   at Npgsql.NpgsqlServices.GetDbProviderManifestToken(DbConnection connection) in c:\C#Apps\github.npgsql.Npgsql.stock\src\Npgsql\NpgsqlServices.cs:line 89
+   at System.Data.Common.DbProviderServices.GetProviderManifestToken(DbConnection connection)
+   --- End of inner exception stack trace ---
+   at System.Data.Common.DbProviderServices.GetProviderManifestToken(DbConnection connection)
+   at System.Data.Entity.ModelConfiguration.Utilities.DbProviderServicesExtensions.GetProviderManifestTokenChecked(DbProviderServices providerServices, DbConnection connection)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.ModelConfiguration.Utilities.DbProviderServicesExtensions.GetProviderManifestTokenChecked(DbProviderServices providerServices, DbConnection connection)
+   at System.Data.Entity.ModelConfiguration.Utilities.DbConnectionExtensions.GetProviderInfo(DbConnection connection, DbProviderManifest& providerManifest)
+   at System.Data.Entity.DbModelBuilder.Build(DbConnection providerConnection)
+   at System.Data.Entity.Internal.LazyInternalContext.CreateModel(LazyInternalContext internalContext)
+   at System.Data.Entity.Internal.RetryLazy`2.GetValue(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.LazyInternalContext.MarkDatabaseInitialized()
+   at System.Data.Entity.Database.Initialize(Boolean force)
+   at mz.betainteractive.sigeas.Models.SystemManager.BeginDatabase() in J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Models\SystemManager.cs:line 72
+===========================================================================================
+
+Date/Time: 13-01-2014 11:28:54
+Title: Error
+Message: An error occurred while getting provider information from the database. This can be caused by Entity Framework using an incorrect connection string. Check the inner exceptions for details and ensure that the connection string is correct.
+Exception Description: 
+System.Data.ProviderIncompatibleException: An error occurred while getting provider information from the database. This can be caused by Entity Framework using an incorrect connection string. Check the inner exceptions for details and ensure that the connection string is correct. ---> System.Data.ProviderIncompatibleException: The provider did not return a ProviderManifestToken string. ---> MySql.Data.MySqlClient.MySqlException: Unable to connect to any of the specified MySQL hosts.
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at MySql.Data.MySqlClient.MySqlProviderServices.GetDbProviderManifestToken(DbConnection connection)
+   at System.Data.Common.DbProviderServices.GetProviderManifestToken(DbConnection connection)
+   --- End of inner exception stack trace ---
+   at System.Data.Common.DbProviderServices.GetProviderManifestToken(DbConnection connection)
+   at System.Data.Entity.ModelConfiguration.Utilities.DbProviderServicesExtensions.GetProviderManifestTokenChecked(DbProviderServices providerServices, DbConnection connection)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.ModelConfiguration.Utilities.DbProviderServicesExtensions.GetProviderManifestTokenChecked(DbProviderServices providerServices, DbConnection connection)
+   at System.Data.Entity.ModelConfiguration.Utilities.DbConnectionExtensions.GetProviderInfo(DbConnection connection, DbProviderManifest& providerManifest)
+   at System.Data.Entity.DbModelBuilder.Build(DbConnection providerConnection)
+   at System.Data.Entity.Internal.LazyInternalContext.CreateModel(LazyInternalContext internalContext)
+   at System.Data.Entity.Internal.RetryLazy`2.GetValue(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.LazyInternalContext.MarkDatabaseInitialized()
+   at System.Data.Entity.Database.Initialize(Boolean force)
+   at mz.betainteractive.sigeas.Models.SystemManager.BeginDatabase() in J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Models\SystemManager.cs:line 72
+===========================================================================================
+
+Date/Time: 13-01-2014 11:30:43
+Title: Error
+Message: An error occurred while getting provider information from the database. This can be caused by Entity Framework using an incorrect connection string. Check the inner exceptions for details and ensure that the connection string is correct.
+Exception Description: 
+System.Data.ProviderIncompatibleException: An error occurred while getting provider information from the database. This can be caused by Entity Framework using an incorrect connection string. Check the inner exceptions for details and ensure that the connection string is correct. ---> System.Data.ProviderIncompatibleException: The provider did not return a ProviderManifestToken string. ---> MySql.Data.MySqlClient.MySqlException: Unable to connect to any of the specified MySQL hosts.
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at MySql.Data.MySqlClient.MySqlProviderServices.GetDbProviderManifestToken(DbConnection connection)
+   at System.Data.Common.DbProviderServices.GetProviderManifestToken(DbConnection connection)
+   --- End of inner exception stack trace ---
+   at System.Data.Common.DbProviderServices.GetProviderManifestToken(DbConnection connection)
+   at System.Data.Entity.ModelConfiguration.Utilities.DbProviderServicesExtensions.GetProviderManifestTokenChecked(DbProviderServices providerServices, DbConnection connection)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.ModelConfiguration.Utilities.DbProviderServicesExtensions.GetProviderManifestTokenChecked(DbProviderServices providerServices, DbConnection connection)
+   at System.Data.Entity.ModelConfiguration.Utilities.DbConnectionExtensions.GetProviderInfo(DbConnection connection, DbProviderManifest& providerManifest)
+   at System.Data.Entity.DbModelBuilder.Build(DbConnection providerConnection)
+   at System.Data.Entity.Internal.LazyInternalContext.CreateModel(LazyInternalContext internalContext)
+   at System.Data.Entity.Internal.RetryLazy`2.GetValue(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.LazyInternalContext.MarkDatabaseInitialized()
+   at System.Data.Entity.Database.Initialize(Boolean force)
+   at mz.betainteractive.sigeas.Models.SystemManager.BeginDatabase() in J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Models\SystemManager.cs:line 72
+===========================================================================================
+
+Date/Time: 13-01-2014 11:52:57
+Title: Usuario com userId=1 não se encontra registado no sistema
+Message: 
+Exception Description: 
+No Exception
+===========================================================================================
+
+Date/Time: 14-01-2014 10:47:21
+Title: Error
+Message: An error occurred while getting provider information from the database. This can be caused by Entity Framework using an incorrect connection string. Check the inner exceptions for details and ensure that the connection string is correct.
+Exception Description: 
+System.Data.ProviderIncompatibleException: An error occurred while getting provider information from the database. This can be caused by Entity Framework using an incorrect connection string. Check the inner exceptions for details and ensure that the connection string is correct. ---> System.Data.ProviderIncompatibleException: The provider did not return a ProviderManifestToken string. ---> MySql.Data.MySqlClient.MySqlException: Authentication to host 'localhost' for user 'sigeas' using method 'mysql_native_password' failed with message: Access denied for user 'sigeas'@'localhost' (using password: YES) ---> MySql.Data.MySqlClient.MySqlException: Access denied for user 'sigeas'@'localhost' (using password: YES)
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   --- End of inner exception stack trace ---
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at MySql.Data.MySqlClient.MySqlProviderServices.GetDbProviderManifestToken(DbConnection connection)
+   at System.Data.Common.DbProviderServices.GetProviderManifestToken(DbConnection connection)
+   --- End of inner exception stack trace ---
+   at System.Data.Common.DbProviderServices.GetProviderManifestToken(DbConnection connection)
+   at System.Data.Entity.ModelConfiguration.Utilities.DbProviderServicesExtensions.GetProviderManifestTokenChecked(DbProviderServices providerServices, DbConnection connection)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.ModelConfiguration.Utilities.DbProviderServicesExtensions.GetProviderManifestTokenChecked(DbProviderServices providerServices, DbConnection connection)
+   at System.Data.Entity.ModelConfiguration.Utilities.DbConnectionExtensions.GetProviderInfo(DbConnection connection, DbProviderManifest& providerManifest)
+   at System.Data.Entity.DbModelBuilder.Build(DbConnection providerConnection)
+   at System.Data.Entity.Internal.LazyInternalContext.CreateModel(LazyInternalContext internalContext)
+   at System.Data.Entity.Internal.RetryLazy`2.GetValue(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.LazyInternalContext.MarkDatabaseInitialized()
+   at System.Data.Entity.Database.Initialize(Boolean force)
+   at mz.betainteractive.sigeas.Models.SystemManager.BeginDatabase() in F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Models\SystemManager.cs:line 72
+===========================================================================================
+
+Date/Time: 14-01-2014 10:50:53
+Title: Error
+Message: An error occurred while getting provider information from the database. This can be caused by Entity Framework using an incorrect connection string. Check the inner exceptions for details and ensure that the connection string is correct.
+Exception Description: 
+System.Data.ProviderIncompatibleException: An error occurred while getting provider information from the database. This can be caused by Entity Framework using an incorrect connection string. Check the inner exceptions for details and ensure that the connection string is correct. ---> System.Data.ProviderIncompatibleException: The provider did not return a ProviderManifestToken string. ---> MySql.Data.MySqlClient.MySqlException: Authentication to host 'localhost' for user 'sigeas' using method 'mysql_native_password' failed with message: Access denied for user 'sigeas'@'localhost' (using password: YES) ---> MySql.Data.MySqlClient.MySqlException: Access denied for user 'sigeas'@'localhost' (using password: YES)
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   --- End of inner exception stack trace ---
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at MySql.Data.MySqlClient.MySqlProviderServices.GetDbProviderManifestToken(DbConnection connection)
+   at System.Data.Common.DbProviderServices.GetProviderManifestToken(DbConnection connection)
+   --- End of inner exception stack trace ---
+   at System.Data.Common.DbProviderServices.GetProviderManifestToken(DbConnection connection)
+   at System.Data.Entity.ModelConfiguration.Utilities.DbProviderServicesExtensions.GetProviderManifestTokenChecked(DbProviderServices providerServices, DbConnection connection)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.ModelConfiguration.Utilities.DbProviderServicesExtensions.GetProviderManifestTokenChecked(DbProviderServices providerServices, DbConnection connection)
+   at System.Data.Entity.ModelConfiguration.Utilities.DbConnectionExtensions.GetProviderInfo(DbConnection connection, DbProviderManifest& providerManifest)
+   at System.Data.Entity.DbModelBuilder.Build(DbConnection providerConnection)
+   at System.Data.Entity.Internal.LazyInternalContext.CreateModel(LazyInternalContext internalContext)
+   at System.Data.Entity.Internal.RetryLazy`2.GetValue(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.LazyInternalContext.MarkDatabaseInitialized()
+   at System.Data.Entity.Database.Initialize(Boolean force)
+   at mz.betainteractive.sigeas.Models.SystemManager.BeginDatabase() in F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Models\SystemManager.cs:line 72
+===========================================================================================
+
+Date/Time: 14-01-2014 10:51:37
+Title: Error
+Message: An error occurred while getting provider information from the database. This can be caused by Entity Framework using an incorrect connection string. Check the inner exceptions for details and ensure that the connection string is correct.
+Exception Description: 
+System.Data.ProviderIncompatibleException: An error occurred while getting provider information from the database. This can be caused by Entity Framework using an incorrect connection string. Check the inner exceptions for details and ensure that the connection string is correct. ---> System.Data.ProviderIncompatibleException: The provider did not return a ProviderManifestToken string. ---> MySql.Data.MySqlClient.MySqlException: Authentication to host 'localhost' for user 'sigeas' using method 'mysql_native_password' failed with message: Access denied for user 'sigeas'@'localhost' (using password: YES) ---> MySql.Data.MySqlClient.MySqlException: Access denied for user 'sigeas'@'localhost' (using password: YES)
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   --- End of inner exception stack trace ---
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at MySql.Data.MySqlClient.MySqlProviderServices.GetDbProviderManifestToken(DbConnection connection)
+   at System.Data.Common.DbProviderServices.GetProviderManifestToken(DbConnection connection)
+   --- End of inner exception stack trace ---
+   at System.Data.Common.DbProviderServices.GetProviderManifestToken(DbConnection connection)
+   at System.Data.Entity.ModelConfiguration.Utilities.DbProviderServicesExtensions.GetProviderManifestTokenChecked(DbProviderServices providerServices, DbConnection connection)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.ModelConfiguration.Utilities.DbProviderServicesExtensions.GetProviderManifestTokenChecked(DbProviderServices providerServices, DbConnection connection)
+   at System.Data.Entity.ModelConfiguration.Utilities.DbConnectionExtensions.GetProviderInfo(DbConnection connection, DbProviderManifest& providerManifest)
+   at System.Data.Entity.DbModelBuilder.Build(DbConnection providerConnection)
+   at System.Data.Entity.Internal.LazyInternalContext.CreateModel(LazyInternalContext internalContext)
+   at System.Data.Entity.Internal.RetryLazy`2.GetValue(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.LazyInternalContext.MarkDatabaseInitialized()
+   at System.Data.Entity.Database.Initialize(Boolean force)
+   at mz.betainteractive.sigeas.Models.SystemManager.BeginDatabase() in F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Models\SystemManager.cs:line 72
+===========================================================================================
+
+Date/Time: 14-01-2014 10:52:25
+Title: Error
+Message: An error occurred while getting provider information from the database. This can be caused by Entity Framework using an incorrect connection string. Check the inner exceptions for details and ensure that the connection string is correct.
+Exception Description: 
+System.Data.ProviderIncompatibleException: An error occurred while getting provider information from the database. This can be caused by Entity Framework using an incorrect connection string. Check the inner exceptions for details and ensure that the connection string is correct. ---> System.Data.ProviderIncompatibleException: The provider did not return a ProviderManifestToken string. ---> MySql.Data.MySqlClient.MySqlException: Authentication to host 'localhost' for user 'sigeas' using method 'mysql_native_password' failed with message: Access denied for user 'sigeas'@'localhost' (using password: YES) ---> MySql.Data.MySqlClient.MySqlException: Access denied for user 'sigeas'@'localhost' (using password: YES)
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   --- End of inner exception stack trace ---
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at MySql.Data.MySqlClient.MySqlProviderServices.GetDbProviderManifestToken(DbConnection connection)
+   at System.Data.Common.DbProviderServices.GetProviderManifestToken(DbConnection connection)
+   --- End of inner exception stack trace ---
+   at System.Data.Common.DbProviderServices.GetProviderManifestToken(DbConnection connection)
+   at System.Data.Entity.ModelConfiguration.Utilities.DbProviderServicesExtensions.GetProviderManifestTokenChecked(DbProviderServices providerServices, DbConnection connection)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.ModelConfiguration.Utilities.DbProviderServicesExtensions.GetProviderManifestTokenChecked(DbProviderServices providerServices, DbConnection connection)
+   at System.Data.Entity.ModelConfiguration.Utilities.DbConnectionExtensions.GetProviderInfo(DbConnection connection, DbProviderManifest& providerManifest)
+   at System.Data.Entity.DbModelBuilder.Build(DbConnection providerConnection)
+   at System.Data.Entity.Internal.LazyInternalContext.CreateModel(LazyInternalContext internalContext)
+   at System.Data.Entity.Internal.RetryLazy`2.GetValue(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.LazyInternalContext.MarkDatabaseInitialized()
+   at System.Data.Entity.Database.Initialize(Boolean force)
+   at mz.betainteractive.sigeas.Models.SystemManager.BeginDatabase() in F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Models\SystemManager.cs:line 72
+===========================================================================================
+
+Date/Time: 14-01-2014 10:53:14
+Title: Error
+Message: An error occurred while getting provider information from the database. This can be caused by Entity Framework using an incorrect connection string. Check the inner exceptions for details and ensure that the connection string is correct.
+Exception Description: 
+System.Data.ProviderIncompatibleException: An error occurred while getting provider information from the database. This can be caused by Entity Framework using an incorrect connection string. Check the inner exceptions for details and ensure that the connection string is correct. ---> System.Data.ProviderIncompatibleException: The provider did not return a ProviderManifestToken string. ---> MySql.Data.MySqlClient.MySqlException: Authentication to host 'localhost' for user 'sigeas' using method 'mysql_native_password' failed with message: Access denied for user 'sigeas'@'localhost' (using password: YES) ---> MySql.Data.MySqlClient.MySqlException: Access denied for user 'sigeas'@'localhost' (using password: YES)
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   --- End of inner exception stack trace ---
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at MySql.Data.MySqlClient.MySqlProviderServices.GetDbProviderManifestToken(DbConnection connection)
+   at System.Data.Common.DbProviderServices.GetProviderManifestToken(DbConnection connection)
+   --- End of inner exception stack trace ---
+   at System.Data.Common.DbProviderServices.GetProviderManifestToken(DbConnection connection)
+   at System.Data.Entity.ModelConfiguration.Utilities.DbProviderServicesExtensions.GetProviderManifestTokenChecked(DbProviderServices providerServices, DbConnection connection)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.ModelConfiguration.Utilities.DbProviderServicesExtensions.GetProviderManifestTokenChecked(DbProviderServices providerServices, DbConnection connection)
+   at System.Data.Entity.ModelConfiguration.Utilities.DbConnectionExtensions.GetProviderInfo(DbConnection connection, DbProviderManifest& providerManifest)
+   at System.Data.Entity.DbModelBuilder.Build(DbConnection providerConnection)
+   at System.Data.Entity.Internal.LazyInternalContext.CreateModel(LazyInternalContext internalContext)
+   at System.Data.Entity.Internal.RetryLazy`2.GetValue(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.LazyInternalContext.MarkDatabaseInitialized()
+   at System.Data.Entity.Database.Initialize(Boolean force)
+   at mz.betainteractive.sigeas.Models.SystemManager.BeginDatabase() in F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Models\SystemManager.cs:line 72
+===========================================================================================
+
+Date/Time: 14-01-2014 10:53:34
+Title: Error
+Message: An error occurred while getting provider information from the database. This can be caused by Entity Framework using an incorrect connection string. Check the inner exceptions for details and ensure that the connection string is correct.
+Exception Description: 
+System.Data.ProviderIncompatibleException: An error occurred while getting provider information from the database. This can be caused by Entity Framework using an incorrect connection string. Check the inner exceptions for details and ensure that the connection string is correct. ---> System.Data.ProviderIncompatibleException: The provider did not return a ProviderManifestToken string. ---> MySql.Data.MySqlClient.MySqlException: Authentication to host 'localhost' for user 'sigeas' using method 'mysql_native_password' failed with message: Access denied for user 'sigeas'@'localhost' (using password: YES) ---> MySql.Data.MySqlClient.MySqlException: Access denied for user 'sigeas'@'localhost' (using password: YES)
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   --- End of inner exception stack trace ---
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at MySql.Data.MySqlClient.MySqlProviderServices.GetDbProviderManifestToken(DbConnection connection)
+   at System.Data.Common.DbProviderServices.GetProviderManifestToken(DbConnection connection)
+   --- End of inner exception stack trace ---
+   at System.Data.Common.DbProviderServices.GetProviderManifestToken(DbConnection connection)
+   at System.Data.Entity.ModelConfiguration.Utilities.DbProviderServicesExtensions.GetProviderManifestTokenChecked(DbProviderServices providerServices, DbConnection connection)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.ModelConfiguration.Utilities.DbProviderServicesExtensions.GetProviderManifestTokenChecked(DbProviderServices providerServices, DbConnection connection)
+   at System.Data.Entity.ModelConfiguration.Utilities.DbConnectionExtensions.GetProviderInfo(DbConnection connection, DbProviderManifest& providerManifest)
+   at System.Data.Entity.DbModelBuilder.Build(DbConnection providerConnection)
+   at System.Data.Entity.Internal.LazyInternalContext.CreateModel(LazyInternalContext internalContext)
+   at System.Data.Entity.Internal.RetryLazy`2.GetValue(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.LazyInternalContext.MarkDatabaseInitialized()
+   at System.Data.Entity.Database.Initialize(Boolean force)
+   at mz.betainteractive.sigeas.Models.SystemManager.BeginDatabase() in F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Models\SystemManager.cs:line 72
+===========================================================================================
+
+Date/Time: 08-04-2014 15:45:30
+Title: Error
+Message: Unable to find the requested .Net Framework Data Provider.  It may not be installed.
+Exception Description: 
+System.ArgumentException: Unable to find the requested .Net Framework Data Provider.  It may not be installed.
+   at System.Data.Common.DbProviderFactories.GetFactory(String providerInvariantName)
+   at System.Data.Entity.Internal.LazyInternalConnection.CreateConnectionFromProviderName(String providerInvariantName)
+   at System.Data.Entity.Internal.LazyInternalConnection.InitializeFromConnectionStringSetting(ConnectionStringSettings appConfigConnection)
+   at System.Data.Entity.Internal.LazyInternalConnection.TryInitializeFromAppConfig(String name, AppConfig config)
+   at System.Data.Entity.Internal.LazyInternalConnection.Initialize()
+   at System.Data.Entity.Internal.LazyInternalConnection.get_ProviderName()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.LazyInternalContext.MarkDatabaseInitialized()
+   at System.Data.Entity.Database.Initialize(Boolean force)
+   at mz.betainteractive.sigeas.Models.SystemManager.BeginDatabase() in F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Models\SystemManager.cs:line 72
+===========================================================================================
+

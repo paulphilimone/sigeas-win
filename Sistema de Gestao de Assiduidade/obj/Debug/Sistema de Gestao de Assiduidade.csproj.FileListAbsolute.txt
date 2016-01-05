@@ -1,0 +1,239 @@
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\ResolveAssemblyReference.cache
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.csproj.ResolveComReference.cache
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FormTests.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmAboutBox.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmCalculoAsseduidade.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmDeviceActivaction.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmDeviceManagement.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmEditUserClock.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmEmpresa.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmFeriados.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmFerias.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmFuncionario.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmHorarioSemanal.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmLogin.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmMainProgram.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmPeriodosAno.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmPlanificacaoHorario.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmPopupBackground.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmRegistosBiometrico.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmSetFingerprint.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmUsersAccounts.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmViewFuncionarioAtt.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.Properties.Resources.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.csproj.GenerateResource.Cache
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Interop.zkemkeeper.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\Sistema de Gestao de Assiduidade.exe.config
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\MyDragTab.cur
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\Sistema de Gestao de Assiduidade.exe
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\Sistema de Gestao de Assiduidade.pdb
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\Ascend.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\Ascend.Resources.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\Ascend.Windows.Forms.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\DbLinq.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\DbLinq.MySql.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\IPAddressControlLib.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\MdiTabStrip.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\TaskPaneControl.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\XPExplorerBar.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\MdiTabStrip.pdb
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\MdiTabStrip.xml
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\Interop.zkemkeeper.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.exe
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.pdb
+D:\beta-interactive\development\c-family\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\Sistema de Gestao de Assiduidade.exe.config
+D:\beta-interactive\development\c-family\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.csproj.ResolveComReference.cache
+D:\beta-interactive\development\c-family\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.exe
+D:\beta-interactive\development\c-family\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.pdb
+D:\beta-interactive\development\c-family\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\ResolveAssemblyReference.cache
+D:\beta-interactive\development\c-family\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FormTests.resources
+D:\beta-interactive\development\c-family\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmAboutBox.resources
+D:\beta-interactive\development\c-family\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmCalculoAsseduidade.resources
+D:\beta-interactive\development\c-family\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmDeviceActivaction.resources
+D:\beta-interactive\development\c-family\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmDeviceManagement.resources
+D:\beta-interactive\development\c-family\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmEditUserClock.resources
+D:\beta-interactive\development\c-family\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmEmpresa.resources
+D:\beta-interactive\development\c-family\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmFeriados.resources
+D:\beta-interactive\development\c-family\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmFerias.resources
+D:\beta-interactive\development\c-family\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmFuncionario.resources
+D:\beta-interactive\development\c-family\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmHorarioSemanal.resources
+D:\beta-interactive\development\c-family\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmLogin.resources
+D:\beta-interactive\development\c-family\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmMainProgram.resources
+D:\beta-interactive\development\c-family\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmPeriodosAno.resources
+D:\beta-interactive\development\c-family\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmPlanificacaoHorario.resources
+D:\beta-interactive\development\c-family\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmPopupBackground.resources
+D:\beta-interactive\development\c-family\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmRegistosBiometrico.resources
+D:\beta-interactive\development\c-family\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmSetFingerprint.resources
+D:\beta-interactive\development\c-family\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmUsersAccounts.resources
+D:\beta-interactive\development\c-family\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmViewFuncionarioAtt.resources
+D:\beta-interactive\development\c-family\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.Properties.Resources.resources
+D:\beta-interactive\development\c-family\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.csproj.GenerateResource.Cache
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\Sistema de Gestao de Assiduidade.exe.config
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Interop.zkemkeeper.dll
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.csproj.ResolveComReference.cache
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.exe
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.pdb
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.csprojResolveAssemblyReference.cache
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FormTests.resources
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmAboutBox.resources
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmCalculoAsseduidade.resources
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmDeviceActivaction.resources
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmDeviceManagement.resources
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmEditUserClock.resources
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmEmpresa.resources
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmFeriados.resources
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmFerias.resources
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmFuncionario.resources
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmHorarioSemanal.resources
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmLogin.resources
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmMainProgram.resources
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmPeriodosAno.resources
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmPlanificacaoHorario.resources
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmPopupBackground.resources
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmRegistosBiometrico.resources
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmSetFingerprint.resources
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmUsersAccounts.resources
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.FrmViewFuncionarioAtt.resources
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sisga.Properties.Resources.resources
+D:\beta-interactive\development\c-family\2010\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.csproj.GenerateResource.Cache
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\Sistema de Gestao de Assiduidade.exe.config
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.csproj.ResolveComReference.cache
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.exe
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.pdb
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Interop.zkemkeeper.dll
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\ResolveAssemblyReference.cache
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.FormTests.resources
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.FrmAboutBox.resources
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.FrmCalculoAsseduidade.resources
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.FrmDeviceActivaction.resources
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.FrmDeviceManagement.resources
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.FrmEditUserClock.resources
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.FrmEmpresa.resources
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.FrmFeriados.resources
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.FrmFerias.resources
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.FrmFuncionario.resources
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.FrmHorarioSemanal.resources
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.FrmLogin.resources
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.FrmMainProgram.resources
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.FrmPeriodosAno.resources
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.FrmPlanificacaoHorario.resources
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.FrmPopupBackground.resources
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.FrmRegistosBiometrico.resources
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.FrmSetFingerprint.resources
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.FrmUsersAccounts.resources
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.FrmViewFuncionarioAtt.resources
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Properties.Resources.resources
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\GenerateResource.read.1.tlog
+E:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\GenerateResource.write.1.tlog
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\MyDragTab.cur
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\Sistema de Gestao de Assiduidade.exe.config
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\Sistema de Gestao de Assiduidade.exe
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\Sistema de Gestao de Assiduidade.pdb
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\EntityFramework.dll
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\MdiTabStrip.dll
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\SigeasDeviceModule.dll
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\Interop.zkemkeeper.dll
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\SigeasDeviceModule.pdb
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\EntityFramework.xml
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\ResolveAssemblyReference.cache
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Interop.zkemkeeper.dll
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.csproj.ResolveComReference.cache
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.AccessControl.EditUserClockView.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.AccessControl.UserClocksViewer.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Empresas.CategoriaAdd.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Empresas.DepartamentoAdd.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.FuncionarioDevices.DeviceDataUpdateView.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.FuncionarioDevices.TableFuncionarioDeviceView.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.DeviceManagement.DoorAdd.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.DeviceManagement.DeviceAdd.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.DeviceManagement.DeviceManager.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Empresas.EmpresaAddView.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Funcionarios.FuncionarioAddView.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Funcionarios.FuncionarioEditView.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.FormTests.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Main.FrmAboutBox.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.AccessControl.AttendanceCalcsView.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.DeviceManagement.FrmDeviceActivaction.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Empresas.FrmEmpresa.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Empresas.FrmFeriados.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Funcionarios.FrmFerias.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Funcionarios.FrmFuncionario.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Horarios.FrmHorarioSemanal.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Main.MainView.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Horarios.FrmPlanificacaoHorario.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.AccessControl.FrmViewFuncionarioAtt.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Properties.Resources.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Main.LoginView.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Main.SelectEmpresaView.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Main.SplashScreen.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.UserManagment.RoleAdd.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.UserManagment.UserAdd.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.UserManagment.UserManager.resources
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\GenerateResource.read.1.tlog
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\GenerateResource.write.1.tlog
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.exe
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.pdb
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\MdiTabStrip.pdb
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\MdiTabStrip.xml
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\Mono.Security.dll
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\Npgsql.dll
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\policy.2.0.Npgsql.dll
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\Npgsql.pdb
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\Npgsql.xml
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\de\Npgsql.resources.dll
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\es\Npgsql.resources.dll
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\fi\Npgsql.resources.dll
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\fr\Npgsql.resources.dll
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\ja\Npgsql.resources.dll
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\zh-CN\Npgsql.resources.dll
+J:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\policy.2.0.Npgsql.config
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\MyDragTab.cur
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\Sistema de Gestao de Assiduidade.exe.config
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\Sistema de Gestao de Assiduidade.exe
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\Sistema de Gestao de Assiduidade.pdb
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\EntityFramework.dll
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\MdiTabStrip.dll
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\SigeasDeviceModule.dll
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\Interop.zkemkeeper.dll
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\SigeasDeviceModule.pdb
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\MdiTabStrip.pdb
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\MdiTabStrip.xml
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Debug\EntityFramework.xml
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\ResolveAssemblyReference.cache
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Interop.zkemkeeper.dll
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.csproj.ResolveComReference.cache
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.AccessControl.EditUserClockView.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.AccessControl.UserClocksViewer.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Empresas.CategoriaAdd.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Empresas.DepartamentoAdd.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.FuncionarioDevices.DeviceDataUpdateView.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.FuncionarioDevices.TableFuncionarioDeviceView.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.DeviceManagement.DoorAdd.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.DeviceManagement.DeviceAdd.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.DeviceManagement.DeviceManager.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Empresas.EmpresaAddView.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Funcionarios.FuncionarioAddView.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Funcionarios.FuncionarioEditView.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.FormTests.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Main.FrmAboutBox.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.AccessControl.AttendanceCalcsView.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.DeviceManagement.FrmDeviceActivaction.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Empresas.FrmEmpresa.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Empresas.FrmFeriados.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Funcionarios.FrmFerias.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Funcionarios.FrmFuncionario.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Horarios.FrmHorarioSemanal.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Main.MainView.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Horarios.FrmPlanificacaoHorario.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.AccessControl.FrmViewFuncionarioAtt.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Properties.Resources.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Main.LoginView.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Main.SelectEmpresaView.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Main.SplashScreen.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.UserManagment.RoleAdd.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.UserManagment.UserAdd.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.UserManagment.UserManager.resources
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\GenerateResource.read.1.tlog
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\GenerateResource.write.1.tlog
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.exe
+F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.pdb

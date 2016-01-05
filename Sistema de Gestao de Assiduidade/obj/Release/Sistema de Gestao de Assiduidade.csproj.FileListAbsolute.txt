@@ -1,0 +1,43 @@
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Release\Sistema de Gestao de Assiduidade.exe.config
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Release\Interop.zkemkeeper.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Release\Sistema de Gestao de Assiduidade.csproj.ResolveComReference.cache
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Release\MyDragTab.cur
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Release\Sistema de Gestao de Assiduidade.exe
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Release\Sistema de Gestao de Assiduidade.pdb
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Release\Ascend.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Release\Ascend.Resources.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Release\Ascend.Windows.Forms.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Release\DbLinq.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Release\DbLinq.MySql.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Release\IPAddressControlLib.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Release\MdiTabStrip.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Release\TaskPaneControl.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Release\XPExplorerBar.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Release\MdiTabStrip.pdb
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Release\MdiTabStrip.xml
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\bin\Release\Interop.zkemkeeper.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Release\ResolveAssemblyReference.cache
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Release\mz.betainteractive.sisga.FormTests.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Release\mz.betainteractive.sisga.FrmAboutBox.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Release\mz.betainteractive.sisga.FrmCalculoAsseduidade.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Release\mz.betainteractive.sisga.FrmDeviceActivaction.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Release\mz.betainteractive.sisga.FrmDeviceManagement.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Release\mz.betainteractive.sisga.FrmEditUserClock.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Release\mz.betainteractive.sisga.FrmEmpresa.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Release\mz.betainteractive.sisga.FrmFeriados.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Release\mz.betainteractive.sisga.FrmFerias.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Release\mz.betainteractive.sisga.FrmFuncionario.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Release\mz.betainteractive.sisga.FrmHorarioSemanal.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Release\mz.betainteractive.sisga.FrmLogin.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Release\mz.betainteractive.sisga.FrmMainProgram.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Release\mz.betainteractive.sisga.FrmPeriodosAno.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Release\mz.betainteractive.sisga.FrmPlanificacaoHorario.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Release\mz.betaInteractive.sisga.FrmPopupBackground.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Release\mz.betainteractive.sisga.FrmRegistosBiometrico.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Release\mz.betaInteractive.sisga.FrmSetFingerprint.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Release\mz.betainteractive.sisga.FrmUsersAccounts.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Release\mz.betainteractive.sisga.FrmViewFuncionarioAtt.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Release\mz.betainteractive.sisga.Properties.Resources.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Release\Sistema de Gestao de Assiduidade.csproj.GenerateResource.Cache
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Release\Sistema de Gestao de Assiduidade.exe
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Release\Sistema de Gestao de Assiduidade.pdb

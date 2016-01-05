@@ -1,0 +1,10 @@
+D:\Beta Interactive Corporation\Development\C-VB\DbLinq-0.20.1-src\DbLinq-0.20.1\build.dbg\DbLinq.Sqlite.dll
+D:\Beta Interactive Corporation\Development\C-VB\DbLinq-0.20.1-src\DbLinq-0.20.1\build.dbg\DbLinq.Sqlite.pdb
+D:\Beta Interactive Corporation\Development\C-VB\DbLinq-0.20.1-src\DbLinq-0.20.1\src\DbLinq.Sqlite\obj\Debug\ResolveAssemblyReference.cache
+D:\Beta Interactive Corporation\Development\C-VB\DbLinq-0.20.1-src\DbLinq-0.20.1\src\DbLinq.Sqlite\obj\Debug\DbLinq.Sqlite.dll
+D:\Beta Interactive Corporation\Development\C-VB\DbLinq-0.20.1-src\DbLinq-0.20.1\src\DbLinq.Sqlite\obj\Debug\DbLinq.Sqlite.pdb
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\build.dbg\DbLinq.Sqlite.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\build.dbg\DbLinq.Sqlite.pdb
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\src\DbLinq.Sqlite\obj\Debug\ResolveAssemblyReference.cache
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\src\DbLinq.Sqlite\obj\Debug\DbLinq.Sqlite.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\src\DbLinq.Sqlite\obj\Debug\DbLinq.Sqlite.pdb

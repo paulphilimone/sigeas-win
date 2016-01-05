@@ -1,0 +1,561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A81AAD52-E744-4AB4-915E-44B3A14F82DD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>mz.betainteractive.sigeas</RootNamespace>
+    <AssemblyName>Sistema de Gestao de Assiduidade</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>mz.betainteractive.sigeas.Program</StartupObject>
+    <ApplicationIcon>sisga.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ascend, Version=1.0.0.6, Culture=neutral, PublicKeyToken=25c7a393ba3f37cd, processorArchitecture=MSIL" />
+    <Reference Include="Ascend.Resources, Version=1.0.0.6, Culture=neutral, PublicKeyToken=9c9aecb37b1e03b6, processorArchitecture=MSIL" />
+    <Reference Include="Ascend.Windows.Forms, Version=1.0.0.6, Culture=neutral, PublicKeyToken=ecd86ece2d3eb46d, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.4.3.1\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="IPAddressControlLib, Version=1.1.3039.21560, Culture=neutral, PublicKeyToken=55e96405d8fd6d61, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data.Entity, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TaskPaneControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="XPExplorerBar, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Configuration\AusenciaConfiguration.cs" />
+    <Compile Include="Models\Configuration\CategoriaConfiguration.cs" />
+    <Compile Include="Models\Configuration\ContinenteConfiguration.cs" />
+    <Compile Include="Models\Configuration\DepartamentoConfiguration.cs" />
+    <Compile Include="Models\Configuration\DeviceActivationConfiguration.cs" />
+    <Compile Include="Models\Configuration\DeviceConfiguration.cs" />
+    <Compile Include="Models\Configuration\DeviceTimezoneConfiguration.cs" />
+    <Compile Include="Models\Configuration\DeviceGroupTimezoneConfiguration.cs" />
+    <Compile Include="Models\Configuration\DeviceTypeConfiguration.cs" />
+    <Compile Include="Models\Configuration\DeviceUserConfiguration.cs" />
+    <Compile Include="Models\Configuration\DistritoConfiguration.cs" />
+    <Compile Include="Models\Configuration\DocumentoIdentificacaoConfiguration.cs" />
+    <Compile Include="Models\Configuration\DoorConfiguration.cs" />
+    <Compile Include="Models\Configuration\DoorTypeConfiguration.cs" />
+    <Compile Include="Models\Configuration\EmpresaConfiguration.cs" />
+    <Compile Include="Models\Configuration\EstadoCivilConfiguration.cs" />
+    <Compile Include="Models\Configuration\FeriaConfiguration.cs" />
+    <Compile Include="Models\Configuration\FeriadoConfiguration.cs" />
+    <Compile Include="Models\Configuration\FuncionarioConfiguration.cs" />
+    <Compile Include="Models\Configuration\FuncionarioHorarioConfiguration.cs" />
+    <Compile Include="Models\Configuration\HorarioDiaConfiguration.cs" />
+    <Compile Include="Models\Configuration\HorarioSemanaConfiguration.cs" />
+    <Compile Include="Models\Configuration\InOutModeConfiguration.cs" />
+    <Compile Include="Models\Configuration\LocalidadeConfiguration.cs" />
+    <Compile Include="Models\Configuration\PaisConfiguration.cs" />
+    <Compile Include="Models\Configuration\PeriodoTempoConfiguration.cs" />
+    <Compile Include="Models\Configuration\PostoAdministrativoConfiguration.cs" />
+    <Compile Include="Models\Configuration\ProvinciaConfiguration.cs" />
+    <Compile Include="Models\Configuration\RoleConfiguration.cs" />
+    <Compile Include="Models\Configuration\RolePermissionConfiguration.cs" />
+    <Compile Include="Models\Configuration\SexoConfiguration.cs" />
+    <Compile Include="Models\Configuration\SystemLogConfiguration.cs" />
+    <Compile Include="Models\Configuration\TipoAusenciaConfiguration.cs" />
+    <Compile Include="Models\Configuration\UserClockConfiguration.cs" />
+    <Compile Include="Models\Configuration\UserConfiguration.cs" />
+    <Compile Include="Models\Configuration\UserFingerprintConfiguration.cs" />
+    <Compile Include="Models\Configuration\VerifyModeConfiguration.cs" />
+    <Compile Include="Models\Entities\ApplicationParam.cs" />
+    <Compile Include="Models\Entities\ApplicationUser.cs" />
+    <Compile Include="Models\Entities\AttendanceRules.cs" />
+    <Compile Include="Models\Entities\AttCalcs.cs" />
+    <Compile Include="Models\Entities\Ausencia.cs" />
+    <Compile Include="Models\Entities\Continente.cs" />
+    <Compile Include="Models\Entities\DeviceGroupTimezone.cs" />
+    <Compile Include="Models\Entities\DeviceTimezone.cs" />
+    <Compile Include="Models\Entities\DeviceType.cs" />
+    <Compile Include="Models\Entities\DeviceUser.cs" />
+    <Compile Include="Models\Entities\DocumentoIdentificacao.cs" />
+    <Compile Include="Models\Entities\EstadoCivil.cs" />
+    <Compile Include="Models\Entities\InOutMode.cs" />
+    <Compile Include="Models\Entities\Pais.cs" />
+    <Compile Include="Models\Entities\PeriodoTempo.cs" />
+    <Compile Include="Models\Entities\PostoAdministrativo.cs" />
+    <Compile Include="Models\Entities\Role.cs" />
+    <Compile Include="Models\Entities\RolePermission.cs" />
+    <Compile Include="Models\Entities\User.cs" />
+    <Compile Include="Models\Entities\UserClock.cs" />
+    <Compile Include="Models\Entities\UserFingerprint.cs" />
+    <Compile Include="Models\Entities\VerifyMode.cs" />
+    <Compile Include="Models\SigeasDatabaseInitializer.cs" />
+    <Compile Include="Models\SigeasDatabaseContext.cs" />
+    <Compile Include="Models\Entities\Categoria.cs" />
+    <Compile Include="Models\Entities\Departamento.cs" />
+    <Compile Include="Models\Entities\Device.cs" />
+    <Compile Include="Models\Entities\DeviceActivation.cs" />
+    <Compile Include="Models\Entities\Distrito.cs" />
+    <Compile Include="Models\Entities\Door.cs" />
+    <Compile Include="Models\Entities\DoorType.cs" />
+    <Compile Include="Models\Entities\Empresa.cs" />
+    <Compile Include="Models\Entities\Ferias.cs" />
+    <Compile Include="Models\Entities\Feriado.cs" />
+    <Compile Include="Models\Entities\Funcionario.cs" />
+    <Compile Include="Models\Entities\FuncionarioHorario.cs" />
+    <Compile Include="Models\Entities\HorarioDia.cs" />
+    <Compile Include="Models\Entities\HorarioSemana.cs" />
+    <Compile Include="Models\Entities\Localidade.cs" />
+    <Compile Include="Models\Configuration\ApplicationParamConfiguration.cs" />
+    <Compile Include="Models\Configuration\ApplicationUserConfiguration.cs" />
+    <Compile Include="Models\Configuration\AttendanceRulesConfiguration.cs" />
+    <Compile Include="Models\Configuration\AttCalcsConfiguration.cs" />
+    <Compile Include="Models\Entities\provincia.cs" />
+    <Compile Include="Models\Entities\Sexo.cs" />
+    <Compile Include="Models\Entities\SystemLog.cs" />
+    <Compile Include="Models\Entities\TipoAusencia.cs" />
+    <Compile Include="Models\SystemManager.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\AccessControlCalculations.cs" />
+    <Compile Include="Utilities\DeviceDataConvertions.cs" />
+    <Compile Include="Views\AccessControl\EditUserClockView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AccessControl\EditUserClockView.designer.cs">
+      <DependentUpon>EditUserClockView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AccessControl\UserClocksViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AccessControl\UserClocksViewer.designer.cs">
+      <DependentUpon>UserClocksViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Empresas\CategoriaAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Empresas\CategoriaAdd.Designer.cs">
+      <DependentUpon>CategoriaAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Empresas\DepartamentoAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Empresas\DepartamentoAdd.Designer.cs">
+      <DependentUpon>DepartamentoAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FuncionarioDevices\DeviceDataUpdateView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FuncionarioDevices\DeviceDataUpdateView.Designer.cs">
+      <DependentUpon>DeviceDataUpdateView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FuncionarioDevices\TableFuncionarioDeviceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FuncionarioDevices\TableFuncionarioDeviceView.Designer.cs">
+      <DependentUpon>TableFuncionarioDeviceView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DeviceManagment\DoorAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DeviceManagment\DoorAdd.Designer.cs">
+      <DependentUpon>DoorAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DeviceManagment\DeviceAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DeviceManagment\DeviceAdd.Designer.cs">
+      <DependentUpon>DeviceAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DeviceManagment\DeviceManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DeviceManagment\DeviceManager.Designer.cs">
+      <DependentUpon>DeviceManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Empresas\EmpresaAddView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Empresas\EmpresaAddView.Designer.cs">
+      <DependentUpon>EmpresaAddView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Funcionarios\FuncionarioAddView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Funcionarios\FuncionarioAddView.designer.cs">
+      <DependentUpon>FuncionarioAddView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Funcionarios\FuncionarioEditView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Funcionarios\FuncionarioEditView.designer.cs">
+      <DependentUpon>FuncionarioEditView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormTests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormTests.Designer.cs">
+      <DependentUpon>FormTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\FrmAboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Main\FrmAboutBox.designer.cs">
+      <DependentUpon>FrmAboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AccessControl\AttendanceCalcsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AccessControl\AttendanceCalcsView.Designer.cs">
+      <DependentUpon>AttendanceCalcsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DeviceManagment\DeviceActivactionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DeviceManagment\DeviceActivactionView.designer.cs">
+      <DependentUpon>DeviceActivactionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Empresas\FrmEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Empresas\FrmEmpresa.Designer.cs">
+      <DependentUpon>FrmEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Empresas\FrmFeriados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Empresas\FrmFeriados.Designer.cs">
+      <DependentUpon>FrmFeriados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Funcionarios\FrmFerias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Funcionarios\FrmFerias.Designer.cs">
+      <DependentUpon>FrmFerias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Funcionarios\FrmFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Funcionarios\FrmFuncionario.Designer.cs">
+      <DependentUpon>FrmFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Horarios\FrmHorarioSemanal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Horarios\FrmHorarioSemanal.Designer.cs">
+      <DependentUpon>FrmHorarioSemanal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\MainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Main\MainView.designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Horarios\FrmPlanificacaoHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Horarios\FrmPlanificacaoHorario.Designer.cs">
+      <DependentUpon>FrmPlanificacaoHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AccessControl\FrmViewFuncionarioAtt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AccessControl\FrmViewFuncionarioAtt.Designer.cs">
+      <DependentUpon>FrmViewFuncionarioAtt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Hora.cs" />
+    <Compile Include="Utilities\DBSearch.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Main\LoginView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Main\LoginView.designer.cs">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\SelectEmpresaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Main\SelectEmpresaView.Designer.cs">
+      <DependentUpon>SelectEmpresaView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Main\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserManagment\RoleAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserManagment\RoleAdd.Designer.cs">
+      <DependentUpon>RoleAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserManagment\UserAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserManagment\UserAdd.Designer.cs">
+      <DependentUpon>UserAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserManagment\UserManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserManagment\UserManager.Designer.cs">
+      <DependentUpon>UserManager.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\AccessControl\EditUserClockView.resx">
+      <DependentUpon>EditUserClockView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AccessControl\UserClocksViewer.resx">
+      <DependentUpon>UserClocksViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Empresas\CategoriaAdd.resx">
+      <DependentUpon>CategoriaAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Empresas\DepartamentoAdd.resx">
+      <DependentUpon>DepartamentoAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FuncionarioDevices\DeviceDataUpdateView.resx">
+      <DependentUpon>DeviceDataUpdateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FuncionarioDevices\TableFuncionarioDeviceView.resx">
+      <DependentUpon>TableFuncionarioDeviceView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DeviceManagment\DoorAdd.resx">
+      <DependentUpon>DoorAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DeviceManagment\DeviceAdd.resx">
+      <DependentUpon>DeviceAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DeviceManagment\DeviceManager.resx">
+      <DependentUpon>DeviceManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Empresas\EmpresaAddView.resx">
+      <DependentUpon>EmpresaAddView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Funcionarios\FuncionarioAddView.resx">
+      <DependentUpon>FuncionarioAddView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Funcionarios\FuncionarioEditView.resx">
+      <DependentUpon>FuncionarioEditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTests.resx">
+      <DependentUpon>FormTests.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Main\FrmAboutBox.resx">
+      <DependentUpon>FrmAboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AccessControl\AttendanceCalcsView.resx">
+      <DependentUpon>AttendanceCalcsView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DeviceManagment\DeviceActivactionView.resx">
+      <DependentUpon>DeviceActivactionView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Empresas\FrmEmpresa.resx">
+      <DependentUpon>FrmEmpresa.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Empresas\FrmFeriados.resx">
+      <DependentUpon>FrmFeriados.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Funcionarios\FrmFerias.resx">
+      <DependentUpon>FrmFerias.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Funcionarios\FrmFuncionario.resx">
+      <DependentUpon>FrmFuncionario.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Horarios\FrmHorarioSemanal.resx">
+      <DependentUpon>FrmHorarioSemanal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Main\MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Horarios\FrmPlanificacaoHorario.resx">
+      <DependentUpon>FrmPlanificacaoHorario.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AccessControl\FrmViewFuncionarioAtt.resx">
+      <DependentUpon>FrmViewFuncionarioAtt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Main\LoginView.resx">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Main\SelectEmpresaView.resx">
+      <DependentUpon>SelectEmpresaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Main\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserManagment\RoleAdd.resx">
+      <DependentUpon>RoleAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserManagment\UserAdd.resx">
+      <DependentUpon>UserAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserManagment\UserManager.resx">
+      <DependentUpon>UserManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CodeTemplates\ReverseEngineerCodeFirst\Context.tt" />
+    <None Include="CodeTemplates\ReverseEngineerCodeFirst\Entity.tt" />
+    <None Include="CodeTemplates\ReverseEngineerCodeFirst\Mapping.tt" />
+    <None Include="ExternalData\Localization\countries.data" />
+    <None Include="ExternalData\Localization\mozambique.data" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings\Constants.cs" />
+    <Compile Include="Settings\SystemDatabases.cs" />
+    <Compile Include="Utilities\Calculations.cs" />
+    <Compile Include="Utilities\Collections.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BoxOne\Sigeas Device Module\SigeasDeviceModule.csproj">
+      <Project>{DEA7E89B-FACE-47E6-9786-B95C87F1A05E}</Project>
+      <Name>SigeasDeviceModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="Projects\MdiTabStrip\MdiTabStrip.vbproj">
+      <Project>{DAA053B9-3316-4A1A-B9B9-A185D6DA73DA}</Project>
+      <Name>MdiTabStrip</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Analise1.txt" />
+    <Content Include="sisga.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="forms\" />
+    <Folder Include="Migrations\Generated\" />
+    <Folder Include="Models\Override\" />
+    <Folder Include="Views\ImportExport\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="zkemkeeper">
+      <Guid>{FE9DED34-E159-408E-8490-B720A5E632C7}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

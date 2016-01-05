@@ -1,0 +1,44 @@
+Beta Interactive Sisga
+
+
+mz.betainteractive.localization.world.Continent           
+mz.betainteractive.localization.world.Country
+mz.betainteractive.localization.local.Provincia
+mz.betainteractive.localization.local.Distrito
+mz.betainteractive.localization.local.PostoAdministrativo
+mz.betainteractive.localization.local.Localidade
+
+mz.betainteractive.model.base.EstadoCivil            (static)
+mz.betainteractive.model.base.Sexo                   (static)
+mz.betainteractive.model.base.DocumentoIdentificacao (static)
+
+mz.betainteractive.authentication.ApplicationUser
+mz.betainteractive.settings.ApplicationParam
+mz.betainteractive.settings.SystemLog
+
+mz.betainteractive.model.rh.Empresa
+mz.betainteractive.model.rh.AttendanceRules
+mz.betainteractive.model.rh.Departamento
+mz.betainteractive.model.rh.Categoria
+mz.betainteractive.model.rh.Funcionario
+mz.betainteractive.model.rh.FuncionarioHorario
+mz.betainteractive.model.rh.HorarioDia
+mz.betainteractive.model.rh.HorarioSemana
+mz.betainteractive.model.rh.SemanaAno
+mz.betainteractive.model.rh.Ferias
+mz.betainteractive.model.rh.Feriado
+mz.betainteractive.model.rh.Ausencia
+mz.betainteractive.model.rh.TipoAusencia	     (static)
+
+mz.betainteractive.model.ca.Door
+mz.betainteractive.model.ca.DoorType                 (static)
+mz.betainteractive.model.ca.Device
+mz.betainteractive.model.ca.DeviceType               (static)
+mz.betainteractive.model.ca.DeviceAuthorization
+mz.betainteractive.model.ca.DeviceFingerprint
+mz.betainteractive.model.ca.DeviceTimezone
+mz.betainteractive.model.ca.DeviceTimezoneGroup
+mz.betainteractive.model.ca.UserClock
+mz.betainteractive.model.ca.UserClockState		(static)
+mz.betainteractive.model.ca.UserClockVerifyMode  	(static)
+mz.betainteractive.model.ca.AttCalcs

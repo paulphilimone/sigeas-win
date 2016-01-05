@@ -1,0 +1,10 @@
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\examples\DbLinq.MySql.Example\bin\Debug\DbLinq.MySql.Example.exe
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\examples\DbLinq.MySql.Example\bin\Debug\DbLinq.MySql.Example.pdb
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\examples\DbLinq.MySql.Example\bin\Debug\DbLinq.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\examples\DbLinq.MySql.Example\bin\Debug\DbLinq.MySql.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\examples\DbLinq.MySql.Example\bin\Debug\MySql.Data.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\examples\DbLinq.MySql.Example\bin\Debug\DbLinq.MySql.pdb
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\examples\DbLinq.MySql.Example\bin\Debug\DbLinq.pdb
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\examples\DbLinq.MySql.Example\obj\Debug\ResolveAssemblyReference.cache
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\examples\DbLinq.MySql.Example\obj\Debug\DbLinq.MySql.Example.exe
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\examples\DbLinq.MySql.Example\obj\Debug\DbLinq.MySql.Example.pdb

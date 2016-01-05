@@ -1,0 +1,5 @@
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\build.dbg\DbLinq.SqlServer.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\build.dbg\DbLinq.SqlServer.pdb
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\src\DbLinq.SqlServer\obj\Debug\ResolveAssemblyReference.cache
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\src\DbLinq.SqlServer\obj\Debug\DbLinq.SqlServer.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\src\DbLinq.SqlServer\obj\Debug\DbLinq.SqlServer.pdb

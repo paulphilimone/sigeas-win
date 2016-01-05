@@ -1,0 +1,41 @@
+using System.ComponentModel.DataAnnotations;
+using System.Data.Entity.ModelConfiguration;
+using mz.betainteractive.sigeas.Models.Entities;
+
+namespace mz.betainteractive.sigeas.Models.Configuration
+{
+    public class FuncionarioConfiguration : EntityTypeConfiguration<Funcionario>
+    {
+        public FuncionarioConfiguration()
+        {
+            // Primary Key
+            //this.HasKey(t => t.Id);
+
+            this.Property(t => t.Nome).IsRequired().HasMaxLength(255);
+            this.Property(t => t.Apelido).IsRequired().HasMaxLength(255);
+            this.Property(t => t.AvenidaRua).HasMaxLength(255);
+            this.Property(t => t.Bairro).HasMaxLength(1000);            
+            this.Property(t => t.Email).HasMaxLength(255);                                    
+            this.Property(t => t.NumeroDI).HasMaxLength(255);                        
+            this.Property(t => t.Telefone).HasMaxLength(255);
+
+            this.ToTable("user_funcionario");
+
+            // Relationships
+            this.HasOptional(t => t.CreatedBy).WithMany();
+            this.HasOptional(t => t.UpdatedBy).WithMany();
+
+            //this.HasOptional(t => t.ContaCartao).WithRequired(t => t.Beneficiario).WillCascadeOnDelete(true);
+
+            this.HasOptional(t => t.DocumentoIdentificacao).WithMany();
+            this.HasOptional(t => t.EstadoCivil).WithMany();
+            this.HasOptional(t => t.Sexo).WithMany();
+
+            this.HasMany(t => t.DeviceUsers).WithRequired(t => t.Funcionario).WillCascadeOnDelete(true);
+            this.HasMany(t => t.Ausencias).WithRequired(t => t.Funcionario).WillCascadeOnDelete(true);
+            this.HasMany(t => t.Ferias).WithRequired(t => t.Funcionario).WillCascadeOnDelete(true);
+            this.HasMany(t => t.UserClocks).WithRequired(t => t.Funcionario).WillCascadeOnDelete(true);
+            this.HasMany(t => t.AttCalculos).WithRequired(t => t.Funcionario).WillCascadeOnDelete(true);
+        }
+    }
+}

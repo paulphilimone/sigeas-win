@@ -1,0 +1,12 @@
+D:\Beta Interactive Corporation\Development\C-VB\DbLinq-0.20.1-src\DbLinq-0.20.1\build.dbg\DbMetal.exe.config
+D:\Beta Interactive Corporation\Development\C-VB\DbLinq-0.20.1-src\DbLinq-0.20.1\build.dbg\DbMetal.exe
+D:\Beta Interactive Corporation\Development\C-VB\DbLinq-0.20.1-src\DbLinq-0.20.1\build.dbg\DbMetal.pdb
+D:\Beta Interactive Corporation\Development\C-VB\DbLinq-0.20.1-src\DbLinq-0.20.1\src\DbMetal\obj\Debug\ResolveAssemblyReference.cache
+D:\Beta Interactive Corporation\Development\C-VB\DbLinq-0.20.1-src\DbLinq-0.20.1\src\DbMetal\obj\Debug\DbMetal.exe
+D:\Beta Interactive Corporation\Development\C-VB\DbLinq-0.20.1-src\DbLinq-0.20.1\src\DbMetal\obj\Debug\DbMetal.pdb
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\build.dbg\DbMetal.exe.config
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\build.dbg\DbMetal.exe
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\build.dbg\DbMetal.pdb
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\src\DbMetal\obj\Debug\ResolveAssemblyReference.cache
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\src\DbMetal\obj\Debug\DbMetal.exe
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\src\DbMetal\obj\Debug\DbMetal.pdb

@@ -1,0 +1,38 @@
+ALGORITIMO DE ENCRIPTAÇÃO E CRIAÇÃO DE CHAVE
+____________________________________________
+
+
+SerialNumber+DevCreationDate 
+
+SN = 0113331130016
+CD = 2011-03-30 16:51:39
+KEY = SN+CD
+
+BetaKey = "kf44d8%"
+LenSN = Length(0113331130016);
+LenCD = Length(2011-03-30 16:51:39);
+RN = random(0-100);
+
+BETAKEY+""
+
+
+Encryprit(KEY)
+  |
+  | FOR POS=0 TO LENGTH(KEY) 
+  |-> Encrypt By Char
+   -> INV = Inverter Bits [NOT(00001111) ->11110000]  (8 BITS)
+   -> N   = GetNumber(INV)                            (1 BYTE) 
+   -> EN1 = N - RN + POS 			      (1 BYTE) 		
+   -> EN2 = N + RN + POS   			      (1 BYTE) 
+   -> ENC = ToChar(EN1)+ToChar(EN2)		      (WORD)	-> 2 BYTES
+   -> ENCSTR += ENC;
+
+
+
+
+0-255
+
+255+2 = 1
+255-2 = 253
+
+BY X-47

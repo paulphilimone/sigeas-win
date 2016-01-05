@@ -1,0 +1,11 @@
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\bin\Release\MyDragTab.cur
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\bin\Release\MdiTabStrip.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\bin\Release\MdiTabStrip.pdb
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\bin\Release\MdiTabStrip.xml
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Release\ResolveAssemblyReference.cache
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Release\MdiTabStrip.Resources.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Release\MdiTabStrip.Design.MdiTabStripDesignerForm.resources
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Release\MdiTabStrip.vbproj.GenerateResource.Cache
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Release\MdiTabStrip.dll
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Release\MdiTabStrip.xml
+D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Release\MdiTabStrip.pdb
