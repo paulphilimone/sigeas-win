@@ -235,6 +235,19 @@ MdiTabStrip
  Specifies whether or not to obey each form's individual property settings or force each to form
  to always be maximized.
  </summary>
+</member><member name="P:MdiTabStrip.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:MdiTabStrip.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:MdiTabStrip.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
 </member><member name="M:MdiTabStrip.MdiTab.#ctor(MdiTabStrip.MdiTabStrip)">
 	<summary>
  Initializes a new instance of the <see cref="T:MdiTabStrip.MdiTab"/> class.
@@ -259,19 +272,6 @@ MdiTabStrip
  whose <see cref="P:System.Windows.Forms.Form.MdiParent"/> property has been 
  set to an instance of another form in an MDI application.
  </summary>
-</member><member name="P:MdiTabStrip.My.Resources.Resources.ResourceManager">
-	<summary>
-  Returns the cached ResourceManager instance used by this class.
-</summary>
-</member><member name="P:MdiTabStrip.My.Resources.Resources.Culture">
-	<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
-</summary>
-</member><member name="T:MdiTabStrip.My.Resources.Resources">
-	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
 </member>
 </members>
 </doc>

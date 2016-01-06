@@ -73,3 +73,35 @@ F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\S
 F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\obj\Debug\GenerateResource.write.1.tlog
 F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\obj\Debug\SisgaProductKeyGenerator.exe
 F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\obj\Debug\SisgaProductKeyGenerator.pdb
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\bin\Debug\SisgaProductKeyGenerator.exe.config
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\bin\Debug\SisgaProductKeyGenerator.exe
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\bin\Debug\SisgaProductKeyGenerator.pdb
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\bin\Debug\IPAddressControlLib.dll
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\bin\Debug\SigeasDeviceModule.dll
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\bin\Debug\Interop.zkemkeeper.dll
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\bin\Debug\SigeasDeviceModule.pdb
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\obj\Debug\Interop.zkemkeeper.dll
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\obj\Debug\SisgaProductKeyGenerator.csproj.ResolveComReference.cache
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\obj\Debug\mz.betainteractive.sigeas.bpkgenerator.Views.FrmGenerateKey.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\obj\Debug\mz.betainteractive.sigeas.bpkgenerator.Properties.Resources.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\obj\Debug\SisgaProductKeyGenerator.exe
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\obj\Debug\SisgaProductKeyGenerator.pdb
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\obj\Debug\Interop.zkemkeeper.dll
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\obj\Debug\SisgaProductKeyGenerator.csproj.ResolveComReference.cache
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\obj\Debug\mz.betainteractive.sigeas.bpkgenerator.Views.FrmGenerateKey.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\obj\Debug\mz.betainteractive.sigeas.bpkgenerator.Properties.Resources.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\bin\Debug\SisgaProductKeyGenerator.exe.config
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\bin\Debug\SisgaProductKeyGenerator.exe
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\bin\Debug\SisgaProductKeyGenerator.pdb
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\bin\Debug\IPAddressControlLib.dll
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\bin\Debug\SigeasDeviceModule.dll
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\bin\Debug\Interop.zkemkeeper.dll
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\bin\Debug\SigeasDeviceModule.pdb
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\obj\Debug\SisgaProductKeyGenerator.exe
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\obj\Debug\SisgaProductKeyGenerator.pdb

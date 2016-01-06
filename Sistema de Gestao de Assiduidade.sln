@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sistema de Gestao de Assidu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SisgaProductKeyGenerator", "Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\SisgaProductKeyGenerator.csproj", "{683F5228-227B-469F-9B0A-8A030C8090AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SigeasDeviceModule", "..\BoxOne\Sigeas Device Module\SigeasDeviceModule.csproj", "{DEA7E89B-FACE-47E6-9786-B95C87F1A05E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SigeasDeviceModule", "..\sigeas-device-module\SigeasDeviceModule.csproj", "{DEA7E89B-FACE-47E6-9786-B95C87F1A05E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -237,3 +237,103 @@ F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\S
 F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\GenerateResource.write.1.tlog
 F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.exe
 F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.pdb
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\Interop.zkemkeeper.dll
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.csproj.ResolveComReference.cache
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.AccessControl.EditUserClockView.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.AccessControl.UserClocksViewer.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Empresas.CategoriaAdd.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Empresas.DepartamentoAdd.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.FuncionarioDevices.DeviceDataUpdateView.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.FuncionarioDevices.TableFuncionarioDeviceView.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.DeviceManagement.DoorAdd.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.DeviceManagement.DeviceAdd.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.DeviceManagement.DeviceManager.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Empresas.EmpresaAddView.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Funcionarios.FuncionarioAddView.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Funcionarios.FuncionarioEditView.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.FormTests.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Main.FrmAboutBox.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.AccessControl.AttendanceCalcsView.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.DeviceManagement.FrmDeviceActivaction.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Empresas.FrmEmpresa.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Empresas.FrmFeriados.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Funcionarios.FrmFerias.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Funcionarios.FrmFuncionario.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Horarios.FrmHorarioSemanal.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Main.MainView.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Horarios.FrmPlanificacaoHorario.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.AccessControl.FrmViewFuncionarioAtt.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Properties.Resources.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Main.LoginView.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Main.SelectEmpresaView.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Main.SplashScreen.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.UserManagment.RoleAdd.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.UserManagment.UserAdd.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.UserManagment.UserManager.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\bin\Debug\Sistema de Gestao de Assiduidade.exe.config
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\bin\Debug\MyDragTab.cur
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\bin\Debug\Sistema de Gestao de Assiduidade.exe
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\bin\Debug\Sistema de Gestao de Assiduidade.pdb
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\bin\Debug\EntityFramework.dll
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\bin\Debug\MdiTabStrip.dll
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\bin\Debug\SigeasDeviceModule.dll
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\bin\Debug\Interop.zkemkeeper.dll
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\bin\Debug\SigeasDeviceModule.pdb
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\bin\Debug\MdiTabStrip.pdb
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\bin\Debug\MdiTabStrip.xml
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\bin\Debug\EntityFramework.xml
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.exe
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.pdb
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\bin\Debug\MyDragTab.cur
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\bin\Debug\Sistema de Gestao de Assiduidade.exe.config
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\bin\Debug\Sistema de Gestao de Assiduidade.exe
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\bin\Debug\Sistema de Gestao de Assiduidade.pdb
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\bin\Debug\EntityFramework.dll
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\bin\Debug\MdiTabStrip.dll
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\bin\Debug\SigeasDeviceModule.dll
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\bin\Debug\Interop.zkemkeeper.dll
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\bin\Debug\SigeasDeviceModule.pdb
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\bin\Debug\MdiTabStrip.pdb
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\bin\Debug\MdiTabStrip.xml
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\bin\Debug\EntityFramework.xml
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\Interop.zkemkeeper.dll
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.csproj.ResolveComReference.cache
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.AccessControl.EditUserClockView.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.AccessControl.UserClocksViewer.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Empresas.CategoriaAdd.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Empresas.DepartamentoAdd.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.FuncionarioDevices.DeviceDataUpdateView.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.FuncionarioDevices.TableFuncionarioDeviceView.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.DeviceManagement.DoorAdd.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.DeviceManagement.DeviceAdd.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.DeviceManagement.DeviceManager.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Empresas.EmpresaAddView.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Funcionarios.FuncionarioAddView.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Funcionarios.FuncionarioEditView.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.FormTests.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Main.FrmAboutBox.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.AccessControl.AttendanceCalcsView.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.DeviceManagement.FrmDeviceActivaction.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Empresas.FrmEmpresa.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Empresas.FrmFeriados.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Funcionarios.FrmFerias.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Funcionarios.FrmFuncionario.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Horarios.FrmHorarioSemanal.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Main.MainView.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Horarios.FrmPlanificacaoHorario.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.AccessControl.FrmViewFuncionarioAtt.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Properties.Resources.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Main.LoginView.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Main.SelectEmpresaView.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.Main.SplashScreen.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.UserManagment.RoleAdd.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.UserManagment.UserAdd.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\mz.betainteractive.sigeas.Views.UserManagment.UserManager.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.exe
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\obj\Debug\Sistema de Gestao de Assiduidade.pdb

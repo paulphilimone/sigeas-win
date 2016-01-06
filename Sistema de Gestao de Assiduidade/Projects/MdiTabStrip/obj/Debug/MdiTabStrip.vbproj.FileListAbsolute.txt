@@ -77,3 +77,27 @@ F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\S
 F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Debug\MdiTabStrip.dll
 F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Debug\MdiTabStrip.xml
 F:\beta-interactive\development\c-family\2013\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Debug\MdiTabStrip.pdb
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\bin\Debug\MyDragTab.cur
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\bin\Debug\MdiTabStrip.dll
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\bin\Debug\MdiTabStrip.pdb
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\bin\Debug\MdiTabStrip.xml
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Debug\MdiTabStrip.Resources.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Debug\MdiTabStrip.Design.MdiTabStripDesignerForm.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Debug\MdiTabStrip.dll
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Debug\MdiTabStrip.xml
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Debug\MdiTabStrip.pdb
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\bin\Debug\MyDragTab.cur
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\bin\Debug\MdiTabStrip.dll
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\bin\Debug\MdiTabStrip.pdb
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\bin\Debug\MdiTabStrip.xml
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Debug\MdiTabStrip.Resources.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Debug\MdiTabStrip.Design.MdiTabStripDesignerForm.resources
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Debug\MdiTabStrip.dll
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Debug\MdiTabStrip.xml
+C:\Users\PaulPhilimone\Documents\local\sigeas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Debug\MdiTabStrip.pdb

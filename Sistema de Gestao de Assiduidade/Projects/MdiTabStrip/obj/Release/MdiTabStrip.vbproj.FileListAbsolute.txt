@@ -9,3 +9,15 @@ D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidad
 D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Release\MdiTabStrip.dll
 D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Release\MdiTabStrip.xml
 D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Release\MdiTabStrip.pdb
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\bin\Release\MyDragTab.cur
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\bin\Release\MdiTabStrip.dll
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\bin\Release\MdiTabStrip.pdb
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\bin\Release\MdiTabStrip.xml
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Release\ResolveAssemblyReference.cache
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Release\MdiTabStrip.Resources.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Release\MdiTabStrip.Design.MdiTabStripDesignerForm.resources
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Release\GenerateResource.read.1.tlog
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Release\GenerateResource.write.1.tlog
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Release\MdiTabStrip.dll
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Release\MdiTabStrip.xml
+C:\Users\PaulPhilimone\Documents\local\sigesas-win\Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\obj\Release\MdiTabStrip.pdb

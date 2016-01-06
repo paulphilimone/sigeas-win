@@ -6,7 +6,44 @@ MdiTabStrip
 </name>
 </assembly>
 <members>
-<member name="E:MdiTabStrip.MdiTabStrip.CurrentMdiTabChanged">
+<member name="M:MdiTabStrip.MdiTab.#ctor(MdiTabStrip.MdiTabStrip)">
+	<summary>
+ Initializes a new instance of the <see cref="T:MdiTabStrip.MdiTab"/> class.
+ </summary>
+</member><member name="M:MdiTabStrip.MdiTab.Dispose(System.Boolean)">
+	<summary>
+ Releases the unmanaged resources used by the <see cref="T:MdiTabStrip.MdiTab"/> and optionally releases the managed resources. 
+ </summary>
+</member><member name="P:MdiTabStrip.MdiTab.Form">
+	<summary>
+ Gets or sets the instance of a <see cref="P:MdiTabStrip.MdiTab.Form"/> the <see cref="T:MdiTabStrip.MdiTab"/> represents.
+ </summary>
+	<returns>The <see cref="P:MdiTabStrip.MdiTab.Form"/> object the tab represents.</returns>
+</member><member name="P:MdiTabStrip.MdiTab.DisplayRectangle">
+	<summary>
+ Gets the rectangle that represents the display area of the control.
+ </summary>
+	<returns>A <see cref="T:System.Drawing.Rectangle"/> that represents the display area of the control.</returns>
+</member><member name="T:MdiTabStrip.MdiTab">
+	<summary>
+ Represents a selectable tab that corresponds to exactly one open <see cref="T:System.Windows.Forms.Form"/> 
+ whose <see cref="P:System.Windows.Forms.Form.MdiParent"/> property has been 
+ set to an instance of another form in an MDI application.
+ </summary>
+</member><member name="P:MdiTabStrip.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:MdiTabStrip.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:MdiTabStrip.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="E:MdiTabStrip.MdiTabStrip.CurrentMdiTabChanged">
 	<summary>
  Occurs when the <see cref="T:MdiTabStrip.MdiTab"/> has been made active.
  </summary>
@@ -234,43 +271,6 @@ MdiTabStrip
 	<summary>
  Specifies whether or not to obey each form's individual property settings or force each to form
  to always be maximized.
- </summary>
-</member><member name="P:MdiTabStrip.My.Resources.Resources.ResourceManager">
-	<summary>
-  Returns the cached ResourceManager instance used by this class.
-</summary>
-</member><member name="P:MdiTabStrip.My.Resources.Resources.Culture">
-	<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
-</summary>
-</member><member name="T:MdiTabStrip.My.Resources.Resources">
-	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
-</member><member name="M:MdiTabStrip.MdiTab.#ctor(MdiTabStrip.MdiTabStrip)">
-	<summary>
- Initializes a new instance of the <see cref="T:MdiTabStrip.MdiTab"/> class.
- </summary>
-</member><member name="M:MdiTabStrip.MdiTab.Dispose(System.Boolean)">
-	<summary>
- Releases the unmanaged resources used by the <see cref="T:MdiTabStrip.MdiTab"/> and optionally releases the managed resources. 
- </summary>
-</member><member name="P:MdiTabStrip.MdiTab.Form">
-	<summary>
- Gets or sets the instance of a <see cref="P:MdiTabStrip.MdiTab.Form"/> the <see cref="T:MdiTabStrip.MdiTab"/> represents.
- </summary>
-	<returns>The <see cref="P:MdiTabStrip.MdiTab.Form"/> object the tab represents.</returns>
-</member><member name="P:MdiTabStrip.MdiTab.DisplayRectangle">
-	<summary>
- Gets the rectangle that represents the display area of the control.
- </summary>
-	<returns>A <see cref="T:System.Drawing.Rectangle"/> that represents the display area of the control.</returns>
-</member><member name="T:MdiTabStrip.MdiTab">
-	<summary>
- Represents a selectable tab that corresponds to exactly one open <see cref="T:System.Windows.Forms.Form"/> 
- whose <see cref="P:System.Windows.Forms.Form.MdiParent"/> property has been 
- set to an instance of another form in an MDI application.
  </summary>
 </member>
 </members>

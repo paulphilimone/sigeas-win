@@ -42,8 +42,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\dll\forms\IPAddressControlLib.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
-    <Reference Include="MySql.Data.Entity, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data.Entity, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -105,7 +105,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\BoxOne\Sigeas Device Module\SigeasDeviceModule.csproj">
+    <ProjectReference Include="..\..\..\..\..\sigeas-device-module\SigeasDeviceModule.csproj">
       <Project>{DEA7E89B-FACE-47E6-9786-B95C87F1A05E}</Project>
       <Name>SigeasDeviceModule</Name>
     </ProjectReference>
