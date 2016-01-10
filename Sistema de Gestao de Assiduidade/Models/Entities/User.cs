@@ -6,7 +6,7 @@ namespace  mz.betainteractive.sigeas.Models.Entities {
 
         public int Id { get; set; }
         public Nullable<int> EnrollNumber { get; set; }
-        public Nullable<int> Previlege { get; set; }
+        public Nullable<int> Privilege { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
         public string CardNumber { get; set; }

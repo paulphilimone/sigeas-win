@@ -188,8 +188,8 @@ namespace mz.betainteractive.sigeas.Utilities {
                 zuser.EnrollNumber = funcionario.EnrollNumber.Value;
             }
 
-            if (funcionario.Previlege.HasValue) {
-                zuser.Previlege = funcionario.Previlege.Value;
+            if (funcionario.Privilege.HasValue) {
+                zuser.Previlege = funcionario.Privilege.Value;
             }
 
             zuser.FullName = funcionario.ToString();
@@ -237,8 +237,8 @@ namespace mz.betainteractive.sigeas.Utilities {
                 zuser.EnrollNumber = funcionario.EnrollNumber.Value;
             }
 
-            if (funcionario.Previlege.HasValue) {
-                zuser.Previlege = funcionario.Previlege.Value;
+            if (funcionario.Privilege.HasValue) {
+                zuser.Previlege = funcionario.Privilege.Value;
             }
 
             zuser.FullName = funcionario.ToString();

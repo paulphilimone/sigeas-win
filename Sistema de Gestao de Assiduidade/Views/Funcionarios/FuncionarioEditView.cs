@@ -123,8 +123,8 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
             if (currentFuncionario.Password != null) {
                 TxtPassword.Text = currentFuncionario.Password;
             }
-            if (currentFuncionario.Previlege != null) {
-                CboxPrevilege.SelectedIndex = currentFuncionario.Previlege.Value;
+            if (currentFuncionario.Privilege != null) {
+                CboxPrevilege.SelectedIndex = currentFuncionario.Privilege.Value;
             }
             if (currentFuncionario.CardNumber != null) {
                 TxtCardNumber.Text = currentFuncionario.CardNumber;
@@ -494,7 +494,7 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
             funcionario.Enabled = enabled;
             funcionario.UserName = username;
             funcionario.Password = password;
-            funcionario.Previlege = previlege;
+            funcionario.Privilege = previlege;
             funcionario.CardNumber = cardNumber;
 
             byte[] photo = GetPictureFromBox();

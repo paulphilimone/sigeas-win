@@ -239,7 +239,7 @@ namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
                         enrollNumber = userId.ToString();
                     }
 
-                    bool fase2 = deviceIO.SetUserInfo(enrollNumber, func.CardNumber, func.UserName, func.Password, func.Previlege.Value, func.Enabled.Value);
+                    bool fase2 = deviceIO.SetUserInfo(enrollNumber, func.CardNumber, func.UserName, func.Password, func.Privilege.Value, func.Enabled.Value);
 
                     foreach (UserFingerprint fp in func.UserFingerprints) {
                         bool fase3 = deviceIO.SetUserTmp(enrollNumber, fp.FingerIndex, fp.TemplateData);

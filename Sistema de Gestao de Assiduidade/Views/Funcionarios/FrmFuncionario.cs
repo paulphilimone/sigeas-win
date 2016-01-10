@@ -371,8 +371,8 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
                 TxtPassword.Text = funcionario.Password;
             }
 
-            if (funcionario.Previlege.HasValue) {
-                CboxPrevilege.SelectedIndex = funcionario.Previlege.Value;
+            if (funcionario.Privilege.HasValue) {
+                CboxPrevilege.SelectedIndex = funcionario.Privilege.Value;
             }
 
             if (funcionario.Enabled.HasValue) {

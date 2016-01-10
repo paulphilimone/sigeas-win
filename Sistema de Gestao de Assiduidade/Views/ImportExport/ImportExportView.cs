@@ -11,7 +11,7 @@ using mz.betainteractive.sigeas.zdbx;
 using mz.betainteractive.sigeas.Models.Entities;
 using mz.betainteractive.sigeas.Utilities;
 using mz.betainteractive.sigeas.BackgroundFeatures;
-using mz.betainteractive.sigeas.Views.Calculations;
+//using mz.betainteractive.sigeas.Views.Calculations;
 using mz.betainteractive.sigeas.DeviceSystem;
 using mz.betainteractive.sigeas.zdbx.models;
 using mz.betainteractive.sigeas.Utilities.Components;
@@ -94,24 +94,24 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
 
             LoadDevicesToExportUsersView();
 
-            LoadContratosToComboBox();
+            LoadDepartamentosToComboBox();
 
-            LViewContratoBeneficiarios.Items.Clear();
-            LViewExportBeneficiarios.Items.Clear();
+            LViewDepartFuncionarios.Items.Clear();
+            LViewExportFuncionarios.Items.Clear();
 
             BtnExportUsers.Enabled = AllowDelete;
         }
 
-        private void LoadContratosToComboBox() {
+        private void LoadDepartamentosToComboBox() {
 
-            CBoxContratos.Items.Clear();
+            CBoxDepartamentos.Items.Clear();
 
             if (context == null) return;
 
-            var contratos = context.ContratoCliente.ToList();
+            var contratos = context.Departamento.ToList();
 
-            foreach (ContratoCliente cc in contratos) {
-                CBoxContratos.Items.Add(cc);
+            foreach (Departamento cc in contratos) {
+                CBoxDepartamentos.Items.Add(cc);
             }
         }
 
@@ -144,7 +144,7 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
 
             if (context == null) return;
 
-            var devices = context.Device.Where(t => t.RegisteredAutoCarro == null && t.RegisteredLocal == null).ToList();
+            var devices = context.Device.Where(t => t.Door == null).ToList();
 
             foreach (var device in devices) {
                 ListViewGenericItem<Device> item = new ListViewGenericItem<Device>(device);
@@ -254,32 +254,32 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
             return devices;
         }
 
-        private List<Beneficiario> GetSelectedContratoBeneficiarios() {
-            List<Beneficiario> benefs = new List<Beneficiario>();
+        private List<Funcionario> GetSelectedDepartFuncionarios() {
+            List<Funcionario> benefs = new List<Funcionario>();
 
-            foreach (ListViewGenericItem<Beneficiario> item in LViewContratoBeneficiarios.Items) {
+            foreach (ListViewGenericItem<Funcionario> item in LViewDepartFuncionarios.Items) {
                 if (item.Checked == true) {
                     benefs.Add(item.Value);
                 }
             }
 
             return benefs;
-        }                
+        }
 
-        private List<Beneficiario> GetAllContratoBeneficiarios() {
-            List<Beneficiario> benefs = new List<Beneficiario>();
+        private List<Funcionario> GetAllDepartFuncionarios() {
+            List<Funcionario> benefs = new List<Funcionario>();
 
-            foreach (ListViewGenericItem<Beneficiario> item in LViewContratoBeneficiarios.Items) {
+            foreach (ListViewGenericItem<Funcionario> item in LViewDepartFuncionarios.Items) {
                 benefs.Add(item.Value);
             }
 
             return benefs;
         }
 
-        private List<Beneficiario> GetBeneficiariosToExport() {
-            List<Beneficiario> benefs = new List<Beneficiario>();
+        private List<Funcionario> GetFuncionariosToExport() {
+            List<Funcionario> benefs = new List<Funcionario>();
 
-            foreach (ListViewGenericItem<Beneficiario> item in LViewExportBeneficiarios.Items) {
+            foreach (ListViewGenericItem<Funcionario> item in LViewExportFuncionarios.Items) {
                 benefs.Add(item.Value);
             }
 
@@ -309,10 +309,10 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
                 if (device != null) {
                     foreach (var zdevUser in zdev.DeviceUsers) {
                         //DeviceUser devUser = device.DeviceUsers.FirstOrDefault(t => t.Beneficiario.iCardNumber==zdevUser.User.CardNumber);
-                        DeviceUser devUser = device.DeviceUsers.FirstOrDefault(t => t.Beneficiario.Id == zdevUser.User.Id);
+                        DeviceUser devUser = device.DeviceUsers.FirstOrDefault(t => t.Funcionario.Id == zdevUser.User.Id);
 
                         if (devUser != null) {
-                            Beneficiario ben = devUser.Beneficiario;
+                            Funcionario ben = devUser.Funcionario;
                             ZUser user = zdevUser.User;
 
                             devUser.EnrollNumber = zdevUser.EnrollNumber;
@@ -359,10 +359,11 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
 
                 result = convertions.ConvertAttendanceDataToDatabase(context, importedDatabase.Clocks, out clocks);
 
+                /* ** DONT KNOW WHAT TO DO HERE YET
                 calc.CorrectAllUserClock(clocks);
                 calc.CalculateMovimentoPorTransacao(clocks);
                 calc.UpdateAllContratos();
-
+                */
                 context.SaveChanges();
             };
 
@@ -390,29 +391,29 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
         }
 
         private void CBoxContratos_SelectedIndexChanged(object sender, EventArgs e) {
-            if (CBoxContratos.SelectedIndex != -1) {
-                OnSelectContrato();
+            if (CBoxDepartamentos.SelectedIndex != -1) {
+                OnSelectDepartamento();
             } else {
-                LViewContratoBeneficiarios.Items.Clear();
+                LViewDepartFuncionarios.Items.Clear();
             }
         }
 
-        private void OnSelectContrato() {
-            ContratoCliente contrato = (ContratoCliente)CBoxContratos.SelectedItem;
-            LoadBeneficiariosToListView(contrato);
+        private void OnSelectDepartamento() {
+            Departamento dp = (Departamento)CBoxDepartamentos.SelectedItem;
+            LoadFuncionariosToListView(dp);
         }
 
-        private void LoadBeneficiariosToListView(ContratoCliente contrato) {
-            LViewContratoBeneficiarios.Items.Clear();
+        private void LoadFuncionariosToListView(Departamento depart) {
+            LViewDepartFuncionarios.Items.Clear();
 
-            foreach (Beneficiario beneficiario in contrato.Beneficiarios) {
+            foreach (Funcionario funcionario in depart.Funcionarios) {
 
-                if (!beneficiario.CompleteRegistered) {
+                if (!funcionario.CompleteRegistered) {
 
-                    ListViewGenericItem<Beneficiario> item = new ListViewGenericItem<Beneficiario>(beneficiario);
+                    ListViewGenericItem<Funcionario> item = new ListViewGenericItem<Funcionario>(funcionario);
                     item.ImageIndex = 0;
-                    item.Text = beneficiario.ToString();
-                    LViewContratoBeneficiarios.Items.Add(item);
+                    item.Text = funcionario.ToString();
+                    LViewDepartFuncionarios.Items.Add(item);
 
                     //item.ForeColor = Color.Red;
                 }
@@ -421,78 +422,78 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
         }
 
         private void BtnAddBeneficiario_Click(object sender, EventArgs e) {
-            AddBeneficiarioToListExport();
+            AddFuncionarioToListExport();
         }
 
-        private void AddBeneficiarioToListExport() {
-            List<Beneficiario> list = GetSelectedContratoBeneficiarios();
+        private void AddFuncionarioToListExport() {
+            List<Funcionario> list = GetSelectedDepartFuncionarios();
 
             if (list.Count == 0) {
-                MessageBox.Show(this, "Para adicionar os beneficiarios selecione-os primeiro!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LViewContratoBeneficiarios.Focus();
+                MessageBox.Show(this, "Para adicionar os funcionarios selecione-os primeiro!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LViewDepartFuncionarios.Focus();
                 return;
             }
 
-            List<Beneficiario> listExisting = GetBeneficiariosToExport();
+            List<Funcionario> listExisting = GetFuncionariosToExport();
 
-            foreach (Beneficiario ben in list) {
+            foreach (Funcionario ben in list) {
                 if (!listExisting.Contains(ben)) {
-                    ListViewGenericItem<Beneficiario> item = new ListViewGenericItem<Beneficiario>(ben);
+                    ListViewGenericItem<Funcionario> item = new ListViewGenericItem<Funcionario>(ben);
                     item.ImageIndex = 0;
                     item.Text = ben.ToString();
-                    LViewExportBeneficiarios.Items.Add(item);
+                    LViewExportFuncionarios.Items.Add(item);
                 }
             }
         }
 
-        private void RemoveBeneficiarioFromListExport() {
+        private void RemoveFuncionarioFromListExport() {
             
-            if (LViewExportBeneficiarios.SelectedItems.Count == 0) {
-                MessageBox.Show(this, "Para remover os beneficiarios selecione-os primeiro!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LViewExportBeneficiarios.Focus();
+            if (LViewExportFuncionarios.SelectedItems.Count == 0) {
+                MessageBox.Show(this, "Para remover os funcionarios selecione-os primeiro!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LViewExportFuncionarios.Focus();
                 return;
             }
 
-            var list = LViewExportBeneficiarios.SelectedItems;
+            var list = LViewExportFuncionarios.SelectedItems;
 
             foreach (ListViewItem item in list) {                    
-                LViewExportBeneficiarios.Items.Remove(item);                
+                LViewExportFuncionarios.Items.Remove(item);                
             }
         }
 
         
 
         private void BtnAddAllBeneficiarios_Click(object sender, EventArgs e) {
-            AddAllBeneficiarioToListExport();
+            AddAllFuncionarioToListExport();
         }
 
-        private void AddAllBeneficiarioToListExport() {
-            List<Beneficiario> list = GetAllContratoBeneficiarios();
+        private void AddAllFuncionarioToListExport() {
+            List<Funcionario> list = GetAllDepartFuncionarios();
 
             if (list.Count == 0) {
-                MessageBox.Show(this, "Não existem beneficiarios para adicionar!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LViewContratoBeneficiarios.Focus();
+                MessageBox.Show(this, "Não existem funcionarios para adicionar!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LViewDepartFuncionarios.Focus();
                 return;
             }
 
-            List<Beneficiario> listExisting = GetBeneficiariosToExport();
+            List<Funcionario> listExisting = GetFuncionariosToExport();
 
-            foreach (Beneficiario ben in list) {
+            foreach (Funcionario ben in list) {
                 if (!listExisting.Contains(ben)) {
-                    ListViewGenericItem<Beneficiario> item = new ListViewGenericItem<Beneficiario>(ben);
+                    ListViewGenericItem<Funcionario> item = new ListViewGenericItem<Funcionario>(ben);
                     item.ImageIndex = 0;
                     item.Text = ben.ToString();
-                    LViewExportBeneficiarios.Items.Add(item);
+                    LViewExportFuncionarios.Items.Add(item);
                 }
             }
         }
 
         private void BtnRemoveBeneficiario_Click(object sender, EventArgs e) {
-            RemoveBeneficiarioFromListExport();
+            RemoveFuncionarioFromListExport();
         }
 
         private void BtnRemoveAllBeneficiarios_Click(object sender, EventArgs e) {
-            LViewExportBeneficiarios.Items.Clear();
+            LViewExportFuncionarios.Items.Clear();
         }
 
         private void BtnExportUsers_Click(object sender, EventArgs e) {
@@ -505,15 +506,15 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
                 return;
             }
 
-            if (LViewExportBeneficiarios.Items.Count == 0) {
-                MessageBox.Show(this, "Não existem beneficiarios para serem exportados. Adicione-os!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                BtnAddAllBeneficiarios.Focus();
+            if (LViewExportFuncionarios.Items.Count == 0) {
+                MessageBox.Show(this, "Não existem funcionarios para serem exportados. Adicione-os!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                BtnAddAllFuncionarios.Focus();
                 return;
             }
 
             ZDBxDatabase database = new ZDBxDatabase();
             List<Device> selectedDevices = GetSelectedDevicesToExportUsers();
-            List<Beneficiario> beneficiarios = GetBeneficiariosToExport();
+            List<Funcionario> funcionarios = GetFuncionariosToExport();
 
             DeviceDataConvertions convertions = new DeviceDataConvertions();
 
@@ -523,7 +524,7 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
                 database.Devices.Add(zdevice);
             }
 
-            foreach (var ben in beneficiarios) {
+            foreach (var ben in funcionarios) {
                 ZUser zuser = convertions.GetZUserOnly(ben);
                 database.Users.Add(zuser);
             }
@@ -579,11 +580,11 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
                 foreach (var user in importedDb.Users) {
                     index++;
 
-                    var beneficiario = context.Beneficiario.FirstOrDefault(t => t.Id == user.Id);
+                    var beneficiario = context.Funcionario.FirstOrDefault(t => t.Id == user.Id);
 
-                    ItemZUserBeneficiario zitem = new ItemZUserBeneficiario { Beneficiario = beneficiario, User = user };
+                    ItemZUserFuncionario zitem = new ItemZUserFuncionario { Funcionario = beneficiario, User = user };
 
-                    ListViewGenericItem<ItemZUserBeneficiario> item = new ListViewGenericItem<ItemZUserBeneficiario>(zitem);
+                    ListViewGenericItem<ItemZUserFuncionario> item = new ListViewGenericItem<ItemZUserFuncionario>(zitem);
 
                     if (beneficiario == null) {
                         item.Text = user.Id.ToString();
@@ -614,11 +615,11 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
             }
         }
 
-        private List<ItemZUserBeneficiario> GetValidColletecdUserData() {
-            List<ItemZUserBeneficiario> list = new List<ItemZUserBeneficiario>();
+        private List<ItemZUserFuncionario> GetValidColletecdUserData() {
+            List<ItemZUserFuncionario> list = new List<ItemZUserFuncionario>();
 
-            foreach (ListViewGenericItem<ItemZUserBeneficiario> item in LViewCollectDataUsers.Items) {
-                if (item.Value.Beneficiario != null) {
+            foreach (ListViewGenericItem<ItemZUserFuncionario> item in LViewCollectDataUsers.Items) {
+                if (item.Value.Funcionario != null) {
                     list.Add(item.Value);
                 }
             }
@@ -638,7 +639,7 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
 
             //when we are in UpdateDeviceModule - atualizar EnrollNumber
 
-            List<ItemZUserBeneficiario> listUsers = GetValidColletecdUserData();
+            List<ItemZUserFuncionario> listUsers = GetValidColletecdUserData();
 
             if (listUsers.Count == 0) {
                 MessageBox.Show(this, "Não existem usuários com dados válidos importados! (Os usuários não foram encontrados no sistema)", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -648,7 +649,7 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
             UpdateCollectedUserDataToSystem(listUsers);
         }
 
-        private void UpdateCollectedUserDataToSystem(List<ItemZUserBeneficiario> listUsers) {
+        private void UpdateCollectedUserDataToSystem(List<ItemZUserFuncionario> listUsers) {
             OnExecuteDialog background = new OnExecuteDialog("Atualização de dados....", "Atualizando dados colectados dos usuários...");
             bool result = false;
             
@@ -668,31 +669,31 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
             background.StartExecute();
         }
 
-        private bool UpdateCollectedUsers(List<ItemZUserBeneficiario> listUsers) {
+        private bool UpdateCollectedUsers(List<ItemZUserFuncionario> listUsers) {
 
             try {                                 
 
                 foreach (var item in listUsers) {
 
-                    if (item.Beneficiario != null) {
-                        Beneficiario ben = item.Beneficiario;
+                    if (item.Funcionario != null) {
+                        Funcionario func = item.Funcionario;
                         ZUser user = item.User;
 
                         //Update card number and fingerprints
-                        ben.CardNumber = user.CardNumber;
+                        func.CardNumber = user.CardNumber;
 
                         //update fingerprints
                         if (user.HasNewFingerprints) {
 
-                            ben.UserFingerprints.RemoveAll(t => t.User.Id == user.Id);
+                            func.UserFingerprints.RemoveAll(t => t.User.Id == user.Id);
 
                             foreach (ZUserFingerprint zfinger in user.UserFingerprints) {
                                 UserFingerprint finger = new UserFingerprint {
-                                    User = ben,
+                                    User = func,
                                     FingerIndex = zfinger.FingerIndex,
                                     TemplateData = zfinger.TemplateData
                                 };
-                                ben.UserFingerprints.Add(finger);
+                                func.UserFingerprints.Add(finger);
                             }
                         }
 
@@ -711,8 +712,8 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
 
     }
 
-    class ItemZUserBeneficiario {
+    class ItemZUserFuncionario {
         public ZUser User;
-        public Beneficiario Beneficiario;
+        public Funcionario Funcionario;
     }
 }

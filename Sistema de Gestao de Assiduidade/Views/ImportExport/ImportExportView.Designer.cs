@@ -88,14 +88,14 @@
             this.BtnRemoveBeneficiario = new System.Windows.Forms.Button();
             this.BtnRemoveAllBeneficiarios = new System.Windows.Forms.Button();
             this.BtnAddBeneficiario = new System.Windows.Forms.Button();
-            this.BtnAddAllBeneficiarios = new System.Windows.Forms.Button();
+            this.BtnAddAllFuncionarios = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.CBoxContratos = new System.Windows.Forms.ComboBox();
-            this.LViewExportBeneficiarios = new System.Windows.Forms.ListView();
+            this.CBoxDepartamentos = new System.Windows.Forms.ComboBox();
+            this.LViewExportFuncionarios = new System.Windows.Forms.ListView();
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.LViewContratoBeneficiarios = new System.Windows.Forms.ListView();
+            this.LViewDepartFuncionarios = new System.Windows.Forms.ListView();
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.BtnExportUsers = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -486,12 +486,12 @@
             this.groupBox3.Controls.Add(this.BtnRemoveBeneficiario);
             this.groupBox3.Controls.Add(this.BtnRemoveAllBeneficiarios);
             this.groupBox3.Controls.Add(this.BtnAddBeneficiario);
-            this.groupBox3.Controls.Add(this.BtnAddAllBeneficiarios);
+            this.groupBox3.Controls.Add(this.BtnAddAllFuncionarios);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.CBoxContratos);
-            this.groupBox3.Controls.Add(this.LViewExportBeneficiarios);
-            this.groupBox3.Controls.Add(this.LViewContratoBeneficiarios);
+            this.groupBox3.Controls.Add(this.CBoxDepartamentos);
+            this.groupBox3.Controls.Add(this.LViewExportFuncionarios);
+            this.groupBox3.Controls.Add(this.LViewDepartFuncionarios);
             this.groupBox3.Location = new System.Drawing.Point(11, 152);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(609, 223);
@@ -531,13 +531,13 @@
             // 
             // BtnAddAllBeneficiarios
             // 
-            this.BtnAddAllBeneficiarios.Location = new System.Drawing.Point(229, 108);
-            this.BtnAddAllBeneficiarios.Name = "BtnAddAllBeneficiarios";
-            this.BtnAddAllBeneficiarios.Size = new System.Drawing.Size(116, 23);
-            this.BtnAddAllBeneficiarios.TabIndex = 6;
-            this.BtnAddAllBeneficiarios.Text = "Adicionar Todos ->";
-            this.BtnAddAllBeneficiarios.UseVisualStyleBackColor = true;
-            this.BtnAddAllBeneficiarios.Click += new System.EventHandler(this.BtnAddAllBeneficiarios_Click);
+            this.BtnAddAllFuncionarios.Location = new System.Drawing.Point(229, 108);
+            this.BtnAddAllFuncionarios.Name = "BtnAddAllBeneficiarios";
+            this.BtnAddAllFuncionarios.Size = new System.Drawing.Size(116, 23);
+            this.BtnAddAllFuncionarios.TabIndex = 6;
+            this.BtnAddAllFuncionarios.Text = "Adicionar Todos ->";
+            this.BtnAddAllFuncionarios.UseVisualStyleBackColor = true;
+            this.BtnAddAllFuncionarios.Click += new System.EventHandler(this.BtnAddAllBeneficiarios_Click);
             // 
             // label6
             // 
@@ -559,26 +559,26 @@
             // 
             // CBoxContratos
             // 
-            this.CBoxContratos.FormattingEnabled = true;
-            this.CBoxContratos.Location = new System.Drawing.Point(19, 40);
-            this.CBoxContratos.Name = "CBoxContratos";
-            this.CBoxContratos.Size = new System.Drawing.Size(204, 21);
-            this.CBoxContratos.TabIndex = 3;
-            this.CBoxContratos.SelectedIndexChanged += new System.EventHandler(this.CBoxContratos_SelectedIndexChanged);
+            this.CBoxDepartamentos.FormattingEnabled = true;
+            this.CBoxDepartamentos.Location = new System.Drawing.Point(19, 40);
+            this.CBoxDepartamentos.Name = "CBoxContratos";
+            this.CBoxDepartamentos.Size = new System.Drawing.Size(204, 21);
+            this.CBoxDepartamentos.TabIndex = 3;
+            this.CBoxDepartamentos.SelectedIndexChanged += new System.EventHandler(this.CBoxContratos_SelectedIndexChanged);
             // 
             // LViewExportBeneficiarios
             // 
-            this.LViewExportBeneficiarios.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.LViewExportFuncionarios.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader12});
-            this.LViewExportBeneficiarios.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.LViewExportBeneficiarios.LargeImageList = this.imageList1;
-            this.LViewExportBeneficiarios.Location = new System.Drawing.Point(351, 40);
-            this.LViewExportBeneficiarios.Name = "LViewExportBeneficiarios";
-            this.LViewExportBeneficiarios.Size = new System.Drawing.Size(242, 173);
-            this.LViewExportBeneficiarios.SmallImageList = this.imageList1;
-            this.LViewExportBeneficiarios.TabIndex = 2;
-            this.LViewExportBeneficiarios.UseCompatibleStateImageBehavior = false;
-            this.LViewExportBeneficiarios.View = System.Windows.Forms.View.Details;
+            this.LViewExportFuncionarios.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.LViewExportFuncionarios.LargeImageList = this.imageList1;
+            this.LViewExportFuncionarios.Location = new System.Drawing.Point(351, 40);
+            this.LViewExportFuncionarios.Name = "LViewExportBeneficiarios";
+            this.LViewExportFuncionarios.Size = new System.Drawing.Size(242, 173);
+            this.LViewExportFuncionarios.SmallImageList = this.imageList1;
+            this.LViewExportFuncionarios.TabIndex = 2;
+            this.LViewExportFuncionarios.UseCompatibleStateImageBehavior = false;
+            this.LViewExportFuncionarios.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader12
             // 
@@ -592,28 +592,28 @@
             // 
             // LViewContratoBeneficiarios
             // 
-            this.LViewContratoBeneficiarios.BackColor = System.Drawing.Color.Bisque;
-            this.LViewContratoBeneficiarios.CheckBoxes = true;
-            this.LViewContratoBeneficiarios.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.LViewDepartFuncionarios.BackColor = System.Drawing.Color.Bisque;
+            this.LViewDepartFuncionarios.CheckBoxes = true;
+            this.LViewDepartFuncionarios.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader11});
-            this.LViewContratoBeneficiarios.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.LViewDepartFuncionarios.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             listViewItem26.StateImageIndex = 0;
             listViewItem27.StateImageIndex = 0;
             listViewItem28.StateImageIndex = 0;
             listViewItem29.StateImageIndex = 0;
-            this.LViewContratoBeneficiarios.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            this.LViewDepartFuncionarios.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem26,
             listViewItem27,
             listViewItem28,
             listViewItem29});
-            this.LViewContratoBeneficiarios.LargeImageList = this.imageList1;
-            this.LViewContratoBeneficiarios.Location = new System.Drawing.Point(19, 67);
-            this.LViewContratoBeneficiarios.Name = "LViewContratoBeneficiarios";
-            this.LViewContratoBeneficiarios.Size = new System.Drawing.Size(204, 146);
-            this.LViewContratoBeneficiarios.SmallImageList = this.imageList1;
-            this.LViewContratoBeneficiarios.TabIndex = 1;
-            this.LViewContratoBeneficiarios.UseCompatibleStateImageBehavior = false;
-            this.LViewContratoBeneficiarios.View = System.Windows.Forms.View.Details;
+            this.LViewDepartFuncionarios.LargeImageList = this.imageList1;
+            this.LViewDepartFuncionarios.Location = new System.Drawing.Point(19, 67);
+            this.LViewDepartFuncionarios.Name = "LViewContratoBeneficiarios";
+            this.LViewDepartFuncionarios.Size = new System.Drawing.Size(204, 146);
+            this.LViewDepartFuncionarios.SmallImageList = this.imageList1;
+            this.LViewDepartFuncionarios.TabIndex = 1;
+            this.LViewDepartFuncionarios.UseCompatibleStateImageBehavior = false;
+            this.LViewDepartFuncionarios.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader11
             // 
@@ -759,11 +759,11 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox CBoxContratos;
-        private System.Windows.Forms.ListView LViewExportBeneficiarios;
-        private System.Windows.Forms.ListView LViewContratoBeneficiarios;
+        private System.Windows.Forms.ComboBox CBoxDepartamentos;
+        private System.Windows.Forms.ListView LViewExportFuncionarios;
+        private System.Windows.Forms.ListView LViewDepartFuncionarios;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Button BtnAddAllBeneficiarios;
+        private System.Windows.Forms.Button BtnAddAllFuncionarios;
         private System.Windows.Forms.Button BtnAddBeneficiario;
         private System.Windows.Forms.Button BtnRemoveBeneficiario;
         private System.Windows.Forms.Button BtnRemoveAllBeneficiarios;

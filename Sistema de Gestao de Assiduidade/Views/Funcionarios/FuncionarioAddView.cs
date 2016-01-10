@@ -391,7 +391,7 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
             funcionario.Enabled = enabled;
             funcionario.UserName = username;
             funcionario.Password = password;
-            funcionario.Previlege = previlege;
+            funcionario.Privilege = previlege;
             funcionario.CardNumber = cardNumber;
             byte[] photo = GetPictureFromBox();
 
