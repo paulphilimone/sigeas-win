@@ -279,6 +279,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.Enabled = false;
             this.label14.Location = new System.Drawing.Point(20, 51);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(47, 13);
@@ -321,6 +322,7 @@
             // 
             // TxtApelido
             // 
+            this.TxtApelido.Enabled = false;
             this.TxtApelido.Location = new System.Drawing.Point(143, 49);
             this.TxtApelido.Name = "TxtApelido";
             this.TxtApelido.Size = new System.Drawing.Size(287, 22);
@@ -619,7 +621,7 @@
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(17, 26);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(51, 13);
+            this.label24.Size = new System.Drawing.Size(50, 13);
             this.label24.TabIndex = 0;
             this.label24.Text = "Telefone";
             // 
@@ -687,7 +689,7 @@
             this.label33.AutoSize = true;
             this.label33.Location = new System.Drawing.Point(20, 18);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(106, 13);
+            this.label33.Size = new System.Drawing.Size(105, 13);
             this.label33.TabIndex = 0;
             this.label33.Text = "Código Temporario";
             // 

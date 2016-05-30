@@ -589,7 +589,7 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
                     if (beneficiario == null) {
                         item.Text = user.Id.ToString();
                     } else {
-                        item.Text = beneficiario.GetCode();
+                        item.Text = beneficiario.Code;
                     }
 
                     item.SubItems.Add(user.FullName);

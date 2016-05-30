@@ -98,7 +98,7 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
             selectedFuncionario = null;
 
             TxtNome.Text = "";
-            TxtApelido.Text = "";
+            //TxtApelido.Text = "";
             CBoxSexo.SelectedIndex = -1;
             CBoxEstadoCivil.SelectedIndex = -1;
             DtpDataNasc.Value = DateTime.Today;
@@ -271,9 +271,10 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
                 TxtNome.Text = funcionario.Nome;
             }
             
+            /*
             if (funcionario.Apelido.Length > 0) { 
                 TxtApelido.Text = funcionario.Apelido;
-            }
+            }*/
             
             if (funcionario.Sexo != null) { 
                 CBoxSexo.Items.Add(funcionario.Sexo);

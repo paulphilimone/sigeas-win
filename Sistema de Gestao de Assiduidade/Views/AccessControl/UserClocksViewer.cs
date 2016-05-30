@@ -226,7 +226,7 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
                 Door door = device.Door;
 
                 item.Text = index.ToString();
-                item.SubItems.Add(funcionario.GetCode());
+                item.SubItems.Add(funcionario.Code);
                 item.SubItems.Add(funcionario.ToString());
                 item.SubItems.Add(device.ToString());
                 item.SubItems.Add(userClock.VerifyMode.ToString());

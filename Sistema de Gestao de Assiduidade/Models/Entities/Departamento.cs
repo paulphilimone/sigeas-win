@@ -6,7 +6,8 @@ namespace mz.betainteractive.sigeas.Models.Entities
 {
     public partial class Departamento  {
         
-        public long Id { get; set; }        
+        public long Id { get; set; }
+        public string Code { get; set; }
         public string Descricao { get; set; }        
         public string Nome { get; set; }
 

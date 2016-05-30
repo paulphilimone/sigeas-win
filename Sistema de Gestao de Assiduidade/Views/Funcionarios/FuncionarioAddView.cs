@@ -331,7 +331,7 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
             }
 
             string nome = TxtNome.Text;
-            string apelido = TxtApelido.Text;
+            //string apelido = TxtApelido.Text;
             Sexo sexo = CBoxSexo.SelectedItem as Sexo;
             EstadoCivil estadoCivil = CBoxEstadoCivil.SelectedItem as EstadoCivil;
             DateTime dataNasc = DtpDataNasc.Value;
@@ -368,7 +368,7 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
             
             funcionario.CompleteRegistered = true;
             funcionario.Nome = nome;
-            funcionario.Apelido = apelido;
+            //funcionario.Apelido = apelido;
             funcionario.Sexo = sexo;
             funcionario.EstadoCivil = estadoCivil;
             funcionario.DataDeNascimento = dataNasc;
@@ -446,12 +446,13 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
                 TxtNome.Focus();
                 return false;
             }
+            /*
             if (TxtApelido.Text == "") {
                 MessageBox.Show(this, "Introduza o apelido", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tabFuncionario.SelectedIndex = 0;
                 TxtApelido.Focus();
                 return false;
-            }
+            }*/
             if (CBoxSexo.SelectedIndex == -1) {
                 MessageBox.Show(this, "Selecione o sexo, por favor", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tabFuncionario.SelectedIndex = 0;
@@ -482,12 +483,14 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
                 CBoxDepartamento.Focus();
                 return false;
             }
+            /* //Nao eh obrigatorio ter categoria
             if (CBoxCategoria.SelectedIndex == -1) {
                 MessageBox.Show(this, "Selecione a categoria", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tabFuncionario.SelectedIndex = 0;
                 CBoxCategoria.Focus();
                 return false;
             }
+             */
             //Contacto
             //introduzir pelo menos 1 contacto
 

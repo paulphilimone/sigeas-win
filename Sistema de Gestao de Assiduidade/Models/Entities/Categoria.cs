@@ -6,9 +6,10 @@ namespace mz.betainteractive.sigeas.Models.Entities
 {
     public partial class Categoria {
         
-        public long Id { get; set; }                                
-        public string Funcoes { get; set; }
+        public long Id { get; set; }
+        public string Code { get; set; }       
         public string Nome { get; set; }
+        public string Funcoes { get; set; }
 
         public virtual Empresa Empresa { get; set; }
 

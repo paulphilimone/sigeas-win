@@ -354,6 +354,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Enabled = false;
             this.label2.Location = new System.Drawing.Point(20, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
@@ -398,6 +399,7 @@
             // 
             // TxtApelido
             // 
+            this.TxtApelido.Enabled = false;
             this.TxtApelido.Location = new System.Drawing.Point(128, 49);
             this.TxtApelido.Name = "TxtApelido";
             this.TxtApelido.ReadOnly = true;
@@ -562,7 +564,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(17, 23);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 13);
+            this.label8.Size = new System.Drawing.Size(50, 13);
             this.label8.TabIndex = 0;
             this.label8.Text = "Telefone";
             // 
@@ -636,7 +638,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(18, 166);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(45, 13);
+            this.label11.Size = new System.Drawing.Size(44, 13);
             this.label11.TabIndex = 23;
             this.label11.Text = "Av. Rua";
             // 
@@ -739,7 +741,7 @@
             this.ChkEnabled.AutoSize = true;
             this.ChkEnabled.Location = new System.Drawing.Point(83, 21);
             this.ChkEnabled.Name = "ChkEnabled";
-            this.ChkEnabled.Size = new System.Drawing.Size(101, 17);
+            this.ChkEnabled.Size = new System.Drawing.Size(108, 17);
             this.ChkEnabled.TabIndex = 1;
             this.ChkEnabled.Text = "Usuário Ativado";
             this.ChkEnabled.UseVisualStyleBackColor = true;
@@ -767,7 +769,7 @@
             this.label33.AutoSize = true;
             this.label33.Location = new System.Drawing.Point(20, 18);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(108, 13);
+            this.label33.Size = new System.Drawing.Size(107, 13);
             this.label33.TabIndex = 0;
             this.label33.Text = "Código Temporario";
             // 

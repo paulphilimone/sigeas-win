@@ -279,6 +279,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.Enabled = false;
             this.label14.Location = new System.Drawing.Point(20, 51);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(47, 13);
@@ -321,6 +322,7 @@
             // 
             // TxtApelido
             // 
+            this.TxtApelido.Enabled = false;
             this.TxtApelido.Location = new System.Drawing.Point(143, 49);
             this.TxtApelido.Name = "TxtApelido";
             this.TxtApelido.Size = new System.Drawing.Size(287, 22);
@@ -404,7 +406,7 @@
             this.tabPageAddress.Location = new System.Drawing.Point(4, 22);
             this.tabPageAddress.Name = "tabPageAddress";
             this.tabPageAddress.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAddress.Size = new System.Drawing.Size(615, 454);
+            this.tabPageAddress.Size = new System.Drawing.Size(615, 393);
             this.tabPageAddress.TabIndex = 4;
             this.tabPageAddress.Text = "Endereço & Contacto";
             this.tabPageAddress.UseVisualStyleBackColor = true;
@@ -475,10 +477,10 @@
             this.label25.TabIndex = 25;
             this.label25.Text = "Bairro";
             // 
-            // TxtNumero
+            // TxtNumeroCasa
             // 
             this.TxtNumeroCasa.Location = new System.Drawing.Point(383, 163);
-            this.TxtNumeroCasa.Name = "TxtNumero";
+            this.TxtNumeroCasa.Name = "TxtNumeroCasa";
             this.TxtNumeroCasa.Size = new System.Drawing.Size(100, 22);
             this.TxtNumeroCasa.TabIndex = 22;
             // 
@@ -619,7 +621,7 @@
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(17, 26);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(51, 13);
+            this.label24.Size = new System.Drawing.Size(50, 13);
             this.label24.TabIndex = 0;
             this.label24.Text = "Telefone";
             // 
@@ -629,7 +631,7 @@
             this.tabPageFpDevice.Location = new System.Drawing.Point(4, 22);
             this.tabPageFpDevice.Name = "tabPageFpDevice";
             this.tabPageFpDevice.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageFpDevice.Size = new System.Drawing.Size(615, 454);
+            this.tabPageFpDevice.Size = new System.Drawing.Size(615, 393);
             this.tabPageFpDevice.TabIndex = 3;
             this.tabPageFpDevice.Text = "Dados Biométricos";
             this.tabPageFpDevice.UseVisualStyleBackColor = true;
@@ -687,7 +689,7 @@
             this.label33.AutoSize = true;
             this.label33.Location = new System.Drawing.Point(20, 18);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(106, 13);
+            this.label33.Size = new System.Drawing.Size(105, 13);
             this.label33.TabIndex = 0;
             this.label33.Text = "Código Temporario";
             // 
@@ -771,9 +773,9 @@
             this.label35.AutoSize = true;
             this.label35.Location = new System.Drawing.Point(20, 59);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(57, 13);
+            this.label35.Size = new System.Drawing.Size(58, 13);
             this.label35.TabIndex = 1;
-            this.label35.Text = "Nickname";
+            this.label35.Text = "Username";
             // 
             // groupBox13
             // 

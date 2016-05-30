@@ -256,7 +256,7 @@ namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
 
                 row.Cells[0].Value = funcionario.Departamento.ToString();
                 row.Cells[1].Value = funcionario.Categoria.ToString();
-                row.Cells[2].Value = funcionario.GetCode();
+                row.Cells[2].Value = funcionario.Code;
                 row.Cells[3].Value = funcionario.ToString();
 
                 for (int i = 4; i < row.Cells.Count; i++) { //I=4 - first device column

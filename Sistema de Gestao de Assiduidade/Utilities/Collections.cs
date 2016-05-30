@@ -193,7 +193,7 @@ namespace mz.betainteractive.sigeas.utilities {
         public void UpdateColumns() {
             this.SubItems.Clear();
             this.Text = (this.Index+1).ToString();
-            this.SubItems.Add(Value.Funcionario.GetCode());
+            this.SubItems.Add(Value.Funcionario.Code);
             this.SubItems.Add(Value.Funcionario.ToString());
             this.SubItems.Add(Value.VerifyMode.ToString());
             this.SubItems.Add(Value.DateAndTime.ToString());//"g", DateTimeFormatInfo.InvariantInfo));

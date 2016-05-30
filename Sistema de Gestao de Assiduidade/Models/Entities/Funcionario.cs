@@ -5,7 +5,7 @@ namespace mz.betainteractive.sigeas.Models.Entities
 {
     public partial class Funcionario : User, IComparable {
         
-        public long Code { get; set; }
+        public string Code { get; set; }
 
         public string Nome { get; set; }
         public string Apelido { get; set; }
@@ -54,14 +54,14 @@ namespace mz.betainteractive.sigeas.Models.Entities
             this.CompleteRegistered = false;
         }
 
-        public string GetCode() {
-            if (Departamento == null) {
-                return "Undefined";
+        public string CreateCode(Empresa empresa) {
+            long contract = 0;
+            if (empresa != null) {
+                contract = empresa.Id;
             }
 
             string code = "";
-            long contract = Departamento.Empresa.Id;
-
+            
             code = "F" + contract.ToString("X3") + "-" + this.Id.ToString("D3");
 
             return code;
@@ -69,7 +69,7 @@ namespace mz.betainteractive.sigeas.Models.Entities
 
         //Default Methods
         public override string ToString() {
-            return this.Nome + " " + this.Apelido;
+            return this.Nome; /*+ " " + this.Apelido;*/
         }
 
         public override bool Equals(object obj) {

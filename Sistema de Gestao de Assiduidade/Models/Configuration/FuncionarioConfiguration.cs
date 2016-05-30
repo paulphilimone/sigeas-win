@@ -10,9 +10,9 @@ namespace mz.betainteractive.sigeas.Models.Configuration
         {
             // Primary Key
             //this.HasKey(t => t.Id);
-
+            this.Property(t => t.Code).IsRequired();
             this.Property(t => t.Nome).IsRequired().HasMaxLength(255);
-            this.Property(t => t.Apelido).IsRequired().HasMaxLength(255);
+            //this.Property(t => t.Apelido).IsRequired().HasMaxLength(255); //we will use only name
             this.Property(t => t.AvenidaRua).HasMaxLength(255);
             this.Property(t => t.Bairro).HasMaxLength(1000);            
             this.Property(t => t.Email).HasMaxLength(255);                                    
