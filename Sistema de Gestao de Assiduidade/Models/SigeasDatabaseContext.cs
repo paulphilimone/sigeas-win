@@ -7,6 +7,7 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace mz.betainteractive.sigeas.Models
 {
+    [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
     public partial class SigeasDatabaseContext : DbContext
     {
         static SigeasDatabaseContext() {            
@@ -14,7 +15,7 @@ namespace mz.betainteractive.sigeas.Models
         }
 
         public SigeasDatabaseContext()
-            : base("Name=sigeas_database_context_mysql") { //postgres or mysql
+            : base("Name=sigeas_database_context_mysql_kserver") { //postgres or mysql here we can change the connection string
                
         }
 
