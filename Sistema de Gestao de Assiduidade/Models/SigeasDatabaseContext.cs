@@ -4,19 +4,20 @@ using mz.betainteractive.sigeas.Models.Configuration;
 using mz.betainteractive.sigeas.Models.Entities;
 using System;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using System.Text.RegularExpressions;
+using System.Reflection;
+using mz.betainteractive.sigeas.Models.Override;
 
-namespace mz.betainteractive.sigeas.Models
-{
+namespace mz.betainteractive.sigeas.Models {
     [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
-    public partial class SigeasDatabaseContext : DbContext
-    {
-        static SigeasDatabaseContext() {            
+    public partial class SigeasDatabaseContext : DbContext {
+        static SigeasDatabaseContext() {
             Database.SetInitializer<SigeasDatabaseContext>(new SigeasDatabaseInitializer());
         }
 
         public SigeasDatabaseContext()
             : base("Name=sigeas_database_context_mysql_kserver") { //postgres or mysql here we can change the connection string
-               
+
         }
 
         public DbSet<ApplicationParam> ApplicationParam { get; set; }
@@ -29,7 +30,7 @@ namespace mz.betainteractive.sigeas.Models
         public DbSet<Pais> Countries { get; set; }
         public DbSet<Departamento> Departamento { get; set; }
         public DbSet<Device> Device { get; set; }
-        public DbSet<DeviceUser> DeviceUser { get; set; }        
+        public DbSet<DeviceUser> DeviceUser { get; set; }
         public DbSet<DeviceActivation> DeviceActivation { get; set; }
         public DbSet<UserFingerprint> DeviceFingerprint { get; set; }
         public DbSet<DeviceTimezone> DeviceTimezone { get; set; }
@@ -47,9 +48,9 @@ namespace mz.betainteractive.sigeas.Models
         public DbSet<FuncionarioHorario> FuncionarioHorario { get; set; }
         public DbSet<HorarioDia> HorarioDia { get; set; }
         public DbSet<HorarioSemana> HorarioSemana { get; set; }
-        public DbSet<Localidade> Localidade { get; set; }        
+        public DbSet<Localidade> Localidade { get; set; }
         public DbSet<PostoAdministrativo> PostoAdministrativo { get; set; }
-        public DbSet<Provincia> Provincia { get; set; }        
+        public DbSet<Provincia> Provincia { get; set; }
         //public DbSet<Sexo> Sexo { get; set; }
         public DbSet<SystemLog> SystemLog { get; set; }
         public DbSet<TipoAusencia> TipoAusencia { get; set; }
@@ -60,25 +61,28 @@ namespace mz.betainteractive.sigeas.Models
         public DbSet<RolePermission> RolePermission { get; set; }
         public DbSet<Role> Role { get; set; }
         public DbSet<PeriodoTempo> PeriodoTempo { get; set; }
-        
-        
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder) {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();                                    
+            modelBuilder.Conventions.AddBefore<System.Data.Entity.ModelConfiguration.Conventions.ForeignKeyIndexConvention>(new ColumnNamingConvention());
+            
+            modelBuilder.Types().Configure(c => c.ToTable(GetColumnName(c.ClrType.Name)));
+            modelBuilder.Properties().Configure(config => config.HasColumnName(GetColumnName(config.ClrPropertyInfo)));
+            
             modelBuilder.Configurations.Add(new ApplicationParamConfiguration());
             modelBuilder.Configurations.Add(new ApplicationUserConfiguration());
             modelBuilder.Configurations.Add(new AttCalcsConfiguration());
             modelBuilder.Configurations.Add(new AttendanceRulesConfiguration());
             modelBuilder.Configurations.Add(new AusenciaConfiguration());
-            modelBuilder.Configurations.Add(new CategoriaConfiguration());            
+            modelBuilder.Configurations.Add(new CategoriaConfiguration());
             modelBuilder.Configurations.Add(new DepartamentoConfiguration());
             modelBuilder.Configurations.Add(new DeviceConfiguration());
             modelBuilder.Configurations.Add(new DeviceUserConfiguration());
-            modelBuilder.Configurations.Add(new DeviceActivationConfiguration());            
+            modelBuilder.Configurations.Add(new DeviceActivationConfiguration());
             modelBuilder.Configurations.Add(new DeviceTimezoneConfiguration());
             modelBuilder.Configurations.Add(new DeviceGroupTimezoneConfiguration());
-            modelBuilder.Configurations.Add(new DeviceTypeConfiguration());            
+            modelBuilder.Configurations.Add(new DeviceTypeConfiguration());
             //modelBuilder.Configurations.Add(new DocumentoIdentificacaoConfiguration());
             modelBuilder.Configurations.Add(new DoorConfiguration());
             modelBuilder.Configurations.Add(new DoorTypeConfiguration());
@@ -96,15 +100,36 @@ namespace mz.betainteractive.sigeas.Models
             modelBuilder.Configurations.Add(new PostoAdministrativoConfiguration());
             modelBuilder.Configurations.Add(new LocalidadeConfiguration());
             modelBuilder.Configurations.Add(new DistritoConfiguration());
-            modelBuilder.Configurations.Add(new PeriodoTempoConfiguration());            
+            modelBuilder.Configurations.Add(new PeriodoTempoConfiguration());
             //modelBuilder.Configurations.Add(new SexoConfiguration());
             modelBuilder.Configurations.Add(new SystemLogConfiguration());
             modelBuilder.Configurations.Add(new TipoAusenciaConfiguration());
-            modelBuilder.Configurations.Add(new UserConfiguration());        
+            modelBuilder.Configurations.Add(new UserConfiguration());
             modelBuilder.Configurations.Add(new UserClockConfiguration());
             modelBuilder.Configurations.Add(new UserFingerprintConfiguration());
             modelBuilder.Configurations.Add(new InOutModeConfiguration());
             modelBuilder.Configurations.Add(new VerifyModeConfiguration());
+        }
+
+        private static string GetColumnName(PropertyInfo property) {
+            var result = "";
+            result += Regex.Replace(property.Name, ".[A-Z]", m => m.Value[0] + "_" + m.Value[1]);
+
+            return result.ToLower();
+        }
+
+        private static string GetColumnName(String property) {
+            var result = "";
+            result += Regex.Replace(property, ".[A-Z]", m => m.Value[0] + "_" + m.Value[1]);
+
+            return result.ToLower();
+        }
+
+        private static string GetColumnNameWithTable(PropertyInfo property) {
+            var result = property.DeclaringType.Name + "_";
+            result += Regex.Replace(property.Name, ".[A-Z]", m => m.Value[0] + "_" + m.Value[1]);
+
+            return result.ToLower();
         }
     }
 }

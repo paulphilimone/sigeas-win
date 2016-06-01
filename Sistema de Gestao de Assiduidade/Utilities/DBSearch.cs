@@ -11,6 +11,27 @@ namespace mz.betainteractive.sigeas.model.ca
 {
     public class DBSearch {
 
+        public static string CreateFuncionarioCode(SigeasDatabaseContext context, Empresa empresa) {
+            long eid = 0;            
+            int id = 1;
+            
+            int? maxId = context.Funcionario.Max(f => (int?)f.Id);
+            
+            if (maxId != null) {
+                id = id + maxId.Value;
+            }
+
+            if (empresa != null) {
+                eid = empresa.Id;
+            }
+
+            string code = "";
+
+            code = "F" + eid.ToString("X2") + "-" + id.ToString("D4");
+
+            return code;
+        }
+
         public static void FillContinente(SigeasDatabaseContext context, ComboBox cbo) {
             var cnts = context.Continente.AsNoTracking().OrderBy(t => t.Nome).ToList();                        
 
