@@ -27,6 +27,7 @@ using mz.betainteractive.sigeas.Views.UserManagment;
 using mz.betainteractive.sigeas.BackgroundFeatures;
 using mz.betainteractive.sigeas.Utilities.Components;
 using mz.betainteractive.sigeas.Views.FuncionarioDevices;
+using mz.betainteractive.sigeas.Views.ImportExport;
 
 
 namespace mz.betainteractive.sigeas.Views.Main {
@@ -54,6 +55,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
         public UserManager UserManagement { get; set; }
         public TableFuncionarioDeviceView tableFuncionarioDeviceView { get; set; }
         public DeviceDataUpdateView deviceDataUpdateView { get; set; }
+        public ImportHrData importHrData { get; set; }
 
         public static ToolStripLabel tssGeralSystemStatus;
 
@@ -83,6 +85,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
             AttendanceCalcsForm = new AttendanceCalcsView();
             tableFuncionarioDeviceView = new TableFuncionarioDeviceView();
             deviceDataUpdateView = new DeviceDataUpdateView();
+            importHrData = new ImportHrData();
 
             DeviceManager.MdiParent = this;
             FuncionarioForm.MdiParent = this;
@@ -580,6 +583,10 @@ namespace mz.betainteractive.sigeas.Views.Main {
 
         private void atualizarFuncionariosNoBiometricoToolStripMenuItem_Click(object sender, EventArgs e) {
             deviceDataUpdateView.Visible = true;
+        }
+
+        private void importarDadosToolStripMenuItem_Click(object sender, EventArgs e) {
+            importHrData.Visible = true;
         }
 
      

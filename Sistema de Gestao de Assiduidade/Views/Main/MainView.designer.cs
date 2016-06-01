@@ -49,6 +49,7 @@
             this.TSMnuItemFuncionarioView = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMnuItemFeriasForm = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMnuItemFeriadosForm = new System.Windows.Forms.ToolStripMenuItem();
+            this.importarDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asseduidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMnuItemHorarioSemanal = new System.Windows.Forms.ToolStripMenuItem();
@@ -157,19 +158,19 @@
             // logOffUserMenuItem
             // 
             this.logOffUserMenuItem.Name = "logOffUserMenuItem";
-            this.logOffUserMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.logOffUserMenuItem.Size = new System.Drawing.Size(217, 22);
             this.logOffUserMenuItem.Text = "Terminar sessão do usuário";
             this.logOffUserMenuItem.Click += new System.EventHandler(this.logOffUserMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(215, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(214, 6);
             // 
             // sairDoProgramaToolStripMenuItem
             // 
             this.sairDoProgramaToolStripMenuItem.Name = "sairDoProgramaToolStripMenuItem";
-            this.sairDoProgramaToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.sairDoProgramaToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.sairDoProgramaToolStripMenuItem.Text = "Sair do programa";
             this.sairDoProgramaToolStripMenuItem.Click += new System.EventHandler(this.sairDoProgramaToolStripMenuItem_Click);
             // 
@@ -230,7 +231,8 @@
             this.TSMnuItemEmpresaForm,
             this.TSMnuItemFuncionarioView,
             this.TSMnuItemFeriasForm,
-            this.TSMnuItemFeriadosForm});
+            this.TSMnuItemFeriadosForm,
+            this.importarDadosToolStripMenuItem});
             this.funcionariosToolStripMenuItem.Name = "funcionariosToolStripMenuItem";
             this.funcionariosToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.funcionariosToolStripMenuItem.Text = "Empresa";
@@ -262,6 +264,13 @@
             this.TSMnuItemFeriadosForm.Size = new System.Drawing.Size(197, 22);
             this.TSMnuItemFeriadosForm.Text = "Definição de Feriados";
             this.TSMnuItemFeriadosForm.Click += new System.EventHandler(this.definirFeriadosToolStripMenuItem_Click_1);
+            // 
+            // importarDadosToolStripMenuItem
+            // 
+            this.importarDadosToolStripMenuItem.Name = "importarDadosToolStripMenuItem";
+            this.importarDadosToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.importarDadosToolStripMenuItem.Text = "Importar Dados";
+            this.importarDadosToolStripMenuItem.Click += new System.EventHandler(this.importarDadosToolStripMenuItem_Click);
             // 
             // asseduidadeToolStripMenuItem
             // 
@@ -417,8 +426,8 @@
             // 
             // toolStripStatusLabel4
             // 
-            this.toolStripStatusLabel4.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)(((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.toolStripStatusLabel4.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)(((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.toolStripStatusLabel4.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenOuter;
             this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
             this.toolStripStatusLabel4.Size = new System.Drawing.Size(52, 19);
@@ -426,8 +435,8 @@
             // 
             // tssSystemStatus
             // 
-            this.tssSystemStatus.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)(((System.Windows.Forms.ToolStripStatusLabelBorderSides.Top | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.tssSystemStatus.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)(((System.Windows.Forms.ToolStripStatusLabelBorderSides.Top | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.tssSystemStatus.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenOuter;
             this.tssSystemStatus.Name = "tssSystemStatus";
             this.tssSystemStatus.Size = new System.Drawing.Size(47, 19);
@@ -436,9 +445,9 @@
             // tssTime
             // 
             this.tssTime.BackColor = System.Drawing.SystemColors.Control;
-            this.tssTime.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.tssTime.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.tssTime.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenOuter;
             this.tssTime.ForeColor = System.Drawing.Color.Black;
             this.tssTime.Name = "tssTime";
@@ -453,9 +462,9 @@
             // 
             // TSLabelEmpresa
             // 
-            this.TSLabelEmpresa.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.TSLabelEmpresa.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.TSLabelEmpresa.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenOuter;
             this.TSLabelEmpresa.Name = "TSLabelEmpresa";
             this.TSLabelEmpresa.Size = new System.Drawing.Size(85, 19);
@@ -482,9 +491,9 @@
             // 
             // tssUserName
             // 
-            this.tssUserName.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.tssUserName.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.tssUserName.BorderStyle = System.Windows.Forms.Border3DStyle.Sunken;
             this.tssUserName.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.tssUserName.Name = "tssUserName";
@@ -500,9 +509,9 @@
             // 
             // tssBiomConnect
             // 
-            this.tssBiomConnect.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.tssBiomConnect.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.tssBiomConnect.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenOuter;
             this.tssBiomConnect.Name = "tssBiomConnect";
             this.tssBiomConnect.Size = new System.Drawing.Size(86, 19);
@@ -545,8 +554,8 @@
             // 
             // expando1
             // 
-            this.expando1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.expando1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.expando1.Animate = true;
             this.expando1.CausesValidation = false;
             this.expando1.CustomHeaderSettings.NormalBackColor = System.Drawing.Color.Black;
@@ -956,6 +965,7 @@
         private System.Windows.Forms.ToolStripMenuItem fToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem associarFuncionáriosÁsPortasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem atualizarFuncionariosNoBiometricoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem importarDadosToolStripMenuItem;
     }
 }
 
