@@ -14,6 +14,10 @@ namespace  mz.betainteractive.sigeas.Models.Entities {
         public string Nome { get; set; }
         /* Properties */
 
+        public static string[] GetAll() {
+            return new string[] { SOLTEIRO, CASADO, DIVORCIADO, VIUVO };
+        }
+
         public override string ToString() {
             return this.Nome;
         }

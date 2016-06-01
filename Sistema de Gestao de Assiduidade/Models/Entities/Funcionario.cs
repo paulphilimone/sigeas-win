@@ -1,10 +1,14 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace mz.betainteractive.sigeas.Models.Entities
 {
     public partial class Funcionario : User, IComparable {
-        
+
+        [StringLength(10)]
+        [Index("IX_Code", 1, IsUnique = true)]
         public string Code { get; set; }
 
         public string Nome { get; set; }
@@ -24,9 +28,9 @@ namespace mz.betainteractive.sigeas.Models.Entities
         public virtual Categoria Categoria { get; set; }
         public Nullable<System.DateTime> DataDeIngresso { get; set; }                       
         
-        public virtual EstadoCivil EstadoCivil { get; set; }
-        public virtual Sexo Sexo { get; set; }
-        public virtual DocumentoIdentificacao DocumentoIdentificacao { get; set; }
+        public virtual string EstadoCivil { get; set; }
+        public virtual string Sexo { get; set; }
+        public virtual string DocumentoIdentificacao { get; set; }
 
         public virtual Pais Nacionalidade { get; set; }
         public virtual Distrito Distrito { get; set; }

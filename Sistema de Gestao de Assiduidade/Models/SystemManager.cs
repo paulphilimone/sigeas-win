@@ -452,6 +452,7 @@ namespace mz.betainteractive.sigeas.Models {
             
             SigeasDatabaseContext db = new SigeasDatabaseContext();
 
+            /* - WE DONT NEED ANYMORE, IS PREFERED TO USE STRING INSTEAD OF OBJS
             if (db.Sexo.Count() == 0) {                
                 db.Sexo.Add(new Sexo{ Nome = Sexo.MASCULINO });
                 db.Sexo.Add(new Sexo{ Nome = Sexo.FEMENINO });
@@ -473,6 +474,7 @@ namespace mz.betainteractive.sigeas.Models {
                 db.DocumentoIdentificacao.Add(new DocumentoIdentificacao { Nome = DocumentoIdentificacao.CERTIDAO_DE_NASCIMENTO, ExpressaoPadrao = "" });
                 db.SaveChanges();
             }
+            */
 
         }
 

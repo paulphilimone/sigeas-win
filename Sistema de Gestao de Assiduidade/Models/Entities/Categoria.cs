@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 
 namespace mz.betainteractive.sigeas.Models.Entities
@@ -7,6 +9,8 @@ namespace mz.betainteractive.sigeas.Models.Entities
     public partial class Categoria {
         
         public long Id { get; set; }
+        [StringLength(10)]
+        [Index("IX_Code", 1, IsUnique = true)]
         public string Code { get; set; }       
         public string Nome { get; set; }
         public string Funcoes { get; set; }

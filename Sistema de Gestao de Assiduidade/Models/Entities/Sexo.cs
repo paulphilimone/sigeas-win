@@ -8,7 +8,17 @@ namespace  mz.betainteractive.sigeas.Models.Entities {
         public static String FEMENINO = "Femenino";
 
         public int Id { get; set; }
-        public string Nome { get; set; }             
+        public string Nome { get; set; }
+
+        public static string GetString(char gender) {
+            switch (gender) {
+                case 'M': return MASCULINO;
+                case 'm': return MASCULINO;
+                case 'F': return FEMENINO;
+                case 'f': return FEMENINO;
+                default: return MASCULINO;
+            }                        
+        }
 
         public override string ToString() {
             return this.Nome;

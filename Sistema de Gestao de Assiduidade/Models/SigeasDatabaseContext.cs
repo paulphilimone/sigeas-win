@@ -36,11 +36,11 @@ namespace mz.betainteractive.sigeas.Models
         public DbSet<DeviceGroupTimezone> DeviceGroupTimezone { get; set; }
         public DbSet<DeviceType> DeviceType { get; set; }
         public DbSet<Distrito> Distrito { get; set; }
-        public DbSet<DocumentoIdentificacao> DocumentoIdentificacao { get; set; }
+        //public DbSet<DocumentoIdentificacao> DocumentoIdentificacao { get; set; }
         public DbSet<Door> Door { get; set; }
         public DbSet<DoorType> DoorType { get; set; }
         public DbSet<Empresa> Empresa { get; set; }
-        public DbSet<EstadoCivil> EstadoCivil { get; set; }
+        //public DbSet<EstadoCivil> EstadoCivil { get; set; }
         public DbSet<Feriado> Feriado { get; set; }
         public DbSet<Ferias> Ferias { get; set; }
         public DbSet<Funcionario> Funcionario { get; set; }
@@ -50,7 +50,7 @@ namespace mz.betainteractive.sigeas.Models
         public DbSet<Localidade> Localidade { get; set; }        
         public DbSet<PostoAdministrativo> PostoAdministrativo { get; set; }
         public DbSet<Provincia> Provincia { get; set; }        
-        public DbSet<Sexo> Sexo { get; set; }
+        //public DbSet<Sexo> Sexo { get; set; }
         public DbSet<SystemLog> SystemLog { get; set; }
         public DbSet<TipoAusencia> TipoAusencia { get; set; }
         public DbSet<User> User { get; set; }
@@ -79,11 +79,11 @@ namespace mz.betainteractive.sigeas.Models
             modelBuilder.Configurations.Add(new DeviceTimezoneConfiguration());
             modelBuilder.Configurations.Add(new DeviceGroupTimezoneConfiguration());
             modelBuilder.Configurations.Add(new DeviceTypeConfiguration());            
-            modelBuilder.Configurations.Add(new DocumentoIdentificacaoConfiguration());
+            //modelBuilder.Configurations.Add(new DocumentoIdentificacaoConfiguration());
             modelBuilder.Configurations.Add(new DoorConfiguration());
             modelBuilder.Configurations.Add(new DoorTypeConfiguration());
             modelBuilder.Configurations.Add(new EmpresaConfiguration());
-            modelBuilder.Configurations.Add(new EstadoCivilConfiguration());
+            //modelBuilder.Configurations.Add(new EstadoCivilConfiguration());
             modelBuilder.Configurations.Add(new FeriadoConfiguration());
             modelBuilder.Configurations.Add(new FeriaConfiguration());
             modelBuilder.Configurations.Add(new FuncionarioConfiguration());
@@ -97,7 +97,7 @@ namespace mz.betainteractive.sigeas.Models
             modelBuilder.Configurations.Add(new LocalidadeConfiguration());
             modelBuilder.Configurations.Add(new DistritoConfiguration());
             modelBuilder.Configurations.Add(new PeriodoTempoConfiguration());            
-            modelBuilder.Configurations.Add(new SexoConfiguration());
+            //modelBuilder.Configurations.Add(new SexoConfiguration());
             modelBuilder.Configurations.Add(new SystemLogConfiguration());
             modelBuilder.Configurations.Add(new TipoAusenciaConfiguration());
             modelBuilder.Configurations.Add(new UserConfiguration());        

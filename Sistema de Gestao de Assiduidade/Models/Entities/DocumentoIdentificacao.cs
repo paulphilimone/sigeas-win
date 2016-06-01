@@ -13,6 +13,10 @@ namespace  mz.betainteractive.sigeas.Models.Entities {
         public string Nome { get; set; }
         public string ExpressaoPadrao { get; set; }
 
+        public static string[] GetAll() {
+            return new string[] { BI, PASSAPORTE, CEDULA_PESSOAL, CERTIDAO_DE_NASCIMENTO };
+        }
+
         public override string ToString() {
             return this.Nome;
         }

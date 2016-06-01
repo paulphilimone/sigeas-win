@@ -81,7 +81,7 @@ namespace mz.betainteractive.sigeas.model.ca
         }
 
         public static void FillSexo(SigeasDatabaseContext context, ComboBox cbo) {
-            var sexos = context.Sexo.AsNoTracking().ToList();
+            var sexos = new string[] {Sexo.MASCULINO, Sexo.FEMENINO};
 
             cbo.Items.Clear();
             cbo.ResetText();
@@ -93,7 +93,7 @@ namespace mz.betainteractive.sigeas.model.ca
 
         public static void FillEstadoCivil(SigeasDatabaseContext context, ComboBox cbo) {
 
-            var objs = context.EstadoCivil.AsNoTracking().ToList();
+            var objs = EstadoCivil.GetAll();
 
             cbo.Items.Clear();
             cbo.ResetText();
@@ -105,7 +105,7 @@ namespace mz.betainteractive.sigeas.model.ca
 
         public static void FillDocumentoID(SigeasDatabaseContext context, ComboBox cbo) {
 
-            var objs = context.DocumentoIdentificacao.AsNoTracking().ToList();
+            var objs = DocumentoIdentificacao.GetAll();
 
             cbo.Items.Clear();
             cbo.ResetText();

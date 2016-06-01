@@ -1,12 +1,15 @@
 using System;
 using System.Collections.Generic;
-
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace mz.betainteractive.sigeas.Models.Entities
 {
     public partial class Departamento  {
         
         public long Id { get; set; }
+        [StringLength(10)]
+        [Index("IX_Code", 1, IsUnique = true)]
         public string Code { get; set; }
         public string Descricao { get; set; }        
         public string Nome { get; set; }

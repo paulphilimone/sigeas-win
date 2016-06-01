@@ -198,33 +198,15 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
         }
 
         private void LoadSexoToComboBox() {
-            var objs = context.Sexo.ToList();
-
-            CBoxSexo.Items.Clear();
-
-            foreach (Sexo sx in objs) {
-                CBoxSexo.Items.Add(sx);
-            }
+            DBSearch.FillSexo(null, CBoxSexo);
         }
 
         private void LoadEstadoCivilToComboBox() {
-            var objs = context.EstadoCivil.ToList();
-
-            CBoxEstadoCivil.Items.Clear();
-
-            foreach (EstadoCivil ec in objs) {
-                CBoxEstadoCivil.Items.Add(ec);
-            }
+            DBSearch.FillEstadoCivil(null, CBoxEstadoCivil);
         }
 
         private void LoadDocumentoIdentificacaoToComboBox() {
-            var objs = context.DocumentoIdentificacao.ToList();
-
-            CBoxTipoDocumento.Items.Clear();
-
-            foreach (DocumentoIdentificacao di in objs) {
-                CBoxTipoDocumento.Items.Add(di);
-            }
+            DBSearch.FillDocumentoID(null, CBoxTipoDocumento);
         }
 
         private void FuncionarioAddView_FormClosing(object sender, FormClosingEventArgs e) {
@@ -434,11 +416,11 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
 
             string nome = TxtNome.Text;
             //string apelido = TxtApelido.Text;
-            Sexo sexo = CBoxSexo.SelectedItem as Sexo;
-            EstadoCivil estadoCivil = CBoxEstadoCivil.SelectedItem as EstadoCivil;
+            string sexo = (CBoxSexo.SelectedItem as string)[0]+"";
+            string estadoCivil = CBoxEstadoCivil.SelectedItem as string;
             DateTime dataNasc = DtpDataNasc.Value;
 
-            DocumentoIdentificacao docIdentificao = CBoxTipoDocumento.SelectedItem as DocumentoIdentificacao;
+            string docIdentificao = CBoxTipoDocumento.SelectedItem as string;
             string numeroDi = TxtNumeroID.Text;
 
             string telefone = TxtTelefone.Text;

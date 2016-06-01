@@ -8,6 +8,8 @@ namespace mz.betainteractive.sigeas.Models.Configuration
     {
         public FuncionarioConfiguration()
         {
+            this.ToTable("user_funcionario");
+
             // Primary Key
             //this.HasKey(t => t.Id);
             this.Property(t => t.Code).IsRequired();
@@ -19,17 +21,16 @@ namespace mz.betainteractive.sigeas.Models.Configuration
             this.Property(t => t.NumeroDI).HasMaxLength(255);                        
             this.Property(t => t.Telefone).HasMaxLength(255);
 
-            this.ToTable("user_funcionario");
+            this.Property(t => t.Sexo).IsRequired().HasMaxLength(4);
+            //this.Property(t => t.EstadoCivil).WithMany();
+            //this.Property(t => t.DocumentoIdentificacao).WithMany();                    
+                      
 
             // Relationships
             this.HasOptional(t => t.CreatedBy).WithMany();
             this.HasOptional(t => t.UpdatedBy).WithMany();
 
-            //this.HasOptional(t => t.ContaCartao).WithRequired(t => t.Beneficiario).WillCascadeOnDelete(true);
-
-            this.HasOptional(t => t.DocumentoIdentificacao).WithMany();
-            this.HasOptional(t => t.EstadoCivil).WithMany();
-            this.HasOptional(t => t.Sexo).WithMany();
+            //this.HasOptional(t => t.ContaCartao).WithRequired(t => t.Beneficiario).WillCascadeOnDelete(true);                       
 
             this.HasMany(t => t.DeviceUsers).WithRequired(t => t.Funcionario).WillCascadeOnDelete(true);
             this.HasMany(t => t.Ausencias).WithRequired(t => t.Funcionario).WillCascadeOnDelete(true);

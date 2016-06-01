@@ -275,12 +275,10 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
             if (funcionario.Apelido.Length > 0) { 
                 TxtApelido.Text = funcionario.Apelido;
             }*/
+                        
+            CBoxSexo.Items.Add(funcionario.Sexo);
+            CBoxSexo.SelectedIndex = 0;
             
-            if (funcionario.Sexo != null) { 
-                CBoxSexo.Items.Add(funcionario.Sexo);
-                CBoxSexo.SelectedIndex = 0;
-            }
-
             if (funcionario.EstadoCivil != null) {
                 CBoxEstadoCivil.Items.Add(funcionario.EstadoCivil);
                 CBoxEstadoCivil.SelectedIndex = 0;
