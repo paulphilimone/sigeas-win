@@ -168,6 +168,7 @@
     <Compile Include="Models\Entities\UserClock.cs" />
     <Compile Include="Models\Entities\UserFingerprint.cs" />
     <Compile Include="Models\Entities\VerifyMode.cs" />
+    <Compile Include="Models\Override\ColumnNamingConvention.cs" />
     <Compile Include="Models\SigeasDatabaseInitializer.cs" />
     <Compile Include="Models\SigeasDatabaseContext.cs" />
     <Compile Include="Models\Entities\Categoria.cs" />
@@ -513,6 +514,8 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="CodeTemplates\EFModelFromDatabase\Context.cs.t4" />
+    <None Include="CodeTemplates\EFModelFromDatabase\EntityType.cs.t4" />
     <None Include="ExternalData\Localization\countries.data" />
     <None Include="ExternalData\Localization\mozambique.data" />
     <None Include="packages.config" />
@@ -545,10 +548,8 @@
     <Content Include="sisga.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CodeTemplates\" />
     <Folder Include="forms\" />
     <Folder Include="Migrations\Generated\" />
-    <Folder Include="Models\Override\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
