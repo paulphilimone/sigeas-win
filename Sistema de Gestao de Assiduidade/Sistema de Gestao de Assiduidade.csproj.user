@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
-    <ReferencePath>D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\dll\dblinq\;D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\dll\forms\;D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\dll\zk\</ReferencePath>
+    <ReferencePath>E:\beta-interactive\development\c-family\2016\sigeas-win\Sistema de Gestao de Assiduidade\dll\</ReferencePath>
     <ProjectView>ProjectFiles</ProjectView>
     <PublishUrlHistory>publish\</PublishUrlHistory>
     <InstallUrlHistory />
