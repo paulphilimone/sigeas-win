@@ -60,7 +60,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
                     foreach (var user in users) {
                         if (user.Enabled) {
                             ListViewItem item = new ListViewItem(user.ToString());
-                            item.Name = user.UserName;
+                            item.Name = user.Username;
                             item.ImageIndex = 2;
                             ListViewUsuarios.Items.Add(item);
                         }                        
@@ -110,7 +110,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
                 using (var DB = new SigeasDatabaseContext()) {
                     string username = UsernameTextBox.Text;
 
-                    ApplicationUser user = DB.ApplicationUser.FirstOrDefault(u => u.UserName==username);
+                    ApplicationUser user = DB.ApplicationUser.FirstOrDefault(u => u.Username==username);
                                         
                     if (user != null) {
                         BetaEncryptation be = new BetaEncryptation();

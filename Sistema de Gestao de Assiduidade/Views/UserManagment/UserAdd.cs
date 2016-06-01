@@ -121,7 +121,7 @@ namespace mz.betainteractive.sigeas.Views.UserManagment {
             string username = TxtAppUser_UserName.Text;
             string password = BetaEncryptation.getEncryptation().EncodePassword(TxtAppUser_Password1.Text);
 
-            ApplicationUser user = context.ApplicationUser.FirstOrDefault(u => u.UserName == username);
+            ApplicationUser user = context.ApplicationUser.FirstOrDefault(u => u.Username == username);
 
             if (user != null) {
                 MessageBox.Show(this, "Já existe um usuário com o nome do usuário (" + username + "), introduza outro por favor!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -138,11 +138,11 @@ namespace mz.betainteractive.sigeas.Views.UserManagment {
             }
 
             user = new ApplicationUser();
-            user.FirstName = nome;
-            user.LastName = apelido;
+            user.Firstname = nome;
+            user.Lastname = apelido;
             user.Email = email;
             user.Enabled = enabled;
-            user.UserName = username;
+            user.Username = username;
             user.Password = password;
             user.CreatedBy = SystemManager.GetCurrentUser(context);
             user.CreationDate = DateTime.Now;

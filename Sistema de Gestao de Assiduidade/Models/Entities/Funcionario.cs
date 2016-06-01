@@ -58,7 +58,7 @@ namespace mz.betainteractive.sigeas.Models.Entities
             this.CompleteRegistered = false;
         }
 
-        public string CreateCode(Empresa empresa) {
+        public string CreateCode(Empresa empresa, int number) {
             long contract = 0;
             if (empresa != null) {
                 contract = empresa.Id;
@@ -66,7 +66,7 @@ namespace mz.betainteractive.sigeas.Models.Entities
 
             string code = "";
             
-            code = "F" + contract.ToString("X3") + "-" + this.Id.ToString("D3");
+            code = "F" + contract.ToString("X2") + "-" + number.ToString("D4");
 
             return code;
         }

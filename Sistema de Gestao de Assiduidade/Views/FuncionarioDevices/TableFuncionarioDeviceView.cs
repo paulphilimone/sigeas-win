@@ -254,8 +254,8 @@ namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
 
                 row.CreateCells(DGViewFuncDevices);
 
-                row.Cells[0].Value = funcionario.Departamento.ToString();
-                row.Cells[1].Value = funcionario.Categoria.ToString();
+                row.Cells[0].Value = (funcionario.Departamento!=null) ? funcionario.Departamento.ToString() : "";
+                row.Cells[1].Value = (funcionario.Categoria!=null) ? funcionario.Categoria.ToString() : "";
                 row.Cells[2].Value = funcionario.Code;
                 row.Cells[3].Value = funcionario.ToString();
 
@@ -277,7 +277,7 @@ namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
                         DeviceUser deviceUser = new DeviceUser {
                             Funcionario = funcionario,
                             Device = column.Value,
-                            CardNumber = funcionario.CardNumber
+                            CardNumber = funcionario.Cardnumber
                         };
 
                         cell.GenericValue = deviceUser;

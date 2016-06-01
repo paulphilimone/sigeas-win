@@ -384,7 +384,7 @@ namespace mz.betainteractive.sigeas.Views.UserManagment {
             }
 
             //Verificar se o UserName não existe gravado
-            ApplicationUser user = context.ApplicationUser.FirstOrDefault(u => u.Id != SelectedUser.Id && u.UserName == username);
+            ApplicationUser user = context.ApplicationUser.FirstOrDefault(u => u.Id != SelectedUser.Id && u.Username == username);
 
             if (user != null) {
                 MessageBox.Show(this, "Já existe um usuário com o nome do usuário (" + username + "), introduza outro por favor!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -402,11 +402,11 @@ namespace mz.betainteractive.sigeas.Views.UserManagment {
 
             user = SelectedUser;
 
-            user.FirstName = nome;
-            user.LastName = apelido;
+            user.Firstname = nome;
+            user.Lastname = apelido;
             user.Email = email;
             user.Enabled = enabled;
-            user.UserName = username;
+            user.Username = username;
             user.Password = password;
             user.UpdatedBy = SystemManager.GetCurrentUser(context);
             user.UpdatedDate = DateTime.Now;
@@ -508,14 +508,14 @@ namespace mz.betainteractive.sigeas.Views.UserManagment {
 
             TxtAppUser_Title.Text = "Dados do Usuário [" + user.ToString() + "]";
 
-            TxtAppUser_Nome.Text = user.FirstName;
-            TxtAppUser_Apelido.Text = user.LastName;
+            TxtAppUser_Nome.Text = user.Firstname;
+            TxtAppUser_Apelido.Text = user.Lastname;
             TxtAppUser_Email.Text = user.Email;
 
             SelectRoles(LBoxAppUser_Perfis, roles);
 
             CBoxAppUser_Enabled.Checked = user.Enabled;
-            TxtAppUser_UserName.Text = user.UserName;
+            TxtAppUser_UserName.Text = user.Username;
             TxtAppUser_Password.Text = BetaEncryptation.getEncryptation().DecodePassword(user.Password);
 
             GBoxUsers.Enabled = true;

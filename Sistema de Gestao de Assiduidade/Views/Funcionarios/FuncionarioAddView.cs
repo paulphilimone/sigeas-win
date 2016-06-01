@@ -291,8 +291,8 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
             }
             
             //Verificar se o CardNumber é o mesmo
-            var userTst1 = context.User.FirstOrDefault(u => u.UserName == TxtUserName.Text);
-            var userTst2 = context.User.FirstOrDefault(u => (u.CardNumber == TxtCardNumber.Text) && u.CardNumber != "");
+            var userTst1 = context.User.FirstOrDefault(u => u.Username == TxtUserName.Text);
+            var userTst2 = context.User.FirstOrDefault(u => (u.Cardnumber == TxtCardNumber.Text) && u.Cardnumber != "");
 
             if (userTst1 != null) {
                 MessageBox.Show(this, "Ja existe um (Funcionario) com o mesmo (Nome de usuário) do (Funcionario) a ser adicionado. Altere o nome do usuário!", "Conflito: ", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -347,7 +347,8 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
 
             //creating
             Funcionario funcionario = new Funcionario();
-            
+
+            funcionario.Code = DBSearch.CreateFuncionarioCode(context, empresa);
             funcionario.CompleteRegistered = true;
             funcionario.Nome = nome;
             //funcionario.Apelido = apelido;
@@ -371,10 +372,10 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
             funcionario.CreationDate = DateTime.Now;
                         
             funcionario.Enabled = enabled;
-            funcionario.UserName = username;
+            funcionario.Username = username;
             funcionario.Password = password;
             funcionario.Privilege = previlege;
-            funcionario.CardNumber = cardNumber;
+            funcionario.Cardnumber = cardNumber;
             byte[] photo = GetPictureFromBox();
 
             if (photo != null && photo.Length > 0) {                    

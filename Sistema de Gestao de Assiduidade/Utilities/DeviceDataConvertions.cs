@@ -46,7 +46,7 @@ namespace mz.betainteractive.sigeas.Utilities {
                 
                 //Obter um User, que esta no biometrico com (SN), e com UserId
                 DeviceUser devUser = context.DeviceUser.FirstOrDefault(d => d.Device.SerialNumber == rawClock.DeviceSerialNumber &&
-                                                                       (d.Funcionario.CardNumber == rawClock.CardNumber));
+                                                                       (d.Funcionario.Cardnumber == rawClock.CardNumber));
 
                 //Search by EnrollNumber
                 if (devUser == null) { 
@@ -193,9 +193,9 @@ namespace mz.betainteractive.sigeas.Utilities {
             }
 
             zuser.FullName = funcionario.ToString();
-            zuser.UserName = funcionario.UserName;
+            zuser.UserName = funcionario.Username;
             zuser.Password = funcionario.Password;
-            zuser.CardNumber = funcionario.CardNumber;
+            zuser.CardNumber = funcionario.Cardnumber;
 
             if (funcionario.Enabled.HasValue) {
                 zuser.Enabled = funcionario.Enabled.Value;
@@ -242,9 +242,9 @@ namespace mz.betainteractive.sigeas.Utilities {
             }
 
             zuser.FullName = funcionario.ToString();
-            zuser.UserName = funcionario.UserName;
+            zuser.UserName = funcionario.Username;
             zuser.Password = funcionario.Password;
-            zuser.CardNumber = funcionario.CardNumber;
+            zuser.CardNumber = funcionario.Cardnumber;
 
             if (funcionario.Enabled.HasValue) {
                 zuser.Enabled = funcionario.Enabled.Value;

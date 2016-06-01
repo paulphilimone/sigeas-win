@@ -224,9 +224,9 @@ namespace mz.betainteractive.sigeas.Models {
 
                 //Set Developer
                 ApplicationUser user = new ApplicationUser();
-                user.FirstName = ".NET";
-                user.LastName = "Developer";
-                user.UserName = "developer";
+                user.Firstname = ".NET";
+                user.Lastname = "Developer";
+                user.Username = "developer";
                 user.Password = encoder.EncodePassword("developer");
                 user.Email = "paulphilimone@yahoo.com.br";
                 user.Enabled = true;
@@ -242,9 +242,9 @@ namespace mz.betainteractive.sigeas.Models {
 
                 //Set Administrator
                 ApplicationUser userAdmin = new ApplicationUser();
-                userAdmin.FirstName = "Administrador";
-                userAdmin.LastName = "Geral";
-                userAdmin.UserName = "administrator";
+                userAdmin.Firstname = "Administrador";
+                userAdmin.Lastname = "Geral";
+                userAdmin.Username = "administrator";
                 userAdmin.Password = encoder.EncodePassword("administrator");
                 userAdmin.Email = "";
                 userAdmin.Enabled = true;
@@ -607,9 +607,9 @@ namespace mz.betainteractive.sigeas.Models {
             if (db.ApplicationUser.Count() == 0) {
 
                 ApplicationUser user = new ApplicationUser();
-                user.FirstName = "Paulo";
-                user.LastName = "Filimone";
-                user.UserName = "paulo";
+                user.Firstname = "Paulo";
+                user.Lastname = "Filimone";
+                user.Username = "paulo";
                 user.Password = "paulox";
                 user.CreationDate = DateTime.Now;
                 db.ApplicationUser.Add(user);
@@ -642,9 +642,9 @@ namespace mz.betainteractive.sigeas.Models {
                 db.SaveChanges();
 
                 ApplicationUser user = new ApplicationUser();
-                user.FirstName = "X-47";
-                user.LastName = "Panelas";
-                user.UserName = "x47";
+                user.Firstname = "X-47";
+                user.Lastname = "Panelas";
+                user.Username = "x47";
                 user.Password = "paulox";
                 user.CreationDate = DateTime.Now;
                 user.CreatedBy = firstUser;

@@ -9,9 +9,9 @@ namespace mz.betainteractive.sigeas.Models.Configuration {
             this.HasKey(t => t.Id);
 
             // Properties
-            this.Property(t => t.UserName).HasMaxLength(1000);
+            this.Property(t => t.Username).HasMaxLength(1000);
             this.Property(t => t.Password).HasMaxLength(1000);
-            this.Property(t => t.CardNumber).HasMaxLength(1000);
+            this.Property(t => t.Cardnumber).HasMaxLength(1000);
 
             this.ToTable("user");
 

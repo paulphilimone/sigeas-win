@@ -362,8 +362,8 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
                 TxtUserId.Text = funcionario.EnrollNumber.ToString();
             }
 
-            if (funcionario.UserName.Length > 0) {
-                TxtUserName.Text = funcionario.UserName;
+            if (funcionario.Username.Length > 0) {
+                TxtUserName.Text = funcionario.Username;
             }
 
             if (funcionario.Password.Length > 0) {

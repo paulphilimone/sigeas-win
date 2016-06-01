@@ -117,8 +117,8 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
             if (currentFuncionario.Enabled != null) {
                 ChkEnabled.Checked = currentFuncionario.Enabled.Value;
             }
-            if (currentFuncionario.UserName != null) {
-                TxtUserName.Text = currentFuncionario.UserName;
+            if (currentFuncionario.Username != null) {
+                TxtUserName.Text = currentFuncionario.Username;
             }
             if (currentFuncionario.Password != null) {
                 TxtPassword.Text = currentFuncionario.Password;
@@ -126,8 +126,8 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
             if (currentFuncionario.Privilege != null) {
                 CboxPrevilege.SelectedIndex = currentFuncionario.Privilege.Value;
             }
-            if (currentFuncionario.CardNumber != null) {
-                TxtCardNumber.Text = currentFuncionario.CardNumber;
+            if (currentFuncionario.Cardnumber != null) {
+                TxtCardNumber.Text = currentFuncionario.Cardnumber;
             }
                                     
         }
@@ -391,10 +391,10 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
             }
             
             //Verificar se o CardNumber é o mesmo
-            var userTst1 = context.User.FirstOrDefault(u => u.UserName == TxtUserName.Text && u.Id != currentFuncionario.Id);
+            var userTst1 = context.User.FirstOrDefault(u => u.Username == TxtUserName.Text && u.Id != currentFuncionario.Id);
 
 
-            var userTst2 = context.User.FirstOrDefault(u => u.CardNumber == TxtCardNumber.Text && u.Id != currentFuncionario.Id && u.CardNumber != "");
+            var userTst2 = context.User.FirstOrDefault(u => u.Cardnumber == TxtCardNumber.Text && u.Id != currentFuncionario.Id && u.Cardnumber != "");
 
             if (userTst1 != null) {
                 MessageBox.Show(this, "Já existe um (Funcionario) com o mesmo (Nome de usuário) do (Funcionario) a ser atualizado. Altere o nome do usuário!", "Conflito: ", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -474,10 +474,10 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
             funcionario.UpdatedDate = DateTime.Now;
                         
             funcionario.Enabled = enabled;
-            funcionario.UserName = username;
+            funcionario.Username = username;
             funcionario.Password = password;
             funcionario.Privilege = previlege;
-            funcionario.CardNumber = cardNumber;
+            funcionario.Cardnumber = cardNumber;
 
             byte[] photo = GetPictureFromBox();
             funcionario.Photo = photo;

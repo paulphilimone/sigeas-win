@@ -320,7 +320,7 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
 
                             //Update card number and fingerprints
 
-                            ben.CardNumber = zdevUser.User.CardNumber;
+                            ben.Cardnumber = zdevUser.User.CardNumber;
 
                             //update fingerprints
                             if (user.HasNewFingerprints) {
@@ -680,7 +680,7 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
                         ZUser user = item.User;
 
                         //Update card number and fingerprints
-                        func.CardNumber = user.CardNumber;
+                        func.Cardnumber = user.CardNumber;
 
                         //update fingerprints
                         if (user.HasNewFingerprints) {

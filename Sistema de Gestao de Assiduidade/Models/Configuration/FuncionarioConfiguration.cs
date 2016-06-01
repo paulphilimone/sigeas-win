@@ -8,7 +8,7 @@ namespace mz.betainteractive.sigeas.Models.Configuration
     {
         public FuncionarioConfiguration()
         {
-            this.ToTable("user_funcionario");
+            this.ToTable("funcionario");
 
             // Primary Key
             //this.HasKey(t => t.Id);

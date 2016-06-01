@@ -10,11 +10,11 @@ namespace mz.betainteractive.sigeas.Models.Configuration {
             // Primary Key
             this.HasKey(t => t.Id);
 
-            this.Property(t => t.FirstName).IsRequired();
-            this.Property(t => t.LastName).IsRequired();                        
+            this.Property(t => t.Firstname).IsRequired();
+            this.Property(t => t.Lastname).IsRequired();                        
             this.Property(t => t.Email).IsRequired();
             this.Property(t => t.LastUserAction);
-            this.Property(t => t.UserName).IsRequired();
+            this.Property(t => t.Username).IsRequired();
             this.Property(t => t.Password).IsRequired();
 
             // Relationships
