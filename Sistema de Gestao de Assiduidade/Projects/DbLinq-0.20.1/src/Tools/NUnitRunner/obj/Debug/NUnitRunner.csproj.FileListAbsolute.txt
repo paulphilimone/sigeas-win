@@ -1,3 +1,0 @@
-D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\src\Tools\NUnitRunner\obj\Debug\ResolveAssemblyReference.cache
-D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\src\Tools\NUnitRunner\obj\Debug\NUnitConsoleRunner.Properties.Resources.resources
-D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\src\Tools\NUnitRunner\obj\Debug\NUnitRunner.csproj.GenerateResource.Cache

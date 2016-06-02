@@ -1,6 +1,0 @@
-D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\build.dbg\DbLinq.Oracle_test.exe.config
-D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\build.dbg\DbLinq.Oracle_test.exe
-D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\build.dbg\DbLinq.Oracle_test.pdb
-D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\src\DbLinq.Oracle\Test\obj\Debug\ResolveAssemblyReference.cache
-D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\src\DbLinq.Oracle\Test\obj\Debug\DbLinq.Oracle_test.exe
-D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\src\DbLinq.Oracle\Test\obj\Debug\DbLinq.Oracle_test.pdb

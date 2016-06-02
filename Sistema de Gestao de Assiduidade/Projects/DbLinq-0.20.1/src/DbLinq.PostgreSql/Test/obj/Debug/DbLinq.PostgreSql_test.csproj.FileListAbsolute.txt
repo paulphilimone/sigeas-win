@@ -1,5 +1,0 @@
-D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\build.dbg\DbLinq.PostgreSql_test.exe
-D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\build.dbg\DbLinq.PostgreSql_test.pdb
-D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\src\DbLinq.PostgreSql\Test\obj\Debug\ResolveAssemblyReference.cache
-D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\src\DbLinq.PostgreSql\Test\obj\Debug\DbLinq.PostgreSql_test.exe
-D:\Beta Interactive Corporation\Development\C-VB\Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade\Projects\DbLinq-0.20.1\src\DbLinq.PostgreSql\Test\obj\Debug\DbLinq.PostgreSql_test.pdb
