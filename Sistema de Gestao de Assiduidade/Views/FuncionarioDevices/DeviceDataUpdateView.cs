@@ -50,7 +50,7 @@ namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
 
         private void LoadDevicesToComboBox() {
             //No futuro não sera assim
-            var devices = context.Device.Where(t => t.Door != null).ToList();
+            var devices = context.Device.ToList();
 
             CBoxDevices.Items.Clear();
 
@@ -312,6 +312,14 @@ namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
         private void DownloadUserClocks() {
             Device device = (Device)CBoxDevices.SelectedItem;
             DeviceIO io = new DeviceIO(device);
+
+            var deviceUsers = context.DeviceUser.Count();
+
+            if (deviceUsers == 0) {
+                MessageBox.Show(this, "Nao existem funcionários registados nos dispositivos. Associe primeiro funcionários à um determinado biometrico", "Não é possivel descarregar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
 
             OnExecuteDialog background = new OnExecuteDialog("Descarregamento....", "Descarregando registos de picagens do biométrico...");
             bool result = false;

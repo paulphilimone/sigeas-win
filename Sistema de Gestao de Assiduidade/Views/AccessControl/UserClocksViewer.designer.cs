@@ -237,7 +237,7 @@
             this.DtpFromDate.Name = "DtpFromDate";
             this.DtpFromDate.Size = new System.Drawing.Size(91, 22);
             this.DtpFromDate.TabIndex = 6;
-            this.DtpFromDate.Value = new System.DateTime(2012, 1, 1, 10, 7, 0, 0);
+            this.DtpFromDate.Value = new System.DateTime(2016, 1, 5, 10, 7, 0, 0);
             // 
             // BtnPesquisar
             // 
@@ -509,9 +509,9 @@
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label5.Location = new System.Drawing.Point(62, 14);
@@ -519,10 +519,10 @@
             this.label5.Size = new System.Drawing.Size(376, 26);
             this.label5.TabIndex = 0;
             this.label5.Text = "Conecte todos os dispositivos biométricos no sistema para obter todos \r\nos regist" +
-                "os de entradas e saidas";
+    "os de entradas e saidas";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // RegistosBiometricoView
+            // UserClocksViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -537,7 +537,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "RegistosBiometricoView";
+            this.Name = "UserClocksViewer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registos de Picagens";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RegistosBiometricoView_FormClosing);

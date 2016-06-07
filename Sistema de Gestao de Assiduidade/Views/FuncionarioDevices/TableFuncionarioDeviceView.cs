@@ -16,6 +16,7 @@ namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
         private SigeasDatabaseContext context;
         private List<DataGridViewColumn> GridColumns = new List<DataGridViewColumn>();
         private List<Funcionario> lastListOfFuncionarios { get; set; }
+        private DeviceDataUpdateView deviceDataUpdate { get; set; }
 
         /*Form Authorization*/
         public int FormCode { get; set; }
@@ -34,6 +35,9 @@ namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
                 context.Dispose();
                 context = null;         
             }
+
+            this.deviceDataUpdate.Dispose();
+            this.deviceDataUpdate = null;
         }
 
         private void LoadContext() {
@@ -43,6 +47,8 @@ namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
         }
 
         private void Initialize() {
+            this.deviceDataUpdate = new DeviceDataUpdateView();
+            
             CleanAll();
             LoadColumnsToGrid();
             LoadDepartamentosToComboBox();
@@ -356,7 +362,7 @@ namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
 
             foreach (DataGridViewRow row in DGViewFuncDevices.Rows){
 
-                for (int i = 3; i < row.Cells.Count; i++) { //I=3 - first device column
+                for (int i = 4; i < row.Cells.Count; i++) { //I=3 - first device column
                     DataGridViewCheckBoxColumnGeneric<Device> column = DGViewFuncDevices.Columns[i] as DataGridViewCheckBoxColumnGeneric<Device>;
                     DataGridViewCheckBoxCellGeneric<DeviceUser> cell = row.Cells[i] as DataGridViewCheckBoxCellGeneric<DeviceUser>;
 
@@ -378,6 +384,10 @@ namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
 
             }
                         
+        }
+
+        private void BtnSaveOnDevices_Click(object sender, EventArgs e) {
+            this.deviceDataUpdate.Visible = true;
         }
 
         

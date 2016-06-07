@@ -23,8 +23,8 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.CBoxCategorias = new System.Windows.Forms.ComboBox();
@@ -38,6 +38,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.BtnSaveAll = new System.Windows.Forms.Button();
             this.BtFechar = new System.Windows.Forms.Button();
+            this.BtnSaveOnDevices = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGViewFuncDevices)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -127,23 +128,23 @@
             // 
             this.DGViewFuncDevices.AllowUserToAddRows = false;
             this.DGViewFuncDevices.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGViewFuncDevices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGViewFuncDevices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DGViewFuncDevices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGViewFuncDevices.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGViewFuncDevices.DefaultCellStyle = dataGridViewCellStyle4;
             this.DGViewFuncDevices.EnableHeadersVisualStyles = false;
             this.DGViewFuncDevices.Location = new System.Drawing.Point(16, 21);
             this.DGViewFuncDevices.Name = "DGViewFuncDevices";
@@ -165,6 +166,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.BtnSaveOnDevices);
             this.groupBox1.Controls.Add(this.BtnSaveAll);
             this.groupBox1.Controls.Add(this.DGViewFuncDevices);
             this.groupBox1.Location = new System.Drawing.Point(12, 123);
@@ -195,6 +197,16 @@
             this.BtFechar.Text = "Fechar";
             this.BtFechar.UseVisualStyleBackColor = true;
             this.BtFechar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // BtnSaveOnDevices
+            // 
+            this.BtnSaveOnDevices.Location = new System.Drawing.Point(227, 349);
+            this.BtnSaveOnDevices.Name = "BtnSaveOnDevices";
+            this.BtnSaveOnDevices.Size = new System.Drawing.Size(284, 26);
+            this.BtnSaveOnDevices.TabIndex = 8;
+            this.BtnSaveOnDevices.Text = "Atualizar Associações nos Biometricos";
+            this.BtnSaveOnDevices.UseVisualStyleBackColor = true;
+            this.BtnSaveOnDevices.Click += new System.EventHandler(this.BtnSaveOnDevices_Click);
             // 
             // TableFuncionarioDeviceView
             // 
@@ -238,6 +250,7 @@
         private System.Windows.Forms.Button BtFechar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox CBoxCategorias;
+        private System.Windows.Forms.Button BtnSaveOnDevices;
         
     }
 }
