@@ -13,6 +13,8 @@ using mz.betainteractive.sigeas.Models;
 using mz.betainteractive.sigeas.Models.Entities;
 using mz.betainteractive.sigeas.model.ca;
 using mz.betainteractive.sigeas.BackgroundFeatures;
+using mz.betainteractive.sigeas.DeviceSystem;
+using mz.betainteractive.sigeas.Utilities;
 
 namespace mz.betainteractive.sigeas.Views.ImportExport {
     public partial class ImportHrData : Form, AuthorizableComponent {
@@ -25,6 +27,8 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
         private List<Departamento> departamentos;
         private List<Categoria> categorias;
         private List<XlsFuncionario> funcionarios;
+
+        private SortedSet<int> avaiables_users;
 
         public int FormCode { get; set; }
         public bool AllowView { get; set; }
@@ -58,6 +62,24 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
             this.departamentos = new List<Departamento>();
             this.categorias = new List<Categoria>();
             this.funcionarios = new List<XlsFuncionario>();
+
+            this.avaiables_users = new SortedSet<int>();
+
+            this.BtnDownloadFps.Enabled = false;
+            this.BtnConnect.Enabled = false;
+            
+            LoadDevicesToComboBox();
+        }
+
+        private void LoadDevicesToComboBox() {
+            //No futuro não sera assim
+            var devices = context.Device.ToList();
+
+            CBoxDevices.Items.Clear();
+
+            foreach (Device dev in devices) {
+                CBoxDevices.Items.Add(dev);
+            }
         }
 
         private void ImportHrData_FormClosing(object sender, FormClosingEventArgs e) {
@@ -261,6 +283,7 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
 
             background.OnPostExecute += delegate() {
                 UpdateViewsWithResults(resultDpts, resultCtgs, resultFunc);
+                LoadSavedFuncionarioToFingReader();
 
                 if (result == true) {
                     MessageBox.Show(this, "Os Dados foram importados com sucesso! Verifique a coluna de status nas tabelas.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -348,7 +371,9 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
                 var departamento = context.Departamento.Where(d => d.Code == xlsfunc.department_code).FirstOrDefault();
                 var categoria = context.Categoria.Where(d => d.Code == xlsfunc.category_code).FirstOrDefault();
 
-                func.Code = func.CreateCode(empresa, ++lastId);
+                xlsfunc.code = func.CreateCode(empresa, ++lastId);
+
+                func.Code = xlsfunc.code;
                 func.Nome = xlsfunc.name;
                 func.Sexo = xlsfunc.gender[0] + "";
                 func.Departamento = departamento;
@@ -377,7 +402,7 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
                 SaveCategorias(resultCtgs);
                 SaveFuncionarios(resultFunc);
             } catch (Exception ex) {
-
+                LogErrors.AddErrorLog(ex, "Error Saving");
                 return false;
             }
 
@@ -418,6 +443,234 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
 
             LViewFuncionarios.Refresh();
         }
+
+        private void BtnConnect_Click(object sender, EventArgs e) {
+
+            if (CBoxDevices.SelectedIndex == -1) {
+                MessageBox.Show(this, "Selecione o dispositivo por favor");
+                return;
+            }
+
+            if (BtnConnect.Text == "Desconectar Dispositivo") {
+                DisconnectDevice();
+                return;
+            }
+
+            if (BtnConnect.Text == "Conectar Dispositivo") {
+                ConnectDevice();
+                return;
+            }
+        }
+
+        private void ConnectDevice() {
+            Device device = (Device)CBoxDevices.SelectedItem;
+
+            DeviceConnector connector = DeviceConnector.GetDeviceConnector(device);
+
+            connector.StartConnection();
+
+            if (device.Connected) {
+                BtnConnect.Text = "Desconectar Dispositivo";
+                CBoxDevices.Enabled = false;                
+                BtnDownloadFps.Enabled = !false;            
+                LabelDeviceConnected.Text = "Conectado";
+
+                GetAvaiableUsersID(device, out avaiables_users);
+
+            } else {
+                BtnConnect.Text = "Conectar Dispositivo";
+                CBoxDevices.Enabled = true;                
+                BtnDownloadFps.Enabled = false;            
+                LabelDeviceConnected.Text = "Desconectado";
+            }
+        }
+
+        private void DisconnectDevice() {
+            Device device = (Device)CBoxDevices.SelectedItem;
+
+            if (device.Connected) {
+                device.Disconnect();
+            }
+
+            if (device.Connected) {
+                BtnConnect.Text = "Desconectar Dispositivo";
+                CBoxDevices.Enabled = false;                
+                BtnDownloadFps.Enabled = !false;       
+                LabelDeviceConnected.Text = "Conectado";
+            } else {
+                BtnConnect.Text = "Conectar Dispositivo";
+                CBoxDevices.Enabled = true;
+                BtnDownloadFps.Enabled = false;    
+                LabelDeviceConnected.Text = "Desconectado";
+            }
+        }
+
+        private void GetAvaiableUsersID(Device device, out SortedSet<int> avaiables) {
+
+            DeviceIO deviceIO = new DeviceIO(device);
+
+            List<int> users = new List<int>();
+            avaiables = new SortedSet<int>();
+            int maxUsers = 0;
+
+            deviceIO.GetAvaiableUsersID(out avaiables, out maxUsers);
+
+        }
+
+
+        private void LoadSavedFuncionarioToFingReader() {
+            foreach (var func in funcionarios){
+                ListViewItem item = new ListViewItem();
+                
+                item.Text = func.code;
+                item.SubItems.Add(func.name);
+                item.SubItems.Add(func.gender);
+                item.SubItems.Add(func.department_code);
+                item.SubItems.Add(func.category_code);
+                item.SubItems.Add(func.enrollNumber);
+                item.SubItems.Add(func.privilege);
+                item.SubItems.Add(func.username);
+                item.SubItems.Add(func.password);
+                item.SubItems.Add(func.cardnumber);
+                //item.SubItems.Add(func.enabled);
+
+                LViewFuncToGetFng.Items.Add(item);
+            }
+
+            LViewFuncToGetFng.Refresh();
+        }
+
+        private void BtnDownloadFps_Click(object sender, EventArgs e) {
+            DownloadFingerprints();
+        }
+
+        private void DownloadFingerprints() {
+            Device device = (Device)CBoxDevices.SelectedItem;
+
+            if (!device.Connected) {
+                MessageBox.Show(this, "Não sera possivel obter os registos de fingerprints. Conecte o dispositivo primeiro!", "Biometrico Desconectado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            OnExecuteDialog background = new OnExecuteDialog("Importação de Fingerprints....", "Obtendo registos de fingerprints no biometrico...");
+            bool result = false;
+
+            int[] resultFunc = new int[funcionarios.Count]; //0 - saved, 1 - already exists, 2 - error while saving
+
+            background.OnExecute += delegate() {
+                result = SaveFingerprints(device, resultFunc);
+            };
+
+            background.OnPostExecute += delegate() {
+                UpdateViewsWithResults(resultFunc);
+                
+                if (result == true) {
+                    MessageBox.Show(this, "Os Dados foram importados com sucesso! Verifique a coluna de status nas tabelas.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                } else {
+                    MessageBox.Show(this, "Não foi possivel gravar os dados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            };
+
+            background.StartExecute();                 
+        }
+
+        private bool SaveFingerprints(Device device, int[] result) {
+
+            try {
+                
+               
+                //get all fingerprints
+                List<string> users = funcionarios.Select(f => f.code).ToList<string>();
+                List<RawFingerprint> fingerprints = null;
+
+                DeviceIO devIo = new DeviceIO(device);
+
+                devIo.GetAllUserTmp(users, out fingerprints);
+                int i = 0;
+                foreach (var xlsfunc in funcionarios) {
+
+                    if (xlsfunc.enrollNumber!=null && xlsfunc.enrollNumber.Length>0) {
+
+                        Funcionario func = context.Funcionario.Where(f => f.Code==xlsfunc.code).FirstOrDefault();
+                        int saves = 0;
+
+                        for (int fi = 0; fi < 9; fi++) {
+
+                            var rFingerPrint = fingerprints.Where(fg => fg.EnrollNumber == func.EnrollNumber && fg.FingerIndex == fi).FirstOrDefault();
+
+                            if (rFingerPrint == null) continue;
+
+                            bool contains = false;
+
+                            foreach (UserFingerprint userFing in func.UserFingerprints) {
+                                if (userFing.FingerIndex == rFingerPrint.FingerIndex) {
+                                    userFing.TemplateData = rFingerPrint.TemplateData;
+                                    contains = true;
+                                    saves++;
+                                    break;
+                                }
+                            }
+
+                            if (!contains) {
+                                var fingerPrint = new UserFingerprint();
+                                fingerPrint.FingerIndex = rFingerPrint.FingerIndex;
+                                fingerPrint.TemplateData = rFingerPrint.TemplateData;
+
+                                func.UserFingerprints.Add(fingerPrint);
+                                saves++;
+                            }
+
+                        }
+
+                        result[i] = saves;
+                                                
+                    }
+
+                    i++;
+                }
+
+                context.SaveChanges();
+
+            } catch (Exception ex) {
+                LogErrors.AddErrorLog(ex, "Error Saving Fps");
+                return false;
+            }
+
+            return true;
+        }
+
+        private void UpdateViewsWithResults(int[] resultFuncFps) {
+            int i = 0;
+            
+            foreach (ListViewItem item in LViewFuncToGetFng.Items) {
+                item.BackColor = resultFuncFps[i] == 0 ? Color.White : resultFuncFps[i] > 0 ? Color.AliceBlue : Color.IndianRed;
+                item.SubItems.Add(resultFuncFps[i] == 0 ? "" : resultFuncFps[i] > 0 ? resultFuncFps[i]+" Saved" : "Error");
+
+                i++;
+            }
+
+            LViewFuncToGetFng.Refresh();
+        }
+
+        private void CBoxDevices_SelectedIndexChanged(object sender, EventArgs e) {
+            if (CBoxDevices.SelectedIndex != -1) {
+                OnSelectDevice();
+            } else {
+                BtnConnect.Enabled = false;                
+                BtnDownloadFps.Enabled = false;
+            }
+        }
+
+        private void OnSelectDevice() {
+            Device device = (Device)CBoxDevices.SelectedItem;
+
+            BtnConnect.Enabled = true;
+            BtnDownloadFps.Enabled = true;
+
+            TxtSerialNumber.Text = device.SerialNumber;
+            TxtDeviceDoor.Text = device.Door.ToString();
+        }
+               
     }
 
     class XlsFuncionario {

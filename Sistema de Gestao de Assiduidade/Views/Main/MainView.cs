@@ -56,6 +56,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
         public TableFuncionarioDeviceView tableFuncionarioDeviceView { get; set; }
         public DeviceDataUpdateView deviceDataUpdateView { get; set; }
         public ImportHrData importHrData { get; set; }
+        public ImportExportView importExportView { get; set; }
 
         public static ToolStripLabel tssGeralSystemStatus;
 
@@ -86,6 +87,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
             tableFuncionarioDeviceView = new TableFuncionarioDeviceView();
             deviceDataUpdateView = new DeviceDataUpdateView();
             importHrData = new ImportHrData();
+            importExportView = new ImportExportView();
 
             DeviceManager.MdiParent = this;
             FuncionarioForm.MdiParent = this;
@@ -110,7 +112,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
             this.AttendanceCalcsForm.FormCode     = 0x0111;            
             this.tableFuncionarioDeviceView.FormCode = 0x0112;
             this.deviceDataUpdateView.FormCode       = 0x0113;
-            //this.importExportView.FormCode = 0x0114;            
+            this.importExportView.FormCode = 0x0114;            
 
             this.securedComponents.Add(this.UserManagement.FormCode, this.UserManagement);
             this.securedComponents.Add(this.DeviceManager.FormCode, this.DeviceManager);
@@ -124,7 +126,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
             this.securedComponents.Add(this.AttendanceCalcsForm.FormCode, this.AttendanceCalcsForm);
             this.securedComponents.Add(this.tableFuncionarioDeviceView.FormCode, this.tableFuncionarioDeviceView);
             this.securedComponents.Add(this.deviceDataUpdateView.FormCode, this.deviceDataUpdateView);
-            //this.securedComponents.Add(this.importExportView.FormCode, this.importExportView);
+            this.securedComponents.Add(this.importExportView.FormCode, this.importExportView);
             
         }
 
@@ -587,6 +589,10 @@ namespace mz.betainteractive.sigeas.Views.Main {
 
         private void importarDadosToolStripMenuItem_Click(object sender, EventArgs e) {
             importHrData.Visible = true;
+        }
+
+        private void importarExportarDadosBiometricosToolStripMenuItem_Click(object sender, EventArgs e) {
+            importExportView.Visible = true;
         }
 
      
