@@ -151,17 +151,17 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
             }
 
             if (categoria == null) {
-                funcionarios.AddRange(departamento.Funcionarios);
+                funcionarios.AddRange(context.Funcionario.Where(f => f.Departamento.Id == departamento.Id).ToList());
             }
 
             if (departamento == null) {
-                funcionarios.AddRange(categoria.Funcionarios);
+                funcionarios.AddRange(context.Funcionario.Where(f => f.Categoria.Id == categoria.Id).ToList());
             }
 
             foreach (Funcionario funcionario in funcionarios) {
-                if (funcionario.CompleteRegistered == true) {
+                //if (funcionario.CompleteRegistered == true) {
                     CBoxFuncionarios.Items.Add(funcionario);
-                }
+                //}
             }
 
             CBoxFuncionarios.Items.Insert(0, "Todos");
@@ -171,21 +171,49 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
             SearchAttendanceData();
         }
 
+        private List<Funcionario> getFuncionarios() {
+            List<Funcionario> funcionarios = new List<Funcionario>();
+
+            Departamento departamento = null;
+            Categoria categoria = null;
+            Funcionario func = null;
+
+            if (CBoxFuncionarios.SelectedItem is Funcionario) {
+                func = CBoxFuncionarios.SelectedItem as Funcionario;
+            }
+            if (CBoxCategorias.SelectedItem is Categoria) {
+                categoria = CBoxCategorias.SelectedItem as Categoria;
+            }
+            if (CBoxDepartamentos.SelectedItem is Departamento) {
+                departamento = CBoxDepartamentos.SelectedItem as Departamento;
+            }
+
+            if (func != null) {
+                funcionarios.Add(func);
+            } else if (categoria == null && departamento == null) {
+                funcionarios.AddRange(context.Funcionario.ToList());
+            } else if (categoria == null) {
+                funcionarios.AddRange(context.Funcionario.Where(f => f.Departamento.Id == departamento.Id).ToList());
+            } else if (departamento == null) {
+                funcionarios.AddRange(context.Funcionario.Where(f => f.Categoria.Id == categoria.Id).ToList());
+            }
+
+            return funcionarios;
+        }
+
         private void SearchAttendanceData() {
             
             OnExecuteDialog background = new OnExecuteDialog("Pesquisa de Dados....", "Pesquisando registos calculados no sistema...");
             bool result = false;
+
+            List<Funcionario> funcionarios = getFuncionarios();
 
             background.OnExecute += delegate() {
                 SearchedAttCalcs.Clear();
 
                 DateTime fromDate = DtpFromDate.Value.Date;
                 DateTime toDate = DtpToDate.Value.Date;
-
-                List<Funcionario> funcionarios = new List<Funcionario>();
-
-                funcionarios.AddRange(CBoxFuncionarios.Items.OfType<Funcionario>());
-
+                                
                 SearchedAttCalcs.AddRange(DBSearch.FindAllAttendanceCalcs(context, funcionarios, fromDate, toDate, false));
 
                 result = SearchedAttCalcs.Count > 0;
@@ -228,13 +256,14 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
                 row.Cells[8].Value = att.Saida.ToShortTimeString(); //Out
                 row.Cells[9].Value = att.EntradaAtrasada.ToShortTimeString(); //Atraso
                 row.Cells[10].Value = att.SaidaAdiantada.ToShortTimeString(); //Adianto
-                row.Cells[11].Value = !att.Ausente; //Presente
+                row.Cells[11].Value = att.IsPresente; //Presente
                 row.Cells[12].Value = new Hora(att.TrabalhouHoras, att.TrabalhouMins).ToString(); //H.Trabalhou
                 row.Cells[13].Value = new Hora(att.AusenteHoras, att.AusenteMins).ToString(); //H.Ausente
                 row.Cells[14].Value = new Hora(att.HrExtrasHoras, att.HrExtrasMins).ToString(); //H. Extras
                 row.Cells[15].Value = att.IsFeriado; //Feriado  - bool
                 row.Cells[16].Value = att.IsEmFerias; //EmFerias - bool
 
+                if (!att.IsDayWork){                    row.DefaultCellStyle.BackColor = Color.DarkGray;                }
 
                 DGViewAttCalcs.Rows.Add(row);
                 i++;
@@ -246,16 +275,14 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
             OnExecuteDialog background = new OnExecuteDialog("Calculos de asseduidade....", "Efectuando calculos de asseduidade...");
             //bool result = false;
 
+            List<Funcionario> funcionarios = getFuncionarios();
+
             background.OnExecute += delegate() {
                 SearchedAttCalcs.Clear();
 
                 DateTime fromDate = DtpFromDate.Value.Date;
                 DateTime toDate = DtpToDate.Value.Date;
-
-                List<Funcionario> funcionarios = new List<Funcionario>();
-
-                funcionarios.AddRange(CBoxFuncionarios.Items.OfType<Funcionario>());
-
+                                
                 Console.WriteLine("Started calcs");
                                 
                 calculations.CalculateAttendanceData(funcionarios, fromDate, toDate);

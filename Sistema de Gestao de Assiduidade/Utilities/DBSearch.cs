@@ -328,10 +328,12 @@ namespace mz.betainteractive.sigeas.model.ca
             DateTime frDt = Constants.GetTime(fromDate, 0, 0, 0);
             DateTime toDt = Constants.GetTime(toDate, 23, 59, 59);
 
-            var list = withTracking ? context.AttCalcs.Where(t => funcionarios.Contains(t.Funcionario) && t.Data >= frDt && t.Data <= toDt)
+            var funcIds = funcionarios.Select(f => f.Id).ToList();
+
+            var list = withTracking ? context.AttCalcs.Where(t => funcIds.Contains(t.Funcionario.Id) && t.Data >= frDt && t.Data <= toDt)
                                                       .OrderBy(t => t.Funcionario.Id).ThenBy(t => t.Data)
                                                       .ToList()
-                                    : context.AttCalcs.AsNoTracking().Where(t => funcionarios.Contains(t.Funcionario) && t.Data >= frDt && t.Data <= toDt)
+                                    : context.AttCalcs.AsNoTracking().Where(t => funcIds.Contains(t.Funcionario.Id) && t.Data >= frDt && t.Data <= toDt)
                                                                      .OrderBy(t => t.Funcionario.Id).ThenBy(t => t.Data)
                                                                      .ToList();
 

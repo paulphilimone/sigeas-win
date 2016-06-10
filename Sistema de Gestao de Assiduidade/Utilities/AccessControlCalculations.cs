@@ -58,6 +58,13 @@ namespace mz.betainteractive.sigeas.Utilities {
             CorrectAllUserClock(clocks);
         }
 
+        public void ClearResults(List<UserClock> listUserClocks) {
+            foreach (var uclock in listUserClocks) {
+                uclock.Result = "";
+                uclock.CorrectState = "";
+            }
+        }
+
         public void CorrectAllUserClock(List<UserClock> listUserClocks){
             //Download All UserClocks
             //Organize All UserClocks - Funcionario, <date, clock>
@@ -176,10 +183,15 @@ namespace mz.betainteractive.sigeas.Utilities {
 
                     uca[uca.Length - 1].Result = "OK";
                     corrects.Add(uca[uca.Length - 1]);
-                } else {//PAR
+                } else {//PAR - can generate error
                     foreach (UserClock u in lc) {
                         u.Result = "Invalido";
                     }
+
+                    UserClock uc = uca[uca.Length - 1];
+                    uc.Result = "OK";
+                    corrects.Add(uc);
+                    //Console.WriteLine(""+uc.Funcionario.Code +", "+uc.DateAndTime.ToString("u")+", "+uc.Result);
                 }
             }
 
@@ -195,7 +207,7 @@ namespace mz.betainteractive.sigeas.Utilities {
             string lastState = "";
 
             foreach (UserClock uc in corrects) {
-                if (uc.Device.DeviceType == DEVICE_TYPE_IN_OUT) {
+                if (uc.Device.DeviceType.Equals(DEVICE_TYPE_IN_OUT)) {
                     if (i % 2 == 0) {
                         uc.CorrectState = "Entrada";//"C/In";
                     } else {
@@ -203,7 +215,7 @@ namespace mz.betainteractive.sigeas.Utilities {
                     }
                 } else {
 
-                    if (uc.Device.DeviceType == DEVICE_TYPE_IN) { //IN
+                    if (uc.Device.DeviceType.Equals(DEVICE_TYPE_IN)) { //IN
                         //Não permite repetições
                         if (lastState == "Entrada") {
                             uc.Result = "Invalido";
@@ -211,17 +223,17 @@ namespace mz.betainteractive.sigeas.Utilities {
 
                         uc.CorrectState = "Entrada";
                         lastState = "Entrada";
-                        continue;
+                        //continue;
                     }
 
-                    if (uc.Device.DeviceType == DEVICE_TYPE_OUT) { //out
+                    if (uc.Device.DeviceType.Equals(DEVICE_TYPE_OUT)) { //out
                         //Não permite repetições
                         if (lastState == "Saida") {
                             uc.Result = "Invalido";
                         }
                         uc.CorrectState = "Saida";
                         lastState = "Saida";
-                        continue;
+                        //continue;
                     }
 
                 }
@@ -281,6 +293,38 @@ namespace mz.betainteractive.sigeas.Utilities {
 
         }
 
+        private void OrganizeByDate(List<UserClock> clocks, out Dictionary<DateTime, List<UserClock>> mapDateClocks, DateTime fromDate, DateTime toDate) {
+
+            mapDateClocks = new Dictionary<DateTime, List<UserClock>>();
+            List<UserClock> listClocks = null;
+
+            for (var day = fromDate.Date; day <= toDate.Date; day = day.AddDays(1) ) {
+                mapDateClocks.Add(day, new List<UserClock>());
+            }
+
+            foreach (UserClock uclock in clocks) {
+
+                DateTime date = uclock.DateAndTime.Date;
+
+                //Se o funcionario esta desativado não corrigir clocks - 
+                if (!FUNCIONARIO_DISABLED_EFECTUA_CALCULOS) {
+                    if (uclock.Funcionario.Enabled == false) {
+                        continue;
+                    }
+                }
+
+                if (mapDateClocks.TryGetValue(date, out listClocks)) {
+                    listClocks.Add(uclock);
+                } else {
+                    listClocks = new List<UserClock>();
+                    listClocks.Add(uclock);
+
+                    mapDateClocks.Add(date, listClocks);
+                }
+
+            }
+
+        }
 
         public void CalculateAttendanceData() { 
             //1 - Get UserClocks
@@ -292,8 +336,8 @@ namespace mz.betainteractive.sigeas.Utilities {
             foreach (var funcionario in funcionarios) {
                 
 
-                //var clocks = context.UserClock.Where(uc => uc.Result == "OK" && uc.Funcionario.Id==funcionario.Id).OrderBy(t => t.DateAndTime).ToList();
-                var clocks = funcionario.UserClocks.Where(uc => uc.Result == "OK").OrderBy(t => t.DateAndTime).ToList();
+                var clocks = context.UserClock.Where(uc => uc.Result == "OK" && uc.Funcionario.Id==funcionario.Id).OrderBy(t => t.DateAndTime).ToList();
+                //var clocks = funcionario.UserClocks.Where(uc => uc.Result == "OK").OrderBy(t => t.DateAndTime).ToList();
 
                 Dictionary<DateTime, List<UserClock>> dateClocks = null;
 
@@ -314,18 +358,19 @@ namespace mz.betainteractive.sigeas.Utilities {
 
             foreach (var funcionario in funcionarios) {
 
-                /*
+                
                 var clocks = context.UserClock.Where(t => t.Result == "OK" &&
-                                                          t.Funcionario == funcionario && 
-                                                         (t.DateAndTime >= fromDate && t.DateAndTime <= toDate)).OrderBy(t => t.DateAndTime).ToList();
-                */
-                var clocks = funcionario.UserClocks.Where(t => t.Result == "OK" &&                                                          
+                                                          t.Funcionario.Id == funcionario.Id && 
                                                          (t.DateAndTime >= fromDate && t.DateAndTime <= toDate)).OrderBy(t => t.DateAndTime).ToList();
                 
+                /*
+                var clocks = funcionario.UserClocks.Where(t => t.Result == "OK" &&                                                          
+                                                         (t.DateAndTime >= fromDate && t.DateAndTime <= toDate)).OrderBy(t => t.DateAndTime).ToList();
+                */
 
                 Dictionary<DateTime, List<UserClock>> dateClocks = null;
 
-                OrganizeByDate(clocks, out dateClocks);
+                OrganizeByDate(clocks, out dateClocks, fromDate, toDate);
 
                 foreach (var date in dateClocks.Keys) {
                     List<UserClock> luc = null;
@@ -344,20 +389,20 @@ namespace mz.betainteractive.sigeas.Utilities {
             
             foreach (var funcionario in funcionarios) {
 
-                /*
+                
                 var clocks = context.UserClock.Include("Funcionario").Where(t => t.Result == "OK" &&
-                                                                            t.Funcionario == funcionario &&
+                                                                            t.Funcionario.Id == funcionario.Id &&
                                                                             (t.DateAndTime >= fromDate && t.DateAndTime <= toDate)).OrderBy(t => t.DateAndTime).ToList();
-                */
-
+                
+                /*
                 var clocks = funcionario.UserClocks.Where(t => t.Result == "OK" &&
                                                               (t.DateAndTime >= fromDate && t.DateAndTime <= toDate)).OrderBy(t => t.DateAndTime).ToList();
-                
+                */
 
 
                 Dictionary<DateTime, List<UserClock>> dateClocks = null;
 
-                OrganizeByDate(clocks, out dateClocks);
+                OrganizeByDate(clocks, out dateClocks, fromDate, toDate);
 
                 foreach (var date in dateClocks.Keys) {
                     List<UserClock> luc = null;
@@ -369,15 +414,17 @@ namespace mz.betainteractive.sigeas.Utilities {
             Console.WriteLine("End Start the Calcs");
         }
 
-        /** Rever Utilidade deste metodo */
         public List<UserClock> GetCalculatedClocks(Funcionario funcionario, DateTime dia) {
             List<UserClock> list = new List<UserClock>();
-            
+
+            /*
             List<UserClock> clocks = funcionario.UserClocks.Where(uc => uc.Result == "OK" &&                                                            
                                                                         uc.DateAndTime.Date == dia.Date)
-                                                                        .OrderBy(t => t.DateAndTime).ToList();
-                        
-            
+                                                                        .OrderBy(t => t.DateAndTime).ToList();*/
+
+            List<UserClock> clocks = context.UserClock.Where(uc => uc.Result == "OK" && uc.Funcionario.Id == funcionario.Id &&
+                                                                   uc.DateAndTime.Date == dia.Date).OrderBy(t => t.DateAndTime).ToList();
+
             FuncionarioHorario fhorario = DBSearch.GetFuncionarioHorario(context, funcionario, dia);
             HorarioSemana semana = null;
             HorarioDia horarioDia = null;

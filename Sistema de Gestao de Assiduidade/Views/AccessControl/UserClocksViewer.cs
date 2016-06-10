@@ -36,6 +36,7 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
                 context.Dispose();
                 context = null;
             }
+            DisconnectDevice();
         }
 
         private void LoadContext() {
@@ -44,13 +45,13 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
             }
         }
 
-        private void RegistosBiometricoView_FormClosing(object sender, FormClosingEventArgs e) {
+        private void UserClocksViewer_FormClosing(object sender, FormClosingEventArgs e) {
             e.Cancel = true;
             this.Hide();
             DisposeContext();
         }
 
-        private void RegistosBiometricoView_VisibleChanged(object sender, EventArgs e) {
+        private void UserClocksViewer_VisibleChanged(object sender, EventArgs e) {
             if (this.Visible) {
                 LoadContext();
                 Initialize();
@@ -148,17 +149,17 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
             }
 
             if (categoria == null) {
-                funcionarios.AddRange(departamento.Funcionarios);
+                funcionarios.AddRange(context.Funcionario.Where(f=>f.Departamento.Id==departamento.Id).ToList());
             }
 
             if (departamento == null) {
-                funcionarios.AddRange(categoria.Funcionarios);
+                funcionarios.AddRange(context.Funcionario.Where(f=>f.Categoria.Id==categoria.Id).ToList());
             }
 
             foreach (Funcionario funcionario in funcionarios) {
-                if (funcionario.CompleteRegistered == true) {
+                //if (funcionario.CompleteRegistered == true) {
                     CBoxFuncionarios.Items.Add(funcionario);
-                }
+                //}
             }
 
             CBoxFuncionarios.Items.Insert(0, "Todos");
@@ -172,8 +173,7 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
             SearchUserClocks();
         }
 
-        private void SearchUserClocks() {
-        
+        private List<UserClock> getUserClocksByFilters() {
             DateTime fromDate = DtpFromDate.Value.Date;
             DateTime toDate = DtpToDate.Value.Date;
             Departamento selectedDepartamento = null;
@@ -193,15 +193,15 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
             }
             if (CBoxFuncionarios.SelectedItem is Funcionario) {
                 selectedfuncionario = CBoxFuncionarios.SelectedItem as Funcionario;
-            }            
-            
+            }
+
             //Search On One funcionario
             if (selectedfuncionario != null) {
                 clocks = context.UserClock.AsNoTracking().Where(uc => uc.DateAndTime >= fromDate && uc.DateAndTime <= toDate && uc.Funcionario.Id == selectedfuncionario.Id).ToList();
             }
 
             //Search On One Departamento
-            if (selectedfuncionario == null && selectedDepartamento != null && selectedCategoria==null) {
+            if (selectedfuncionario == null && selectedDepartamento != null && selectedCategoria == null) {
                 clocks = context.UserClock.AsNoTracking().Where(uc => uc.DateAndTime >= fromDate && uc.DateAndTime <= toDate && uc.Funcionario.Departamento.Id == selectedDepartamento.Id).ToList();
             }
             //Search On One Categoria
@@ -213,7 +213,19 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
             if (selectedDepartamento == null && selectedfuncionario == null && selectedCategoria == null) {
                 clocks = context.UserClock.AsNoTracking().Where(uc => uc.DateAndTime >= fromDate && uc.DateAndTime <= toDate).ToList();
             }
-                        
+
+            return clocks;
+        }
+
+        private void SearchUserClocks() {
+
+            var clocks = getUserClocksByFilters();
+
+            ShowUserClocks(clocks);
+        }
+
+        private void ShowUserClocks(List<UserClock> clocks) {
+
             LViewUserClocks.Items.Clear();
             int index = 0;
 
@@ -230,19 +242,17 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
                 item.SubItems.Add(funcionario.ToString());
                 item.SubItems.Add(device.ToString());
                 item.SubItems.Add(userClock.VerifyMode.ToString());
-                item.SubItems.Add(userClock.DateAndTime.ToString());
+                item.SubItems.Add(userClock.DateAndTime.ToString("u"));
                 item.SubItems.Add(userClock.InOutMode.ToString());
                 item.SubItems.Add(userClock.CorrectState);
                 item.SubItems.Add(userClock.Result);
 
-                if (userClock.Result == "Inválido") {
+                if (userClock.Result == "Invalido") {
                     item.BackColor = Color.Lime;
                 }
 
                 LViewUserClocks.Items.Add(item);
             }
-
-
         }
 
         private void BtnConnect_Click(object sender, EventArgs e) {
@@ -359,6 +369,54 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
             background.StartExecute();
         }
 
+        /*
+         * Search and calculate data
+         * 1 - Get the user-clocks from database         
+         * 2 - Correct the downloaded user-clock list
+         * 3 - Calculate History & descounts of the corrected downloaded user-clock list
+         */
+        private void SearchAndCorrectUserClocks() {
+            Device device = (Device)CBoxDevices.SelectedItem;
+            DeviceIO io = new DeviceIO(device);
+
+            var deviceUsers = context.DeviceUser.Count();
+
+            if (deviceUsers == 0) {
+                MessageBox.Show(this, "Nao existem funcionários registados nos dispositivos. Associe primeiro funcionários à um determinado biometrico", "Não é possivel descarregar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            OnExecuteDialog background = new OnExecuteDialog("Descarregamento....", "Descarregando registos de picagens do biométrico...");
+            bool result = false;
+
+            List<UserClock> clocks = getUserClocksByFilters();
+
+            background.OnExecute += delegate() {
+                AccessControlCalculations calc = new AccessControlCalculations(context);
+                DeviceDataConvertions convertions = new DeviceDataConvertions();
+                               
+                
+                //Pass 2 - confirm this code if we gonna use it
+                calc.ClearResults(clocks);
+
+                //Pass 3
+                calc.CorrectAllUserClock(clocks);
+
+                context.SaveChanges();
+            };
+
+            background.OnPostExecute += delegate() {
+                if (result == true) {
+                    ShowUserClocks(clocks);
+                    MessageBox.Show(this, "Os registos de picagens foram registados com sucesso", "", MessageBoxButtons.OK, MessageBoxIcon.Information);                    
+                } else {
+                    MessageBox.Show(this, "Não foi possivel gravar os registos de picagens", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            };
+
+            background.StartExecute();
+        }
+
         private void DeleteAllUserClocksOnDevice(DeviceIO io) {
             DialogResult result = MessageBox.Show(this, "Deseja apagar os registos de picagens que estão no biométrico?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -431,7 +489,7 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
         }
 
         private void BtnSearchAndCorrect_Click(object sender, EventArgs e) {
-
+            SearchAndCorrectUserClocks();
         }
 
                

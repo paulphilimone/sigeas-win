@@ -39,21 +39,22 @@ namespace mz.betainteractive.sigeas.Utilities {
             }
 
             var createdBy = SystemManager.GetCurrentUser(context);
+            
+            /* //analisaremos num futuro breve
+            var verifyModes = new List<VerifyMode>();
+
+            verifyModes.Add(context.VerifyMode.First(v => v.Number == VerifyMode.PASSWORD_NUMBER));
+            verifyModes.Add(context.VerifyMode.First(v => v.Number == VerifyMode.FINGERPRINT_NUMBER));
+            verifyModes.Add(context.VerifyMode.First(v => v.Number == VerifyMode.CARD_NUMBER));
+            */
 
             foreach (RawUserClock rawClock in listRawClocks){                           
                 
                 int dwEnrollNumber = Int32.Parse(rawClock.EnrollNumber);
                 
-                //Obter um User, que esta no biometrico com (SN), e com UserId
-                DeviceUser devUser = context.DeviceUser.FirstOrDefault(d => d.Device.SerialNumber == rawClock.DeviceSerialNumber &&
-                                                                       (d.Funcionario.Cardnumber == rawClock.CardNumber));
-
                 //Search by EnrollNumber
-                if (devUser == null) { 
-                    devUser = context.DeviceUser.FirstOrDefault(d => d.Device.SerialNumber == rawClock.DeviceSerialNumber &&
-                                                                            d.EnrollNumber == dwEnrollNumber);                    
-                }
-
+                DeviceUser  devUser = context.DeviceUser.FirstOrDefault(d => d.Device.SerialNumber == rawClock.DeviceSerialNumber && d.EnrollNumber == dwEnrollNumber);                    
+                
                 if (devUser == null) {
                     //Create Log Download Errors
                     LogErrors.AddErrorLog(null, "Usuario com userId=" + dwEnrollNumber + " não se encontra registado no sistema");
