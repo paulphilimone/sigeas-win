@@ -322,7 +322,7 @@ namespace mz.betainteractive.sigeas.Views.Horarios {
 
         private void Limpar() {
             DGViewFuncionarioHorario.Rows.Clear();
-            NudAnos.Value = 2012;
+            NudAnos.Value = DateTime.Now.Year;
             TxtFuncionario.Text = "";
             chkSelectAll.Checked = false;
             backupGridHorarios.Clear();
@@ -429,10 +429,11 @@ namespace mz.betainteractive.sigeas.Views.Horarios {
                 fhorario.Ordem = row.Value.Order;
                 fhorario.Inicio = row.Value.First;
                 fhorario.Fim = row.Value.Last;
-                fhorario.Periodo = periodo;
-                fhorario.Horario = horario;
+                fhorario.Periodo = periodo;                              
 
                 context.FuncionarioHorario.Add(fhorario);
+                context.HorarioSemana.Attach(horario); //to not be reinserted
+                fhorario.Horario = horario;            //to not be reinserted
             }
 
             //changes grids

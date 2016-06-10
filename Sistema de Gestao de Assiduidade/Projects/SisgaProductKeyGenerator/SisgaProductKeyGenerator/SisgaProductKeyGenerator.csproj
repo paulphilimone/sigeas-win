@@ -37,6 +37,9 @@
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>mz.betainteractive.sigeas.bpkgenerator.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="IPAddressControlLib, Version=1.1.3039.21560, Culture=neutral, PublicKeyToken=55e96405d8fd6d61, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

@@ -18,6 +18,7 @@ namespace mz.betainteractive.sigeas {
         static void Main() {
             Thread.CurrentThread.CurrentCulture = new CultureInfo("pt-PT");
             Thread.CurrentThread.CurrentCulture.NumberFormat.CurrencySymbol = "Mt";
+            Thread.CurrentThread.CurrentCulture.DateTimeFormat = new DateTimeFormatInfo();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
