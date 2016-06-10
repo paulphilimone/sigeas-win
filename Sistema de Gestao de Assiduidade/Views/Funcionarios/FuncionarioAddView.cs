@@ -576,6 +576,10 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
         private void RemoverFoto() {
             picBoxFoto.BackgroundImage = null;
         }
+
+        private void BtnRegisterUser_Click(object sender, EventArgs e) {
+
+        }
                         
     }
 }

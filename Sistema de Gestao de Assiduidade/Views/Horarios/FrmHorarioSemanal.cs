@@ -946,7 +946,8 @@ namespace mz.betainteractive.sigeas.Views.Horarios {
             HorarioDia sexta = CreateHorarioSexta();
             HorarioDia sabado = CreateHorarioSabado();
             HorarioDia domingo = CreateHorarioDomingo();
-                                              
+
+            horario.Codigo = CreateCode();                      
             horario.Descricao = descricao;
             horario.HasFeriados = hasFeriados;
             horario.HasHorasExtras = hasHorasExtras;            
@@ -996,6 +997,13 @@ namespace mz.betainteractive.sigeas.Views.Horarios {
                 MessageBox.Show(this, "Ocorreu erro ao tentar gravar o perfil de horário na base de dados.\nErro: " + ex.Message, "Erro grave", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
                                             
+        }
+
+        private string CreateCode() {
+            
+            int max = context.HorarioSemana.ToList().Count + 1;
+
+            return "H" + max.ToString("X3");
         }
 
         private void AtualizarHorario() {
@@ -1605,7 +1613,7 @@ namespace mz.betainteractive.sigeas.Views.Horarios {
             EnableForChange();
             SelectedHorario = horario;
 
-            txtCodigo.Text = horario.Id.ToString();
+            txtCodigo.Text = horario.Codigo;
             txtDescricao.Text = horario.Descricao;
             chkHasFeriados.Checked = horario.HasFeriados;
             chkHasHrExtras.Checked = horario.HasHorasExtras;

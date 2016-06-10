@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace mz.betainteractive.sigeas.Models.Entities
 {
@@ -10,8 +12,10 @@ namespace mz.betainteractive.sigeas.Models.Entities
     public partial class HorarioSemana {
 
         public long Id { get; set; }
-        
-        public int Codigo { get; set; }
+
+        [StringLength(10)]
+        [Index("IX_Code", 1, IsUnique = true)]
+        public string Codigo { get; set; }
         public string Descricao { get; set; }
                 
         public bool HasFeriados { get; set; }

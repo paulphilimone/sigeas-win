@@ -12,6 +12,7 @@ namespace mz.betainteractive.sigeas.Models.Configuration
             this.HasKey(t => t.Id);
 
             // Properties            
+            //this.Property(t => t.Codigo).IsRequired();
             this.Property(t => t.Descricao).IsRequired().HasMaxLength(255);
 
 
