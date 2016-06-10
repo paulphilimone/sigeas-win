@@ -801,6 +801,7 @@
             this.BtnRegisterUser.Text = "Registar no biometrico";
             this.BtnRegisterUser.UseVisualStyleBackColor = true;
             this.BtnRegisterUser.Visible = false;
+            this.BtnRegisterUser.Click += new System.EventHandler(this.BtnRegisterUser_Click);
             // 
             // panel1
             // 

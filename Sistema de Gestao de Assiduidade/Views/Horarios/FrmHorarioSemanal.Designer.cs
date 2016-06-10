@@ -612,7 +612,7 @@
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.Location = new System.Drawing.Point(0, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 13);
+            this.label8.Size = new System.Drawing.Size(46, 13);
             this.label8.TabIndex = 0;
             this.label8.Text = "1ª Saida";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -632,7 +632,7 @@
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label9.Location = new System.Drawing.Point(0, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(59, 13);
+            this.label9.Size = new System.Drawing.Size(57, 13);
             this.label9.TabIndex = 0;
             this.label9.Text = "1ª Entrada";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -909,7 +909,7 @@
             this.label25.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label25.Location = new System.Drawing.Point(0, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(48, 13);
+            this.label25.Size = new System.Drawing.Size(46, 13);
             this.label25.TabIndex = 0;
             this.label25.Text = "1ª Saida";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -929,7 +929,7 @@
             this.label26.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label26.Location = new System.Drawing.Point(0, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(59, 13);
+            this.label26.Size = new System.Drawing.Size(57, 13);
             this.label26.TabIndex = 0;
             this.label26.Text = "1ª Entrada";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1205,7 +1205,7 @@
             this.label34.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label34.Location = new System.Drawing.Point(0, 0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(48, 13);
+            this.label34.Size = new System.Drawing.Size(46, 13);
             this.label34.TabIndex = 0;
             this.label34.Text = "1ª Saida";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1225,7 +1225,7 @@
             this.label35.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label35.Location = new System.Drawing.Point(0, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(59, 13);
+            this.label35.Size = new System.Drawing.Size(57, 13);
             this.label35.TabIndex = 0;
             this.label35.Text = "1ª Entrada";
             this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1501,7 +1501,7 @@
             this.label43.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label43.Location = new System.Drawing.Point(0, 0);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(48, 13);
+            this.label43.Size = new System.Drawing.Size(46, 13);
             this.label43.TabIndex = 0;
             this.label43.Text = "1ª Saida";
             this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1521,7 +1521,7 @@
             this.label44.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label44.Location = new System.Drawing.Point(0, 0);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(59, 13);
+            this.label44.Size = new System.Drawing.Size(57, 13);
             this.label44.TabIndex = 0;
             this.label44.Text = "1ª Entrada";
             this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1797,7 +1797,7 @@
             this.label52.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label52.Location = new System.Drawing.Point(0, 0);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(48, 13);
+            this.label52.Size = new System.Drawing.Size(46, 13);
             this.label52.TabIndex = 0;
             this.label52.Text = "1ª Saida";
             this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1817,7 +1817,7 @@
             this.label53.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label53.Location = new System.Drawing.Point(0, 0);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(59, 13);
+            this.label53.Size = new System.Drawing.Size(57, 13);
             this.label53.TabIndex = 0;
             this.label53.Text = "1ª Entrada";
             this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2093,7 +2093,7 @@
             this.label61.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label61.Location = new System.Drawing.Point(0, 0);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(48, 13);
+            this.label61.Size = new System.Drawing.Size(46, 13);
             this.label61.TabIndex = 0;
             this.label61.Text = "1ª Saida";
             this.label61.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2113,7 +2113,7 @@
             this.label62.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label62.Location = new System.Drawing.Point(0, 0);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(59, 13);
+            this.label62.Size = new System.Drawing.Size(57, 13);
             this.label62.TabIndex = 0;
             this.label62.Text = "1ª Entrada";
             this.label62.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2389,7 +2389,7 @@
             this.label70.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label70.Location = new System.Drawing.Point(0, 0);
             this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(48, 13);
+            this.label70.Size = new System.Drawing.Size(46, 13);
             this.label70.TabIndex = 0;
             this.label70.Text = "1ª Saida";
             this.label70.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2409,7 +2409,7 @@
             this.label71.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label71.Location = new System.Drawing.Point(0, 0);
             this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(59, 13);
+            this.label71.Size = new System.Drawing.Size(57, 13);
             this.label71.TabIndex = 0;
             this.label71.Text = "1ª Entrada";
             this.label71.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2568,7 +2568,7 @@
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(0, 4);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(111, 13);
+            this.label17.Size = new System.Drawing.Size(110, 13);
             this.label17.TabIndex = 24;
             this.label17.Text = "Total Horas/Semana";
             // 

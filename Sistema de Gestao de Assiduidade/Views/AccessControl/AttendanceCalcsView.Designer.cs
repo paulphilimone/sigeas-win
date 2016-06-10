@@ -224,6 +224,9 @@
             // 
             // DGViewAttCalcs
             // 
+            this.DGViewAttCalcs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DGViewAttCalcs.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGViewAttCalcs.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -393,13 +396,13 @@
             this.toolStripSeparator1,
             this.cancelarToolStripMenuItem});
             this.MenuStripDGV.Name = "MenuStripDGV";
-            this.MenuStripDGV.Size = new System.Drawing.Size(153, 98);
+            this.MenuStripDGV.Size = new System.Drawing.Size(135, 76);
             this.MenuStripDGV.Opening += new System.ComponentModel.CancelEventHandler(this.MenuStripDGV_Opening);
             // 
             // verRegistosToolStripMenuItem
             // 
             this.verRegistosToolStripMenuItem.Name = "verRegistosToolStripMenuItem";
-            this.verRegistosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.verRegistosToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.verRegistosToolStripMenuItem.Text = "Ver registos";
             this.verRegistosToolStripMenuItem.Click += new System.EventHandler(this.verRegistosToolStripMenuItem_Click);
             // 
@@ -407,22 +410,25 @@
             // 
             this.apagarToolStripMenuItem.Enabled = false;
             this.apagarToolStripMenuItem.Name = "apagarToolStripMenuItem";
-            this.apagarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.apagarToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.apagarToolStripMenuItem.Text = "Apagar";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(131, 6);
             // 
             // cancelarToolStripMenuItem
             // 
             this.cancelarToolStripMenuItem.Name = "cancelarToolStripMenuItem";
-            this.cancelarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cancelarToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.cancelarToolStripMenuItem.Text = "Cancelar";
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.DGViewAttCalcs);
             this.groupBox4.Location = new System.Drawing.Point(12, 127);
             this.groupBox4.Name = "groupBox4";
@@ -451,7 +457,7 @@
             this.BtnLimpar.UseVisualStyleBackColor = true;
             this.BtnLimpar.Click += new System.EventHandler(this.btLimpar_Click);
             // 
-            // FrmCalculoAsseduidade
+            // AttendanceCalcsView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -464,10 +470,8 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmCalculoAsseduidade";
+            this.Name = "AttendanceCalcsView";
             this.Text = "Calculo de Assiduidade";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCalculoAsseduidade_FormClosing);
             this.VisibleChanged += new System.EventHandler(this.FrmCalculoAsseduidade_VisibleChanged);

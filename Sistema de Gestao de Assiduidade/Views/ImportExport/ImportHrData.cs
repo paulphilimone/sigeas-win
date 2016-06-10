@@ -362,6 +362,7 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
 
                 if (repCodes != null || repFuncs != null) {
                     result[i] = 1;
+                    xlsfunc.code = repCodes.Code;
                     i++;
                     continue;
                 }                               
@@ -526,11 +527,11 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
                 item.SubItems.Add(func.name);
                 item.SubItems.Add(func.gender);
                 item.SubItems.Add(func.department_code);
-                item.SubItems.Add(func.category_code);
+                //item.SubItems.Add(func.category_code);
                 item.SubItems.Add(func.enrollNumber);
-                item.SubItems.Add(func.privilege);
+                //item.SubItems.Add(func.privilege);
                 item.SubItems.Add(func.username);
-                item.SubItems.Add(func.password);
+                //item.SubItems.Add(func.password);
                 item.SubItems.Add(func.cardnumber);
                 //item.SubItems.Add(func.enabled);
 
@@ -580,7 +581,7 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
                 
                
                 //get all fingerprints
-                List<string> users = funcionarios.Select(f => f.code).ToList<string>();
+                List<string> users = funcionarios.Select(f => f.enrollNumber).ToList<string>();
                 List<RawFingerprint> fingerprints = null;
 
                 DeviceIO devIo = new DeviceIO(device);

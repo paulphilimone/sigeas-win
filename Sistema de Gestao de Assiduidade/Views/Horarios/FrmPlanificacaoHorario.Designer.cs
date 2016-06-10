@@ -111,6 +111,9 @@
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.DGViewFuncionarioHorario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DGViewFuncionarioHorario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -261,7 +264,7 @@
             this.chkSelectAll.Location = new System.Drawing.Point(462, 13);
             this.chkSelectAll.Name = "chkSelectAll";
             this.chkSelectAll.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkSelectAll.Size = new System.Drawing.Size(113, 17);
+            this.chkSelectAll.Size = new System.Drawing.Size(112, 17);
             this.chkSelectAll.TabIndex = 10;
             this.chkSelectAll.Text = "Selecionar Todos";
             this.chkSelectAll.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -293,7 +296,7 @@
             this.RBtnPeriodoSemanal.Checked = true;
             this.RBtnPeriodoSemanal.Location = new System.Drawing.Point(35, 22);
             this.RBtnPeriodoSemanal.Name = "RBtnPeriodoSemanal";
-            this.RBtnPeriodoSemanal.Size = new System.Drawing.Size(66, 17);
+            this.RBtnPeriodoSemanal.Size = new System.Drawing.Size(68, 17);
             this.RBtnPeriodoSemanal.TabIndex = 14;
             this.RBtnPeriodoSemanal.TabStop = true;
             this.RBtnPeriodoSemanal.Text = "Semanal";
@@ -305,7 +308,7 @@
             this.RBtnPeriodoMensal.AutoSize = true;
             this.RBtnPeriodoMensal.Location = new System.Drawing.Point(123, 23);
             this.RBtnPeriodoMensal.Name = "RBtnPeriodoMensal";
-            this.RBtnPeriodoMensal.Size = new System.Drawing.Size(59, 17);
+            this.RBtnPeriodoMensal.Size = new System.Drawing.Size(61, 17);
             this.RBtnPeriodoMensal.TabIndex = 15;
             this.RBtnPeriodoMensal.Text = "Mensal";
             this.RBtnPeriodoMensal.UseVisualStyleBackColor = true;
@@ -329,7 +332,7 @@
             this.RBtnPeriodoTrimestral.Enabled = false;
             this.RBtnPeriodoTrimestral.Location = new System.Drawing.Point(206, 23);
             this.RBtnPeriodoTrimestral.Name = "RBtnPeriodoTrimestral";
-            this.RBtnPeriodoTrimestral.Size = new System.Drawing.Size(70, 17);
+            this.RBtnPeriodoTrimestral.Size = new System.Drawing.Size(75, 17);
             this.RBtnPeriodoTrimestral.TabIndex = 16;
             this.RBtnPeriodoTrimestral.Text = "Trimestral";
             this.RBtnPeriodoTrimestral.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -414,7 +417,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.DGViewFuncionarioHorario);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MinimizeBox = false;
             this.Name = "FrmPlanificacaoHorario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Planificação de Horários";

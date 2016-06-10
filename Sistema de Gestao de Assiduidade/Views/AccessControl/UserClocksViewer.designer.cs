@@ -262,7 +262,6 @@
             // 
             // BtnInsertClock
             // 
-            this.BtnInsertClock.Enabled = false;
             this.BtnInsertClock.Location = new System.Drawing.Point(37, 75);
             this.BtnInsertClock.Name = "BtnInsertClock";
             this.BtnInsertClock.Size = new System.Drawing.Size(169, 24);
@@ -273,7 +272,6 @@
             // 
             // BtnSearchAndCorrect
             // 
-            this.BtnSearchAndCorrect.Enabled = false;
             this.BtnSearchAndCorrect.Location = new System.Drawing.Point(37, 46);
             this.BtnSearchAndCorrect.Name = "BtnSearchAndCorrect";
             this.BtnSearchAndCorrect.Size = new System.Drawing.Size(169, 24);
@@ -540,8 +538,8 @@
             this.Name = "UserClocksViewer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registos de Picagens";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RegistosBiometricoView_FormClosing);
-            this.VisibleChanged += new System.EventHandler(this.RegistosBiometricoView_VisibleChanged);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UserClocksViewer_FormClosing);
+            this.VisibleChanged += new System.EventHandler(this.UserClocksViewer_VisibleChanged);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
