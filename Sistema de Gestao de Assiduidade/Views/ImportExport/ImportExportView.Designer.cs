@@ -24,29 +24,29 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem22 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem23 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem24 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "B000-001",
             "MICHELE",
             "12000445",
             "2",
             "OK"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem25 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             "B005-C34",
             "RAYMOND ROLAND",
             "281022320",
             "10",
             "Invalido"}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Lime, null);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImportExportView));
-            System.Windows.Forms.ListViewItem listViewItem26 = new System.Windows.Forms.ListViewItem("Paulo Filimone", 0);
-            System.Windows.Forms.ListViewItem listViewItem27 = new System.Windows.Forms.ListViewItem("Robert Full", 0);
-            System.Windows.Forms.ListViewItem listViewItem28 = new System.Windows.Forms.ListViewItem("Lindo L. Taylor", 0);
-            System.Windows.Forms.ListViewItem listViewItem29 = new System.Windows.Forms.ListViewItem("Tangente Hipotenusa", 0);
-            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem19 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem20 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("Paulo Filimone", 0);
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("Robert Full", 0);
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("Lindo L. Taylor", 0);
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("Tangente Hipotenusa", 0);
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem("");
             this.LViewImportedData = new System.Windows.Forms.ListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -247,13 +247,13 @@
             this.columnHeader5,
             this.columnHeader6});
             this.LViewExportData.GridLines = true;
-            listViewItem9.StateImageIndex = 0;
-            listViewItem22.StateImageIndex = 0;
-            listViewItem23.StateImageIndex = 0;
+            listViewItem1.StateImageIndex = 0;
+            listViewItem2.StateImageIndex = 0;
+            listViewItem3.StateImageIndex = 0;
             this.LViewExportData.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem9,
-            listViewItem22,
-            listViewItem23});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3});
             this.LViewExportData.Location = new System.Drawing.Point(19, 55);
             this.LViewExportData.Name = "LViewExportData";
             this.LViewExportData.Size = new System.Drawing.Size(573, 285);
@@ -389,9 +389,9 @@
             // 
             // LViewCollectDataUsers
             // 
-            this.LViewCollectDataUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.LViewCollectDataUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LViewCollectDataUsers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ColUserCode,
             this.ColFullName,
@@ -402,8 +402,8 @@
             this.LViewCollectDataUsers.FullRowSelect = true;
             this.LViewCollectDataUsers.GridLines = true;
             this.LViewCollectDataUsers.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem24,
-            listViewItem25});
+            listViewItem4,
+            listViewItem5});
             this.LViewCollectDataUsers.Location = new System.Drawing.Point(23, 92);
             this.LViewCollectDataUsers.MultiSelect = false;
             this.LViewCollectDataUsers.Name = "LViewCollectDataUsers";
@@ -497,7 +497,7 @@
             this.groupBox3.Size = new System.Drawing.Size(609, 223);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Beneficiários não complemente registados";
+            this.groupBox3.Text = "Funcionarios não complemente registados";
             // 
             // BtnRemoveBeneficiario
             // 
@@ -529,10 +529,10 @@
             this.BtnAddBeneficiario.UseVisualStyleBackColor = true;
             this.BtnAddBeneficiario.Click += new System.EventHandler(this.BtnAddBeneficiario_Click);
             // 
-            // BtnAddAllBeneficiarios
+            // BtnAddAllFuncionarios
             // 
             this.BtnAddAllFuncionarios.Location = new System.Drawing.Point(229, 108);
-            this.BtnAddAllFuncionarios.Name = "BtnAddAllBeneficiarios";
+            this.BtnAddAllFuncionarios.Name = "BtnAddAllFuncionarios";
             this.BtnAddAllFuncionarios.Size = new System.Drawing.Size(116, 23);
             this.BtnAddAllFuncionarios.TabIndex = 6;
             this.BtnAddAllFuncionarios.Text = "Adicionar Todos ->";
@@ -544,36 +544,36 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(348, 24);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(128, 13);
+            this.label6.Size = new System.Drawing.Size(127, 13);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Beneficiarios á exportar";
+            this.label6.Text = "Funcionarios á exportar";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(16, 24);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 13);
+            this.label5.Size = new System.Drawing.Size(86, 13);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Contrato de Clientes";
+            this.label5.Text = "Departamentos";
             // 
-            // CBoxContratos
+            // CBoxDepartamentos
             // 
             this.CBoxDepartamentos.FormattingEnabled = true;
             this.CBoxDepartamentos.Location = new System.Drawing.Point(19, 40);
-            this.CBoxDepartamentos.Name = "CBoxContratos";
+            this.CBoxDepartamentos.Name = "CBoxDepartamentos";
             this.CBoxDepartamentos.Size = new System.Drawing.Size(204, 21);
             this.CBoxDepartamentos.TabIndex = 3;
             this.CBoxDepartamentos.SelectedIndexChanged += new System.EventHandler(this.CBoxContratos_SelectedIndexChanged);
             // 
-            // LViewExportBeneficiarios
+            // LViewExportFuncionarios
             // 
             this.LViewExportFuncionarios.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader12});
             this.LViewExportFuncionarios.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.LViewExportFuncionarios.LargeImageList = this.imageList1;
             this.LViewExportFuncionarios.Location = new System.Drawing.Point(351, 40);
-            this.LViewExportFuncionarios.Name = "LViewExportBeneficiarios";
+            this.LViewExportFuncionarios.Name = "LViewExportFuncionarios";
             this.LViewExportFuncionarios.Size = new System.Drawing.Size(242, 173);
             this.LViewExportFuncionarios.SmallImageList = this.imageList1;
             this.LViewExportFuncionarios.TabIndex = 2;
@@ -590,25 +590,25 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "role_icon2.png");
             // 
-            // LViewContratoBeneficiarios
+            // LViewDepartFuncionarios
             // 
             this.LViewDepartFuncionarios.BackColor = System.Drawing.Color.Bisque;
             this.LViewDepartFuncionarios.CheckBoxes = true;
             this.LViewDepartFuncionarios.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader11});
             this.LViewDepartFuncionarios.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            listViewItem26.StateImageIndex = 0;
-            listViewItem27.StateImageIndex = 0;
-            listViewItem28.StateImageIndex = 0;
-            listViewItem29.StateImageIndex = 0;
+            listViewItem6.StateImageIndex = 0;
+            listViewItem7.StateImageIndex = 0;
+            listViewItem8.StateImageIndex = 0;
+            listViewItem9.StateImageIndex = 0;
             this.LViewDepartFuncionarios.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem26,
-            listViewItem27,
-            listViewItem28,
-            listViewItem29});
+            listViewItem6,
+            listViewItem7,
+            listViewItem8,
+            listViewItem9});
             this.LViewDepartFuncionarios.LargeImageList = this.imageList1;
             this.LViewDepartFuncionarios.Location = new System.Drawing.Point(19, 67);
-            this.LViewDepartFuncionarios.Name = "LViewContratoBeneficiarios";
+            this.LViewDepartFuncionarios.Name = "LViewDepartFuncionarios";
             this.LViewDepartFuncionarios.Size = new System.Drawing.Size(204, 146);
             this.LViewDepartFuncionarios.SmallImageList = this.imageList1;
             this.LViewDepartFuncionarios.TabIndex = 1;
@@ -647,13 +647,13 @@
             this.columnHeader9,
             this.columnHeader10});
             this.LViewExportUserDevices.GridLines = true;
-            listViewItem18.StateImageIndex = 0;
-            listViewItem19.StateImageIndex = 0;
-            listViewItem20.StateImageIndex = 0;
+            listViewItem10.StateImageIndex = 0;
+            listViewItem11.StateImageIndex = 0;
+            listViewItem12.StateImageIndex = 0;
             this.LViewExportUserDevices.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem18,
-            listViewItem19,
-            listViewItem20});
+            listViewItem10,
+            listViewItem11,
+            listViewItem12});
             this.LViewExportUserDevices.Location = new System.Drawing.Point(19, 25);
             this.LViewExportUserDevices.Name = "LViewExportUserDevices";
             this.LViewExportUserDevices.Size = new System.Drawing.Size(574, 98);

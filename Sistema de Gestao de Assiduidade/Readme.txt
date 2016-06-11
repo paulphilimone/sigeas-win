@@ -10,9 +10,9 @@
 
 - Notes onn future development.  
   - Ter em conta Multiple Verification Modes, altera verifyMode number
-  - Bug planificacao de horario - its creating another horario semana (corrected)
-  - Melhorar Device Update View
-
+  - Melhorar Device Update View 
+  - Import Export (bug enrollNumber of DeviceUser is not exported to zxdb - some users wont collect data using mobile manager)
+  - Add saving dialog to "Guardar associacoes" on tableFuncionariosDeviceView
 
 - New Features
   - Add Device Capacity Warning (need to connect once or twice a week, create statistics of clocks per day)

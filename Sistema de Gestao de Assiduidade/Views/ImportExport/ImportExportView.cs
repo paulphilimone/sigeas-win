@@ -478,11 +478,11 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
 
             List<Funcionario> listExisting = GetFuncionariosToExport();
 
-            foreach (Funcionario ben in list) {
-                if (!listExisting.Contains(ben)) {
-                    ListViewGenericItem<Funcionario> item = new ListViewGenericItem<Funcionario>(ben);
+            foreach (Funcionario func in list) {
+                if (!listExisting.Contains(func)) {
+                    ListViewGenericItem<Funcionario> item = new ListViewGenericItem<Funcionario>(func);
                     item.ImageIndex = 0;
-                    item.Text = ben.ToString();
+                    item.Text = func.ToString();
                     LViewExportFuncionarios.Items.Add(item);
                 }
             }
@@ -580,23 +580,23 @@ namespace mz.betainteractive.sigeas.Views.ImportExport {
                 foreach (var user in importedDb.Users) {
                     index++;
 
-                    var beneficiario = context.Funcionario.FirstOrDefault(t => t.Id == user.Id);
+                    var funcionario = context.Funcionario.FirstOrDefault(t => t.Id == user.Id);
 
-                    ItemZUserFuncionario zitem = new ItemZUserFuncionario { Funcionario = beneficiario, User = user };
+                    ItemZUserFuncionario zitem = new ItemZUserFuncionario { Funcionario = funcionario, User = user };
 
                     ListViewGenericItem<ItemZUserFuncionario> item = new ListViewGenericItem<ItemZUserFuncionario>(zitem);
 
-                    if (beneficiario == null) {
+                    if (funcionario == null) {
                         item.Text = user.Id.ToString();
                     } else {
-                        item.Text = beneficiario.Code;
+                        item.Text = funcionario.Code;
                     }
 
                     item.SubItems.Add(user.FullName);
                     item.SubItems.Add(user.CardNumber);
                     item.SubItems.Add(user.UserFingerprints.Count.ToString());
 
-                    if (beneficiario == null) {
+                    if (funcionario == null) {
                         item.SubItems.Add("Inválido");
                         item.BackColor = Color.Lime;
                     } else {
