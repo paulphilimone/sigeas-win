@@ -9,13 +9,15 @@ using System.Windows.Forms;
 using mz.betainteractive.sigeas.Models;
 using mz.betainteractive.sigeas.Models.Entities;
 using mz.betainteractive.sigeas.Utilities;
+using mz.betainteractive.sigeas.BackgroundFeatures;
 
 namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
     public partial class TableFuncionarioDeviceView : Form, mz.betainteractive.sigeas.Utilities.Components.AuthorizableComponent {
 
         private const string MENU_SELECT_ALL = "Selecionar Todos";
         private const string MENU_UNSELECT_ALL = "Desmarcar Todos";
-        private const string MENU_CANCEL = "Cancelar";
+        private const string MENU_CANCEL = "Cancelar";
+
 
         private SigeasDatabaseContext context;
         private List<DataGridViewColumn> GridColumns = new List<DataGridViewColumn>();
@@ -100,7 +102,8 @@ namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
 
                 column.CellTemplate = new DataGridViewCheckBoxCellGeneric<DeviceUser>();
 
-                column.HeaderCell.ContextMenuStrip = CreateDeviceMenuStrip(column);
+                column.HeaderCell.ContextMenuStrip = CreateDeviceMenuStrip(column);
+
                 GridColumns.Add(column);
             }
 
@@ -379,7 +382,37 @@ namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
         }
 
         private void BtnSaveAll_Click(object sender, EventArgs e) {
-            UpdateDeviceUsers();
+            SaveAll();            
+        }
+
+        private void SaveAll(){
+            OnExecuteDialog background = new OnExecuteDialog("Guardar associações...", "Guardando associações de funcionarios e dispositivos...");
+            bool result = true;
+
+            //take data from controls
+
+            background.OnExecute += delegate() {
+
+                //Execute inner job - without using controls
+                try {
+                    UpdateDeviceUsers();                   
+                } catch (Exception ex) {
+                    LogErrors.AddErrorLog(ex, "Erro Gravar associações");                    
+                    result = false;
+                }
+            };
+
+            background.OnPostExecute += delegate() {
+                //output result
+                if (result) {
+                    MessageBox.Show(this, "As alterações nas associações (Beneficiário => Dispositivo) foram registadas com sucesso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadFuncionariosToGridView(lastListOfFuncionarios);
+                } else {
+                    MessageBox.Show(this, "Não foi possivel registar as alterações (Beneficiário => Dispositivo) na base de dados");
+                }
+            };
+
+            background.StartExecute();                       
         }
 
         private void UpdateDeviceUsers() {
@@ -400,15 +433,9 @@ namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
             foreach (var dev in devicesToAdd) {
                 context.DeviceUser.Add(dev);
             }
-
-            try {
-                context.SaveChanges();
-                MessageBox.Show(this, "As alterações nas associações (Beneficiário => Dispositivo) foram registadas com sucesso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadFuncionariosToGridView(lastListOfFuncionarios);
-            } catch (Exception ex) {
-                LogErrors.AddErrorLog(ex, "Erro Gravar associações");
-                MessageBox.Show(this, "Não foi possivel registar as alterações (Beneficiário => Dispositivo) na base de dados");
-            }
+                      
+            context.SaveChanges();
+          
         }
 
         private void GetChangedStateDevices(out List<DeviceUser> listOfDevicesToAdd, out List<DeviceUser> listOfDevicesToRemove) {
