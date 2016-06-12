@@ -10,8 +10,6 @@
 
 - Notes onn future development.  
   - Ter em conta Multiple Verification Modes, altera verifyMode number
-  - Melhorar Device Update View 
-  - Import Export (bug enrollNumber of DeviceUser is not exported to zxdb - some users wont collect data using mobile manager)
   - Add saving dialog to "Guardar associacoes" on tableFuncionariosDeviceView
 
 - New Features
@@ -26,3 +24,16 @@
     - Mais faltosos por Departamentos
     - Departamento com mais faltas
     - 
+
+Fase 1 - depois venda
+ - Testar e corrigir bugs
+ - Modificar Planificacao de Horario (tornar mais facil)
+ - Adicionar Reports
+
+Fase 2 - depois venda e update
+ - Mudar as Views do programa (torna-lo mais user friendly)
+ - Optional (Faces e Multiple Verification Mode)
+
+Fase 3
+ - Web Application
+ - SigeasDeviceModule - Server(app with rest web services) n Client(java)

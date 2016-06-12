@@ -23,7 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "01 de Fevereiro de 2012"),
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "29 de Fevereiro de 2012"),
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "28 dias"),
@@ -69,8 +69,10 @@
             this.groupBox2.Controls.Add(this.CBoxCategoria);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(11, 10);
+            this.groupBox2.MaximumSize = new System.Drawing.Size(512, 0);
+            this.groupBox2.MinimumSize = new System.Drawing.Size(256, 126);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(256, 126);
+            this.groupBox2.Size = new System.Drawing.Size(342, 126);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Selecione o Funcionário";
@@ -84,12 +86,14 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Departamento";
             // 
-            // cboDepartamento
+            // CBoxDepartamento
             // 
+            this.CBoxDepartamento.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CBoxDepartamento.FormattingEnabled = true;
             this.CBoxDepartamento.Location = new System.Drawing.Point(95, 31);
-            this.CBoxDepartamento.Name = "cboDepartamento";
-            this.CBoxDepartamento.Size = new System.Drawing.Size(146, 21);
+            this.CBoxDepartamento.Name = "CBoxDepartamento";
+            this.CBoxDepartamento.Size = new System.Drawing.Size(232, 21);
             this.CBoxDepartamento.TabIndex = 0;
             this.CBoxDepartamento.SelectedIndexChanged += new System.EventHandler(this.cboDepartamento_SelectedIndexChanged);
             // 
@@ -102,21 +106,25 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Categoria";
             // 
-            // cboFuncionario
+            // CBoxFuncionario
             // 
+            this.CBoxFuncionario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CBoxFuncionario.FormattingEnabled = true;
             this.CBoxFuncionario.Location = new System.Drawing.Point(95, 85);
-            this.CBoxFuncionario.Name = "cboFuncionario";
-            this.CBoxFuncionario.Size = new System.Drawing.Size(146, 21);
+            this.CBoxFuncionario.Name = "CBoxFuncionario";
+            this.CBoxFuncionario.Size = new System.Drawing.Size(232, 21);
             this.CBoxFuncionario.TabIndex = 1;
             this.CBoxFuncionario.SelectedIndexChanged += new System.EventHandler(this.cboFuncionario_SelectedIndexChanged);
             // 
-            // cboCategoria
+            // CBoxCategoria
             // 
+            this.CBoxCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CBoxCategoria.FormattingEnabled = true;
             this.CBoxCategoria.Location = new System.Drawing.Point(95, 58);
-            this.CBoxCategoria.Name = "cboCategoria";
-            this.CBoxCategoria.Size = new System.Drawing.Size(146, 21);
+            this.CBoxCategoria.Name = "CBoxCategoria";
+            this.CBoxCategoria.Size = new System.Drawing.Size(232, 21);
             this.CBoxCategoria.TabIndex = 12;
             this.CBoxCategoria.SelectedIndexChanged += new System.EventHandler(this.cboCategoria_SelectedIndexChanged);
             // 
@@ -170,7 +178,7 @@
             this.groupBox1.Controls.Add(this.dtpFim);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(273, 10);
+            this.groupBox1.Location = new System.Drawing.Point(359, 10);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(340, 126);
             this.groupBox1.TabIndex = 23;
@@ -200,16 +208,22 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.listViewFerias);
             this.groupBox3.Location = new System.Drawing.Point(11, 142);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(602, 206);
+            this.groupBox3.Size = new System.Drawing.Size(688, 209);
             this.groupBox3.TabIndex = 24;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Lista de feriados registados";
             // 
             // listViewFerias
             // 
+            this.listViewFerias.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listViewFerias.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listViewFerias.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
@@ -220,11 +234,11 @@
             this.listViewFerias.GridLines = true;
             this.listViewFerias.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listViewFerias.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem2});
             this.listViewFerias.Location = new System.Drawing.Point(16, 64);
             this.listViewFerias.MultiSelect = false;
             this.listViewFerias.Name = "listViewFerias";
-            this.listViewFerias.Size = new System.Drawing.Size(571, 126);
+            this.listViewFerias.Size = new System.Drawing.Size(657, 129);
             this.listViewFerias.TabIndex = 0;
             this.listViewFerias.UseCompatibleStateImageBehavior = false;
             this.listViewFerias.View = System.Windows.Forms.View.Details;
@@ -254,7 +268,8 @@
             // 
             // btFechar
             // 
-            this.btFechar.Location = new System.Drawing.Point(500, 358);
+            this.btFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btFechar.Location = new System.Drawing.Point(586, 361);
             this.btFechar.Name = "btFechar";
             this.btFechar.Size = new System.Drawing.Size(99, 23);
             this.btFechar.TabIndex = 25;
@@ -264,12 +279,14 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.txtFuncionario);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(27, 165);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(571, 35);
+            this.panel1.Size = new System.Drawing.Size(657, 35);
             this.panel1.TabIndex = 26;
             // 
             // txtFuncionario
@@ -292,7 +309,8 @@
             // 
             // btLimpar
             // 
-            this.btLimpar.Location = new System.Drawing.Point(400, 358);
+            this.btLimpar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btLimpar.Location = new System.Drawing.Point(486, 361);
             this.btLimpar.Name = "btLimpar";
             this.btLimpar.Size = new System.Drawing.Size(94, 23);
             this.btLimpar.TabIndex = 27;
@@ -302,7 +320,8 @@
             // 
             // btRemover
             // 
-            this.btRemover.Location = new System.Drawing.Point(299, 358);
+            this.btRemover.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btRemover.Location = new System.Drawing.Point(385, 361);
             this.btRemover.Name = "btRemover";
             this.btRemover.Size = new System.Drawing.Size(95, 23);
             this.btRemover.TabIndex = 28;
@@ -315,7 +334,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(625, 393);
+            this.ClientSize = new System.Drawing.Size(711, 396);
             this.Controls.Add(this.btRemover);
             this.Controls.Add(this.btLimpar);
             this.Controls.Add(this.panel1);
@@ -324,11 +343,10 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FrmFerias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Férias dos funcionários";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmFerias_FormClosing);            
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmFerias_FormClosing);
             this.VisibleChanged += new System.EventHandler(this.FrmFerias_VisibleChanged);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

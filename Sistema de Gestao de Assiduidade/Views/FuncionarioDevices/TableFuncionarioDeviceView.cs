@@ -13,6 +13,10 @@ using mz.betainteractive.sigeas.Utilities;
 namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
     public partial class TableFuncionarioDeviceView : Form, mz.betainteractive.sigeas.Utilities.Components.AuthorizableComponent {
 
+        private const string MENU_SELECT_ALL = "Selecionar Todos";
+        private const string MENU_UNSELECT_ALL = "Desmarcar Todos";
+        private const string MENU_CANCEL = "Cancelar";
+
         private SigeasDatabaseContext context;
         private List<DataGridViewColumn> GridColumns = new List<DataGridViewColumn>();
         private List<Funcionario> lastListOfFuncionarios { get; set; }
@@ -96,6 +100,7 @@ namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
 
                 column.CellTemplate = new DataGridViewCheckBoxCellGeneric<DeviceUser>();
 
+                column.HeaderCell.ContextMenuStrip = CreateDeviceMenuStrip(column);
                 GridColumns.Add(column);
             }
 
@@ -166,6 +171,52 @@ namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
 
             CBoxFuncionarios.Items.Insert(0, "Todos");
         }
+
+        private ContextMenuStrip CreateDeviceMenuStrip(DataGridViewCheckBoxColumnGeneric<Device> device) {
+            var menu = new ContextMenuStripGeneric<DataGridViewCheckBoxColumnGeneric<Device>>(device);
+
+            ToolStripMenuItem ppdItemSelectAll = new ToolStripMenuItem(MENU_SELECT_ALL);
+            ToolStripSeparator separator1 = new ToolStripSeparator();
+            ToolStripSeparator separator2 = new ToolStripSeparator();
+            ToolStripMenuItem ppdItemCancelar = new ToolStripMenuItem(MENU_CANCEL);
+            ToolStripMenuItem ppdItemUnselectAll = new ToolStripMenuItem(MENU_UNSELECT_ALL);
+
+            //ppdItemUnselectAll.Enabled = false;
+
+            menu.Items.AddRange(new ToolStripItem[] { ppdItemSelectAll, separator1, ppdItemUnselectAll, separator2, ppdItemCancelar });
+
+            ppdItemSelectAll.Click += PopupMenuDevicesAction;
+            ppdItemUnselectAll.Click += PopupMenuDevicesAction;
+
+            return menu;
+        }
+
+        private void PopupMenuDevicesAction(object sender, EventArgs e) {
+
+            ToolStripMenuItem item = sender as ToolStripMenuItem;
+            var contextMenu = item.Owner as ContextMenuStripGeneric<DataGridViewCheckBoxColumnGeneric<Device>>;
+            var column = contextMenu.Value;
+
+
+            Console.WriteLine("assigned to : " + item.Owner);
+
+            if (item.Text == MENU_SELECT_ALL) {
+                SetCellSelected(column, true);
+            }
+
+            if (item.Text == MENU_UNSELECT_ALL) {
+                SetCellSelected(column, false);
+            }
+
+        }
+
+        private void SetCellSelected(DataGridViewCheckBoxColumnGeneric<Device> column, bool value) {
+            foreach (DataGridViewRow row in DGViewFuncDevices.Rows) {
+                var cell = row.Cells[column.Index] as DataGridViewCheckBoxCell;
+                cell.Value = value;
+            }
+        }
+
 
         private void TableFuncionarioDeviceView_VisibleChanged(object sender, EventArgs e) {
             if (this.Visible == true) {
@@ -285,6 +336,10 @@ namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
                             Device = column.Value,
                             CardNumber = funcionario.Cardnumber
                         };
+
+                        if (funcionario.EnrollNumber.HasValue) { //This field is not empty if emploeyes were imported by xls (from previous system with enrollNumber)
+                            deviceUser.EnrollNumber = funcionario.EnrollNumber.Value;
+                        }
 
                         cell.GenericValue = deviceUser;
 

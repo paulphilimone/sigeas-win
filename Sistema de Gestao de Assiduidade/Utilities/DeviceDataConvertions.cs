@@ -51,7 +51,7 @@ namespace mz.betainteractive.sigeas.Utilities {
             foreach (RawUserClock rawClock in listRawClocks){                           
                 
                 int dwEnrollNumber = Int32.Parse(rawClock.EnrollNumber);
-                
+                //Console.WriteLine("en: "+rawClock.EnrollNumber+", sn: "+rawClock.DeviceSerialNumber+", "+rawClock.DateAndTime);
                 //Search by EnrollNumber
                 DeviceUser  devUser = context.DeviceUser.FirstOrDefault(d => d.Device.SerialNumber == rawClock.DeviceSerialNumber && d.EnrollNumber == dwEnrollNumber);                    
                 
