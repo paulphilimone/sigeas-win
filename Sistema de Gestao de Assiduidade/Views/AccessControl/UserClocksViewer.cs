@@ -296,6 +296,8 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
             Device device = (Device)CBoxDevices.SelectedItem;
             DeviceIO deviceIO = new DeviceIO(device);
 
+            if (device == null) return;
+
             if (device.Connected) {
                 deviceIO.StartIdentify();
                 device.Disconnect();                
@@ -344,17 +346,24 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
             background.OnExecute += delegate() {                
                 AccessControlCalculations calc = new AccessControlCalculations(context);
                 DeviceDataConvertions convertions = new DeviceDataConvertions();
-                
-                //Pass 1 & 2
-                List<RawUserClock> rawClocks = null;
-                //Pass 1
-                io.DownloadAttendanceData_TFT(out rawClocks);
-                //Pass 2
-                result = convertions.ConvertAttendanceDataToDatabase(context, rawClocks, out clocks);
-                //Pass 3
-                calc.CorrectAllUserClock(clocks);
-                
-                context.SaveChanges();
+
+                try {
+
+                    //Pass 1 & 2
+                    List<RawUserClock> rawClocks = null;
+                    //Pass 1
+                    io.DownloadAttendanceData_TFT(out rawClocks);
+                    //Pass 2
+                    result = convertions.ConvertAttendanceDataToDatabase(context, rawClocks, out clocks);
+                    //Pass 3
+                    calc.CorrectAllUserClock(clocks);
+
+                    context.SaveChanges();
+
+                    result = true;
+                } catch (Exception ex) {
+                    LogErrors.AddErrorLog(ex, "Error on UserClocksViewer - Dwnld Ucs");
+                }
             };
 
             background.OnPostExecute += delegate() {
@@ -394,15 +403,20 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
             background.OnExecute += delegate() {
                 AccessControlCalculations calc = new AccessControlCalculations(context);
                 DeviceDataConvertions convertions = new DeviceDataConvertions();
-                               
-                
-                //Pass 2 - confirm this code if we gonna use it
-                calc.ClearResults(clocks);
 
-                //Pass 3
-                calc.CorrectAllUserClock(clocks);
+                try {
+                    //Pass 2 - confirm this code if we gonna use it
+                    calc.ClearResults(clocks);
 
-                context.SaveChanges();
+                    //Pass 3
+                    calc.CorrectAllUserClock(clocks);
+
+                    context.SaveChanges();
+
+                    result = true;
+                } catch (Exception ex) {
+                    LogErrors.AddErrorLog(ex, "Error on UserClocksViewer - Srch & Crrt Ucs");
+                }
             };
 
             background.OnPostExecute += delegate() {
