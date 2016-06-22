@@ -59,6 +59,10 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
         }
 
         private void Initialize() {
+
+            DtpToDate.Value = DateTime.Now;
+            DtpFromDate.Value = DtpToDate.Value.AddMonths(-1);
+
             LoadDevicesToComboBox();
             LoadDepartamentosToComboBox();
             LoadCategoriasToComboBox();
@@ -197,21 +201,21 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
 
             //Search On One funcionario
             if (selectedfuncionario != null) {
-                clocks = context.UserClock.AsNoTracking().Where(uc => uc.DateAndTime >= fromDate && uc.DateAndTime <= toDate && uc.Funcionario.Id == selectedfuncionario.Id).ToList();
+                clocks = context.UserClock.Where(uc => uc.DateAndTime >= fromDate && uc.DateAndTime <= toDate && uc.Funcionario.Id == selectedfuncionario.Id).ToList();
             }
 
             //Search On One Departamento
             if (selectedfuncionario == null && selectedDepartamento != null && selectedCategoria == null) {
-                clocks = context.UserClock.AsNoTracking().Where(uc => uc.DateAndTime >= fromDate && uc.DateAndTime <= toDate && uc.Funcionario.Departamento.Id == selectedDepartamento.Id).ToList();
+                clocks = context.UserClock.Where(uc => uc.DateAndTime >= fromDate && uc.DateAndTime <= toDate && uc.Funcionario.Departamento.Id == selectedDepartamento.Id).ToList();
             }
             //Search On One Categoria
             if (selectedfuncionario == null && selectedDepartamento == null && selectedCategoria != null) {
-                clocks = context.UserClock.AsNoTracking().Where(uc => uc.DateAndTime >= fromDate && uc.DateAndTime <= toDate && uc.Funcionario.Categoria.Id == selectedCategoria.Id).ToList();
+                clocks = context.UserClock.Where(uc => uc.DateAndTime >= fromDate && uc.DateAndTime <= toDate && uc.Funcionario.Categoria.Id == selectedCategoria.Id).ToList();
             }
 
             //Search On All enterprise
             if (selectedDepartamento == null && selectedfuncionario == null && selectedCategoria == null) {
-                clocks = context.UserClock.AsNoTracking().Where(uc => uc.DateAndTime >= fromDate && uc.DateAndTime <= toDate).ToList();
+                clocks = context.UserClock.Where(uc => uc.DateAndTime >= fromDate && uc.DateAndTime <= toDate).ToList();
             }
 
             return clocks;

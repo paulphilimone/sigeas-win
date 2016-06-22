@@ -237,7 +237,7 @@
             this.DtpFromDate.Name = "DtpFromDate";
             this.DtpFromDate.Size = new System.Drawing.Size(91, 22);
             this.DtpFromDate.TabIndex = 6;
-            this.DtpFromDate.Value = new System.DateTime(2016, 1, 5, 10, 7, 0, 0);
+            this.DtpFromDate.Value = new System.DateTime(2016, 6, 22, 0, 0, 0, 0);
             // 
             // BtnPesquisar
             // 

@@ -70,7 +70,9 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
             }
         }
 
-        private void Initialize() {                        
+        private void Initialize() {
+            DtpToDate.Value = DateTime.Now;
+            DtpFromDate.Value = DtpToDate.Value.AddMonths(-1);
             LoadDepartamentosToComboBox();
             LoadCategoriasToComboBox();
             LimparLista();
@@ -263,7 +265,9 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
                 row.Cells[15].Value = att.IsFeriado; //Feriado  - bool
                 row.Cells[16].Value = att.IsEmFerias; //EmFerias - bool
 
-                if (!att.IsDayWork){                    row.DefaultCellStyle.BackColor = Color.DarkGray;                }
+                if (!att.IsDayWork){
+                    row.DefaultCellStyle.BackColor = Color.DarkGray;
+                }
 
                 DGViewAttCalcs.Rows.Add(row);
                 i++;
