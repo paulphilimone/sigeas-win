@@ -23,29 +23,26 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CBoxDepartamento = new System.Windows.Forms.ComboBox();
             this.CBoxFuncionario = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.DGViewFuncionarioHorario = new System.Windows.Forms.DataGridView();
             this.colOrdem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colHorario = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colPeriodo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSelected = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ColFName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NudAnos = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.TxtFuncionario = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.chkSelectAll = new System.Windows.Forms.CheckBox();
             this.CBoxCategoria = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.RBtnPeriodoSemanal = new System.Windows.Forms.RadioButton();
@@ -58,12 +55,20 @@
             this.BtnViewAssociacoes = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btLimpar = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.popMenuSelectionDecision = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.popMenSelOverwriteAll = new System.Windows.Forms.ToolStripMenuItem();
+            this.popMenSelOverwriteSome = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.popMenSelCancelar = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.DGViewFuncionarioHorario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NudAnos)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.popMenuSelectionDecision.SuspendLayout();
             this.SuspendLayout();
             // 
             // CBoxDepartamento
@@ -108,93 +113,74 @@
             this.DGViewFuncionarioHorario.AllowUserToDeleteRows = false;
             this.DGViewFuncionarioHorario.AllowUserToResizeColumns = false;
             this.DGViewFuncionarioHorario.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.DGViewFuncionarioHorario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGViewFuncionarioHorario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
             this.DGViewFuncionarioHorario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGViewFuncionarioHorario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DGViewFuncionarioHorario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DGViewFuncionarioHorario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGViewFuncionarioHorario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.DGViewFuncionarioHorario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGViewFuncionarioHorario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colOrdem,
-            this.colHorario,
-            this.colPeriodo,
-            this.colSelected});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGViewFuncionarioHorario.DefaultCellStyle = dataGridViewCellStyle6;
+            this.ColFName});
+            this.DGViewFuncionarioHorario.Cursor = System.Windows.Forms.Cursors.Cross;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGViewFuncionarioHorario.DefaultCellStyle = dataGridViewCellStyle18;
             this.DGViewFuncionarioHorario.Location = new System.Drawing.Point(12, 188);
             this.DGViewFuncionarioHorario.Name = "DGViewFuncionarioHorario";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGViewFuncionarioHorario.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.DGViewFuncionarioHorario.RowHeadersVisible = false;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.DGViewFuncionarioHorario.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.DGViewFuncionarioHorario.ReadOnly = true;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGViewFuncionarioHorario.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            this.DGViewFuncionarioHorario.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.DGViewFuncionarioHorario.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.DGViewFuncionarioHorario.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.DGViewFuncionarioHorario.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DGViewFuncionarioHorario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGViewFuncionarioHorario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.DGViewFuncionarioHorario.ShowCellErrors = false;
             this.DGViewFuncionarioHorario.ShowRowErrors = false;
-            this.DGViewFuncionarioHorario.Size = new System.Drawing.Size(612, 168);
+            this.DGViewFuncionarioHorario.Size = new System.Drawing.Size(1015, 394);
             this.DGViewFuncionarioHorario.TabIndex = 5;
             // 
             // colOrdem
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.colOrdem.DefaultCellStyle = dataGridViewCellStyle3;
-            this.colOrdem.HeaderText = "Ordem";
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.colOrdem.DefaultCellStyle = dataGridViewCellStyle17;
+            this.colOrdem.HeaderText = "Código";
             this.colOrdem.Name = "colOrdem";
             this.colOrdem.ReadOnly = true;
             this.colOrdem.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colOrdem.Width = 70;
+            this.colOrdem.Width = 90;
             // 
-            // colHorario
+            // ColFName
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.NullValue = "Sem horário";
-            this.colHorario.DefaultCellStyle = dataGridViewCellStyle4;
-            this.colHorario.HeaderText = "Horário";
-            this.colHorario.Name = "colHorario";
-            this.colHorario.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colHorario.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.colHorario.Width = 230;
-            // 
-            // colPeriodo
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colPeriodo.DefaultCellStyle = dataGridViewCellStyle5;
-            this.colPeriodo.HeaderText = "Periodo";
-            this.colPeriodo.Name = "colPeriodo";
-            this.colPeriodo.ReadOnly = true;
-            this.colPeriodo.Width = 255;
-            // 
-            // colSelected
-            // 
-            this.colSelected.HeaderText = "";
-            this.colSelected.Name = "colSelected";
-            this.colSelected.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colSelected.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.colSelected.Width = 30;
+            this.ColFName.HeaderText = "Nome Completo";
+            this.ColFName.Name = "ColFName";
+            this.ColFName.ReadOnly = true;
+            this.ColFName.Width = 200;
             // 
             // NudAnos
             // 
@@ -234,7 +220,6 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.NudAnos);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.chkSelectAll);
             this.panel1.Location = new System.Drawing.Point(11, 126);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(613, 46);
@@ -258,20 +243,6 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Funcionário";
             // 
-            // chkSelectAll
-            // 
-            this.chkSelectAll.AutoSize = true;
-            this.chkSelectAll.Location = new System.Drawing.Point(462, 13);
-            this.chkSelectAll.Name = "chkSelectAll";
-            this.chkSelectAll.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkSelectAll.Size = new System.Drawing.Size(112, 17);
-            this.chkSelectAll.TabIndex = 10;
-            this.chkSelectAll.Text = "Selecionar Todos";
-            this.chkSelectAll.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.chkSelectAll.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.chkSelectAll.UseVisualStyleBackColor = true;
-            this.chkSelectAll.CheckedChanged += new System.EventHandler(this.chkSelectAll_CheckedChanged);
-            // 
             // CBoxCategoria
             // 
             this.CBoxCategoria.FormattingEnabled = true;
@@ -293,12 +264,11 @@
             // RBtnPeriodoSemanal
             // 
             this.RBtnPeriodoSemanal.AutoSize = true;
-            this.RBtnPeriodoSemanal.Checked = true;
+            this.RBtnPeriodoSemanal.Enabled = false;
             this.RBtnPeriodoSemanal.Location = new System.Drawing.Point(35, 22);
             this.RBtnPeriodoSemanal.Name = "RBtnPeriodoSemanal";
             this.RBtnPeriodoSemanal.Size = new System.Drawing.Size(68, 17);
             this.RBtnPeriodoSemanal.TabIndex = 14;
-            this.RBtnPeriodoSemanal.TabStop = true;
             this.RBtnPeriodoSemanal.Text = "Semanal";
             this.RBtnPeriodoSemanal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.RBtnPeriodoSemanal.UseVisualStyleBackColor = true;
@@ -306,10 +276,12 @@
             // RBtnPeriodoMensal
             // 
             this.RBtnPeriodoMensal.AutoSize = true;
+            this.RBtnPeriodoMensal.Checked = true;
             this.RBtnPeriodoMensal.Location = new System.Drawing.Point(123, 23);
             this.RBtnPeriodoMensal.Name = "RBtnPeriodoMensal";
             this.RBtnPeriodoMensal.Size = new System.Drawing.Size(61, 17);
             this.RBtnPeriodoMensal.TabIndex = 15;
+            this.RBtnPeriodoMensal.TabStop = true;
             this.RBtnPeriodoMensal.Text = "Mensal";
             this.RBtnPeriodoMensal.UseVisualStyleBackColor = true;
             // 
@@ -354,7 +326,8 @@
             // 
             // btFechar
             // 
-            this.btFechar.Location = new System.Drawing.Point(523, 375);
+            this.btFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btFechar.Location = new System.Drawing.Point(926, 601);
             this.btFechar.Name = "btFechar";
             this.btFechar.Size = new System.Drawing.Size(100, 23);
             this.btFechar.TabIndex = 19;
@@ -364,7 +337,8 @@
             // 
             // btGravar
             // 
-            this.btGravar.Location = new System.Drawing.Point(264, 375);
+            this.btGravar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btGravar.Location = new System.Drawing.Point(667, 601);
             this.btGravar.Name = "btGravar";
             this.btGravar.Size = new System.Drawing.Size(146, 23);
             this.btGravar.TabIndex = 20;
@@ -374,7 +348,6 @@
             // 
             // BtnViewAssociacoes
             // 
-            this.BtnViewAssociacoes.Enabled = false;
             this.BtnViewAssociacoes.Location = new System.Drawing.Point(56, 18);
             this.BtnViewAssociacoes.Name = "BtnViewAssociacoes";
             this.BtnViewAssociacoes.Size = new System.Drawing.Size(202, 23);
@@ -394,7 +367,8 @@
             // 
             // btLimpar
             // 
-            this.btLimpar.Location = new System.Drawing.Point(416, 375);
+            this.btLimpar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btLimpar.Location = new System.Drawing.Point(819, 601);
             this.btLimpar.Name = "btLimpar";
             this.btLimpar.Size = new System.Drawing.Size(101, 23);
             this.btLimpar.TabIndex = 23;
@@ -402,12 +376,63 @@
             this.btLimpar.UseVisualStyleBackColor = true;
             this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle21;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Código";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn1.Width = 90;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nome Completo";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 200;
+            // 
+            // popMenuSelectionDecision
+            // 
+            this.popMenuSelectionDecision.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.popMenSelOverwriteAll,
+            this.popMenSelOverwriteSome,
+            this.toolStripSeparator1,
+            this.popMenSelCancelar});
+            this.popMenuSelectionDecision.Name = "popMenuSelectionDecision";
+            this.popMenuSelectionDecision.Size = new System.Drawing.Size(227, 76);
+            // 
+            // popMenSelOverwriteAll
+            // 
+            this.popMenSelOverwriteAll.Name = "popMenSelOverwriteAll";
+            this.popMenSelOverwriteAll.Size = new System.Drawing.Size(226, 22);
+            this.popMenSelOverwriteAll.Text = "Substituir Todos";
+            // 
+            // popMenSelOverwriteSome
+            // 
+            this.popMenSelOverwriteSome.Name = "popMenSelOverwriteSome";
+            this.popMenSelOverwriteSome.Size = new System.Drawing.Size(226, 22);
+            this.popMenSelOverwriteSome.Text = "Adicionar os Novos somente";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(223, 6);
+            // 
+            // popMenSelCancelar
+            // 
+            this.popMenSelCancelar.Name = "popMenSelCancelar";
+            this.popMenSelCancelar.Size = new System.Drawing.Size(226, 22);
+            this.popMenSelCancelar.Text = "Cancelar / Ignorar";
+            // 
             // FrmPlanificacaoHorario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(636, 410);
+            this.ClientSize = new System.Drawing.Size(1039, 636);
             this.Controls.Add(this.btLimpar);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btGravar);
@@ -432,6 +457,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            this.popMenuSelectionDecision.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -446,7 +472,6 @@
         private System.Windows.Forms.NumericUpDown NudAnos;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.CheckBox chkSelectAll;
         private System.Windows.Forms.TextBox TxtFuncionario;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox CBoxCategoria;
@@ -462,8 +487,13 @@
         private System.Windows.Forms.Button btLimpar;
         private System.Windows.Forms.RadioButton RBtnPeriodoTrimestral;
         private System.Windows.Forms.DataGridViewTextBoxColumn colOrdem;
-        private System.Windows.Forms.DataGridViewComboBoxColumn colHorario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPeriodo;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn colSelected;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColFName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.ContextMenuStrip popMenuSelectionDecision;
+        private System.Windows.Forms.ToolStripMenuItem popMenSelOverwriteAll;
+        private System.Windows.Forms.ToolStripMenuItem popMenSelOverwriteSome;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem popMenSelCancelar;
     }
 }

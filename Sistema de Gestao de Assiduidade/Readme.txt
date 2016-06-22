@@ -10,9 +10,6 @@
 
 - Notes onn future development.  
   - Ter em conta Multiple Verification Modes, altera verifyMode number
-  - Bug planificacao de horario - its creating another horario semana (corrected)
-  - Melhorar Device Update View
-
 
 - New Features
   - Add Device Capacity Warning (need to connect once or twice a week, create statistics of clocks per day)
@@ -26,3 +23,16 @@
     - Mais faltosos por Departamentos
     - Departamento com mais faltas
     - 
+
+Fase 1 - depois venda
+ - Testar e corrigir bugs
+ - Modificar Planificacao de Horario (tornar mais facil)
+ - Adicionar Reports
+
+Fase 2 - depois venda e update
+ - Mudar as Views do programa (torna-lo mais user friendly)
+ - Optional (Faces e Multiple Verification Mode)
+
+Fase 3
+ - Web Application
+ - SigeasDeviceModule - Server(app with rest web services) n Client(java)

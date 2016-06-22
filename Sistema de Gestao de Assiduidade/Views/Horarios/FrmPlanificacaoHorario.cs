@@ -18,10 +18,9 @@ namespace mz.betainteractive.sigeas.Views.Horarios {
                 
         private SigeasDatabaseContext context;
 
-        private Dictionary<DataGridViewGenericRow<DateBounds>, FuncionarioHorario> backupGridHorarios;
-
-        private Funcionario SelectedFuncionario;
-        private bool SelectedHorarioSemanal;
+        private Dictionary<DataGridViewTextBoxCellGeneric<HorarioSemana>, HorarioSemana> backupGridHorarios;         
+        private Cursor ExcelCursorCross;
+        private ContextMenuStripGeneric<DataGridViewTextBoxCellGeneric<HorarioSemana>> menuStripHorario;
 
         /*Form Authorization*/
         public int FormCode { get; set; }
@@ -30,24 +29,35 @@ namespace mz.betainteractive.sigeas.Views.Horarios {
         public bool AllowDelete { get; set; }
         public bool AllowAdd { get; set; }
 
+        public static string MENU_HORARIO_REMOVER = "Remover Horário";
+        public static string MENU_HORARIO_CANCELAR = "Cancelar";
+
+        private bool startedMove = false;
+        private List<DataGridViewTextBoxCellGeneric<HorarioSemana>> selectedCells = new List<DataGridViewTextBoxCellGeneric<HorarioSemana>>();
+        private HorarioSemana selectedHorario;   
+        private bool popMenuItemClicked = false;
+
         public FrmPlanificacaoHorario() {
             InitializeComponent();
-            colHorario.DisplayMember = "Descricao";
-            colHorario.ValueMember = "This";
+            //colHorario.DisplayMember = "Descricao";
+            //colHorario.ValueMember = "This";
         }
 
         private void Initialize() {
             Limpar();
             LoadDepartamentos();
             LoadCategorias();
-            LoadHorarios();
+            
+            ExcelCursorCross = new Cursor(Properties.Resources.cross_pointer.GetHicon());
+
+            DGViewFuncionarioHorario.Cursor = ExcelCursorCross;
+
         }
 
         private void DisposeContext() {
             if (context != null) {
                 context.Dispose();
-                context = null;
-                SelectedFuncionario = null;
+                context = null;                
                 backupGridHorarios = null;
                 //Limpar();
             }
@@ -58,10 +68,162 @@ namespace mz.betainteractive.sigeas.Views.Horarios {
                 context = new SigeasDatabaseContext();
             }
 
-            SelectedFuncionario = null;
-            backupGridHorarios = new Dictionary<DataGridViewGenericRow<DateBounds>, FuncionarioHorario>();
+            backupGridHorarios = new Dictionary<DataGridViewTextBoxCellGeneric<HorarioSemana>, HorarioSemana>();
+
+            InitializeMenus();
         }
 
+        private void InitializeMenus() {
+            this.menuStripHorario = CreateHorarioMenuStrip();
+
+            popMenuSelectionDecision.ItemClicked += new ToolStripItemClickedEventHandler(popMenuSelectionDecision_ItemClicked);
+            
+            DGViewFuncionarioHorario.CellMouseDoubleClick += HorarioCellMouseDoubleClick;
+            DGViewFuncionarioHorario.SelectionChanged += HorarioCellSelectionChanged;
+            DGViewFuncionarioHorario.CellMouseDown += HorarioCellMouseDown;
+            DGViewFuncionarioHorario.CellMouseUp += HorarioCellMouseUp;
+        }                
+
+        private ContextMenuStripGeneric<DataGridViewTextBoxCellGeneric<HorarioSemana>> CreateHorarioMenuStrip() {
+            var menu = new ContextMenuStripGeneric<DataGridViewTextBoxCellGeneric<HorarioSemana>>();
+
+            ToolStripSeparator separator1 = new ToolStripSeparator();
+            ToolStripSeparator separator2 = new ToolStripSeparator();
+            ToolStripMenuItem ppdItemRemove = new ToolStripMenuItem(MENU_HORARIO_REMOVER);
+            ToolStripMenuItem ppdItemCancelar = new ToolStripMenuItem(MENU_HORARIO_CANCELAR);
+
+            foreach (var horario in context.HorarioSemana.ToList()) {
+                menu.Items.Add(new ToolStripMenuItemGeneric<HorarioSemana>(horario));
+            }
+
+            menu.Items.AddRange(new ToolStripItem[] { separator1, ppdItemRemove, separator2, ppdItemCancelar });
+            menu.ItemClicked += PopupMenuHorariosAction;
+            menu.Closed += new ToolStripDropDownClosedEventHandler(HorarioMenuClosed);
+
+            return menu;
+        }
+
+        private void HorarioMenuClosed(object sender, ToolStripDropDownClosedEventArgs e) {
+            if (!popMenuItemClicked) {
+                RemoveCurrentSelection(true, false);
+            }
+        }
+
+        private DataGridViewTextBoxCellGeneric<HorarioSemana> GetHorarioCell(int rowIndex, int columnIndex) {
+            try {
+                var cell = this.DGViewFuncionarioHorario.Rows[rowIndex].Cells[columnIndex] as DataGridViewTextBoxCellGeneric<HorarioSemana>;
+                return cell;
+            } catch (Exception ex) {
+                return null;
+            }
+        }
+
+        private void popMenuSelectionDecision_ItemClicked(object sender, ToolStripItemClickedEventArgs e) {
+            popMenuItemClicked = true;
+
+            if (e.ClickedItem == popMenSelOverwriteAll) {
+                RemoveCurrentSelection(false, true);
+            }
+            if (e.ClickedItem == popMenSelOverwriteSome) {
+                RemoveCurrentSelection(false, false);
+            }
+            if (e.ClickedItem == popMenSelCancelar) {
+                RemoveCurrentSelection(true, false);
+            }
+        }
+                
+        private void PopupMenuHorariosAction(object sender, ToolStripItemClickedEventArgs e) {
+
+            ToolStripMenuItem item = e.ClickedItem as ToolStripMenuItem;
+            var contextMenu = item.Owner as ContextMenuStripGeneric<DataGridViewTextBoxCellGeneric<HorarioSemana>>;
+
+            if (item is ToolStripMenuItemGeneric<HorarioSemana>) {
+                var horario = (item as ToolStripMenuItemGeneric<HorarioSemana>).Value;
+                var cell = contextMenu.Value;
+
+                cell.GenericValue = horario;
+                cell.Value = horario;
+            }
+
+            if (item.Text==MENU_HORARIO_REMOVER){
+                var cell = contextMenu.Value;
+
+                cell.GenericValue = null;
+                cell.SetTextUsingValue();
+            }
+
+            //var column = contextMenu.Value;
+
+            Console.WriteLine("sender " + sender);
+            Console.WriteLine("assigned to : " + item.Owner);
+
+        }
+                
+        private void HorarioCellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e) {
+            var cell = GetHorarioCell(e.RowIndex, e.ColumnIndex);
+
+            if (cell == null) return;
+
+            var rect = this.DGViewFuncionarioHorario.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, false);
+
+            var itemRemove = this.menuStripHorario.Items[this.menuStripHorario.Items.Count - 3] as ToolStripMenuItem;
+
+            itemRemove.Enabled = cell.GenericValue != null;
+
+            this.menuStripHorario.Value = cell;
+            this.menuStripHorario.Show(cell.DataGridView, new Point(rect.X, rect.Y + rect.Height));
+        }
+
+        private void HorarioCellSelectionChanged(object sender, EventArgs e) {            
+            if (startedMove)
+                foreach (var xcell in DGViewFuncionarioHorario.SelectedCells.Cast<DataGridViewCell>()) {
+                    if (xcell is DataGridViewTextBoxCellGeneric<HorarioSemana>) {
+                        var cell = xcell as DataGridViewTextBoxCellGeneric<HorarioSemana>;
+
+                        if (!selectedCells.Contains(cell)) {
+                            cell.Value = selectedHorario.ToString();
+                            selectedCells.Add(cell);
+                        }
+
+                    }
+                }
+        }
+
+        private void HorarioCellMouseDown(object sender, DataGridViewCellMouseEventArgs e) {
+            var cell = GetHorarioCell(e.RowIndex, e.ColumnIndex);
+            if (cell != null && cell.GenericValue != null) {
+                DGViewFuncionarioHorario.Cursor = Cursors.PanSE;
+                selectedHorario = cell.GenericValue;
+                startedMove = true;
+                selectedCells.Clear();
+                selectedCells.Add(cell);
+            }
+        }
+
+        private void HorarioCellMouseUp(object sender, DataGridViewCellMouseEventArgs e) {
+            DGViewFuncionarioHorario.Cursor = ExcelCursorCross;
+
+            if (startedMove && selectedCells.Count > 1) {
+                startedMove = false;
+                popMenuItemClicked = false;
+                var cell = GetHorarioCell(e.RowIndex, e.ColumnIndex);
+                var rect = this.DGViewFuncionarioHorario.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, false);
+                popMenuSelectionDecision.Show(cell.DataGridView, rect.X + e.X, rect.Y + e.Y);
+            }
+        }
+
+        private void RemoveCurrentSelection(bool cancelOrIgnore, bool overwrite) {
+            foreach (var cell in selectedCells) {
+                cell.Style.BackColor = Color.White;
+                cell.Style.ForeColor = Color.Black;
+
+                if (!cancelOrIgnore) {
+                    cell.GenericValue = overwrite ? selectedHorario : cell.GenericValue == null ? selectedHorario : cell.GenericValue;
+                }
+
+                cell.SetTextUsingValue();
+            }
+        }               
 
         private void FrmPlanificacaoHorario_FormClosing(object sender, FormClosingEventArgs e) {
             e.Cancel = true;
@@ -87,12 +249,35 @@ namespace mz.betainteractive.sigeas.Views.Horarios {
         public void LoadDepartamentos() {
             DBSearch.FillDepartamento(context, CBoxDepartamento, false);
         }
+            
+        private List<Funcionario> getFuncionarios() {
+            List<Funcionario> funcionarios = new List<Funcionario>();
 
-        public void LoadHorarios() {
-            List<HorarioSemana> list = context.HorarioSemana.AsNoTracking().ToList();
-            colHorario.Items.Clear();
-            colHorario.Items.AddRange(list.ToArray());
-            colHorario.Items.Add("Sem horário");
+            Departamento departamento = null;
+            Categoria categoria = null;
+            Funcionario func = null;
+
+            if (CBoxFuncionario.SelectedItem is Funcionario) {
+                func = CBoxFuncionario.SelectedItem as Funcionario;
+            }
+            if (CBoxCategoria.SelectedItem is Categoria) {
+                categoria = CBoxCategoria.SelectedItem as Categoria;
+            }
+            if (CBoxDepartamento.SelectedItem is Departamento) {
+                departamento = CBoxDepartamento.SelectedItem as Departamento;
+            }
+
+            if (func != null) {
+                funcionarios.Add(func);
+            } else if (categoria == null && departamento == null) {
+                funcionarios.AddRange(context.Funcionario.ToList());
+            } else if (categoria == null) {
+                funcionarios.AddRange(context.Funcionario.Where(f => f.Departamento.Id == departamento.Id).ToList());
+            } else if (departamento == null) {
+                funcionarios.AddRange(context.Funcionario.Where(f => f.Categoria.Id == categoria.Id).ToList());
+            }
+
+            return funcionarios;
         }
 
         private void cboDepartamento_SelectedIndexChanged(object sender, EventArgs e) {
@@ -148,22 +333,11 @@ namespace mz.betainteractive.sigeas.Views.Horarios {
         }
 
         private void VisualizarAssociacoes() {
-
-            if (CBoxFuncionario.SelectedIndex == -1) {
-                MessageBox.Show("Selecione o funcionário primeiro");
-                return;
-            }
-            if (!(CBoxFuncionario.SelectedItem is Funcionario)) {
-                MessageBox.Show("Selecione o funcionário primeiro");
-                return;
-            }
-
+           
             int ano = (int)NudAnos.Value;
             Funcionario funcionario = (Funcionario)CBoxFuncionario.SelectedItem;
-
-            Limpar();
-
-            TxtFuncionario.Text = funcionario.ToString();
+                        
+            //TxtFuncionario.Text = funcionario.ToString();
 
             if (RBtnPeriodoSemanal.Checked) {
                 PeriodoTempo periodo = context.PeriodoTempo.FirstOrDefault(t => t.Descricao == PeriodoTempo.SEMANAL);
@@ -195,13 +369,13 @@ namespace mz.betainteractive.sigeas.Views.Horarios {
         }
 
         private FuncionarioHorario GetFuncionarioHorario(List<FuncionarioHorario> funcHorarios, Funcionario funcionario, DateBounds dateBound) {
-            var fhorario = funcHorarios.Where(t => t.Ordem == dateBound.Order).FirstOrDefault();
+            var fhorario = funcHorarios.Where(f => f.Funcionario == funcionario && f.Inicio == dateBound.First && f.Fim == dateBound.Last).FirstOrDefault();
             return fhorario;
         }
 
         private bool CheckIfExistsSemanal(Funcionario funcionario, int ano) {
             //check if already exists Semanal
-            FuncionarioHorario funcHor = context.FuncionarioHorario.FirstOrDefault(t => t.Funcionario.Id == funcionario.Id && t.Ano == ano && t.Periodo.Descricao == PeriodoTempo.SEMANAL);
+            FuncionarioHorario funcHor = context.FuncionarioHorario.Where(t => t.Funcionario.Id == funcionario.Id && t.Ano == ano && t.Periodo.Descricao == PeriodoTempo.SEMANAL).FirstOrDefault();
             if (funcHor != null) {
                 MessageBox.Show("Este funcionário já possui horarios semanais associados!\nNB: Se quiser mudar de horário apague todos os horários semanais que já estão associados");
                 return true;
@@ -238,8 +412,9 @@ namespace mz.betainteractive.sigeas.Views.Horarios {
             string suffix = "";
 
             List<DateBounds> periodos = null;
-
+                        
             if (periodo.Descricao == PeriodoTempo.SEMANAL) {
+                
                 //check if already exists Mensal                
                 if (CheckIfExistsMensal(funcionario, ano)) {
                     return;
@@ -248,26 +423,29 @@ namespace mz.betainteractive.sigeas.Views.Horarios {
                 if (CheckIfExistsTrimestral(funcionario, ano)) {
                     return;
                 }
-
+                
                 periodos = dateUtil.Weeks.ToList<DateBounds>();
                 suffix = "ª";
             }
 
             if (periodo.Descricao == PeriodoTempo.MENSAL) {
-                //check if already exists Semanal                
+                
+                //check if already exists Semanal      
+                /*
                 if (CheckIfExistsSemanal(funcionario, ano)) {
                     return;
                 }
                 //check if already exists Trimestral
                 if (CheckIfExistsTrimestral(funcionario, ano)) {
                     return;
-                }
-
+                }*/
+                
                 periodos = dateUtil.Months.ToList<DateBounds>();
                 suffix = "º";
             }
 
             if (periodo.Descricao == PeriodoTempo.TRIMESTRAL) {
+                
                 //check if already exists Semanal                
                 if (CheckIfExistsSemanal(funcionario, ano)) {
                     return;
@@ -276,44 +454,103 @@ namespace mz.betainteractive.sigeas.Views.Horarios {
                 if (CheckIfExistsMensal(funcionario, ano)) {
                     return;
                 }
-
+                
                 periodos = dateUtil.Quarters.ToList<DateBounds>();
                 suffix = "º";
             }
+            
 
             DGViewFuncionarioHorario.Rows.Clear();
-            SelectedFuncionario = funcionario;
-            List<FuncionarioHorario> funcHorarios = context.FuncionarioHorario.Where(t => t.Funcionario.Id == funcionario.Id && t.Ano == ano).ToList();
+            NudAnos.ReadOnly = true;
+            LoadColumnsToGrid(periodos);
+                        
+            var funcionarios = getFuncionarios();
+            var funcIds = funcionarios.Select(f => f.Id).ToList();
 
-            foreach (DateBounds dateBound in periodos) {
+            List<FuncionarioHorario> funcHorarios = context.FuncionarioHorario.Where(t => funcIds.Contains(t.Funcionario.Id) && t.Ano == ano).ToList();                    
 
-                DataGridViewGenericRow<DateBounds> row = new DataGridViewGenericRow<DateBounds>(dateBound);
+            foreach (var func in funcionarios) {
 
-                bool associated = false;
-
-                FuncionarioHorario funcionarioHorario = GetFuncionarioHorario(funcHorarios, funcionario, dateBound);
-                HorarioSemana horario = funcionarioHorario == null ? null : funcionarioHorario.Horario;
-
-                associated = horario != null;
-
+                DataGridViewGenericRow<Funcionario> row = new DataGridViewGenericRow<Funcionario>(func);
+                                
                 row.CreateCells(DGViewFuncionarioHorario);
-                row.Cells[0].Value = dateBound.Order + suffix;
-                row.Cells[1].Value = (associated) ? horario : null;
-                row.Cells[2].Value = DateUtilities.GetPeriodo(dateBound);
-                row.Cells[3].Value = associated;
+                row.Cells[0].Value = func.Code;
+                row.Cells[1].Value = func.Nome;
 
-                if (horario != null) {
-                    backupGridHorarios.Add(row, funcionarioHorario);
+                int i=2;
+                foreach (var dateBound in periodos){
+                    FuncionarioHorario funcionarioHorario = GetFuncionarioHorario(funcHorarios, func, dateBound);
+                    HorarioSemana horario = funcionarioHorario == null ? null : funcionarioHorario.Horario;
+
+                    DataGridViewTextBoxCellGeneric<HorarioSemana> cell = row.Cells[i] as DataGridViewTextBoxCellGeneric<HorarioSemana>;
+
+                    if (horario != null) {
+                        backupGridHorarios.Add(cell, horario);
+                        cell.GenericValue = horario;
+                        cell.SetTextUsingValue();
+                    }                                       
+
+                    
+                    i++;
                 }
 
                 DGViewFuncionarioHorario.Rows.Add(row);
             }
 
+        }
+        
+        private void LoadColumnsToGrid(List<DateBounds> dateBounds) {
+
+            List<DataGridViewColumn> GridColumns = new List<DataGridViewColumn>();
+
+            DataGridViewTextBoxColumn colDepartamento = new DataGridViewTextBoxColumn();
+            DataGridViewTextBoxColumn colCategoria = new DataGridViewTextBoxColumn();
+            DataGridViewTextBoxColumn colFuncionarioCode = new DataGridViewTextBoxColumn();
+            DataGridViewTextBoxColumn colFuncionarioNome = new DataGridViewTextBoxColumn();
+
+            colDepartamento.HeaderText = "Departamento";
+            colCategoria.HeaderText = "Categoria";
+            colFuncionarioCode.HeaderText = "Código";
+            colFuncionarioNome.HeaderText = "Funcionário";
+
+            colDepartamento.ReadOnly = true;
+            colCategoria.ReadOnly = true;
+            colFuncionarioCode.ReadOnly = true;
+            colFuncionarioNome.ReadOnly = true;
+            colFuncionarioNome.Width = 180;
+
+            colFuncionarioCode.DefaultCellStyle.SelectionBackColor = Color.White;
+            colFuncionarioCode.DefaultCellStyle.SelectionForeColor = Color.Black;
+            colFuncionarioNome.DefaultCellStyle.SelectionBackColor = Color.White;
+            colFuncionarioNome.DefaultCellStyle.SelectionForeColor = Color.Black;
+
+            GridColumns.Clear();
+
+            GridColumns.AddRange(new DataGridViewColumn[] { /*colDepartamento, colCategoria,*/ colFuncionarioCode, colFuncionarioNome });                      
+            
+            foreach (var bound in dateBounds) {
+                DataGridViewTextBoxColumnGeneric<DateBounds> column = new DataGridViewTextBoxColumnGeneric<DateBounds>(bound);
+                
+                column.HeaderText = DateUtilities.GetPeriodoShort(bound);
+                column.Width = 120;
+
+                column.CellTemplate = new DataGridViewTextBoxCellGeneric<HorarioSemana>();
+
+                GridColumns.Add(column);
+            }
+
+            DGViewFuncionarioHorario.Rows.Clear();
+            DGViewFuncionarioHorario.Columns.Clear();
+
+            foreach (var col in GridColumns) {
+                DGViewFuncionarioHorario.Columns.Add(col);
+            }
+
 
         }
-
+                
         private void cboFuncionario_SelectedIndexChanged(object sender, EventArgs e) {
-            BtnViewAssociacoes.Enabled = CBoxFuncionario.SelectedIndex != -1;
+            //BtnViewAssociacoes.Enabled = CBoxFuncionario.SelectedIndex != -1;
         }
 
         private void btLimpar_Click(object sender, EventArgs e) {
@@ -323,23 +560,9 @@ namespace mz.betainteractive.sigeas.Views.Horarios {
         private void Limpar() {
             DGViewFuncionarioHorario.Rows.Clear();
             NudAnos.Value = DateTime.Now.Year;
-            TxtFuncionario.Text = "";
-            chkSelectAll.Checked = false;
-            backupGridHorarios.Clear();
-            SelectedFuncionario = null;
-            SelectedHorarioSemanal = true;
-        }
-
-        private void chkSelectAll_CheckedChanged(object sender, EventArgs e) {
-            SelectAll();
-        }
-
-        private void SelectAll() {
-            bool select = chkSelectAll.Checked;
-
-            foreach (DataGridViewRow rowx in DGViewFuncionarioHorario.Rows) {
-                rowx.Cells[3].Value = select;
-            }
+            NudAnos.ReadOnly = false;
+            TxtFuncionario.Text = "";            
+            backupGridHorarios.Clear();            
         }
 
         private PeriodoTempo GetSelectedPeriodo() {
@@ -367,37 +590,35 @@ namespace mz.betainteractive.sigeas.Views.Horarios {
 
         private void GravarAssociacoes() {
 
-            List<DataGridViewGenericRow<DateBounds>> changedGrids = new List<DataGridViewGenericRow<DateBounds>>();
-            List<DataGridViewGenericRow<DateBounds>> removeGrids = new List<DataGridViewGenericRow<DateBounds>>();
-            List<DataGridViewGenericRow<DateBounds>> newGrids = new List<DataGridViewGenericRow<DateBounds>>();
+            List<DataGridViewTextBoxCellGeneric<HorarioSemana>> changedGrids = new List<DataGridViewTextBoxCellGeneric<HorarioSemana>>();
+            List<DataGridViewTextBoxCellGeneric<HorarioSemana>> removeGrids = new List<DataGridViewTextBoxCellGeneric<HorarioSemana>>();
+            List<DataGridViewTextBoxCellGeneric<HorarioSemana>> newGrids = new List<DataGridViewTextBoxCellGeneric<HorarioSemana>>();
 
-            foreach (DataGridViewRow rowx in DGViewFuncionarioHorario.Rows) {
+            int ano = (int)NudAnos.Value;
 
-                if (rowx is DataGridViewGenericRow<DateBounds>) {
-                    DataGridViewGenericRow<DateBounds> row = (DataGridViewGenericRow<DateBounds>)rowx;
-
-                    bool chked = (bool)row.Cells[3].Value;
+            foreach (var row in DGViewFuncionarioHorario.Rows.OfType<DataGridViewGenericRow<Funcionario>>()) {                
+                for (int i = 2; i < row.Cells.Count; i++) {
+                    var cell = row.Cells[i] as DataGridViewTextBoxCellGeneric<HorarioSemana>;
+                    var horario = cell.GenericValue;
 
                     //ChangedGrids & RemoveGrids
-                    if (backupGridHorarios.ContainsKey(row)) {
-                        FuncionarioHorario fhorario = null;
-                        backupGridHorarios.TryGetValue(row, out fhorario);
+                    if (backupGridHorarios.ContainsKey(cell)) {
+                        HorarioSemana oldHorario = null;
+                        backupGridHorarios.TryGetValue(cell, out oldHorario);
 
-                        if (chked == false) {
-                            removeGrids.Add(row);
+                        if (horario == null) {
+                            removeGrids.Add(cell);
                             continue;
                         }
 
-                        if (row.Cells[1].Value is HorarioSemana) {
-                            HorarioSemana horario = (HorarioSemana)row.Cells[1].Value;
-                            if (!fhorario.Horario.Equals(horario)) {
-                                changedGrids.Add(row);
-                                continue;
-                            }
+                        if (!oldHorario.Equals(horario)) {                           
+                            changedGrids.Add(cell);
+                            continue;                            
                         }
                     } else {
-                        if (chked == true && row.Cells[1].Value is HorarioSemana) {
-                            newGrids.Add(row);
+                        if (horario != null) {
+                            newGrids.Add(cell);
+                            Console.WriteLine(row.Value.Code+", "+horario+", r:"+cell.RowIndex+",c:"+cell.ColumnIndex+", i:"+i);
                         }
                     }
 
@@ -419,38 +640,50 @@ namespace mz.betainteractive.sigeas.Views.Horarios {
             PeriodoTempo periodo = GetSelectedPeriodo();
 
             //rec new grids
-            foreach (DataGridViewGenericRow<DateBounds> row in newGrids) {
+            foreach (var cell in newGrids) {
+                var row = cell.OwningRow as DataGridViewGenericRow<Funcionario>;
+                var col = cell.OwningColumn as DataGridViewTextBoxColumnGeneric<DateBounds>;
 
                 FuncionarioHorario fhorario = new FuncionarioHorario();
-                HorarioSemana horario = (HorarioSemana)row.Cells[1].Value;
-
-                fhorario.Funcionario = SelectedFuncionario;
-                fhorario.Ano = row.Value.First.Year;
-                fhorario.Ordem = row.Value.Order;
-                fhorario.Inicio = row.Value.First;
-                fhorario.Fim = row.Value.Last;
+                
+                fhorario.Funcionario = row.Value;
+                fhorario.Ano = ano;
+                fhorario.Ordem = col.Value.Order;
+                fhorario.Inicio = col.Value.First;
+                fhorario.Fim = col.Value.Last;
                 fhorario.Periodo = periodo;                              
 
                 context.FuncionarioHorario.Add(fhorario);
-                context.HorarioSemana.Attach(horario); //to not be reinserted
-                fhorario.Horario = horario;            //to not be reinserted
+                context.HorarioSemana.Attach(cell.GenericValue); //to not be reinserted
+                fhorario.Horario = cell.GenericValue;            //to not be reinserted
             }
 
             //changes grids
-            foreach (DataGridViewGenericRow<DateBounds> row in changedGrids) {
-
+            foreach (var cell in changedGrids) {
                 FuncionarioHorario fhorario = null;
-                backupGridHorarios.TryGetValue(row, out fhorario);
+                HorarioSemana oldHorario = null;
+                var row = cell.OwningRow as DataGridViewGenericRow<Funcionario>;
+                var col = cell.OwningColumn as DataGridViewTextBoxColumnGeneric<DateBounds>;                               
+                
+                backupGridHorarios.TryGetValue(cell, out oldHorario);
 
-                HorarioSemana horario = (HorarioSemana)row.Cells[1].Value;
-                fhorario.Horario = horario;
+                fhorario = context.FuncionarioHorario.Where(f => f.Funcionario.Id==row.Value.Id && f.Horario.Id==oldHorario.Id && f.Inicio==col.Value.First && f.Fim==col.Value.Last).FirstOrDefault();
+                                
+                context.HorarioSemana.Attach(cell.GenericValue);
+                fhorario.Horario = cell.GenericValue;
             }
 
             //remove grids
-            foreach (DataGridViewGenericRow<DateBounds> row in removeGrids) {
+            foreach (var cell in removeGrids) {
 
                 FuncionarioHorario fhorario = null;
-                backupGridHorarios.TryGetValue(row, out fhorario);
+                HorarioSemana oldHorario = null;
+                var row = cell.OwningRow as DataGridViewGenericRow<Funcionario>;
+                var col = cell.OwningColumn as DataGridViewTextBoxColumnGeneric<DateBounds>;
+
+                backupGridHorarios.TryGetValue(cell, out oldHorario);
+
+                fhorario = context.FuncionarioHorario.Where(f => f.Funcionario.Id == row.Value.Id && f.Horario.Id == oldHorario.Id && f.Inicio == col.Value.First && f.Fim == col.Value.Last).FirstOrDefault();
 
                 context.FuncionarioHorario.Remove(fhorario);
             }
@@ -476,9 +709,7 @@ namespace mz.betainteractive.sigeas.Views.Horarios {
                 LogErrors.AddErrorLog(ex, "Ocorreu erro ao tentar atualizar os horários dos funcionários na base de dados");
                 MessageBox.Show(this, "Ocorreu erro ao tentar atualizar os horários dos funcionários na base de dados.\nErro: " + ex.Message, "Erro grave", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-
+        }        
 
     }
 }
