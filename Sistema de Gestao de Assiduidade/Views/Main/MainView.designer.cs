@@ -44,9 +44,11 @@
             this.fToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.associarFuncionáriosÁsPortasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.atualizarFuncionariosNoBiometricoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSMnuItemFeriasForm = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMnuItemEmpresaForm = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMnuItemFuncionarioView = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSMnuItemFeriadosForm = new System.Windows.Forms.ToolStripMenuItem();
             this.importarDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asseduidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,6 +61,7 @@
             this.ferramentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMnuItemDeviceManager = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMnuItemUserManager = new System.Windows.Forms.ToolStripMenuItem();
+            this.importarExportarDadosBiometricosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMnuItemDeviceActivation = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.conteúdosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -110,9 +113,6 @@
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.timerHoras = new System.Windows.Forms.Timer(this.components);
-            this.TSMnuItemFeriasForm = new System.Windows.Forms.ToolStripMenuItem();
-            this.TSMnuItemFeriadosForm = new System.Windows.Forms.ToolStripMenuItem();
-            this.importarExportarDadosBiometricosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenu.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.taskPaneMain.SuspendLayout();
@@ -227,6 +227,13 @@
             this.atualizarFuncionariosNoBiometricoToolStripMenuItem.Text = "Atualizar Funcionarios nos biometricos";
             this.atualizarFuncionariosNoBiometricoToolStripMenuItem.Click += new System.EventHandler(this.atualizarFuncionariosNoBiometricoToolStripMenuItem_Click);
             // 
+            // TSMnuItemFeriasForm
+            // 
+            this.TSMnuItemFeriasForm.Name = "TSMnuItemFeriasForm";
+            this.TSMnuItemFeriasForm.Size = new System.Drawing.Size(279, 22);
+            this.TSMnuItemFeriasForm.Text = "Planificação de Férias";
+            this.TSMnuItemFeriasForm.Click += new System.EventHandler(this.TSMnuItemFeriasForm_Click);
+            // 
             // funcionariosToolStripMenuItem
             // 
             this.funcionariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -251,6 +258,13 @@
             this.TSMnuItemFuncionarioView.Size = new System.Drawing.Size(231, 22);
             this.TSMnuItemFuncionarioView.Text = "Gestão de Funcionários";
             this.TSMnuItemFuncionarioView.Click += new System.EventHandler(this.funcionáriosToolStripMenuItem_Click);
+            // 
+            // TSMnuItemFeriadosForm
+            // 
+            this.TSMnuItemFeriadosForm.Name = "TSMnuItemFeriadosForm";
+            this.TSMnuItemFeriadosForm.Size = new System.Drawing.Size(231, 22);
+            this.TSMnuItemFeriadosForm.Text = "Definição de Feriados";
+            this.TSMnuItemFeriadosForm.Click += new System.EventHandler(this.TSMnuItemFeriadosForm_Click);
             // 
             // importarDadosToolStripMenuItem
             // 
@@ -345,6 +359,13 @@
             this.TSMnuItemUserManager.Size = new System.Drawing.Size(270, 22);
             this.TSMnuItemUserManager.Text = "Gestor de Utilizadores do sistema";
             this.TSMnuItemUserManager.Click += new System.EventHandler(this.gestorDeUtilizadoresToolStripMenuItem_Click);
+            // 
+            // importarExportarDadosBiometricosToolStripMenuItem
+            // 
+            this.importarExportarDadosBiometricosToolStripMenuItem.Name = "importarExportarDadosBiometricosToolStripMenuItem";
+            this.importarExportarDadosBiometricosToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
+            this.importarExportarDadosBiometricosToolStripMenuItem.Text = "Importar/Exportar Dados Biometricos";
+            this.importarExportarDadosBiometricosToolStripMenuItem.Click += new System.EventHandler(this.importarExportarDadosBiometricosToolStripMenuItem_Click);
             // 
             // TSMnuItemDeviceActivation
             // 
@@ -830,25 +851,6 @@
             this.timerHoras.Enabled = true;
             this.timerHoras.Interval = 1000;
             this.timerHoras.Tick += new System.EventHandler(this.timerHoras_Tick);
-            // 
-            // TSMnuItemFeriasForm
-            // 
-            this.TSMnuItemFeriasForm.Name = "TSMnuItemFeriasForm";
-            this.TSMnuItemFeriasForm.Size = new System.Drawing.Size(279, 22);
-            this.TSMnuItemFeriasForm.Text = "Planificação de Férias";
-            // 
-            // TSMnuItemFeriadosForm
-            // 
-            this.TSMnuItemFeriadosForm.Name = "TSMnuItemFeriadosForm";
-            this.TSMnuItemFeriadosForm.Size = new System.Drawing.Size(231, 22);
-            this.TSMnuItemFeriadosForm.Text = "Definição de Feriados";
-            // 
-            // importarExportarDadosBiometricosToolStripMenuItem
-            // 
-            this.importarExportarDadosBiometricosToolStripMenuItem.Name = "importarExportarDadosBiometricosToolStripMenuItem";
-            this.importarExportarDadosBiometricosToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
-            this.importarExportarDadosBiometricosToolStripMenuItem.Text = "Importar/Exportar Dados Biometricos";
-            this.importarExportarDadosBiometricosToolStripMenuItem.Click += new System.EventHandler(this.importarExportarDadosBiometricosToolStripMenuItem_Click);
             // 
             // MainView
             // 

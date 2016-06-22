@@ -595,6 +595,14 @@ namespace mz.betainteractive.sigeas.Views.Main {
             importExportView.Visible = true;
         }
 
+        private void TSMnuItemFeriasForm_Click(object sender, EventArgs e) {
+            this.FeriasForm.Visible = true;
+        }
+
+        private void TSMnuItemFeriadosForm_Click(object sender, EventArgs e) {
+            this.FeriadosForm.Visible = true;
+        }
+
      
     }
 }

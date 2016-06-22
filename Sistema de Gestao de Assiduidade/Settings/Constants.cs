@@ -5,6 +5,8 @@ using System.Text;
 
 namespace mz.betainteractive.sigeas.settings {
     public class Constants {
+
+        public static string LONG_DATETIME_FORMAT = "yyyy-MM-dd hh:mm:ss";
         /*
         public static Sexo MASCULINO;
         public static Sexo FEMENINO;

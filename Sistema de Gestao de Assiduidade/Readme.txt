@@ -10,6 +10,7 @@
 
 - Notes onn future development.  
   - Ter em conta Multiple Verification Modes, altera verifyMode number
+  - Add saving dialog to "Guardar associacoes" on tableFuncionariosDeviceView
 
 - New Features
   - Add Device Capacity Warning (need to connect once or twice a week, create statistics of clocks per day)
@@ -28,6 +29,7 @@ Fase 1 - depois venda
  - Testar e corrigir bugs
    - UserClockViewer bugs
      - Not saving
+ - Modificar Planificacao de Horario (tornar mais facil)
  - Adicionar Reports
 
 Fase 2 - depois venda e update

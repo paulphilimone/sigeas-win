@@ -12,6 +12,7 @@ using mz.betainteractive.sigeas.Utilities;
 using mz.betainteractive.sigeas.Models.Entities;
 using mz.betainteractive.sigeas.Models;
 using mz.betainteractive.sigeas.Utilities.Components;
+using mz.betainteractive.sigeas.settings;
 
 namespace mz.betainteractive.sigeas.Views.AccessControl {
     public partial class UserClocksViewer : Form, AuthorizableComponent
@@ -246,7 +247,7 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
                 item.SubItems.Add(funcionario.ToString());
                 item.SubItems.Add(device.ToString());
                 item.SubItems.Add(userClock.VerifyMode.ToString());
-                item.SubItems.Add(userClock.DateAndTime.ToString("u"));
+                item.SubItems.Add(userClock.DateAndTime.ToString(Constants.LONG_DATETIME_FORMAT));
                 item.SubItems.Add(userClock.InOutMode.ToString());
                 item.SubItems.Add(userClock.CorrectState);
                 item.SubItems.Add(userClock.Result);
@@ -405,10 +406,12 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
             List<UserClock> clocks = getUserClocksByFilters();
 
             background.OnExecute += delegate() {
-                AccessControlCalculations calc = new AccessControlCalculations(context);
-                DeviceDataConvertions convertions = new DeviceDataConvertions();
 
-                try {
+                try{
+                    AccessControlCalculations calc = new AccessControlCalculations(context);
+                    DeviceDataConvertions convertions = new DeviceDataConvertions();
+                               
+                
                     //Pass 2 - confirm this code if we gonna use it
                     calc.ClearResults(clocks);
 
@@ -418,9 +421,11 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
                     context.SaveChanges();
 
                     result = true;
+
                 } catch (Exception ex) {
                     LogErrors.AddErrorLog(ex, "Error on UserClocksViewer - Srch & Crrt Ucs");
                 }
+
             };
 
             background.OnPostExecute += delegate() {
