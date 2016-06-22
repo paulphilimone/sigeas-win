@@ -545,6 +545,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Analise1.txt" />
+    <None Include="Resources\cross_pointer.png" />
     <Content Include="sisga.ico" />
   </ItemGroup>
   <ItemGroup>
