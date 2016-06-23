@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace mz.betainteractive.sigeas.Models.Entities
 {
-    public partial class AttCalcs {
+    public partial class DailyAttCalcs {
 
         public long Id { get; set; }        
         public int Ano { get; set; }

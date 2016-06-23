@@ -305,35 +305,35 @@ namespace mz.betainteractive.sigeas.model.ca
         }
                 
 
-        public static AttCalcs GetAttCalcs(SigeasDatabaseContext context, Funcionario funcionario, DateTime dia) {
+        public static DailyAttCalcs GetAttCalcs(SigeasDatabaseContext context, Funcionario funcionario, DateTime dia) {
             DateTime date = dia.Date;
-            AttCalcs atts = context.AttCalcs.Where(t => t.Funcionario.Id == funcionario.Id && t.Data == date).FirstOrDefault();                        
+            DailyAttCalcs atts = context.DailyAttCalcs.Where(t => t.Funcionario.Id == funcionario.Id && t.Data == date).FirstOrDefault();                        
             return atts;
         }                
                
-        public static List<AttCalcs> FindAllAttendanceCalcs(SigeasDatabaseContext context, DateTime fromDate, DateTime toDate) {
+        public static List<DailyAttCalcs> FindAllAttendanceCalcs(SigeasDatabaseContext context, DateTime fromDate, DateTime toDate) {
             
             DateTime frDt = fromDate.Date;
             DateTime toDt = toDate.Date;
 
-            var list = context.AttCalcs.Where(t => t.Data >= frDt && t.Data <= toDt)
+            var list = context.DailyAttCalcs.Where(t => t.Data >= frDt && t.Data <= toDt)
                                         .OrderBy(t => t.Funcionario.Id).ThenBy(t => t.Data)
                                         .ToList();
                     
             return list;
         }
 
-        public static List<AttCalcs> FindAllAttendanceCalcs(SigeasDatabaseContext context, List<Funcionario> funcionarios, DateTime fromDate, DateTime toDate, bool withTracking) {
+        public static List<DailyAttCalcs> FindAllAttendanceCalcs(SigeasDatabaseContext context, List<Funcionario> funcionarios, DateTime fromDate, DateTime toDate, bool withTracking) {
             
             DateTime frDt = Constants.GetTime(fromDate, 0, 0, 0);
             DateTime toDt = Constants.GetTime(toDate, 23, 59, 59);
 
             var funcIds = funcionarios.Select(f => f.Id).ToList();
 
-            var list = withTracking ? context.AttCalcs.Where(t => funcIds.Contains(t.Funcionario.Id) && t.Data >= frDt && t.Data <= toDt)
+            var list = withTracking ? context.DailyAttCalcs.Where(t => funcIds.Contains(t.Funcionario.Id) && t.Data >= frDt && t.Data <= toDt)
                                                       .OrderBy(t => t.Funcionario.Id).ThenBy(t => t.Data)
                                                       .ToList()
-                                    : context.AttCalcs.AsNoTracking().Where(t => funcIds.Contains(t.Funcionario.Id) && t.Data >= frDt && t.Data <= toDt)
+                                    : context.DailyAttCalcs.AsNoTracking().Where(t => funcIds.Contains(t.Funcionario.Id) && t.Data >= frDt && t.Data <= toDt)
                                                                      .OrderBy(t => t.Funcionario.Id).ThenBy(t => t.Data)
                                                                      .ToList();
 

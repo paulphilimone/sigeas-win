@@ -458,7 +458,7 @@ namespace mz.betainteractive.sigeas.Utilities {
             FuncionarioHorario fhorario = DBSearch.GetFuncionarioHorario(context, funcionario, dia);
             HorarioSemana semana = null;
             HorarioDia horarioDia = null;
-            AttCalcs calculado = null;
+            DailyAttCalcs calculado = null;
 
             calculado = GetExistenceAttOrDelete(funcionario, dia, horarioDia == null);
             bool isNew = calculado == null;
@@ -478,7 +478,7 @@ namespace mz.betainteractive.sigeas.Utilities {
             bool hasIntervalo = horarioDia.HasIntervalo;
 
             if (isNew) {
-                calculado = new AttCalcs();
+                calculado = new DailyAttCalcs();
             }
 
             calculado.Funcionario = funcionario;
@@ -492,7 +492,7 @@ namespace mz.betainteractive.sigeas.Utilities {
                 calculado.IsPresente = false;
 
                 if (isNew) {
-                    context.AttCalcs.Add(calculado);
+                    context.DailyAttCalcs.Add(calculado);
                 }
 
                 context.SaveChanges();
@@ -511,7 +511,7 @@ namespace mz.betainteractive.sigeas.Utilities {
                 //if (semana.HasHorasExtras){ //calcular horas extras}
 
                 if (isNew) {
-                    context.AttCalcs.Add(calculado);
+                    context.DailyAttCalcs.Add(calculado);
                 }
 
                 context.SaveChanges();
@@ -529,7 +529,7 @@ namespace mz.betainteractive.sigeas.Utilities {
                 //if (semana.HasHorasExtras){ //calcular horas extras}
 
                 if (isNew) {
-                    context.AttCalcs.Add(calculado);
+                    context.DailyAttCalcs.Add(calculado);
                 }
 
                 context.SaveChanges();
@@ -651,7 +651,7 @@ namespace mz.betainteractive.sigeas.Utilities {
             calculado.AusenteMins = tsHA.Minutes;
 
             if (isNew) {
-                context.AttCalcs.Add(calculado);
+                context.DailyAttCalcs.Add(calculado);
             }
 
             context.SaveChanges();
@@ -882,12 +882,12 @@ namespace mz.betainteractive.sigeas.Utilities {
             }
         }
 
-        private AttCalcs GetExistenceAttOrDelete(Funcionario funcionario, DateTime date, bool delete) {
+        private DailyAttCalcs GetExistenceAttOrDelete(Funcionario funcionario, DateTime date, bool delete) {
 
-            AttCalcs attc = DBSearch.GetAttCalcs(context, funcionario, date);
+            DailyAttCalcs attc = DBSearch.GetAttCalcs(context, funcionario, date);
 
             if (attc != null && delete == true) {
-                context.AttCalcs.Remove(attc);
+                context.DailyAttCalcs.Remove(attc);
                 context.SaveChanges();
                 return null;
             }

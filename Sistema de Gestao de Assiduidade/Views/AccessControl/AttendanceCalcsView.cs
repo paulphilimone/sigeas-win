@@ -23,8 +23,8 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
         private SigeasDatabaseContext context;
 
         private AccessControlCalculations calculations;
-        private List<AttCalcs> SearchedAttCalcs;
-        private List<AttCalcs> SearchedAndCalculatedAttCalcs;
+        private List<DailyAttCalcs> SearchedAttCalcs;
+        private List<DailyAttCalcs> SearchedAndCalculatedAttCalcs;
         private FrmViewFuncionarioAtt FuncionarioAttForm;
 
         /*Form Authorization*/
@@ -37,8 +37,8 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
         public AttendanceCalcsView() {
             InitializeComponent();
             
-            SearchedAttCalcs = new List<AttCalcs>();
-            SearchedAndCalculatedAttCalcs = new List<AttCalcs>();
+            SearchedAttCalcs = new List<DailyAttCalcs>();
+            SearchedAndCalculatedAttCalcs = new List<DailyAttCalcs>();
             FuncionarioAttForm = new FrmViewFuncionarioAtt();
         }
         
@@ -232,7 +232,7 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
             FillListaAttCalcs(SearchedAttCalcs);
         }
 
-        private void FillListaAttCalcs(List<AttCalcs> list) {
+        private void FillListaAttCalcs(List<DailyAttCalcs> list) {
 
             DGViewAttCalcs.Rows.Clear();
 
@@ -242,9 +242,9 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
             }
 
             int i = 1;
-            foreach (AttCalcs att in list) {
+            foreach (DailyAttCalcs att in list) {
 
-                DataGridViewGenericRow<AttCalcs> row = new DataGridViewGenericRow<AttCalcs>(att);
+                DataGridViewGenericRow<DailyAttCalcs> row = new DataGridViewGenericRow<DailyAttCalcs>(att);
 
                 row.CreateCells(DGViewAttCalcs);
                 row.Cells[0].Value = att.Funcionario.ToString();
@@ -335,8 +335,8 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
         private void ViewFuncionarioRegs() {
             DataGridViewRow row = DGViewAttCalcs.SelectedRows[0];
 
-            if (row is DataGridViewGenericRow<AttCalcs>) {
-                DataGridViewGenericRow<AttCalcs> grow = (DataGridViewGenericRow<AttCalcs>)row;
+            if (row is DataGridViewGenericRow<DailyAttCalcs>) {
+                DataGridViewGenericRow<DailyAttCalcs> grow = (DataGridViewGenericRow<DailyAttCalcs>)row;
                 FuncionarioAttForm.ViewData(context, grow.Value);
                 FuncionarioAttForm.ShowDialog();
             }

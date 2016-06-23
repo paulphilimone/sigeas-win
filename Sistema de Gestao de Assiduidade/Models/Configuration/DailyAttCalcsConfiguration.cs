@@ -3,9 +3,9 @@ using System.Data.Entity.ModelConfiguration;
 using mz.betainteractive.sigeas.Models.Entities;
 
 namespace mz.betainteractive.sigeas.Models.Configuration {
-    public class AttCalcsConfiguration : EntityTypeConfiguration<AttCalcs> {
+    public class DailyAttCalcsConfiguration : EntityTypeConfiguration<DailyAttCalcs> {
 
-        public AttCalcsConfiguration() {
+        public DailyAttCalcsConfiguration() {
             // Primary Key
             this.HasKey(t => t.Id);
 

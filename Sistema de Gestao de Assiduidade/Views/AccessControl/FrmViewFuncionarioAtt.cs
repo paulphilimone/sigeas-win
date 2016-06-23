@@ -20,13 +20,13 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
         private SigeasDatabaseContext context;
         private Funcionario funcionario;
         private HorarioDia horarioDia;
-        private AttCalcs Calculos;               
+        private DailyAttCalcs Calculos;               
 
         public FrmViewFuncionarioAtt() {
             InitializeComponent();
         }
 
-        public void ViewData(SigeasDatabaseContext context, AttCalcs att) {
+        public void ViewData(SigeasDatabaseContext context, DailyAttCalcs att) {
             this.context = context;
 
             this.Calculos = att;

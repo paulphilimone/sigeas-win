@@ -46,14 +46,14 @@ namespace mz.betainteractive.sigeas.Models.Entities
         public virtual List<Ausencia> Ausencias { get; set; }
         public virtual List<Ferias> Ferias { get; set; }
         public virtual List<UserClock> UserClocks { get; set; }
-        public virtual List<AttCalcs> AttCalculos { get; set; }
+        public virtual List<DailyAttCalcs> AttCalculos { get; set; }
         public virtual List<DeviceUser> DeviceUsers { get; set; }
 
         public Funcionario() {
             this.Ausencias = new List<Ausencia>();
             this.Ferias = new List<Ferias>();
             this.UserClocks = new List<UserClock>();
-            this.AttCalculos = new List<AttCalcs>();
+            this.AttCalculos = new List<DailyAttCalcs>();
             this.DeviceUsers = new List<DeviceUser>();
             this.CompleteRegistered = false;
         }

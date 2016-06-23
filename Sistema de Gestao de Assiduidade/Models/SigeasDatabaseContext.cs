@@ -22,7 +22,7 @@ namespace mz.betainteractive.sigeas.Models {
 
         public DbSet<ApplicationParam> ApplicationParam { get; set; }
         public DbSet<ApplicationUser> ApplicationUser { get; set; }
-        public DbSet<AttCalcs> AttCalcs { get; set; }
+        public DbSet<DailyAttCalcs> DailyAttCalcs { get; set; }
         public DbSet<AttendanceRules> AttendanceRules { get; set; }
         public DbSet<Ausencia> Ausencia { get; set; }
         public DbSet<Categoria> Categoria { get; set; }
@@ -72,7 +72,7 @@ namespace mz.betainteractive.sigeas.Models {
             
             modelBuilder.Configurations.Add(new ApplicationParamConfiguration());
             modelBuilder.Configurations.Add(new ApplicationUserConfiguration());
-            modelBuilder.Configurations.Add(new AttCalcsConfiguration());
+            modelBuilder.Configurations.Add(new DailyAttCalcsConfiguration());
             modelBuilder.Configurations.Add(new AttendanceRulesConfiguration());
             modelBuilder.Configurations.Add(new AusenciaConfiguration());
             modelBuilder.Configurations.Add(new CategoriaConfiguration());

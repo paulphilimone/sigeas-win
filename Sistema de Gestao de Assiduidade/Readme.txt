@@ -26,10 +26,7 @@
     - 
 
 Fase 1 - depois venda
- - Testar e corrigir bugs
-   - UserClockViewer bugs
-     - Not saving
- - Modificar Planificacao de Horario (tornar mais facil)
+ - Testar e corrigir bugs  
  - Adicionar Reports
 
 Fase 2 - depois venda e update
