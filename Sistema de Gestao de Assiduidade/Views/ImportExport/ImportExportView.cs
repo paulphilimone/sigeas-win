@@ -10,11 +10,13 @@ using mz.betainteractive.sigeas.Models;
 using mz.betainteractive.sigeas.zdbx;
 using mz.betainteractive.sigeas.Models.Entities;
 using mz.betainteractive.sigeas.Utilities;
-using mz.betainteractive.sigeas.BackgroundFeatures;
+using mz.betainteractive.utilities.module.BackgroundFeatures;
 //using mz.betainteractive.sigeas.Views.Calculations;
 using mz.betainteractive.sigeas.DeviceSystem;
 using mz.betainteractive.sigeas.zdbx.models;
-using mz.betainteractive.sigeas.Utilities.Components;
+using mz.betainteractive.utilities.module.Components;
+using mz.betainteractive.utilities.module.General;
+using mz.betainteractive.utilities.module.Collections;
 
 namespace mz.betainteractive.sigeas.Views.ImportExport {
     public partial class ImportExportView : Form, AuthorizableComponent {

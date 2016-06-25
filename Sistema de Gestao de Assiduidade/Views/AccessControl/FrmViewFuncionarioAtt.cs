@@ -12,7 +12,7 @@ using mz.betainteractive.sigeas.model.ca;
 using mz.betainteractive.sigeas.Models.Entities;
 using mz.betainteractive.sigeas.Utilities;
 using mz.betainteractive.sigeas.Models;
-using mz.betainteractive.sigeas.Utilities.Components;
+using mz.betainteractive.utilities.module.Components;
 
 namespace mz.betainteractive.sigeas.Views.AccessControl {
     public partial class FrmViewFuncionarioAtt : Form {

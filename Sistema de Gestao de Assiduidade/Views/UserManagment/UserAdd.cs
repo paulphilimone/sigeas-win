@@ -10,6 +10,7 @@ using mz.betainteractive.sigeas.Models;
 using mz.betainteractive.sigeas.Models.Entities;
 using mz.betainteractive.encoding.encryptation;
 using mz.betainteractive.sigeas.Utilities;
+using mz.betainteractive.utilities.module.General;
 
 namespace mz.betainteractive.sigeas.Views.UserManagment {
     public partial class UserAdd : Form {

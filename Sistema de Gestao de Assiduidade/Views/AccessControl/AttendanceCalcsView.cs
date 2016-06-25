@@ -7,15 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using mz.betainteractive.sigeas.model.ca;
-using mz.betainteractive.sigeas.utilities;
+using mz.betainteractive.sigeas.Utilities;
 using System.Threading;
 using System.Globalization;
 using mz.betainteractive.sigeas.Models.Entities;
 using mz.betainteractive.sigeas.Models;
 using mz.betainteractive.sigeas.Utilities;
-using mz.betainteractive.sigeas.BackgroundFeatures;
+using mz.betainteractive.utilities.module.BackgroundFeatures;
 using mz.betainteractive.sigeas.model.basic;
-using mz.betainteractive.sigeas.Utilities.Components;
+using mz.betainteractive.utilities.module.Components;
+using mz.betainteractive.utilities.module.Collections;
 
 namespace mz.betainteractive.sigeas.Views.AccessControl {
     public partial class AttendanceCalcsView : Form, AuthorizableComponent {

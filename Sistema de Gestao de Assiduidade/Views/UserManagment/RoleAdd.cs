@@ -10,6 +10,8 @@ using mz.betainteractive.sigeas.Models.Entities;
 using mz.betainteractive.sigeas.Models;
 using mz.betainteractive.sigeas.Utilities;
 using System.Globalization;
+using mz.betainteractive.utilities.module.General;
+using mz.betainteractive.utilities.module.Collections;
 
 namespace mz.betainteractive.sigeas.Views.UserManagment {
     public partial class RoleAdd : Form {

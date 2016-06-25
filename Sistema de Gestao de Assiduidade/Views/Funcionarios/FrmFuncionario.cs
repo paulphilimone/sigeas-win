@@ -8,14 +8,15 @@ using System.Text;
 using System.Windows.Forms;
 using mz.betainteractive.sigeas.model.ca;
 using mz.betainteractive.sigeas.settings;
-using mz.betainteractive.sigeas.utilities;
+using mz.betainteractive.sigeas.Utilities;
 using System.Drawing.Imaging;
 using System.IO;
 using mz.betainteractive.sigeas;
 using mz.betainteractive.sigeas.Models.Entities;
 using mz.betainteractive.sigeas.Models;
 using mz.betainteractive.sigeas.Views.Funcionarios;
-using mz.betainteractive.sigeas.Utilities.Components;
+using mz.betainteractive.utilities.module.Components;
+using mz.betainteractive.sigeas.utilities;
 
 namespace mz.betainteractive.sigeas.Views.Funcionarios {
     public partial class FrmFuncionario : Form, AuthorizableComponent {

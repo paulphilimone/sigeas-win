@@ -8,12 +8,12 @@ using System.Text;
 using System.Windows.Forms;
 using mz.betainteractive.sigeas.Models.Entities;
 using mz.betainteractive.sigeas.DeviceSystem;
-using mz.betainteractive.sigeas.BackgroundFeatures;
+using mz.betainteractive.utilities.module.BackgroundFeatures;
 using mz.betainteractive.sigeas.Models;
 using mz.betainteractive.sigeas.Utilities;
 
 namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
-    public partial class DeviceDataUpdateView : Form, mz.betainteractive.sigeas.Utilities.Components.AuthorizableComponent {
+    public partial class DeviceDataUpdateView : Form, mz.betainteractive.utilities.module.Components.AuthorizableComponent {
         private SortedSet<int> avaiableIds;
         private SigeasDatabaseContext context;
 

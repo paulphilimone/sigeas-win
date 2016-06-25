@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using mz.betainteractive.sigeas.model.ca;
-using mz.betainteractive.sigeas.utilities;
+using mz.betainteractive.sigeas.Utilities;
 using mz.betainteractive.sigeas.Models;
 using mz.betainteractive.sigeas.Models.Entities;
 using mz.betainteractive.sigeas.Utilities;
-using mz.betainteractive.sigeas.Utilities.Components;
+using mz.betainteractive.utilities.module.Components;
+using mz.betainteractive.sigeas.Utilities;
+using mz.betainteractive.utilities.module.General;
+using mz.betainteractive.sigeas.utilities;
 
 namespace mz.betainteractive.sigeas.Views.Funcionarios {
     public partial class FrmFerias : Form, AuthorizableComponent {

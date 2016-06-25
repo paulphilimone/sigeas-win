@@ -15,9 +15,10 @@ using mz.betainteractive.sigeas.DeviceSystem.Views;
 using mz.betainteractive.sigeas.model.ca;
 using System.IO;
 using System.Drawing.Imaging;
+using mz.betainteractive.utilities.module.General;
 
 namespace mz.betainteractive.sigeas.Views.Funcionarios {
-    public partial class FuncionarioAddView : Form, mz.betainteractive.sigeas.Utilities.Components.AuthorizableComponent    {
+    public partial class FuncionarioAddView : Form, mz.betainteractive.utilities.module.Components.AuthorizableComponent    {
 
         private SigeasDatabaseContext context;        
         private Empresa empresa;

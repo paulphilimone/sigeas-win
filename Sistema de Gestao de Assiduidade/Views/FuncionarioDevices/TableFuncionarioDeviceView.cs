@@ -9,10 +9,13 @@ using System.Windows.Forms;
 using mz.betainteractive.sigeas.Models;
 using mz.betainteractive.sigeas.Models.Entities;
 using mz.betainteractive.sigeas.Utilities;
-using mz.betainteractive.sigeas.BackgroundFeatures;
+using mz.betainteractive.utilities.module.BackgroundFeatures;
+using mz.betainteractive.utilities.module.Collections;
+using mz.betainteractive.sigeas.Utilities;
+using mz.betainteractive.utilities.module.General;
 
 namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
-    public partial class TableFuncionarioDeviceView : Form, mz.betainteractive.sigeas.Utilities.Components.AuthorizableComponent {
+    public partial class TableFuncionarioDeviceView : Form, mz.betainteractive.utilities.module.Components.AuthorizableComponent {
 
         private const string MENU_SELECT_ALL = "Selecionar Todos";
         private const string MENU_UNSELECT_ALL = "Desmarcar Todos";

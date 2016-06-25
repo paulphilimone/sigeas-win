@@ -16,6 +16,8 @@ using mz.betainteractive.sigeas.zdbx.models;
 using System.Resources;
 using System.Globalization;
 using System.IO;
+using mz.betainteractive.utilities.module.General;
+using mz.betainteractive.utilities.module.IO;
 
 namespace mz.betainteractive.sigeas.Models {
     /*

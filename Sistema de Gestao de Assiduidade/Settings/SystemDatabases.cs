@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using mz.betainteractive.sigeas.model.ca;
-using mz.betainteractive.sigeas.utilities;
+using mz.betainteractive.sigeas.Utilities;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using mz.betainteractive.sigeas.Properties;

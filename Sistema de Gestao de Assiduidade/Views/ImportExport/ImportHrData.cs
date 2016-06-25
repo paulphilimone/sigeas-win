@@ -6,15 +6,16 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using mz.betainteractive.sigeas.Utilities.Components;
+using mz.betainteractive.utilities.module.Components;
 using System.IO;
 using OfficeOpenXml;
 using mz.betainteractive.sigeas.Models;
 using mz.betainteractive.sigeas.Models.Entities;
 using mz.betainteractive.sigeas.model.ca;
-using mz.betainteractive.sigeas.BackgroundFeatures;
+using mz.betainteractive.utilities.module.BackgroundFeatures;
 using mz.betainteractive.sigeas.DeviceSystem;
 using mz.betainteractive.sigeas.Utilities;
+using mz.betainteractive.utilities.module.General;
 
 namespace mz.betainteractive.sigeas.Views.ImportExport {
     public partial class ImportHrData : Form, AuthorizableComponent {

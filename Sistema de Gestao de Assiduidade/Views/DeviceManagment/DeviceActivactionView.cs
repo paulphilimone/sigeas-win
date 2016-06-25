@@ -13,7 +13,7 @@ using mz.betainteractive.sigeas;
 using mz.betainteractive.sigeas.Models;
 using mz.betainteractive.sigeas.Models.Entities;
 using mz.betainteractive.encoding.encryptation;
-using mz.betainteractive.sigeas.Utilities.Components;
+using mz.betainteractive.utilities.module.Components;
 
 namespace mz.betainteractive.sigeas.Views.DeviceManagement {
     public partial class FrmDeviceActivaction : Form, AuthorizableComponent {

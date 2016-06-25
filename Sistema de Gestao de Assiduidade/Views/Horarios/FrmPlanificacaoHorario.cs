@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using mz.betainteractive.sigeas.model.ca;
-using mz.betainteractive.sigeas.utilities;
+using mz.betainteractive.sigeas.Utilities;
 using mz.betainteractive.sigeas.Models;
 using mz.betainteractive.sigeas.Models.Entities;
 using mz.betainteractive.sigeas.Utilities;
-using mz.betainteractive.sigeas.Utilities.Components;
+using mz.betainteractive.utilities.module.Components;
+using mz.betainteractive.utilities.module.Collections;
+using mz.betainteractive.utilities.module.General;
 
 namespace mz.betainteractive.sigeas.Views.Horarios {
     public partial class FrmPlanificacaoHorario : Form, AuthorizableComponent {

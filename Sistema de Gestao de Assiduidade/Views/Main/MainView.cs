@@ -12,7 +12,7 @@ using System.Windows.Forms;
 using XPExplorerBar;
 using mz.betainteractive.sigeas;
 using mz.betainteractive.sigeas.settings;
-using mz.betainteractive.sigeas.utilities;
+using mz.betainteractive.sigeas.Utilities;
 using mz.betainteractive.sigeas.model.ca;
 using mz.betainteractive.sigeas.Models.Entities;
 using mz.betainteractive.sigeas.Views;
@@ -24,10 +24,11 @@ using mz.betainteractive.sigeas.Views.Funcionarios;
 using mz.betainteractive.sigeas.Views.Horarios;
 using mz.betainteractive.sigeas.Views.AccessControl;
 using mz.betainteractive.sigeas.Views.UserManagment;
-using mz.betainteractive.sigeas.BackgroundFeatures;
-using mz.betainteractive.sigeas.Utilities.Components;
+using mz.betainteractive.utilities.module.BackgroundFeatures;
+using mz.betainteractive.utilities.module.Components;
 using mz.betainteractive.sigeas.Views.FuncionarioDevices;
 using mz.betainteractive.sigeas.Views.ImportExport;
+using mz.betainteractive.sigeas.utilities;
 
 
 namespace mz.betainteractive.sigeas.Views.Main {

@@ -10,9 +10,12 @@ using mz.betainteractive.sigeas.Utilities;
 using System.Text.RegularExpressions;
 using mz.betainteractive.sigeas.Models;
 using mz.betainteractive.sigeas.DeviceSystem;
-using mz.betainteractive.sigeas.BackgroundFeatures;
+using mz.betainteractive.utilities.module.BackgroundFeatures;
 using mz.betainteractive.sigeas.Models.Entities;
-using mz.betainteractive.sigeas.Utilities.Components;
+using mz.betainteractive.utilities.module.Components;
+using mz.betainteractive.sigeas.Utilities;
+using mz.betainteractive.utilities.module.General;
+using mz.betainteractive.utilities.module.Collections;
 
 namespace mz.betainteractive.sigeas.Views.DeviceManagement {
     public partial class DeviceManager : Form, AuthorizableComponent {

@@ -7,6 +7,7 @@ using mz.betainteractive.sigeas.Models.Entities;
 using mz.betainteractive.sigeas.zdbx;
 using mz.betainteractive.sigeas.Models;
 using mz.betainteractive.sigeas.DeviceSystem;
+using mz.betainteractive.utilities.module.General;
 
 namespace mz.betainteractive.sigeas.Utilities {
     public class DeviceDataConvertions {
