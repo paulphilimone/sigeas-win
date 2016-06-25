@@ -538,6 +538,10 @@
     <Compile Include="Utilities\Collections.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\bi-utilities-module\BiUtilitiesModule.csproj">
+      <Project>{FF298101-31A2-430C-94FB-1310B4A0566B}</Project>
+      <Name>BiUtilitiesModule</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\sigeas-device-module\SigeasDeviceModule.csproj">
       <Project>{DEA7E89B-FACE-47E6-9786-B95C87F1A05E}</Project>
       <Name>SigeasDeviceModule</Name>
