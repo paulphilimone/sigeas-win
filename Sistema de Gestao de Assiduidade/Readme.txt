@@ -10,7 +10,6 @@
 
 - Notes onn future development.  
   - Ter em conta Multiple Verification Modes, altera verifyMode number
-  - Add saving dialog to "Guardar associacoes" on tableFuncionariosDeviceView
 
 - New Features
   - Add Device Capacity Warning (need to connect once or twice a week, create statistics of clocks per day)
@@ -27,7 +26,11 @@
 
 Fase 1 - depois venda
  - Testar e corrigir bugs  
+ - Permitir edicao de periodo de tempo mensal (MonthWork Criado) - Done! - Para o futuro permitir alterar/remover sem apagar os ja usados
+ - Adicionar monthWork a UserClockViewer/AttCalcsViewer
+ - Adicionar calculo de resumo mensal do funcionario - baseado em DailyAttCalcs
  - Adicionar Reports
+
 
 Fase 2 - depois venda e update
  - Mudar as Views do programa (torna-lo mais user friendly)
@@ -36,3 +39,9 @@ Fase 2 - depois venda e update
 Fase 3
  - Web Application
  - SigeasDeviceModule - Server(app with rest web services) n Client(java)
+ 
+ DailyAttCalcs   - Calculo de Assiduidade de um Funcionario num dia
+ MonthlyAttCalcs  - Resumo de assiduidade de um Funcionario durante um periodo (mensal)
+
+
+ 

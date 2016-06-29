@@ -116,6 +116,7 @@
     <Compile Include="Models\Configuration\AusenciaConfiguration.cs" />
     <Compile Include="Models\Configuration\CategoriaConfiguration.cs" />
     <Compile Include="Models\Configuration\ContinenteConfiguration.cs" />
+    <Compile Include="Models\Configuration\MonthWorkConfiguration.cs" />
     <Compile Include="Models\Configuration\DepartamentoConfiguration.cs" />
     <Compile Include="Models\Configuration\DeviceActivationConfiguration.cs" />
     <Compile Include="Models\Configuration\DeviceConfiguration.cs" />
@@ -137,6 +138,7 @@
     <Compile Include="Models\Configuration\HorarioSemanaConfiguration.cs" />
     <Compile Include="Models\Configuration\InOutModeConfiguration.cs" />
     <Compile Include="Models\Configuration\LocalidadeConfiguration.cs" />
+    <Compile Include="Models\Configuration\MonthlyAttCalcsConfiguration.cs" />
     <Compile Include="Models\Configuration\PaisConfiguration.cs" />
     <Compile Include="Models\Configuration\PeriodoTempoConfiguration.cs" />
     <Compile Include="Models\Configuration\PostoAdministrativoConfiguration.cs" />
@@ -153,7 +155,8 @@
     <Compile Include="Models\Entities\ApplicationParam.cs" />
     <Compile Include="Models\Entities\ApplicationUser.cs" />
     <Compile Include="Models\Entities\AttendanceRules.cs" />
-    <Compile Include="Models\Entities\AttCalcs.cs" />
+    <Compile Include="Models\Entities\MonthWork.cs" />
+    <Compile Include="Models\Entities\DailyAttCalcs.cs" />
     <Compile Include="Models\Entities\Ausencia.cs" />
     <Compile Include="Models\Entities\Continente.cs" />
     <Compile Include="Models\Entities\DeviceGroupTimezone.cs" />
@@ -163,6 +166,7 @@
     <Compile Include="Models\Entities\DocumentoIdentificacao.cs" />
     <Compile Include="Models\Entities\EstadoCivil.cs" />
     <Compile Include="Models\Entities\InOutMode.cs" />
+    <Compile Include="Models\Entities\MonthlyAttCalcs.cs" />
     <Compile Include="Models\Entities\Pais.cs" />
     <Compile Include="Models\Entities\PeriodoTempo.cs" />
     <Compile Include="Models\Entities\PostoAdministrativo.cs" />
@@ -193,7 +197,7 @@
     <Compile Include="Models\Configuration\ApplicationParamConfiguration.cs" />
     <Compile Include="Models\Configuration\ApplicationUserConfiguration.cs" />
     <Compile Include="Models\Configuration\AttendanceRulesConfiguration.cs" />
-    <Compile Include="Models\Configuration\AttCalcsConfiguration.cs" />
+    <Compile Include="Models\Configuration\DailyAttCalcsConfiguration.cs" />
     <Compile Include="Models\Entities\provincia.cs" />
     <Compile Include="Models\Entities\Sexo.cs" />
     <Compile Include="Models\Entities\SystemLog.cs" />
