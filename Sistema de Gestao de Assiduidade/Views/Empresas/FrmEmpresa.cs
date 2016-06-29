@@ -887,7 +887,10 @@ namespace mz.betainteractive.sigeas.Views.Empresas {
                     continue;
                 }
 
-                monthWorks.Add(new MonthWork(dBound));
+                var monthWork = new MonthWork(dBound);
+                monthWork.Enabled = true;
+
+                monthWorks.Add(monthWork);
             }
 
             if (monthWorks.Count == 0) {

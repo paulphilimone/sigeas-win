@@ -19,7 +19,7 @@ namespace mz.betainteractive.sigeas.Models.Entities
         //public int TotalWorkDays { get; set; }
         public int TotalDays { get; set; }
 
-        public bool Enabled; /* if the enterprise changes his initial date for calculations all current data is disabled and new ones a created*/
+        public bool Enabled { get; set; } /* if the enterprise changes his initial date for calculations all current data is disabled and new ones a created*/
        
         public virtual ApplicationUser CreatedBy { get; set; }
         public virtual ApplicationUser UpdatedBy { get; set; }
@@ -35,6 +35,10 @@ namespace mz.betainteractive.sigeas.Models.Entities
             this.First = dateBound.First;
             this.Last = dateBound.Last;
             this.TotalDays = dateBound.Days;
+        }
+
+        public override string ToString() {
+            return this.Name + " de " + this.Year;
         }
 
     }
