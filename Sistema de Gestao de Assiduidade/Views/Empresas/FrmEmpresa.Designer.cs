@@ -46,6 +46,12 @@
             treeNode7,
             treeNode8});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEmpresa));
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            "1",
+            "2016",
+            "Janeiro",
+            "01 Janeiro",
+            "31 Janeiro"}, -1);
             this.label1 = new System.Windows.Forms.Label();
             this.txtNomeEmpresa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -117,6 +123,24 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
+            this.txtMonthName = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txtMonthDays = new System.Windows.Forms.TextBox();
+            this.txtEndDate = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.btPreviewMonthList = new System.Windows.Forms.Button();
+            this.btGenerateMonthsList = new System.Windows.Forms.Button();
+            this.listViewMonths = new System.Windows.Forms.ListView();
+            this.colHeaderOrder = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colHeaderYear = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colHeaderMonthName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colHeaderFirst = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colHeaderLast = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colHeaderDays = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.funcionarioImageList = new System.Windows.Forms.ImageList(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -136,6 +160,8 @@
             this.grpBoxRegras1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCountAtrasoAfter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCountHrExAfter)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -212,7 +238,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(24, 137);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(45, 13);
+            this.label9.Size = new System.Drawing.Size(44, 13);
             this.label9.TabIndex = 10;
             this.label9.Text = "Av. Rua";
             // 
@@ -328,7 +354,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(19, 55);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 13);
+            this.label7.Size = new System.Drawing.Size(50, 13);
             this.label7.TabIndex = 1;
             this.label7.Text = "Telefone";
             // 
@@ -376,6 +402,7 @@
             this.tabEmpresa.Controls.Add(this.tabPage1);
             this.tabEmpresa.Controls.Add(this.tabPage2);
             this.tabEmpresa.Controls.Add(this.tabPageAttendRules);
+            this.tabEmpresa.Controls.Add(this.tabPage3);
             this.tabEmpresa.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabEmpresa.Location = new System.Drawing.Point(2, 2);
             this.tabEmpresa.Name = "tabEmpresa";
@@ -945,6 +972,175 @@
             this.label17.TabIndex = 16;
             this.label17.Text = "Minutos";
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.groupBox7);
+            this.tabPage3.Controls.Add(this.btPreviewMonthList);
+            this.tabPage3.Controls.Add(this.btGenerateMonthsList);
+            this.tabPage3.Controls.Add(this.listViewMonths);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(521, 418);
+            this.tabPage3.TabIndex = 3;
+            this.tabPage3.Text = "Ano Laboral";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.label23);
+            this.groupBox7.Controls.Add(this.dtpStartDate);
+            this.groupBox7.Controls.Add(this.txtMonthName);
+            this.groupBox7.Controls.Add(this.label24);
+            this.groupBox7.Controls.Add(this.txtMonthDays);
+            this.groupBox7.Controls.Add(this.txtEndDate);
+            this.groupBox7.Controls.Add(this.label25);
+            this.groupBox7.Location = new System.Drawing.Point(6, 6);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(498, 96);
+            this.groupBox7.TabIndex = 10;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Ano Laboral da Empresa, para efeitos de fim de balanço";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(6, 29);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(63, 13);
+            this.label23.TabIndex = 1;
+            this.label23.Text = "Data Inicial";
+            // 
+            // dtpStartDate
+            // 
+            this.dtpStartDate.CustomFormat = "    dd MMMM yyyy";
+            this.dtpStartDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpStartDate.Location = new System.Drawing.Point(9, 45);
+            this.dtpStartDate.Name = "dtpStartDate";
+            this.dtpStartDate.Size = new System.Drawing.Size(164, 22);
+            this.dtpStartDate.TabIndex = 0;
+            this.dtpStartDate.ValueChanged += new System.EventHandler(this.dtpInitialDay_ValueChanged);
+            // 
+            // txtMonthName
+            // 
+            this.txtMonthName.Location = new System.Drawing.Point(375, 45);
+            this.txtMonthName.Name = "txtMonthName";
+            this.txtMonthName.ReadOnly = true;
+            this.txtMonthName.Size = new System.Drawing.Size(112, 22);
+            this.txtMonthName.TabIndex = 8;
+            this.txtMonthName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(176, 29);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(58, 13);
+            this.label24.TabIndex = 3;
+            this.label24.Text = "Data Final";
+            // 
+            // txtMonthDays
+            // 
+            this.txtMonthDays.Location = new System.Drawing.Point(339, 45);
+            this.txtMonthDays.Name = "txtMonthDays";
+            this.txtMonthDays.ReadOnly = true;
+            this.txtMonthDays.Size = new System.Drawing.Size(30, 22);
+            this.txtMonthDays.TabIndex = 7;
+            this.txtMonthDays.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtEndDate
+            // 
+            this.txtEndDate.Location = new System.Drawing.Point(179, 46);
+            this.txtEndDate.Name = "txtEndDate";
+            this.txtEndDate.ReadOnly = true;
+            this.txtEndDate.Size = new System.Drawing.Size(137, 22);
+            this.txtEndDate.TabIndex = 4;
+            this.txtEndDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(336, 29);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(105, 13);
+            this.label25.TabIndex = 6;
+            this.label25.Text = "Total de dias e Mês";
+            // 
+            // btPreviewMonthList
+            // 
+            this.btPreviewMonthList.Location = new System.Drawing.Point(15, 108);
+            this.btPreviewMonthList.Name = "btPreviewMonthList";
+            this.btPreviewMonthList.Size = new System.Drawing.Size(164, 23);
+            this.btPreviewMonthList.TabIndex = 9;
+            this.btPreviewMonthList.Text = "Preview Months List";
+            this.btPreviewMonthList.UseVisualStyleBackColor = true;
+            this.btPreviewMonthList.Click += new System.EventHandler(this.btPreviewMonthList_Click);
+            // 
+            // btGenerateMonthsList
+            // 
+            this.btGenerateMonthsList.Location = new System.Drawing.Point(185, 108);
+            this.btGenerateMonthsList.Name = "btGenerateMonthsList";
+            this.btGenerateMonthsList.Size = new System.Drawing.Size(161, 23);
+            this.btGenerateMonthsList.TabIndex = 5;
+            this.btGenerateMonthsList.Text = "Generate Months List";
+            this.btGenerateMonthsList.UseVisualStyleBackColor = true;
+            this.btGenerateMonthsList.Click += new System.EventHandler(this.btGenerateMonthsList_Click);
+            // 
+            // listViewMonths
+            // 
+            this.listViewMonths.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colHeaderOrder,
+            this.colHeaderYear,
+            this.colHeaderMonthName,
+            this.colHeaderFirst,
+            this.colHeaderLast,
+            this.colHeaderDays});
+            this.listViewMonths.FullRowSelect = true;
+            this.listViewMonths.GridLines = true;
+            this.listViewMonths.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem3});
+            this.listViewMonths.Location = new System.Drawing.Point(15, 147);
+            this.listViewMonths.MultiSelect = false;
+            this.listViewMonths.Name = "listViewMonths";
+            this.listViewMonths.Size = new System.Drawing.Size(489, 252);
+            this.listViewMonths.TabIndex = 2;
+            this.listViewMonths.UseCompatibleStateImageBehavior = false;
+            this.listViewMonths.View = System.Windows.Forms.View.Details;
+            // 
+            // colHeaderOrder
+            // 
+            this.colHeaderOrder.Text = "Ord";
+            this.colHeaderOrder.Width = 40;
+            // 
+            // colHeaderYear
+            // 
+            this.colHeaderYear.Text = "Ano";
+            this.colHeaderYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colHeaderYear.Width = 51;
+            // 
+            // colHeaderMonthName
+            // 
+            this.colHeaderMonthName.Text = "Mês";
+            this.colHeaderMonthName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colHeaderMonthName.Width = 114;
+            // 
+            // colHeaderFirst
+            // 
+            this.colHeaderFirst.Text = "Data de inicio";
+            this.colHeaderFirst.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colHeaderFirst.Width = 101;
+            // 
+            // colHeaderLast
+            // 
+            this.colHeaderLast.Text = "Data do fim";
+            this.colHeaderLast.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colHeaderLast.Width = 90;
+            // 
+            // colHeaderDays
+            // 
+            this.colHeaderDays.Text = "T. Dias";
+            // 
             // funcionarioImageList
             // 
             this.funcionarioImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("funcionarioImageList.ImageStream")));
@@ -997,6 +1193,9 @@
             this.grpBoxRegras1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCountAtrasoAfter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCountHrExAfter)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1075,5 +1274,23 @@
         private System.Windows.Forms.Button BtnAddDepartamento;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Button BtnAddCategoria;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.ListView listViewMonths;
+        private System.Windows.Forms.ColumnHeader colHeaderOrder;
+        private System.Windows.Forms.ColumnHeader colHeaderYear;
+        private System.Windows.Forms.ColumnHeader colHeaderMonthName;
+        private System.Windows.Forms.ColumnHeader colHeaderFirst;
+        private System.Windows.Forms.ColumnHeader colHeaderLast;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.DateTimePicker dtpStartDate;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.TextBox txtMonthName;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox txtMonthDays;
+        private System.Windows.Forms.TextBox txtEndDate;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Button btPreviewMonthList;
+        private System.Windows.Forms.Button btGenerateMonthsList;
+        private System.Windows.Forms.ColumnHeader colHeaderDays;
     }
 }

@@ -10,11 +10,10 @@ using mz.betainteractive.sigeas.model.ca;
 using mz.betainteractive.sigeas.Utilities;
 using mz.betainteractive.sigeas.Models;
 using mz.betainteractive.sigeas.Models.Entities;
-using mz.betainteractive.sigeas.Utilities;
 using mz.betainteractive.utilities.module.Components;
-using mz.betainteractive.sigeas.Utilities;
 using mz.betainteractive.utilities.module.General;
 using mz.betainteractive.sigeas.utilities;
+using System.Globalization;
 
 namespace mz.betainteractive.sigeas.Views.Empresas {
     public partial class FrmEmpresa : Form, AuthorizableComponent {
@@ -59,6 +58,7 @@ namespace mz.betainteractive.sigeas.Views.Empresas {
                 SelectedDepartamento = null;
                 currentEmpresa = null; 
                 LimparForm();
+                CleanAnoLaboral();
             }
         }
 
@@ -78,6 +78,7 @@ namespace mz.betainteractive.sigeas.Views.Empresas {
             LoadDepartamentos();
             LoadCategorias();
             LoadRegras();
+            LoadMonthWorkFromDB();
         }
 
 
@@ -350,6 +351,7 @@ namespace mz.betainteractive.sigeas.Views.Empresas {
             LimparCategoriaForm();
             LimparDepartamentoForm();
             LimparRegras();
+            CleanAnoLaboral();
         }
 
         private void LimparForm() {
@@ -367,6 +369,13 @@ namespace mz.betainteractive.sigeas.Views.Empresas {
             txtEmail.Text = "";
             txtTelefone.Text = "";
             txtFax.Text = "";
+        }
+
+        private void CleanAnoLaboral() {
+            txtEndDate.Text = "";
+            txtMonthDays.Text = "";
+            txtMonthName.Text = "";
+            listViewMonths.Items.Clear();
         }
 
         private void btGravarDepartamento_Click(object sender, EventArgs e) {
@@ -808,6 +817,95 @@ namespace mz.betainteractive.sigeas.Views.Empresas {
 
         private void BtnAddCategoria_Click(object sender, EventArgs e) {
             OpenAddCategoria();
+        }
+
+        private void dtpInitialDay_ValueChanged(object sender, EventArgs e) {
+            UpdateDatesCalculations();
+        }
+
+        private void UpdateDatesCalculations() {
+            CultureInfo ci = new CultureInfo("pt-PT");
+
+            var dateBound = DateUtilities.GetMonthDateBound(dtpStartDate.Value);
+
+            txtEndDate.Text = dateBound.Last.ToString("dd MMMM yyyy", ci);
+            txtMonthDays.Text = dateBound.Days + "";
+            txtMonthName.Text = dateBound.Name;
+        }
+
+        private void btPreviewMonthList_Click(object sender, EventArgs e) {
+            var bounds = DateUtilities.GetMonthsList(dtpStartDate.Value, 6);
+            ViewMonthsList(bounds);
+        }
+
+        private void ViewMonthsList(List<DateBounds> bounds) {
+            CultureInfo ci = new CultureInfo("pt-PT");
+
+            listViewMonths.Items.Clear();
+
+            foreach (var dbound in bounds) {
+                ListViewItem item = new ListViewItem(dbound.Order+"");
+                item.SubItems.AddRange(new string[] { dbound.Year+"", StringUtilities.Capitalize(dbound.Name), StringUtilities.Capitalize(dbound.First.ToString("dd MMMM", ci)), StringUtilities.Capitalize(dbound.Last.ToString("dd MMMM", ci)), dbound.Days.ToString() });
+                listViewMonths.Items.Add(item);
+            }
+        }
+
+        private void LoadMonthWorkFromDB() {
+            CultureInfo ci = new CultureInfo("pt-PT");
+
+            GetEmpresa();
+
+            if (currentEmpresa.InitialStartDate != null){
+                dtpStartDate.Value = currentEmpresa.InitialStartDate.Value;
+                UpdateDatesCalculations();
+            }
+            var monthWorks = context.MonthWork.ToList();
+
+            listViewMonths.Items.Clear();
+
+            foreach (var dbound in monthWorks) {
+                ListViewItem item = new ListViewItem(dbound.Order + "");
+                item.SubItems.AddRange(new string[] { dbound.Year + "", StringUtilities.Capitalize(dbound.Name), StringUtilities.Capitalize(dbound.First.ToString("dd MMMM", ci)), StringUtilities.Capitalize(dbound.Last.ToString("dd MMMM", ci)), dbound.TotalDays.ToString() });
+                listViewMonths.Items.Add(item);
+            }
+        }
+        
+        private void btGenerateMonthsList_Click(object sender, EventArgs e) {
+            CreateAndSaveMonthsList();
+        }
+
+        private void CreateAndSaveMonthsList() {
+            var bounds = DateUtilities.GetMonthsList(dtpStartDate.Value, 20);
+            var exists = new List<DateBounds>();
+            var monthWorks = new List<MonthWork>();
+
+            foreach (var dBound in bounds) {
+                bool recordExists = context.MonthWork.Where(t=>t.Year==dBound.Year && t.Order==dBound.Order).Count()>0;
+
+                if (recordExists) {
+                    exists.Add(dBound);
+                    continue;
+                }
+
+                monthWorks.Add(new MonthWork(dBound));
+            }
+
+            if (monthWorks.Count == 0) {
+                MessageBox.Show("Não há meses para serem gravados no sistema!");
+                return;
+            } 
+
+            try {
+                this.currentEmpresa.InitialStartDate = dtpStartDate.Value;
+                context.MonthWork.AddRange(monthWorks);
+                context.SaveChanges();
+                MessageBox.Show("Meses de trabalho foram registados com sucesso!");
+
+            } catch (Exception ex) {
+                LogErrors.AddErrorLog(ex, "Ocorreu erro ao guardar os meses de trabalho");
+                MessageBox.Show(this, "Ocorreu erro ao tentar guardar os meses de trabalho.\nErro: " + ex.Message, "Erro grave", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
     }

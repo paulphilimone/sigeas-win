@@ -30,6 +30,8 @@ namespace  mz.betainteractive.sigeas.Models.Entities
         public virtual List<Departamento> Departamentos { get; set; }
         public virtual List<Categoria> Categorias { get; set; }
 
+        public Nullable<System.DateTime> InitialStartDate { get; set; }
+
         //public virtual List<Door>
 
         public Empresa() {
