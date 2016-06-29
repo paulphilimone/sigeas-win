@@ -38,7 +38,7 @@ namespace mz.betainteractive.sigeas.Models.Entities
         }
 
         public override string ToString() {
-            return this.Name + " de " + this.Year;
+            return StringUtilities.Capitalize(this.Name) + " de " + this.Year;
         }
 
     }

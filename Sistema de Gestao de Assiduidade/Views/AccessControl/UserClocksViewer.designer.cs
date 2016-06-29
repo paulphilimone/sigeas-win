@@ -24,7 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "1"),
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "B000-001"),
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "MICHELE"),
@@ -34,7 +34,7 @@
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "Saida"),
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "Entrada", System.Drawing.SystemColors.WindowText, System.Drawing.Color.Aqua, new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)))),
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "OK")}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "15",
             "RAYMOND ROLAND",
@@ -88,6 +88,8 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.CBoxMonthWorks = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -169,6 +171,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.CBoxMonthWorks);
             this.groupBox1.Controls.Add(this.DtpToTime);
             this.groupBox1.Controls.Add(this.DtpToDate);
             this.groupBox1.Controls.Add(this.label4);
@@ -186,7 +190,7 @@
             // 
             this.DtpToTime.Enabled = false;
             this.DtpToTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.DtpToTime.Location = new System.Drawing.Point(162, 61);
+            this.DtpToTime.Location = new System.Drawing.Point(157, 77);
             this.DtpToTime.Name = "DtpToTime";
             this.DtpToTime.ShowUpDown = true;
             this.DtpToTime.Size = new System.Drawing.Size(70, 22);
@@ -196,7 +200,7 @@
             // DtpToDate
             // 
             this.DtpToDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpToDate.Location = new System.Drawing.Point(65, 61);
+            this.DtpToDate.Location = new System.Drawing.Point(60, 77);
             this.DtpToDate.Name = "DtpToDate";
             this.DtpToDate.Size = new System.Drawing.Size(91, 22);
             this.DtpToDate.TabIndex = 8;
@@ -204,7 +208,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(39, 64);
+            this.label4.Location = new System.Drawing.Point(34, 80);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(24, 13);
             this.label4.TabIndex = 3;
@@ -213,7 +217,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(39, 37);
+            this.label3.Location = new System.Drawing.Point(34, 53);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(21, 13);
             this.label3.TabIndex = 2;
@@ -223,7 +227,7 @@
             // 
             this.DtpFromTime.Enabled = false;
             this.DtpFromTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.DtpFromTime.Location = new System.Drawing.Point(162, 34);
+            this.DtpFromTime.Location = new System.Drawing.Point(157, 50);
             this.DtpFromTime.Name = "DtpFromTime";
             this.DtpFromTime.ShowUpDown = true;
             this.DtpFromTime.Size = new System.Drawing.Size(70, 22);
@@ -233,7 +237,7 @@
             // DtpFromDate
             // 
             this.DtpFromDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpFromDate.Location = new System.Drawing.Point(65, 34);
+            this.DtpFromDate.Location = new System.Drawing.Point(60, 50);
             this.DtpFromDate.Name = "DtpFromDate";
             this.DtpFromDate.Size = new System.Drawing.Size(91, 22);
             this.DtpFromDate.TabIndex = 6;
@@ -393,8 +397,8 @@
             this.LViewUserClocks.FullRowSelect = true;
             this.LViewUserClocks.GridLines = true;
             this.LViewUserClocks.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2});
+            listViewItem3,
+            listViewItem4});
             this.LViewUserClocks.Location = new System.Drawing.Point(11, 22);
             this.LViewUserClocks.MultiSelect = false;
             this.LViewUserClocks.Name = "LViewUserClocks";
@@ -532,6 +536,24 @@
     "os de entradas e saidas";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // CBoxMonthWorks
+            // 
+            this.CBoxMonthWorks.FormattingEnabled = true;
+            this.CBoxMonthWorks.Location = new System.Drawing.Point(60, 20);
+            this.CBoxMonthWorks.Name = "CBoxMonthWorks";
+            this.CBoxMonthWorks.Size = new System.Drawing.Size(169, 21);
+            this.CBoxMonthWorks.TabIndex = 10;
+            this.CBoxMonthWorks.SelectedIndexChanged += new System.EventHandler(this.CBoxMonthWorks_SelectedIndexChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(27, 23);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(28, 13);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Mês";
+            // 
             // UserClocksViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -613,5 +635,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox CBoxCategorias;
         private System.Windows.Forms.ColumnHeader ColVerifyMode;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox CBoxMonthWorks;
     }
 }

@@ -68,6 +68,8 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.BtnFechar = new System.Windows.Forms.Button();
             this.BtnLimpar = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.CBoxMonthWorks = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -146,6 +148,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.CBoxMonthWorks);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.DtpToDate);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -160,7 +164,7 @@
             // DtpToDate
             // 
             this.DtpToDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpToDate.Location = new System.Drawing.Point(84, 59);
+            this.DtpToDate.Location = new System.Drawing.Point(58, 78);
             this.DtpToDate.Name = "DtpToDate";
             this.DtpToDate.Size = new System.Drawing.Size(91, 22);
             this.DtpToDate.TabIndex = 4;
@@ -168,7 +172,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(58, 62);
+            this.label4.Location = new System.Drawing.Point(32, 81);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(24, 13);
             this.label4.TabIndex = 3;
@@ -177,7 +181,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(58, 35);
+            this.label3.Location = new System.Drawing.Point(32, 54);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(21, 13);
             this.label3.TabIndex = 2;
@@ -186,7 +190,7 @@
             // DtpFromDate
             // 
             this.DtpFromDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpFromDate.Location = new System.Drawing.Point(84, 32);
+            this.DtpFromDate.Location = new System.Drawing.Point(58, 51);
             this.DtpFromDate.Name = "DtpFromDate";
             this.DtpFromDate.Size = new System.Drawing.Size(91, 22);
             this.DtpFromDate.TabIndex = 0;
@@ -201,6 +205,7 @@
             this.groupBox3.Size = new System.Drawing.Size(220, 109);
             this.groupBox3.TabIndex = 24;
             this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Assiduidade Diária";
             // 
             // BtnSearchAndCalculate
             // 
@@ -275,7 +280,7 @@
             this.DGViewAttCalcs.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.DGViewAttCalcs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGViewAttCalcs.ShowEditingIcon = false;
-            this.DGViewAttCalcs.Size = new System.Drawing.Size(825, 318);
+            this.DGViewAttCalcs.Size = new System.Drawing.Size(1058, 318);
             this.DGViewAttCalcs.TabIndex = 25;
             this.DGViewAttCalcs.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvAttCalcs_MouseDoubleClick);
             // 
@@ -432,7 +437,7 @@
             this.groupBox4.Controls.Add(this.DGViewAttCalcs);
             this.groupBox4.Location = new System.Drawing.Point(12, 127);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(839, 343);
+            this.groupBox4.Size = new System.Drawing.Size(1072, 343);
             this.groupBox4.TabIndex = 26;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Dados calculados";
@@ -440,7 +445,7 @@
             // BtnFechar
             // 
             this.BtnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnFechar.Location = new System.Drawing.Point(737, 476);
+            this.BtnFechar.Location = new System.Drawing.Point(970, 476);
             this.BtnFechar.Name = "BtnFechar";
             this.BtnFechar.Size = new System.Drawing.Size(112, 23);
             this.BtnFechar.TabIndex = 27;
@@ -451,7 +456,7 @@
             // BtnLimpar
             // 
             this.BtnLimpar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnLimpar.Location = new System.Drawing.Point(622, 477);
+            this.BtnLimpar.Location = new System.Drawing.Point(855, 477);
             this.BtnLimpar.Name = "BtnLimpar";
             this.BtnLimpar.Size = new System.Drawing.Size(109, 23);
             this.BtnLimpar.TabIndex = 28;
@@ -459,12 +464,30 @@
             this.BtnLimpar.UseVisualStyleBackColor = true;
             this.BtnLimpar.Click += new System.EventHandler(this.btLimpar_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(24, 27);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(28, 13);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Mês";
+            // 
+            // CBoxMonthWorks
+            // 
+            this.CBoxMonthWorks.FormattingEnabled = true;
+            this.CBoxMonthWorks.Location = new System.Drawing.Point(58, 24);
+            this.CBoxMonthWorks.Name = "CBoxMonthWorks";
+            this.CBoxMonthWorks.Size = new System.Drawing.Size(192, 21);
+            this.CBoxMonthWorks.TabIndex = 13;
+            this.CBoxMonthWorks.SelectedIndexChanged += new System.EventHandler(this.CBoxMonthWorks_SelectedIndexChanged);
+            // 
             // AttendanceCalcsView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(863, 512);
+            this.ClientSize = new System.Drawing.Size(1096, 512);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.BtnFechar);
             this.Controls.Add(this.BtnLimpar);
@@ -532,5 +555,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColHorasExtras;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ColFeriado;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ColEmFerias;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox CBoxMonthWorks;
     }
 }

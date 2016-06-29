@@ -69,9 +69,10 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
             LoadDevicesToComboBox();
             LoadDepartamentosToComboBox();
             LoadCategoriasToComboBox();
+            LoadMonthWorksToComboBox();
             LimparLista();
         }
-
+                
         private void LoadDevicesToComboBox() {
             //No futuro não sera assim
             var devices = context.Device.AsNoTracking().Where(t => t.Door != null).ToList();
@@ -115,7 +116,7 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
 
         private void LimparLista() {
             LViewUserClocks.Items.Clear();
-        }
+        }       
 
         private void CBoxDepartamentos_SelectedIndexChanged(object sender, EventArgs e) {
             if (CBoxDepartamentos.SelectedIndex != -1) {
@@ -150,6 +151,8 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
             CBoxFuncionarios.Items.Clear();
 
             List<Funcionario> funcionarios = new List<Funcionario>();
+
+            if (context.Funcionario.Count() == 0) return;
 
             if (categoria == null && departamento == null) {
                 funcionarios = context.Funcionario.ToList();
@@ -515,6 +518,29 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
 
         private void BtnSearchAndCorrect_Click(object sender, EventArgs e) {
             SearchAndCorrectUserClocks();
+        }
+
+        private void CBoxMonthWorks_SelectedIndexChanged(object sender, EventArgs e) {
+            OnMonthWorkSelected();
+        }
+
+        private void LoadMonthWorksToComboBox() {
+            var months = context.MonthWork.Where(t => t.Enabled == true).ToList();
+
+            CBoxMonthWorks.Items.Clear();
+
+            foreach (var month in months) {
+                CBoxMonthWorks.Items.Add(month);
+            }
+        }
+
+        private void OnMonthWorkSelected() {
+            MonthWork monthWork = CBoxMonthWorks.SelectedItem as MonthWork;
+
+            if (monthWork == null) return;
+
+            DtpFromDate.Value = monthWork.First;
+            DtpToDate.Value = monthWork.Last;
         }
 
                

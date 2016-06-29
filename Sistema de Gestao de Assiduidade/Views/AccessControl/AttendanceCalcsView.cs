@@ -12,7 +12,6 @@ using System.Threading;
 using System.Globalization;
 using mz.betainteractive.sigeas.Models.Entities;
 using mz.betainteractive.sigeas.Models;
-using mz.betainteractive.sigeas.Utilities;
 using mz.betainteractive.utilities.module.BackgroundFeatures;
 using mz.betainteractive.sigeas.model.basic;
 using mz.betainteractive.utilities.module.Components;
@@ -76,6 +75,7 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
             DtpFromDate.Value = DtpToDate.Value.AddMonths(-1);
             LoadDepartamentosToComboBox();
             LoadCategoriasToComboBox();
+            LoadMonthWorksToComboBox();
             LimparLista();
         }
 
@@ -148,6 +148,8 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
             CBoxFuncionarios.Items.Clear();
 
             List<Funcionario> funcionarios = new List<Funcionario>();
+
+            if (context.Funcionario.Count() == 0) return;
 
             if (categoria == null && departamento == null) {
                 funcionarios = context.Funcionario.ToList();
@@ -238,7 +240,7 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
             DGViewAttCalcs.Rows.Clear();
 
             if (list.Count == 0) {
-                MessageBox.Show("Não existem dados calculados para a pesquisa efectuda");
+                MessageBox.Show("Não existem dados calculados para a pesquisa efectuada");
                 return;
             }
 
@@ -277,6 +279,12 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
         }
         
         private void PesquisarAndCalculate() {
+
+            if (context.FuncionarioHorario.Count()==0) {
+                MessageBox.Show("Não existem horarios associados ha funcionarios");
+                return;
+            }
+
             OnExecuteDialog background = new OnExecuteDialog("Calculos de asseduidade....", "Efectuando calculos de asseduidade...");
             //bool result = false;
 
@@ -348,8 +356,29 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
                 ViewFuncionarioRegs();
             }
         }
-                
 
+        private void CBoxMonthWorks_SelectedIndexChanged(object sender, EventArgs e) {
+            OnMonthWorkSelected();
+        }
+
+        private void LoadMonthWorksToComboBox() {
+            var months = context.MonthWork.Where(t => t.Enabled == true).ToList();
+
+            CBoxMonthWorks.Items.Clear();
+
+            foreach (var month in months) {
+                CBoxMonthWorks.Items.Add(month);
+            }
+        }
+
+        private void OnMonthWorkSelected() {
+            MonthWork monthWork = CBoxMonthWorks.SelectedItem as MonthWork;
+
+            if (monthWork == null) return;
+
+            DtpFromDate.Value = monthWork.First;
+            DtpToDate.Value = monthWork.Last;
+        }
         
     }
 }
