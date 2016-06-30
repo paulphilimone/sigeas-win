@@ -24,9 +24,9 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.CBoxDepartamentos = new System.Windows.Forms.ComboBox();
@@ -35,6 +35,8 @@
             this.CBoxCategorias = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.CBoxMonthWorks = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.DtpToDate = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,23 +45,6 @@
             this.BtnSearchAndCalculate = new System.Windows.Forms.Button();
             this.BtnPesquisar = new System.Windows.Forms.Button();
             this.DGViewAttCalcs = new System.Windows.Forms.DataGridView();
-            this.ColFuncionario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColWeekDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEntrada1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColSaida1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEntrada2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColSaida2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColClockIn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColClockOut = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEntradaAtrasada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColSaidaAdiantada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColPreste = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ColHorasTrabalho = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColHorasAusente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColHorasExtras = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColFeriado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ColEmFerias = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.MenuStripDGV = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.verRegistosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.apagarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,14 +53,16 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.BtnFechar = new System.Windows.Forms.Button();
             this.BtnLimpar = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.CBoxMonthWorks = new System.Windows.Forms.ComboBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.BtnMonthSearchCalc = new System.Windows.Forms.Button();
+            this.BtnMonthSearch = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGViewAttCalcs)).BeginInit();
             this.MenuStripDGV.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -161,12 +148,30 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Periodo a pesquisar";
             // 
+            // CBoxMonthWorks
+            // 
+            this.CBoxMonthWorks.FormattingEnabled = true;
+            this.CBoxMonthWorks.Location = new System.Drawing.Point(58, 24);
+            this.CBoxMonthWorks.Name = "CBoxMonthWorks";
+            this.CBoxMonthWorks.Size = new System.Drawing.Size(192, 21);
+            this.CBoxMonthWorks.TabIndex = 13;
+            this.CBoxMonthWorks.SelectedIndexChanged += new System.EventHandler(this.CBoxMonthWorks_SelectedIndexChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(24, 27);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(28, 13);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Mês";
+            // 
             // DtpToDate
             // 
             this.DtpToDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtpToDate.Location = new System.Drawing.Point(58, 78);
             this.DtpToDate.Name = "DtpToDate";
-            this.DtpToDate.Size = new System.Drawing.Size(91, 22);
+            this.DtpToDate.Size = new System.Drawing.Size(102, 22);
             this.DtpToDate.TabIndex = 4;
             // 
             // label4
@@ -192,7 +197,7 @@
             this.DtpFromDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtpFromDate.Location = new System.Drawing.Point(58, 51);
             this.DtpFromDate.Name = "DtpFromDate";
-            this.DtpFromDate.Size = new System.Drawing.Size(91, 22);
+            this.DtpFromDate.Size = new System.Drawing.Size(102, 22);
             this.DtpFromDate.TabIndex = 0;
             this.DtpFromDate.Value = new System.DateTime(2016, 6, 22, 0, 0, 0, 0);
             // 
@@ -209,7 +214,7 @@
             // 
             // BtnSearchAndCalculate
             // 
-            this.BtnSearchAndCalculate.Location = new System.Drawing.Point(25, 46);
+            this.BtnSearchAndCalculate.Location = new System.Drawing.Point(24, 56);
             this.BtnSearchAndCalculate.Name = "BtnSearchAndCalculate";
             this.BtnSearchAndCalculate.Size = new System.Drawing.Size(169, 23);
             this.BtnSearchAndCalculate.TabIndex = 21;
@@ -219,7 +224,7 @@
             // 
             // BtnPesquisar
             // 
-            this.BtnPesquisar.Location = new System.Drawing.Point(25, 17);
+            this.BtnPesquisar.Location = new System.Drawing.Point(24, 27);
             this.BtnPesquisar.Name = "BtnPesquisar";
             this.BtnPesquisar.Size = new System.Drawing.Size(169, 23);
             this.BtnPesquisar.TabIndex = 20;
@@ -234,164 +239,37 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DGViewAttCalcs.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGViewAttCalcs.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGViewAttCalcs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGViewAttCalcs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DGViewAttCalcs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGViewAttCalcs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColFuncionario,
-            this.ColDay,
-            this.ColWeekDay,
-            this.ColEntrada1,
-            this.ColSaida1,
-            this.ColEntrada2,
-            this.ColSaida2,
-            this.ColClockIn,
-            this.ColClockOut,
-            this.ColEntradaAtrasada,
-            this.ColSaidaAdiantada,
-            this.ColPreste,
-            this.ColHorasTrabalho,
-            this.ColHorasAusente,
-            this.ColHorasExtras,
-            this.ColFeriado,
-            this.ColEmFerias});
             this.DGViewAttCalcs.ContextMenuStrip = this.MenuStripDGV;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGViewAttCalcs.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGViewAttCalcs.DefaultCellStyle = dataGridViewCellStyle2;
             this.DGViewAttCalcs.EnableHeadersVisualStyles = false;
             this.DGViewAttCalcs.Location = new System.Drawing.Point(6, 19);
             this.DGViewAttCalcs.MultiSelect = false;
             this.DGViewAttCalcs.Name = "DGViewAttCalcs";
             this.DGViewAttCalcs.ReadOnly = true;
             this.DGViewAttCalcs.RowHeadersVisible = false;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.DGViewAttCalcs.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.DGViewAttCalcs.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.DGViewAttCalcs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGViewAttCalcs.ShowEditingIcon = false;
             this.DGViewAttCalcs.Size = new System.Drawing.Size(1058, 318);
             this.DGViewAttCalcs.TabIndex = 25;
             this.DGViewAttCalcs.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvAttCalcs_MouseDoubleClick);
-            // 
-            // ColFuncionario
-            // 
-            this.ColFuncionario.HeaderText = "Nome";
-            this.ColFuncionario.Name = "ColFuncionario";
-            this.ColFuncionario.ReadOnly = true;
-            // 
-            // ColDay
-            // 
-            this.ColDay.HeaderText = "Data";
-            this.ColDay.Name = "ColDay";
-            this.ColDay.ReadOnly = true;
-            this.ColDay.Width = 70;
-            // 
-            // ColWeekDay
-            // 
-            this.ColWeekDay.HeaderText = "Dia. Semana";
-            this.ColWeekDay.Name = "ColWeekDay";
-            this.ColWeekDay.ReadOnly = true;
-            // 
-            // ColEntrada1
-            // 
-            this.ColEntrada1.HeaderText = "1ª Entrada";
-            this.ColEntrada1.Name = "ColEntrada1";
-            this.ColEntrada1.ReadOnly = true;
-            // 
-            // ColSaida1
-            // 
-            this.ColSaida1.HeaderText = "1ª Saida";
-            this.ColSaida1.Name = "ColSaida1";
-            this.ColSaida1.ReadOnly = true;
-            // 
-            // ColEntrada2
-            // 
-            this.ColEntrada2.HeaderText = "2ª Entrada";
-            this.ColEntrada2.Name = "ColEntrada2";
-            this.ColEntrada2.ReadOnly = true;
-            // 
-            // ColSaida2
-            // 
-            this.ColSaida2.HeaderText = "2ª Saida";
-            this.ColSaida2.Name = "ColSaida2";
-            this.ColSaida2.ReadOnly = true;
-            // 
-            // ColClockIn
-            // 
-            this.ColClockIn.HeaderText = "Entrou ás";
-            this.ColClockIn.Name = "ColClockIn";
-            this.ColClockIn.ReadOnly = true;
-            // 
-            // ColClockOut
-            // 
-            this.ColClockOut.HeaderText = "Saiu ás";
-            this.ColClockOut.Name = "ColClockOut";
-            this.ColClockOut.ReadOnly = true;
-            // 
-            // ColEntradaAtrasada
-            // 
-            this.ColEntradaAtrasada.HeaderText = "Atraso";
-            this.ColEntradaAtrasada.Name = "ColEntradaAtrasada";
-            this.ColEntradaAtrasada.ReadOnly = true;
-            // 
-            // ColSaidaAdiantada
-            // 
-            this.ColSaidaAdiantada.HeaderText = "S. Adiantada";
-            this.ColSaidaAdiantada.Name = "ColSaidaAdiantada";
-            this.ColSaidaAdiantada.ReadOnly = true;
-            // 
-            // ColPreste
-            // 
-            this.ColPreste.HeaderText = "Presente";
-            this.ColPreste.Name = "ColPreste";
-            this.ColPreste.ReadOnly = true;
-            this.ColPreste.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColPreste.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // ColHorasTrabalho
-            // 
-            this.ColHorasTrabalho.HeaderText = "H. Trabalho";
-            this.ColHorasTrabalho.Name = "ColHorasTrabalho";
-            this.ColHorasTrabalho.ReadOnly = true;
-            // 
-            // ColHorasAusente
-            // 
-            this.ColHorasAusente.HeaderText = "H. Ausente";
-            this.ColHorasAusente.Name = "ColHorasAusente";
-            this.ColHorasAusente.ReadOnly = true;
-            // 
-            // ColHorasExtras
-            // 
-            this.ColHorasExtras.HeaderText = "H. Extras";
-            this.ColHorasExtras.Name = "ColHorasExtras";
-            this.ColHorasExtras.ReadOnly = true;
-            // 
-            // ColFeriado
-            // 
-            this.ColFeriado.HeaderText = "Feriado";
-            this.ColFeriado.Name = "ColFeriado";
-            this.ColFeriado.ReadOnly = true;
-            this.ColFeriado.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColFeriado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // ColEmFerias
-            // 
-            this.ColEmFerias.HeaderText = "De férias";
-            this.ColEmFerias.Name = "ColEmFerias";
-            this.ColEmFerias.ReadOnly = true;
-            this.ColEmFerias.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColEmFerias.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // MenuStripDGV
             // 
@@ -464,23 +342,37 @@
             this.BtnLimpar.UseVisualStyleBackColor = true;
             this.BtnLimpar.Click += new System.EventHandler(this.btLimpar_Click);
             // 
-            // label8
+            // groupBox5
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(24, 27);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(28, 13);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Mês";
+            this.groupBox5.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.groupBox5.Controls.Add(this.BtnMonthSearchCalc);
+            this.groupBox5.Controls.Add(this.BtnMonthSearch);
+            this.groupBox5.Location = new System.Drawing.Point(856, 12);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(220, 109);
+            this.groupBox5.TabIndex = 29;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Assiduidade Mensal";
             // 
-            // CBoxMonthWorks
+            // BtnMonthSearchCalc
             // 
-            this.CBoxMonthWorks.FormattingEnabled = true;
-            this.CBoxMonthWorks.Location = new System.Drawing.Point(58, 24);
-            this.CBoxMonthWorks.Name = "CBoxMonthWorks";
-            this.CBoxMonthWorks.Size = new System.Drawing.Size(192, 21);
-            this.CBoxMonthWorks.TabIndex = 13;
-            this.CBoxMonthWorks.SelectedIndexChanged += new System.EventHandler(this.CBoxMonthWorks_SelectedIndexChanged);
+            this.BtnMonthSearchCalc.Location = new System.Drawing.Point(26, 56);
+            this.BtnMonthSearchCalc.Name = "BtnMonthSearchCalc";
+            this.BtnMonthSearchCalc.Size = new System.Drawing.Size(169, 23);
+            this.BtnMonthSearchCalc.TabIndex = 21;
+            this.BtnMonthSearchCalc.Text = "Pesquisar e Calcular";
+            this.BtnMonthSearchCalc.UseVisualStyleBackColor = true;
+            this.BtnMonthSearchCalc.Click += new System.EventHandler(this.BtnMonthSearchCalc_Click);
+            // 
+            // BtnMonthSearch
+            // 
+            this.BtnMonthSearch.Location = new System.Drawing.Point(26, 27);
+            this.BtnMonthSearch.Name = "BtnMonthSearch";
+            this.BtnMonthSearch.Size = new System.Drawing.Size(169, 23);
+            this.BtnMonthSearch.TabIndex = 20;
+            this.BtnMonthSearch.Text = "Pesquisar";
+            this.BtnMonthSearch.UseVisualStyleBackColor = true;
+            this.BtnMonthSearch.Click += new System.EventHandler(this.BtnMonthSearch_Click);
             // 
             // AttendanceCalcsView
             // 
@@ -488,6 +380,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1096, 512);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.BtnFechar);
             this.Controls.Add(this.BtnLimpar);
@@ -508,6 +401,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DGViewAttCalcs)).EndInit();
             this.MenuStripDGV.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -538,24 +432,10 @@
         private System.Windows.Forms.ToolStripMenuItem apagarToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem cancelarToolStripMenuItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColFuncionario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColDay;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColWeekDay;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColEntrada1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColSaida1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColEntrada2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColSaida2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColClockIn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColClockOut;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColEntradaAtrasada;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColSaidaAdiantada;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn ColPreste;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColHorasTrabalho;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColHorasAusente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColHorasExtras;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn ColFeriado;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn ColEmFerias;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox CBoxMonthWorks;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button BtnMonthSearchCalc;
+        private System.Windows.Forms.Button BtnMonthSearch;
     }
 }
