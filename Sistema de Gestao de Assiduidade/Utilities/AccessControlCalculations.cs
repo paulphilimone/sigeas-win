@@ -8,6 +8,7 @@ using mz.betainteractive.sigeas.Models.Entities;
 using mz.betainteractive.sigeas.Utilities;
 using mz.betainteractive.sigeas.model.ca;
 using mz.betainteractive.sigeas.settings;
+using mz.betainteractive.sigeas.model.basic;
 
 namespace mz.betainteractive.sigeas.Utilities {
 
@@ -25,7 +26,8 @@ namespace mz.betainteractive.sigeas.Utilities {
         private TipoAusencia AUSENCIA_FERIAS;
         private TipoAusencia AUSENCIA_TRABALHO;
         private TipoAusencia AUSENCIA_OUTROS;
-        private bool FUNCIONARIO_DISABLED_EFECTUA_CALCULOS = true;
+        public static bool FUNCIONARIO_DISABLED_EFECTUA_CALCULOS = true;
+        public static bool DELETE_OLD_ATTENDANCE_RECORD = true;
 
         public AccessControlCalculations() {
             context = new SigeasDatabaseContext();
@@ -262,7 +264,7 @@ namespace mz.betainteractive.sigeas.Utilities {
         #endregion
 
 
-        #region Calculations Of AttendanceData
+        #region Calculations Of Daily AttendanceData
 
         private void OrganizeByDate(List<UserClock> clocks, out Dictionary<DateTime, List<UserClock>> mapDateClocks) {
 
@@ -460,7 +462,7 @@ namespace mz.betainteractive.sigeas.Utilities {
             HorarioDia horarioDia = null;
             DailyAttCalcs calculado = null;
 
-            calculado = GetExistenceAttOrDelete(funcionario, dia, horarioDia == null);
+            calculado = GetExistenceAttOrDelete(funcionario, dia, DELETE_OLD_ATTENDANCE_RECORD);
             bool isNew = calculado == null;
 
             if (fhorario == null) {
@@ -490,6 +492,7 @@ namespace mz.betainteractive.sigeas.Utilities {
             if (horarioDia.Enabled == false) {
                 calculado.IsDayWork = false;
                 calculado.IsPresente = false;
+                calculado.Ausente = false;
 
                 if (isNew) {
                     context.DailyAttCalcs.Add(calculado);
@@ -504,6 +507,7 @@ namespace mz.betainteractive.sigeas.Utilities {
             if (semana.HasFeriados && DBSearch.IsFeriado(context, dia)) {
                 calculado.IsDayWork = true;
                 calculado.IsFeriado = true;
+                calculado.IsPresente = true;
                 calculado.TipoAusencia = AUSENCIA_OUTROS;
                 calculado.IsAusenciaAutorizada = true;
 
@@ -522,6 +526,7 @@ namespace mz.betainteractive.sigeas.Utilities {
             if (DBSearch.OnVacation(context, funcionario, dia)) {
                 calculado.IsDayWork = true;
                 calculado.IsEmFerias = true;
+                calculado.IsPresente = true;
                 calculado.TipoAusencia = AUSENCIA_FERIAS;
                 calculado.IsAusenciaAutorizada = true;
 
@@ -575,8 +580,13 @@ namespace mz.betainteractive.sigeas.Utilities {
             calculado.IsDayWork = true;
             calculado.IsPresente = (sepClocks[0].Count > 0) || (sepClocks[1].Count > 0);
 
+            
+            //Eh necessario colocar ausencias
             //calculado.IsAusenciaAutorizada
+
+
             if (calculado.IsPresente == false) {
+                calculado.Ausente = true;
                 calculado.TipoAusencia = AUSENCIA_OUTROS;
             }
 
@@ -906,6 +916,126 @@ namespace mz.betainteractive.sigeas.Utilities {
                 }
             return list;
         }            
+
+        #endregion
+
+        #region Calculations Of Monthly AttendanceData
+
+        public void CalculateMonthlyAttendanceData(List<Funcionario> funcionarios, MonthWork monthWork) {
+            Console.WriteLine("Start the M-Calcs");
+
+            //calculate for every funcionario on exact month the attendance
+            foreach (var funcionario in funcionarios) {
+                var dailyAttCalcs = context.DailyAttCalcs.Where(t => t.Funcionario.Id==funcionario.Id && t.Data >= monthWork.First && t.Data <= monthWork.Last).OrderBy(t => t.Data).ToList();
+
+                var monthAttCalc = CalcAttData(funcionario, monthWork, dailyAttCalcs);
+            }
+
+            Console.WriteLine("End Start the Calcs");
+            //After adding all or update it - saveChanges
+            context.SaveChanges();
+        }
+
+        public void CalculateMonthlyAttendanceData(List<Funcionario> funcionarios, List<MonthWork> monthWorks) {
+            Console.WriteLine("Start the M-Calcs - many monthWorks");
+
+            //calculate for every funcionario on exact month the attendance
+            foreach (var mWork in monthWorks) {
+                CalculateMonthlyAttendanceData(funcionarios, mWork);
+            }
+
+            Console.WriteLine("End Start the Calcs - many monthWorks");
+            
+        }
+
+        public void CalculateMonthlyAttendanceData(List<Funcionario> funcionarios, DateTime fromDate, DateTime toDate) {
+            var monthWorks = DBSearch.FindAllMonthWorks(context, fromDate, toDate, true);
+            CalculateMonthlyAttendanceData(funcionarios, monthWorks);
+        }
+
+        private MonthlyAttCalcs CalcAttData(Funcionario funcionario, MonthWork monthWork, List<DailyAttCalcs> dailyAttCalcs) {
+            
+            MonthlyAttCalcs att = GetExistenceAttOrDelete(funcionario, monthWork, DELETE_OLD_ATTENDANCE_RECORD);
+            bool isNew = false;
+
+            if (att == null) {
+                att = new MonthlyAttCalcs();
+                isNew = true;
+            }
+
+            att.Funcionario = funcionario;
+            att.Ano = monthWork.Year;
+            att.Month = monthWork;
+            att.Order = monthWork.Order;
+            att.First = monthWork.First;
+            att.Last = monthWork.Last;
+            att.OnVacation = dailyAttCalcs.Count>0;
+
+            foreach (var dAtt in dailyAttCalcs){
+                if (dAtt.IsDayWork) {
+                    att.TotalWorkDays++;
+                    att.TotalWorkHours += dAtt.HorarioDia.HorasTrabalho;
+                    att.TotalWorkMins += dAtt.HorarioDia.MinsTrabalho;                                       
+                }
+
+                if (dAtt.IsPresente){
+                    att.WorkedDays++;
+                    att.WorkedHours += dAtt.TrabalhouHoras;
+                    att.WorkedMins += dAtt.TrabalhouMins;
+                }
+
+                if (dAtt.Ausente) {
+                    att.AbsentDays++;
+                    att.AbsentHours += dAtt.AusenteHoras;
+                    att.AbsentMins += dAtt.AusenteMins;
+                }
+
+                att.TotalOvertimeHours += dAtt.HrExtrasHoras;
+                att.TotalOvertimeMins += dAtt.HrExtrasMins;
+
+                att.Holidays = dAtt.IsFeriado ? att.Holidays + 1 : att.Holidays;
+                att.OnVacation = att.OnVacation && dAtt.IsEmFerias;
+
+            }
+
+            Hora workHours = Hora.Create(att.TotalWorkHours, att.TotalWorkMins);
+            Hora workedHours = Hora.Create(att.WorkedHours, att.WorkedMins);
+            Hora absentHours = Hora.Create(att.AbsentHours, att.AbsentMins);
+            Hora overtimeHours = Hora.Create(att.TotalOvertimeHours, att.TotalOvertimeMins);
+
+
+            att.TotalWorkHours = workHours.Horas;
+            att.TotalWorkMins = workHours.Minutos;
+
+            att.WorkedHours = workedHours.Horas;
+            att.WorkedMins = workedHours.Minutos;
+
+            att.AbsentHours = absentHours.Horas;
+            att.AbsentMins = absentHours.Minutos;
+
+            att.TotalOvertimeHours = overtimeHours.Horas;
+            att.TotalOvertimeMins = overtimeHours.Minutos;
+
+
+            if (isNew) {
+                context.MonthlyAttCalcs.Add(att);
+            }
+                        
+            return att;
+        }
+
+        private MonthlyAttCalcs GetExistenceAttOrDelete(Funcionario funcionario, MonthWork monthWork, bool delete) {
+
+            var attc = context.MonthlyAttCalcs.Where(t => t.Funcionario.Id == funcionario.Id && t.Month.Id==monthWork.Id).FirstOrDefault();
+
+            if (attc != null && delete == true) {
+                context.MonthlyAttCalcs.Remove(attc);
+                context.SaveChanges();
+                return null;
+            }
+
+            return attc;
+        }
 
         #endregion
 
