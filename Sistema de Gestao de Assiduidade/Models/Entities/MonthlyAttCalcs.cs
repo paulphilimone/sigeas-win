@@ -38,5 +38,19 @@ namespace mz.betainteractive.sigeas.Models.Entities
         public virtual ApplicationUser UpdatedBy { get; set; }
         public Nullable<System.DateTime> CreationDate { get; set; }
         public Nullable<System.DateTime> UpdatedDate { get; set; }
+
+        public string TotalWorkDaysText() {
+            return "" + TotalWorkDays.ToString("D2") + " dias / " + TotalWorkHours.ToString("D2") + ":" + TotalWorkMins.ToString("D2");
+        }
+
+        public string WorkedDaysText() {
+            return "" + WorkedDays.ToString("D2") + " dias / " + WorkedHours.ToString("D2") + ":" + WorkedMins.ToString("D2");
+        }
+
+        public string AbsentDaysText() {
+            return "" + AbsentDays.ToString("D2") + " dias / " + AbsentHours.ToString("D2") + ":" + AbsentMins.ToString("D2");
+        }
+
+        
     }
 }

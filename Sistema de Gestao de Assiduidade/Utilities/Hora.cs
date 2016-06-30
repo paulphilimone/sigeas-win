@@ -14,6 +14,13 @@ namespace mz.betainteractive.sigeas.model.basic {
         public Hora(int h, int m) {
             this.Horas = h;
             this.Minutos = m;
+
+            if (m > 60) {
+                int hh = m / 60;
+                int mr = m % 60;
+                this.Horas += hh;
+                this.Minutos = mr;
+            }
         }
 
         public static Hora Create(int h, int m) {

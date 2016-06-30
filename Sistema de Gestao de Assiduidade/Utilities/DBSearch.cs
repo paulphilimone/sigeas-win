@@ -342,6 +342,53 @@ namespace mz.betainteractive.sigeas.model.ca
             return list;
         }
 
+        public static List<MonthlyAttCalcs> FindAllMonthlyAttendanceCalcs(SigeasDatabaseContext context, DateTime fromDate, DateTime toDate) {
+
+            DateTime frDt = fromDate.Date;
+            DateTime toDt = toDate.Date;
+
+            var list = context.MonthlyAttCalcs.Where(t => (t.First >= frDt && t.First <= toDt) || (t.Last >= frDt && t.Last <= toDt))
+                                        .OrderBy(t => t.Funcionario.Id).ThenBy(t => t.Month.Id)
+                                        .ToList();
+
+            return list;
+        }
+
+        public static List<MonthlyAttCalcs> FindAllMonthlyAttendanceCalcs(SigeasDatabaseContext context, List<Funcionario> funcionarios, DateTime fromDate, DateTime toDate, bool withTracking) {
+
+            DateTime frDt = Constants.GetTime(fromDate, 0, 0, 0);
+            DateTime toDt = Constants.GetTime(toDate, 23, 59, 59);
+
+            var funcIds = funcionarios.Select(f => f.Id).ToList();
+
+            var list = withTracking ? context.MonthlyAttCalcs.Where(t => funcIds.Contains(t.Funcionario.Id) && ((t.First >= frDt && t.First <= toDt) || (t.Last >= frDt && t.Last <= toDt)) )
+                                                             .OrderBy(t => t.Funcionario.Id).ThenBy(t => t.Month.Id)
+                                                             .ToList()
+                                    : context.MonthlyAttCalcs.AsNoTracking()
+                                                             .Where(t => funcIds.Contains(t.Funcionario.Id) && ((t.First >= frDt && t.First <= toDt) || (t.Last >= frDt && t.Last <= toDt)) )
+                                                             .OrderBy(t => t.Funcionario.Id).ThenBy(t => t.Month)
+                                                             .ToList();
+
+            return list;
+        }
+
+        public static List<MonthWork> FindAllMonthWorks(SigeasDatabaseContext context, DateTime fromDate, DateTime toDate, bool withTracking) {
+
+            DateTime frDt = Constants.GetTime(fromDate, 0, 0, 0);
+            DateTime toDt = Constants.GetTime(toDate, 23, 59, 59);                        
+
+            var list = withTracking ? context.MonthWork.Where(t => (t.First >= frDt && t.First <= toDt) || (t.Last >= frDt && t.Last <= toDt))
+                                                       .OrderBy(t => t.Year).ThenBy(t => t.Order)
+                                                       .ToList()
+                                    : context.MonthWork.AsNoTracking()
+                                                       .Where(t => (t.First >= frDt && t.First <= toDt) || (t.Last >= frDt && t.Last <= toDt))
+                                                       .OrderBy(t => t.Year).ThenBy(t => t.Order)
+                                                       .ToList();
+
+            return list;
+        }
+
+                        
 
         internal static bool IsFeriado(SigeasDatabaseContext context, DateTime dia) {
          
