@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MdiTabStrip", "Sistema de Gestao de Assiduidade\Projects\MdiTabStrip\MdiTabStrip.vbproj", "{DAA053B9-3316-4A1A-B9B9-A185D6DA73DA}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sistema de Gestao de Assiduidade", "Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade.csproj", "{A81AAD52-E744-4AB4-915E-44B3A14F82DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SisgaProductKeyGenerator", "Sistema de Gestao de Assiduidade\Projects\SisgaProductKeyGenerator\SisgaProductKeyGenerator\SisgaProductKeyGenerator.csproj", "{683F5228-227B-469F-9B0A-8A030C8090AF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SigeasDeviceModule", "..\sigeas-device-module\SigeasDeviceModule.csproj", "{DEA7E89B-FACE-47E6-9786-B95C87F1A05E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SigeasProductKeyGenerator", "..\sigeas-pkey-generator\SigeasProductKeyGenerator.csproj", "{683F5228-227B-469F-9B0A-8A030C8090AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiUtilitiesModule", "..\bi-utilities-module\BiUtilitiesModule.csproj", "{FF298101-31A2-430C-94FB-1310B4A0566B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,22 +15,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DAA053B9-3316-4A1A-B9B9-A185D6DA73DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DAA053B9-3316-4A1A-B9B9-A185D6DA73DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DAA053B9-3316-4A1A-B9B9-A185D6DA73DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DAA053B9-3316-4A1A-B9B9-A185D6DA73DA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A81AAD52-E744-4AB4-915E-44B3A14F82DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A81AAD52-E744-4AB4-915E-44B3A14F82DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A81AAD52-E744-4AB4-915E-44B3A14F82DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A81AAD52-E744-4AB4-915E-44B3A14F82DD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{683F5228-227B-469F-9B0A-8A030C8090AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{683F5228-227B-469F-9B0A-8A030C8090AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{683F5228-227B-469F-9B0A-8A030C8090AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{683F5228-227B-469F-9B0A-8A030C8090AF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DEA7E89B-FACE-47E6-9786-B95C87F1A05E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DEA7E89B-FACE-47E6-9786-B95C87F1A05E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEA7E89B-FACE-47E6-9786-B95C87F1A05E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEA7E89B-FACE-47E6-9786-B95C87F1A05E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{683F5228-227B-469F-9B0A-8A030C8090AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{683F5228-227B-469F-9B0A-8A030C8090AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{683F5228-227B-469F-9B0A-8A030C8090AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{683F5228-227B-469F-9B0A-8A030C8090AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF298101-31A2-430C-94FB-1310B4A0566B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF298101-31A2-430C-94FB-1310B4A0566B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF298101-31A2-430C-94FB-1310B4A0566B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF298101-31A2-430C-94FB-1310B4A0566B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
