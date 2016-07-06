@@ -428,8 +428,10 @@ namespace mz.betainteractive.sigeas.Models {
             }
 
             if (db.TipoAusencia.Count() == 0) {
-                db.TipoAusencia.Add(new TipoAusencia { Nome = TipoAusencia.DOENCA });
-                db.TipoAusencia.Add(new TipoAusencia { Nome = TipoAusencia.EM_FERIAS });
+                db.TipoAusencia.Add(new TipoAusencia { Nome = TipoAusencia.CASAMENTO });
+                db.TipoAusencia.Add(new TipoAusencia { Nome = TipoAusencia.DOENCA_ACIDENTE });
+                db.TipoAusencia.Add(new TipoAusencia { Nome = TipoAusencia.FALECIMENTO });
+                db.TipoAusencia.Add(new TipoAusencia { Nome = TipoAusencia.FALECIMENTO_2 });
                 db.TipoAusencia.Add(new TipoAusencia { Nome = TipoAusencia.TRABALHO });
                 db.TipoAusencia.Add(new TipoAusencia { Nome = TipoAusencia.OUTRO });
                 db.SaveChanges();

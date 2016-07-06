@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "Porta 1",
             "Entrada",
             "OFF"}, -1);
@@ -113,6 +113,7 @@
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.timerHoras = new System.Windows.Forms.Timer(this.components);
+            this.pedidoDeDispensaAusenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenu.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.taskPaneMain.SuspendLayout();
@@ -278,7 +279,8 @@
             this.asseduidadeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem2,
             this.TSMnuItemUserClocksViewer,
-            this.TSMnuItemAttCalcsViewer});
+            this.TSMnuItemAttCalcsViewer,
+            this.pedidoDeDispensaAusenciaToolStripMenuItem});
             this.asseduidadeToolStripMenuItem.Name = "asseduidadeToolStripMenuItem";
             this.asseduidadeToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
             this.asseduidadeToolStripMenuItem.Text = "Assiduidade";
@@ -597,7 +599,7 @@
             this.listViewDevices.FullRowSelect = true;
             this.listViewDevices.GridLines = true;
             this.listViewDevices.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.listViewDevices.Location = new System.Drawing.Point(4, 38);
             this.listViewDevices.MultiSelect = false;
             this.listViewDevices.Name = "listViewDevices";
@@ -852,6 +854,13 @@
             this.timerHoras.Interval = 1000;
             this.timerHoras.Tick += new System.EventHandler(this.timerHoras_Tick);
             // 
+            // pedidoDeDispensaAusenciaToolStripMenuItem
+            // 
+            this.pedidoDeDispensaAusenciaToolStripMenuItem.Name = "pedidoDeDispensaAusenciaToolStripMenuItem";
+            this.pedidoDeDispensaAusenciaToolStripMenuItem.Size = new System.Drawing.Size(252, 22);
+            this.pedidoDeDispensaAusenciaToolStripMenuItem.Text = "Pedido de Dispensa/Ausência";
+            this.pedidoDeDispensaAusenciaToolStripMenuItem.Click += new System.EventHandler(this.pedidoDeDispensaAusenciaToolStripMenuItem_Click);
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -976,6 +985,7 @@
         private System.Windows.Forms.ToolStripMenuItem TSMnuItemFeriasForm;
         private System.Windows.Forms.ToolStripMenuItem TSMnuItemFeriadosForm;
         private System.Windows.Forms.ToolStripMenuItem importarExportarDadosBiometricosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pedidoDeDispensaAusenciaToolStripMenuItem;
     }
 }
 

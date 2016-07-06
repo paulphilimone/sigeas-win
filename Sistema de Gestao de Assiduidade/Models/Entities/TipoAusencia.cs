@@ -4,9 +4,11 @@ using System.Collections.Generic;
 namespace mz.betainteractive.sigeas.Models.Entities
 {
     public partial class TipoAusencia {
-        public static string DOENCA = "Doença";
-        public static string EM_FERIAS = "Em Férias";
-        public static string TRABALHO = "Trabalho";
+        public static string CASAMENTO = "Doença";
+        public static string FALECIMENTO = "Falecimento (Pais, filhos, avos, etc)";
+        public static string FALECIMENTO_2 = "Falecimento (Sogros, Tios, primos, etc)";
+        public static string DOENCA_ACIDENTE = "Doença / Acidente";        
+        public static string TRABALHO = "Trabalho fora do escritorio";
         public static string OUTRO = "Outro";
         
         public long Id { get; set; }        

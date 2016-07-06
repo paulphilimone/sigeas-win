@@ -45,12 +45,7 @@ namespace mz.betainteractive.sigeas.Utilities {
             this.rules = empresa.AttendanceRules;
             this.DEVICE_TYPE_IN = context.DeviceType.FirstOrDefault(t => t.TypeNumber == DeviceType.TYPE_IN);
             this.DEVICE_TYPE_OUT = context.DeviceType.FirstOrDefault(t => t.TypeNumber == DeviceType.TYPE_OUT);
-            this.DEVICE_TYPE_IN_OUT = context.DeviceType.FirstOrDefault(t => t.TypeNumber == DeviceType.TYPE_IN_OUT);
-
-            this.AUSENCIA_DOENCAS = context.TipoAusencia.FirstOrDefault(t => t.Nome == TipoAusencia.DOENCA);
-            this.AUSENCIA_FERIAS = context.TipoAusencia.FirstOrDefault(t => t.Nome == TipoAusencia.EM_FERIAS);
-            this.AUSENCIA_TRABALHO = context.TipoAusencia.FirstOrDefault(t => t.Nome == TipoAusencia.TRABALHO);
-            this.AUSENCIA_OUTROS = context.TipoAusencia.FirstOrDefault(t => t.Nome == TipoAusencia.OUTRO);
+            this.DEVICE_TYPE_IN_OUT = context.DeviceType.FirstOrDefault(t => t.TypeNumber == DeviceType.TYPE_IN_OUT);        
         }
 
         #region Correction Of UserClocks
@@ -419,13 +414,16 @@ namespace mz.betainteractive.sigeas.Utilities {
         public List<UserClock> GetCalculatedClocks(Funcionario funcionario, DateTime dia) {
             List<UserClock> list = new List<UserClock>();
 
+            DateTime frDt = Constants.GetTime(dia, 0, 0, 0);
+            DateTime toDt = Constants.GetTime(dia, 23, 59, 59);
+
             /*
             List<UserClock> clocks = funcionario.UserClocks.Where(uc => uc.Result == "OK" &&                                                            
                                                                         uc.DateAndTime.Date == dia.Date)
                                                                         .OrderBy(t => t.DateAndTime).ToList();*/
 
             List<UserClock> clocks = context.UserClock.Where(uc => uc.Result == "OK" && uc.Funcionario.Id == funcionario.Id &&
-                                                                   uc.DateAndTime.Date == dia.Date).OrderBy(t => t.DateAndTime).ToList();
+                                                                   (uc.DateAndTime >= frDt && uc.DateAndTime <= toDt) ).OrderBy(t => t.DateAndTime).ToList();
 
             FuncionarioHorario fhorario = DBSearch.GetFuncionarioHorario(context, funcionario, dia);
             HorarioSemana semana = null;
@@ -579,15 +577,23 @@ namespace mz.betainteractive.sigeas.Utilities {
 
             calculado.IsDayWork = true;
             calculado.IsPresente = (sepClocks[0].Count > 0) || (sepClocks[1].Count > 0);
-
-            
-            //Eh necessario colocar ausencias
-            //calculado.IsAusenciaAutorizada
-
-
+                                    
             if (calculado.IsPresente == false) {
-                calculado.Ausente = true;
-                calculado.TipoAusencia = AUSENCIA_OUTROS;
+
+                //Eh necessario colocar ausencias - rever isto - contar como horas trabalhadas a ausencia justificada?
+                //calculado.IsAusenciaAutorizada
+
+                var ausencia = GetAusencia(funcionario, dia);
+
+                if (ausencia != null) {
+                    calculado.Ausente = true;
+                    calculado.TipoAusencia = ausencia.Tipo;
+                    calculado.IsAusenciaAutorizada = ausencia.Justificada;
+                } else {
+                    calculado.Ausente = true;
+                    calculado.TipoAusencia = AUSENCIA_OUTROS;
+                }
+                
             }
 
 
@@ -666,6 +672,20 @@ namespace mz.betainteractive.sigeas.Utilities {
 
             context.SaveChanges();
 
+        }
+
+        private bool CheckIfAusenciaJustificada(Funcionario funcionario, DateTime dia) {
+            var ausencia = GetAusencia(funcionario, dia);
+            if (ausencia != null && ausencia.Justificada) {
+                return true;
+            }
+
+            return false;
+        }
+
+        private Ausencia GetAusencia(Funcionario funcionario, DateTime dia) {
+            var ausencia = context.Ausencia.Where(t => t.Funcionario.Id == funcionario.Id && (t.DataInicial >= dia && t.DataFinal <= dia)).FirstOrDefault();            
+            return ausencia;
         }
 
         private TimeSpan GetHorasTrabalhadas(List<UserClock> list) {
@@ -978,13 +998,13 @@ namespace mz.betainteractive.sigeas.Utilities {
                     att.TotalWorkMins += dAtt.HorarioDia.MinsTrabalho;                                       
                 }
 
-                if (dAtt.IsPresente){
+                if (dAtt.IsPresente || (!dAtt.IsPresente && dAtt.IsAusenciaAutorizada)){
                     att.WorkedDays++;
                     att.WorkedHours += dAtt.TrabalhouHoras;
                     att.WorkedMins += dAtt.TrabalhouMins;
                 }
 
-                if (dAtt.Ausente) {
+                if (dAtt.Ausente && !dAtt.IsAusenciaAutorizada) {
                     att.AbsentDays++;
                     att.AbsentHours += dAtt.AusenteHoras;
                     att.AbsentMins += dAtt.AusenteMins;

@@ -58,6 +58,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
         public DeviceDataUpdateView deviceDataUpdateView { get; set; }
         public ImportHrData importHrData { get; set; }
         public ImportExportView importExportView { get; set; }
+        public PedidoDispensaView pedidoDispensaView { get; set; }
 
         public static ToolStripLabel tssGeralSystemStatus;
 
@@ -89,6 +90,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
             deviceDataUpdateView = new DeviceDataUpdateView();
             importHrData = new ImportHrData();
             importExportView = new ImportExportView();
+            pedidoDispensaView = new PedidoDispensaView();
 
             DeviceManager.MdiParent = this;
             FuncionarioForm.MdiParent = this;
@@ -113,7 +115,8 @@ namespace mz.betainteractive.sigeas.Views.Main {
             this.AttendanceCalcsForm.FormCode     = 0x0111;            
             this.tableFuncionarioDeviceView.FormCode = 0x0112;
             this.deviceDataUpdateView.FormCode       = 0x0113;
-            this.importExportView.FormCode = 0x0114;            
+            this.importExportView.FormCode = 0x0114;
+            this.pedidoDispensaView.FormCode = 0x0115;
 
             this.securedComponents.Add(this.UserManagement.FormCode, this.UserManagement);
             this.securedComponents.Add(this.DeviceManager.FormCode, this.DeviceManager);
@@ -128,7 +131,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
             this.securedComponents.Add(this.tableFuncionarioDeviceView.FormCode, this.tableFuncionarioDeviceView);
             this.securedComponents.Add(this.deviceDataUpdateView.FormCode, this.deviceDataUpdateView);
             this.securedComponents.Add(this.importExportView.FormCode, this.importExportView);
-            
+            this.securedComponents.Add(this.pedidoDispensaView.FormCode, this.pedidoDispensaView);
         }
 
         public void SettingSecurity() {
@@ -214,7 +217,9 @@ namespace mz.betainteractive.sigeas.Views.Main {
             //this.deviceDataUpdateView.FormCode = 0x0113;
             
             //this.importExportView.FormCode = 0x0114;
-            
+
+            pedidoDeDispensaAusenciaToolStripMenuItem.Enabled = this.pedidoDispensaView.AllowView;
+
 
         }
 
@@ -602,6 +607,10 @@ namespace mz.betainteractive.sigeas.Views.Main {
 
         private void TSMnuItemFeriadosForm_Click(object sender, EventArgs e) {
             this.FeriadosForm.Visible = true;
+        }
+
+        private void pedidoDeDispensaAusenciaToolStripMenuItem_Click(object sender, EventArgs e) {
+            this.pedidoDispensaView.Visible = true;
         }
 
      

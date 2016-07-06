@@ -12,7 +12,7 @@ namespace mz.betainteractive.sigeas.Models.Configuration
             this.HasKey(t => t.Id);
 
             
-            this.Property(t => t.Descricao).HasMaxLength(1000);
+            this.Property(t => t.Motivo).HasMaxLength(1000);
             
             // Relationships
             this.HasOptional(t => t.CreatedBy).WithMany();
