@@ -127,6 +127,14 @@ namespace mz.betainteractive.sigeas.settings {
             return new DateTime(date.Year, date.Month, date.Day, time.Hours, time.Minutes, time.Seconds);
         }
 
+        public static DateTime GetMinTime() {
+            return GetTime(0, 0, 0);
+        }
+
+        public static DateTime GetMaxTime() {
+            return GetTime(23, 59, 59);
+        }
+
         /*
          * Get the default time, started with 2012,1,1,0,0,0
          */

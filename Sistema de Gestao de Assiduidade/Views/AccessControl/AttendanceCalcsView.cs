@@ -32,6 +32,8 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
         private List<DataGridViewColumn> monthlyAttCalcsColumns;
         private List<DataGridViewColumn> dailyAttCalcsColumns;
 
+        private bool viewingDailyAttCalcs;
+
         /*Form Authorization*/
         public int FormCode { get; set; }
         public bool AllowView { get; set; }
@@ -88,6 +90,7 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
             CreateColumnsForMonthlyAttCalcs();
 
             this.DGViewAttCalcs.Columns.AddRange(dailyAttCalcsColumns.ToArray());
+            this.viewingDailyAttCalcs = true;
         }
 
         private void CreateColumnsForDailyAttCalcs() {
@@ -107,6 +110,7 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
             var ColPreste = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             var ColHorasTrabalho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             var ColHorasAusente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            var ColAusenciaAutorizada = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             var ColHorasExtras = new System.Windows.Forms.DataGridViewTextBoxColumn();
             var ColFeriado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             var ColEmFerias = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -184,6 +188,11 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
             ColHorasAusente.HeaderText = "H. Ausente";
             ColHorasAusente.Name = "ColHorasAusente";
             ColHorasAusente.ReadOnly = true;
+            //
+            // ColAusenciaAutorizada
+            ColAusenciaAutorizada.HeaderText = "A. Autorizada";
+            ColAusenciaAutorizada.Name = "ColAusenciaAutorizada";
+            ColAusenciaAutorizada.ReadOnly = true;
             // 
             // ColHorasExtras
             ColHorasExtras.HeaderText = "H. Extras";
@@ -206,7 +215,7 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
 
             this.dailyAttCalcsColumns.AddRange(new DataGridViewColumn[] {
                                     ColFuncionario, ColDay, ColWeekDay, ColEntrada1, ColSaida1, ColEntrada2, ColSaida2, ColClockIn, ColClockOut, ColEntradaAtrasada, 
-                                    ColSaidaAdiantada, ColPreste, ColHorasTrabalho, ColHorasAusente, ColHorasExtras, ColFeriado, ColEmFerias});
+                                    ColSaidaAdiantada, ColPreste, ColHorasTrabalho, ColHorasAusente, ColAusenciaAutorizada, ColHorasExtras, ColFeriado, ColEmFerias});
         }
 
         private void CreateColumnsForMonthlyAttCalcs() {
@@ -394,6 +403,7 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
         }
         
         private void ViewSearchedAttendanceCalcs() {
+            this.viewingDailyAttCalcs = true;
             DGViewAttCalcs.Columns.Clear();
             DGViewAttCalcs.Columns.AddRange(dailyAttCalcsColumns.ToArray());
             FillListaAttCalcs(SearchedAttCalcs);
@@ -428,9 +438,10 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
                 row.Cells[11].Value = att.IsPresente; //Presente
                 row.Cells[12].Value = new Hora(att.TrabalhouHoras, att.TrabalhouMins).ToString(); //H.Trabalhou
                 row.Cells[13].Value = new Hora(att.AusenteHoras, att.AusenteMins).ToString(); //H.Ausente
-                row.Cells[14].Value = new Hora(att.HrExtrasHoras, att.HrExtrasMins).ToString(); //H. Extras
-                row.Cells[15].Value = att.IsFeriado; //Feriado  - bool
-                row.Cells[16].Value = att.IsEmFerias; //EmFerias - bool
+                row.Cells[14].Value = att.IsAusenciaAutorizada; // bool
+                row.Cells[15].Value = new Hora(att.HrExtrasHoras, att.HrExtrasMins).ToString(); //H. Extras
+                row.Cells[16].Value = att.IsFeriado; //Feriado  - bool
+                row.Cells[17].Value = att.IsEmFerias; //EmFerias - bool
 
                 if (!att.IsDayWork){
                     row.DefaultCellStyle.BackColor = Color.DarkGray;
@@ -477,6 +488,7 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
         }
 
         private void ViewCalculatedAttendanceCalcs() {
+            this.viewingDailyAttCalcs = true;
             DGViewAttCalcs.Columns.Clear();
             DGViewAttCalcs.Columns.AddRange(dailyAttCalcsColumns.ToArray());
             FillListaAttCalcs(SearchedAndCalculatedAttCalcs);
@@ -495,8 +507,24 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
         }
 
         private void MenuStripDGV_Opening(object sender, CancelEventArgs e) {
-            if (DGViewAttCalcs.SelectedRows.Count==0){
+            if (DGViewAttCalcs.SelectedRows.Count == 0) {
                 e.Cancel = true;
+            } else {
+                DataGridViewRow row = DGViewAttCalcs.SelectedRows[0];
+
+                if (row is DataGridViewGenericRow<DailyAttCalcs>) {
+                    var grow = row as DataGridViewGenericRow<DailyAttCalcs>;
+                    registarPedidoDeDispensaToolStripMenuItem.Enabled = grow.Value.IsDayWork && grow.Value.Ausente && !grow.Value.IsAusenciaAutorizada;
+                }
+
+                if (row is DataGridViewGenericRow<MonthlyAttCalcs>) {
+                    e.Cancel = true; //Dont open the popmenu
+
+                    var grow = row as DataGridViewGenericRow<MonthlyAttCalcs>;
+                    verRegistosToolStripMenuItem.Enabled = false;
+                    registarPedidoDeDispensaToolStripMenuItem.Enabled = false;
+                }
+
             }
         }
 
@@ -576,6 +604,7 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
         }
 
         private void ViewSearchedMonthlyAttendanceCalcs() {
+            this.viewingDailyAttCalcs = false;
             DGViewAttCalcs.Columns.Clear();
             DGViewAttCalcs.Columns.AddRange(monthlyAttCalcsColumns.ToArray());
             FillMonthlyAttCalcsList(SearchedMonthlyAttCalcs);
@@ -657,6 +686,7 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
         }
 
         private void ViewCalculatedMonthlyAttendanceCalcs() {
+            this.viewingDailyAttCalcs = false;
             DGViewAttCalcs.Columns.Clear();
             DGViewAttCalcs.Columns.AddRange(monthlyAttCalcsColumns.ToArray());
             FillMonthlyAttCalcsList(SearchedMonthlyAndCalculatedAttCalcs);

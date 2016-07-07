@@ -56,6 +56,7 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.BtnMonthSearchCalc = new System.Windows.Forms.Button();
             this.BtnMonthSearch = new System.Windows.Forms.Button();
+            this.registarPedidoDeDispensaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -275,17 +276,18 @@
             // 
             this.MenuStripDGV.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.verRegistosToolStripMenuItem,
+            this.registarPedidoDeDispensaToolStripMenuItem,
             this.apagarToolStripMenuItem,
             this.toolStripSeparator1,
             this.cancelarToolStripMenuItem});
             this.MenuStripDGV.Name = "MenuStripDGV";
-            this.MenuStripDGV.Size = new System.Drawing.Size(135, 76);
+            this.MenuStripDGV.Size = new System.Drawing.Size(223, 120);
             this.MenuStripDGV.Opening += new System.ComponentModel.CancelEventHandler(this.MenuStripDGV_Opening);
             // 
             // verRegistosToolStripMenuItem
             // 
             this.verRegistosToolStripMenuItem.Name = "verRegistosToolStripMenuItem";
-            this.verRegistosToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.verRegistosToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.verRegistosToolStripMenuItem.Text = "Ver registos";
             this.verRegistosToolStripMenuItem.Click += new System.EventHandler(this.verRegistosToolStripMenuItem_Click);
             // 
@@ -293,18 +295,18 @@
             // 
             this.apagarToolStripMenuItem.Enabled = false;
             this.apagarToolStripMenuItem.Name = "apagarToolStripMenuItem";
-            this.apagarToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.apagarToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.apagarToolStripMenuItem.Text = "Apagar";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(131, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(219, 6);
             // 
             // cancelarToolStripMenuItem
             // 
             this.cancelarToolStripMenuItem.Name = "cancelarToolStripMenuItem";
-            this.cancelarToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.cancelarToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.cancelarToolStripMenuItem.Text = "Cancelar";
             // 
             // groupBox4
@@ -344,7 +346,7 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.groupBox5.BackColor = System.Drawing.Color.LavenderBlush;
             this.groupBox5.Controls.Add(this.BtnMonthSearchCalc);
             this.groupBox5.Controls.Add(this.BtnMonthSearch);
             this.groupBox5.Location = new System.Drawing.Point(856, 12);
@@ -373,6 +375,13 @@
             this.BtnMonthSearch.Text = "Pesquisar";
             this.BtnMonthSearch.UseVisualStyleBackColor = true;
             this.BtnMonthSearch.Click += new System.EventHandler(this.BtnMonthSearch_Click);
+            // 
+            // registarPedidoDeDispensaToolStripMenuItem
+            // 
+            this.registarPedidoDeDispensaToolStripMenuItem.Enabled = false;
+            this.registarPedidoDeDispensaToolStripMenuItem.Name = "registarPedidoDeDispensaToolStripMenuItem";
+            this.registarPedidoDeDispensaToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
+            this.registarPedidoDeDispensaToolStripMenuItem.Text = "Registar Pedido de Dispensa";
             // 
             // AttendanceCalcsView
             // 
@@ -437,5 +446,6 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button BtnMonthSearchCalc;
         private System.Windows.Forms.Button BtnMonthSearch;
+        private System.Windows.Forms.ToolStripMenuItem registarPedidoDeDispensaToolStripMenuItem;
     }
 }

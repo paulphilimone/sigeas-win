@@ -361,11 +361,11 @@ namespace mz.betainteractive.sigeas.model.ca
 
             var funcIds = funcionarios.Select(f => f.Id).ToList();
 
-            var list = withTracking ? context.MonthlyAttCalcs.Where(t => funcIds.Contains(t.Funcionario.Id) && ((t.First >= frDt && t.First <= toDt) || (t.Last >= frDt && t.Last <= toDt)) )
+            var list = withTracking ? context.MonthlyAttCalcs.Where(t => funcIds.Contains(t.Funcionario.Id) && ((t.First >= frDt && t.First <= toDt) || (t.Last >= frDt && t.Last <= toDt) || (frDt >= t.First && frDt <= t.Last) || (toDt >= t.First && toDt <= t.Last)))
                                                              .OrderBy(t => t.Funcionario.Id).ThenBy(t => t.Month.Id)
                                                              .ToList()
                                     : context.MonthlyAttCalcs.AsNoTracking()
-                                                             .Where(t => funcIds.Contains(t.Funcionario.Id) && ((t.First >= frDt && t.First <= toDt) || (t.Last >= frDt && t.Last <= toDt)) )
+                                                             .Where(t => funcIds.Contains(t.Funcionario.Id) && ((t.First >= frDt && t.First <= toDt) || (t.Last >= frDt && t.Last <= toDt) || (frDt >= t.First && frDt <= t.Last) || (toDt >= t.First && toDt <= t.Last)) )
                                                              .OrderBy(t => t.Funcionario.Id).ThenBy(t => t.Month)
                                                              .ToList();
 
@@ -377,7 +377,7 @@ namespace mz.betainteractive.sigeas.model.ca
             DateTime frDt = Constants.GetTime(fromDate, 0, 0, 0);
             DateTime toDt = Constants.GetTime(toDate, 23, 59, 59);                        
 
-            var list = withTracking ? context.MonthWork.Where(t => (t.First >= frDt && t.First <= toDt) || (t.Last >= frDt && t.Last <= toDt))
+            var list = withTracking ? context.MonthWork.Where(t => (t.First >= frDt && t.First <= toDt) || (t.Last >= frDt && t.Last <= toDt)  )
                                                        .OrderBy(t => t.Year).ThenBy(t => t.Order)
                                                        .ToList()
                                     : context.MonthWork.AsNoTracking()
@@ -401,9 +401,21 @@ namespace mz.betainteractive.sigeas.model.ca
         internal static bool OnVacation(SigeasDatabaseContext context, Funcionario funcionario, DateTime dia) {           
             DateTime date = dia.Date;
 
-            var ferias = funcionario.Ferias.Where(t => date >= t.DataInicial && date <= t.DataFinal).FirstOrDefault();
+            var ferias = context.Ferias.Where(t => t.Funcionario.Id == funcionario.Id && date >= t.DataInicial && date <= t.DataFinal).FirstOrDefault();
 
             return (ferias != null);
         }
+
+        internal static bool HasVacation(SigeasDatabaseContext context, Funcionario funcionario, DateTime fromDate, DateTime toDate) {
+            DateTime frDt = Constants.GetTime(fromDate, 0, 0, 0);
+            DateTime toDt = Constants.GetTime(toDate, 23, 59, 59);                      
+
+            var ferias = context.Ferias.Where(t => t.Funcionario.Id==funcionario.Id &&
+                                             (((t.DataInicial >= frDt && t.DataInicial <= toDt) || (t.DataFinal >= frDt && t.DataFinal <= toDt) || (frDt >= t.DataInicial && frDt <= t.DataFinal) || (toDt >= t.DataInicial && toDt <= t.DataFinal))))
+                                             .FirstOrDefault();
+            return (ferias != null);
+        }
+
+
     }
 }
