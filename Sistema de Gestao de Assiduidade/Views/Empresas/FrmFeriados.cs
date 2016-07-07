@@ -14,6 +14,8 @@ using mz.betainteractive.sigeas.Utilities;
 using mz.betainteractive.utilities.module.Components;
 using mz.betainteractive.utilities.module.General;
 using mz.betainteractive.sigeas.utilities;
+using mz.betainteractive.utilities.module.Collections;
+using System.Globalization;
 
 namespace mz.betainteractive.sigeas.Views.Empresas {
     public partial class FrmFeriados : Form, AuthorizableComponent {
@@ -74,8 +76,13 @@ namespace mz.betainteractive.sigeas.Views.Empresas {
             SelectedFeriado = null;
             txtNome.Text = "";
             dtpData.Value = DateTime.Today;
+            cboTipos.SelectedIndex = -1;
+            txtDescricao.Text = "";
             btUpdate.Enabled = false;
-            btRemover.Enabled = false;
+            btRemover.Enabled = false;            
+            txtNome.Enabled = true;
+            cboTipos.Enabled = true;
+            dtpData.Enabled = true;
         }
 
         private void CleanAll() {
@@ -92,12 +99,18 @@ namespace mz.betainteractive.sigeas.Views.Empresas {
         }
                 
         private void LoadFeriados() {
+            CultureInfo ci = new CultureInfo("pt-PT");
+
             List<Feriado> frs = context.Feriado.ToList();
 
             listViewFeriados.Items.Clear();
 
             foreach (Feriado fe in frs){
-                ListViewItemFeriado item = new ListViewItemFeriado(fe);
+                ListViewGenericItem<Feriado> item = new ListViewGenericItem<Feriado>(fe);
+                item.Text = fe.Nome;
+                item.SubItems.Add(fe.Data.ToString("dd MMMM", ci));
+                item.SubItems.Add(fe.GetTipoText());
+                item.SubItems.Add(fe.Descricao);
                 listViewFeriados.Items.Add(item);
             }
         }
@@ -105,7 +118,7 @@ namespace mz.betainteractive.sigeas.Views.Empresas {
         private void listViewFeriados_MouseDoubleClick(object sender, MouseEventArgs e) {
             if (e.Button == MouseButtons.Left) {
                 if (listViewFeriados.SelectedItems.Count == 1) {
-                    ListViewItemFeriado item = (ListViewItemFeriado)listViewFeriados.SelectedItems[0];
+                    var item = listViewFeriados.SelectedItems[0] as ListViewGenericItem<Feriado>;
                     EditFeriado(item.Value);
                 }
             }
@@ -114,11 +127,16 @@ namespace mz.betainteractive.sigeas.Views.Empresas {
         private void EditFeriado(Feriado feriado) {
             btGravar.Enabled = false;
             btUpdate.Enabled = true;
-            btRemover.Enabled = true;
+            btRemover.Enabled = !feriado.Default;
 
             SelectedFeriado = feriado;
             txtNome.Text = feriado.Nome;
             dtpData.Value = feriado.Data;
+            cboTipos.SelectedIndex = feriado.Tipo - 1;
+            txtDescricao.Text = feriado.Descricao;
+
+            dtpData.Enabled = !feriado.Default;
+            txtNome.Enabled = !feriado.Default;
         }
 
         private void btGravar_Click(object sender, EventArgs e) {
@@ -142,6 +160,8 @@ namespace mz.betainteractive.sigeas.Views.Empresas {
             Feriado feriado = new Feriado();
             feriado.Nome = txtNome.Text;
             feriado.Data = dtpData.Value;
+            feriado.Tipo = cboTipos.SelectedIndex + 1;
+            feriado.Descricao = txtDescricao.Text;
 
             try{    
                 context.Feriado.Add(feriado);
@@ -223,6 +243,8 @@ namespace mz.betainteractive.sigeas.Views.Empresas {
 
             feriado.Nome = txtNome.Text;
             feriado.Data = dtpData.Value;
+            feriado.Tipo = cboTipos.SelectedIndex + 1;
+            feriado.Descricao = txtDescricao.Text;
 
             try{
                 
@@ -245,9 +267,7 @@ namespace mz.betainteractive.sigeas.Views.Empresas {
 
         private void btRemover_Click(object sender, EventArgs e) {
             RemoverFeriado();
-        }
-
-        
+        }        
                 
     }
 }
