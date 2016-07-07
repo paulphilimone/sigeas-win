@@ -10,6 +10,7 @@
 
 - Notes onn future development.  
   - Ter em conta Multiple Verification Modes, altera verifyMode number
+  - Ao recalcular AttendanceData - permitir apagar ou nao
 
 - New Features
   - Add Device Capacity Warning (need to connect once or twice a week, create statistics of clocks per day)
@@ -21,14 +22,12 @@
     - Per Departamento - Total de Horas trabalhadas no mês, horas nâo trabalhadas, horas extras, faltas
     - Per Categoria    - Total de Horas trabalhadas no mês, horas nâo trabalhadas, horas extras, faltas
     - Mais faltosos por Departamentos
-    - Departamento com mais faltas
-    - 
+    - Departamento com mais faltas      
+  - Para o futuro permitir alterar/remover MonthWorks sem apagar os ja usados
 
-Fase 1 - depois venda
- - Testar e corrigir bugs  
- - Permitir edicao de periodo de tempo mensal (MonthWork Criado) - Done! - Para o futuro permitir alterar/remover sem apagar os ja usados
- - Adicionar monthWork a UserClockViewer/AttCalcsViewer
- - Adicionar calculo de resumo mensal do funcionario - baseado em DailyAttCalcs
+Fase 1 - antes da venda
+ - Testar e corrigir bugs   
+ - Rever controle de Ferias
  - Adicionar Reports
 
 
@@ -42,6 +41,3 @@ Fase 3
  
  DailyAttCalcs   - Calculo de Assiduidade de um Funcionario num dia
  MonthlyAttCalcs  - Resumo de assiduidade de um Funcionario durante um periodo (mensal)
-
-
- 
