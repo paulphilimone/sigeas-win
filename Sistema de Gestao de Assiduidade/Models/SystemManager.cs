@@ -18,6 +18,7 @@ using System.Globalization;
 using System.IO;
 using mz.betainteractive.utilities.module.General;
 using mz.betainteractive.utilities.module.IO;
+using OfficeOpenXml;
 
 namespace mz.betainteractive.sigeas.Models {
     /*
@@ -106,6 +107,8 @@ namespace mz.betainteractive.sigeas.Models {
             fireOnLoadingDatabase(80);
                         
             InsertAccountSystemData();
+            InsertFeriados();
+
             fireOnLoadingDatabase(100);
             fireOnFinishedLoading();
         }
@@ -480,6 +483,40 @@ namespace mz.betainteractive.sigeas.Models {
             }
             */
 
+        }
+
+        private void InsertFeriados() {
+            SigeasDatabaseContext db = new SigeasDatabaseContext();
+
+            if (db.Feriado.Count() > 0) return;
+
+            byte[] bytes = mz.betainteractive.sigeas.Properties.Resources.feriados;
+            Stream stream = new MemoryStream(bytes, false);
+
+            ExcelPackage package = new ExcelPackage(stream);
+
+            ExcelWorksheet mainWsheet = package.Workbook.Worksheets.FirstOrDefault();
+            
+            for (var rowNumber = 2; rowNumber <= mainWsheet.Dimension.End.Row; rowNumber++) {
+                var row = mainWsheet.Cells[rowNumber, 1, rowNumber, mainWsheet.Dimension.End.Column];
+
+                if (row.Count() < 3) {
+                    Console.WriteLine("Empty Line, Break!");
+                    break;
+                }
+
+
+                var feriado = new Feriado();
+                feriado.Data = DateTime.ParseExact(row.ElementAt(0).Text, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+                feriado.Tipo = Feriado.TIPO_NACIONAL;
+                feriado.Nome = row.ElementAt(2).Text;                
+                feriado.Descricao = row.ElementAt(3).Text;
+                feriado.Default = true;
+
+                db.Feriado.Add(feriado);
+            }
+
+            db.SaveChanges();
         }
 
         private void InsertLocalizationData() {

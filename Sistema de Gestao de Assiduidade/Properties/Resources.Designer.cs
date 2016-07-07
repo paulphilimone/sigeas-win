@@ -231,6 +231,16 @@ namespace mz.betainteractive.sigeas.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] feriados {
+            get {
+                object obj = ResourceManager.GetObject("feriados", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap fingerprint {
