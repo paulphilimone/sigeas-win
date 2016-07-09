@@ -444,7 +444,7 @@ namespace mz.betainteractive.sigeas.Utilities {
             bool hasIntervalo = horarioDia.HasIntervalo;
 
             clocks = CleanAndShiftClocks(clocks, horarioDia);
-            List<UserClock>[] sepClocks = CorrectByRulesAndSeparate(clocks, horarioDia, this.rules);
+            List<UserClock>[] sepClocks = CorrectByRulesAndSeparate(clocks, horarioDia, this.rules, false);
 
             foreach (List<UserClock> lcs in sepClocks) {
                 list.AddRange(lcs);
@@ -459,6 +459,7 @@ namespace mz.betainteractive.sigeas.Utilities {
             HorarioSemana semana = null;
             HorarioDia horarioDia = null;
             DailyAttCalcs calculado = null;
+            bool hasClocksOnNonWorkDay = false;
 
             calculado = GetExistenceAttOrDelete(funcionario, dia, DELETE_OLD_ATTENDANCE_RECORD);
             bool isNew = calculado == null;
@@ -551,7 +552,7 @@ namespace mz.betainteractive.sigeas.Utilities {
             //using uc.Time
             //corrects again, insert clocks, shift clocks
             clocks = CleanAndShiftClocks(clocks, horarioDia);
-            List<UserClock>[] sepClocks = CorrectByRulesAndSeparate(clocks, horarioDia, this.rules);
+            List<UserClock>[] sepClocks = CorrectByRulesAndSeparate(clocks, horarioDia, this.rules, false);
 
             /*
             Console.WriteLine("Shifted Clocks");
@@ -808,7 +809,7 @@ namespace mz.betainteractive.sigeas.Utilities {
             return clocks;
         }
 
-        private List<UserClock>[] CorrectByRulesAndSeparate(List<UserClock> clocks, HorarioDia horarioDia, AttendanceRules rules) {
+        private List<UserClock>[] CorrectByRulesAndSeparate(List<UserClock> clocks, HorarioDia horarioDia, AttendanceRules rules, bool hasClocksOnNonWorkDay) {
             List<UserClock>[] arrClocks = new List<UserClock>[2];
             arrClocks[0] = new List<UserClock>();
             arrClocks[1] = new List<UserClock>();

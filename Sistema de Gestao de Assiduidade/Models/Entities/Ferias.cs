@@ -8,7 +8,9 @@ namespace mz.betainteractive.sigeas.Models.Entities
                 
         public System.DateTime DataFinal { get; set; }
         public System.DateTime DataInicial { get; set; }
-        
+        public int DiasCompridos { get; set; }
+        public int DiasNaoCompridos { get; set; }
+
         public virtual Funcionario Funcionario { get; set; }
 
         public virtual ApplicationUser CreatedBy { get; set; }

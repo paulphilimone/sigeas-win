@@ -229,11 +229,15 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
             Funcionario funcionario = (Funcionario)CBoxFuncionario.SelectedItem;                        
             
             if (DBSearch.OnVacation(context, funcionario, dtInicial)) {
-                MessageBox.Show("Já existe um periodo de férias em que a data inicial está abrangida!\nNB: Introduza periodos de férias diferentes dos existentes", "Data inicial incorrecta");
+                MessageBox.Show("Já existe um periodo de férias registado em que a data inicial está abrangida!\nNB: Introduza periodos de férias diferentes dos existentes", "Data inicial incorrecta");
                 return true;
             }
             if (DBSearch.OnVacation(context, funcionario, dtFinal)) {
-                MessageBox.Show("Já existe um periodo de férias em que a data final está abrangida!\nNB: Introduza periodos de férias diferentes dos existentes", "Data final incorrecta");
+                MessageBox.Show("Já existe um periodo de férias registado em que a data final está abrangida!\nNB: Introduza periodos de férias diferentes dos existentes", "Data final incorrecta");
+                return true;
+            }
+            if (DBSearch.HasVacation(context, funcionario, dtInicial, dtFinal)) {
+                MessageBox.Show("Já existe um periodo de férias registado em que o periodo introduzido esta abrangido!\nNB: Introduza periodos de férias diferentes dos existentes", "Datas incorrectas");
                 return true;
             }
 
