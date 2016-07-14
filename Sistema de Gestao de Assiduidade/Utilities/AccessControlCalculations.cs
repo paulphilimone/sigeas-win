@@ -322,67 +322,13 @@ namespace mz.betainteractive.sigeas.Utilities {
             }
 
         }
-
-        public void CalculateAttendanceData() { 
-            //1 - Get UserClocks
-            //2 - Organize by Funcionario <Date, List<UserClock>>
-            //3 -                        
-
-            var funcionarios = context.Funcionario.ToList();
-
-            foreach (var funcionario in funcionarios) {
-                
-
-                var clocks = context.UserClock.Where(uc => uc.Result == "OK" && uc.Funcionario.Id==funcionario.Id).OrderBy(t => t.DateAndTime).ToList();
-                //var clocks = funcionario.UserClocks.Where(uc => uc.Result == "OK").OrderBy(t => t.DateAndTime).ToList();
-
-                Dictionary<DateTime, List<UserClock>> dateClocks = null;
-
-                OrganizeByDate(clocks, out dateClocks);
-
-                foreach (var date in dateClocks.Keys) {
-                    List<UserClock> luc = null;
-                    dateClocks.TryGetValue(date, out luc);
-                    CalculateAttCalcs(funcionario, date, luc);
-                }
-            }
-
-        }
-                
-        public void CalculateAttendanceData(DateTime fromDate, DateTime toDate) {                        
-            //NEW
-            var funcionarios = context.Funcionario.ToList();
-
-            foreach (var funcionario in funcionarios) {
-
-                
-                var clocks = context.UserClock.Where(t => t.Result == "OK" &&
-                                                          t.Funcionario.Id == funcionario.Id && 
-                                                         (t.DateAndTime >= fromDate && t.DateAndTime <= toDate)).OrderBy(t => t.DateAndTime).ToList();
-                
-                /*
-                var clocks = funcionario.UserClocks.Where(t => t.Result == "OK" &&                                                          
-                                                         (t.DateAndTime >= fromDate && t.DateAndTime <= toDate)).OrderBy(t => t.DateAndTime).ToList();
-                */
-
-                Dictionary<DateTime, List<UserClock>> dateClocks = null;
-
-                OrganizeByDate(clocks, out dateClocks, fromDate, toDate);
-
-                foreach (var date in dateClocks.Keys) {
-                    List<UserClock> luc = null;
-                    dateClocks.TryGetValue(date, out luc);
-                    CalculateAttCalcs(funcionario, date, luc);
-                }
-            }
-
-
-        }
-
+        
         public void CalculateAttendanceData(List<Funcionario> funcionarios, DateTime fromDate, DateTime toDate) {
                         
             Console.WriteLine("Start the Calcs");
             //NEW
+
+            var monthWorks = DBSearch.FindAllMonthWorks(context, fromDate, toDate, true);
             
             foreach (var funcionario in funcionarios) {
 
@@ -390,12 +336,7 @@ namespace mz.betainteractive.sigeas.Utilities {
                 var clocks = context.UserClock.Include("Funcionario").Where(t => t.Result == "OK" &&
                                                                             t.Funcionario.Id == funcionario.Id &&
                                                                             (t.DateAndTime >= fromDate && t.DateAndTime <= toDate)).OrderBy(t => t.DateAndTime).ToList();
-                
-                /*
-                var clocks = funcionario.UserClocks.Where(t => t.Result == "OK" &&
-                                                              (t.DateAndTime >= fromDate && t.DateAndTime <= toDate)).OrderBy(t => t.DateAndTime).ToList();
-                */
-
+              
 
                 Dictionary<DateTime, List<UserClock>> dateClocks = null;
 
@@ -404,7 +345,7 @@ namespace mz.betainteractive.sigeas.Utilities {
                 foreach (var date in dateClocks.Keys) {
                     List<UserClock> luc = null;
                     dateClocks.TryGetValue(date, out luc);
-                    CalculateAttCalcs(funcionario, date, luc);
+                    CalculateAttCalcs(funcionario, date, luc, monthWorks);
                 }
             }
 
@@ -453,9 +394,10 @@ namespace mz.betainteractive.sigeas.Utilities {
             return list;
         }
 
-        private void CalculateAttCalcs(Funcionario funcionario, DateTime dia, List<UserClock> clocks) {
+        private void CalculateAttCalcs(Funcionario funcionario, DateTime dia, List<UserClock> clocks, List<MonthWork> monthWorks) {
 
             FuncionarioHorario fhorario = DBSearch.GetFuncionarioHorario(context, funcionario, dia);
+            MonthWork monthWork = monthWorks.Where(t => dia >= t.First && dia <= t.Last).FirstOrDefault();
             HorarioSemana semana = null;
             HorarioDia horarioDia = null;
             DailyAttCalcs calculado = null;
@@ -485,6 +427,7 @@ namespace mz.betainteractive.sigeas.Utilities {
             calculado.Funcionario = funcionario;
             calculado.Data = dia.Date;
             calculado.HorarioDia = horarioDia;
+            calculado.Month = monthWork;
 
 
             //2º se horario não esta ativado, não é dia de trabalho

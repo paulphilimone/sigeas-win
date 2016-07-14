@@ -24,6 +24,7 @@ namespace mz.betainteractive.sigeas.Models.Entities
 
         public virtual Funcionario Funcionario { get; set; }        
         public virtual HorarioDia HorarioDia { get; set; }
+        public virtual MonthWork Month { get; set; }   
 
         public int HrExtrasHoras { get; set; }
         public int HrExtrasMins { get; set; }

@@ -15,6 +15,7 @@ namespace mz.betainteractive.sigeas.Models.Configuration {
             this.HasOptional(t => t.UpdatedBy).WithMany();
             this.HasRequired(t => t.Funcionario).WithMany(t => t.AttCalculos);
             this.HasRequired(t => t.HorarioDia).WithMany();
+            this.HasRequired(t => t.Month);
         }
     }
 }
