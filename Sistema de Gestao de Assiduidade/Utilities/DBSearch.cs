@@ -375,15 +375,16 @@ namespace mz.betainteractive.sigeas.model.ca
         public static List<MonthWork> FindAllMonthWorks(SigeasDatabaseContext context, DateTime fromDate, DateTime toDate, bool withTracking) {
 
             DateTime frDt = Constants.GetTime(fromDate, 0, 0, 0);
-            DateTime toDt = Constants.GetTime(toDate, 23, 59, 59);                        
+            DateTime toDt = Constants.GetTime(toDate, 23, 59, 59);
 
-            var list = withTracking ? context.MonthWork.Where(t => (t.First >= frDt && t.First <= toDt) || (t.Last >= frDt && t.Last <= toDt)  )
+            var list = withTracking ? context.MonthWork.Where(t => (t.First >= frDt && t.First <= toDt) || (t.Last >= frDt && t.Last <= toDt) || (frDt >= t.First && frDt <= t.Last) || (toDt >= t.First && toDt <= t.Last))
                                                        .OrderBy(t => t.Year).ThenBy(t => t.Order)
                                                        .ToList()
                                     : context.MonthWork.AsNoTracking()
                                                        .Where(t => (t.First >= frDt && t.First <= toDt) || (t.Last >= frDt && t.Last <= toDt))
                                                        .OrderBy(t => t.Year).ThenBy(t => t.Order)
                                                        .ToList();
+            ///
 
             return list;
         }

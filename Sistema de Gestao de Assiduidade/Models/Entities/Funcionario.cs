@@ -21,6 +21,7 @@ namespace mz.betainteractive.sigeas.Models.Entities
         public byte[] Photo { get; set; }
         public string Email { get; set; }
         public string Telefone { get; set; }
+        public string Nuit { get; set; }
 
         public bool CompleteRegistered { get; set; }
 
