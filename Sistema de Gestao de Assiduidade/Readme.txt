@@ -12,24 +12,26 @@
   - Ter em conta Multiple Verification Modes, altera verifyMode number
   - Ao recalcular AttendanceData - permitir apagar ou nao
 
-- New Features
-  - Add Device Capacity Warning (need to connect once or twice a week, create statistics of clocks per day)
+- New Features  
+  - Novas Funcionalidades
+   - onLoginChecks -> (put a lot of checks, recalcular ferias, device capacity warning, etc) 
+   - after 30 minutes without touching, Lock account
+   - if Program is always opening, openingChecks.        
   - Initial Program Setup needs Technical Assistant
   - Controlador de Ferias (new feature)
-  - Controle de acesso aos departamentos (new feature)
-  - Generate Reports
+  - Controle de acesso aos departamentos (new feature)  -      
+  - Para o futuro permitir alterar/remover MonthWorks sem apagar os ja usados
+
+Fase 1 - antes da venda
+ - Testar e corrigir bugs               
+ - (***) Para o futuro ver o que fazer quando houver clocks (num dia em que nao se trabalha, num feriado e no periodo de ferias)
+ - Adicionar Reports
+    Generate Reports
     - Per Funcionario  - Todos dias do mês
     - Per Departamento - Total de Horas trabalhadas no mês, horas nâo trabalhadas, horas extras, faltas
     - Per Categoria    - Total de Horas trabalhadas no mês, horas nâo trabalhadas, horas extras, faltas
     - Mais faltosos por Departamentos
-    - Departamento com mais faltas      
-  - Para o futuro permitir alterar/remover MonthWorks sem apagar os ja usados
-
-Fase 1 - antes da venda
- - Testar e corrigir bugs   
- - Rever controle de Ferias
- - Adicionar Reports
-
+    - Departamento com mais faltas
 
 Fase 2 - depois venda e update
  - Mudar as Views do programa (torna-lo mais user friendly)
@@ -38,6 +40,3 @@ Fase 2 - depois venda e update
 Fase 3
  - Web Application
  - SigeasDeviceModule - Server(app with rest web services) n Client(java)
- 
- DailyAttCalcs   - Calculo de Assiduidade de um Funcionario num dia
- MonthlyAttCalcs  - Resumo de assiduidade de um Funcionario durante um periodo (mensal)
