@@ -29,6 +29,7 @@ using mz.betainteractive.utilities.module.Components;
 using mz.betainteractive.sigeas.Views.FuncionarioDevices;
 using mz.betainteractive.sigeas.Views.ImportExport;
 using mz.betainteractive.sigeas.utilities;
+using mz.betainteractive.sigeas.Views.Reports;
 
 
 namespace mz.betainteractive.sigeas.Views.Main {
@@ -59,6 +60,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
         public ImportHrData importHrData { get; set; }
         public ImportExportView importExportView { get; set; }
         public PedidoDispensaView pedidoDispensaView { get; set; }
+        public ReportsCreatorView reportsCreatorView { get; set; }
 
         public static ToolStripLabel tssGeralSystemStatus;
 
@@ -91,6 +93,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
             importHrData = new ImportHrData();
             importExportView = new ImportExportView();
             pedidoDispensaView = new PedidoDispensaView();
+            reportsCreatorView = new ReportsCreatorView();
 
             DeviceManager.MdiParent = this;
             FuncionarioForm.MdiParent = this;
@@ -117,6 +120,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
             this.deviceDataUpdateView.FormCode       = 0x0113;
             this.importExportView.FormCode = 0x0114;
             this.pedidoDispensaView.FormCode = 0x0115;
+            this.reportsCreatorView.FormCode = 0x0116;
 
             this.securedComponents.Add(this.UserManagement.FormCode, this.UserManagement);
             this.securedComponents.Add(this.DeviceManager.FormCode, this.DeviceManager);
@@ -132,6 +136,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
             this.securedComponents.Add(this.deviceDataUpdateView.FormCode, this.deviceDataUpdateView);
             this.securedComponents.Add(this.importExportView.FormCode, this.importExportView);
             this.securedComponents.Add(this.pedidoDispensaView.FormCode, this.pedidoDispensaView);
+            this.securedComponents.Add(this.reportsCreatorView.FormCode, this.reportsCreatorView);
         }
 
         public void SettingSecurity() {
@@ -215,10 +220,16 @@ namespace mz.betainteractive.sigeas.Views.Main {
             associarFuncionáriosÁsPortasToolStripMenuItem.Enabled = this.tableFuncionarioDeviceView.AllowView;
             
             //this.deviceDataUpdateView.FormCode = 0x0113;
+            atualizarFuncionariosNoBiometricoToolStripMenuItem.Enabled = this.deviceDataUpdateView.AllowView;
             
             //this.importExportView.FormCode = 0x0114;
+            importarDadosToolStripMenuItem.Enabled = this.importExportView.AllowView;
 
+            //this.pedidoDispensaView.FormCode = 0x0115;
             pedidoDeDispensaAusenciaToolStripMenuItem.Enabled = this.pedidoDispensaView.AllowView;
+                        
+            //this.reportsCreatorView.FormCode = 0x0116;
+            relatoriosToolStripMenuItem.Enabled = this.reportsCreatorView.AllowView;
 
 
         }
@@ -611,6 +622,10 @@ namespace mz.betainteractive.sigeas.Views.Main {
 
         private void pedidoDeDispensaAusenciaToolStripMenuItem_Click(object sender, EventArgs e) {
             this.pedidoDispensaView.Visible = true;
+        }
+
+        private void relátoriosDeAsseduidadeToolStripMenuItem_Click(object sender, EventArgs e) {
+            this.reportsCreatorView.Visible = true;
         }
 
      
