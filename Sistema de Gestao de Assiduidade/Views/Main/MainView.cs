@@ -272,10 +272,19 @@ namespace mz.betainteractive.sigeas.Views.Main {
 
             if (answer == DialogResult.Yes){
                 e.Cancel = false;
+                CloseAllForms();
                 Environment.Exit(0);
             } else {
                 e.Cancel = true;
             }            
+        }
+
+        private void CloseAllForms() {
+            foreach (var comp in securedComponents.Values) {
+                if (comp is Form) {
+                    (comp as Form).Close();
+                }
+            }
         }
 
         public void UpdateUserSettings(ApplicationUser user) {
