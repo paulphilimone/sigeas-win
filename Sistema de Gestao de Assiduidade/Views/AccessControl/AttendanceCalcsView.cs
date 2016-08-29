@@ -324,13 +324,9 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
 
             if (categoria == null && departamento == null) {
                 funcionarios = context.Funcionario.ToList();
-            }
-
-            if (categoria == null) {
+            } else if (categoria == null) {
                 funcionarios.AddRange(context.Funcionario.Where(f => f.Departamento.Id == departamento.Id).ToList());
-            }
-
-            if (departamento == null) {
+            } else if (departamento == null) {
                 funcionarios.AddRange(context.Funcionario.Where(f => f.Categoria.Id == categoria.Id).ToList());
             }
 
