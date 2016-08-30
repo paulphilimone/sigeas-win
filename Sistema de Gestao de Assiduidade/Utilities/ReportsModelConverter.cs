@@ -118,6 +118,7 @@ namespace mz.betainteractive.sigeas.Utilities {
                 row["Name"] = item.ToString();
                 row["First"] = item.First;
                 row["Last"] = item.Last;
+                row["PeriodText"] = item.First.ToString("yyyy-MM-dd") + " á " + item.Last.ToString("yyyy-MM-dd");
 
                 table.Rows.Add(row);
             }
@@ -165,7 +166,7 @@ namespace mz.betainteractive.sigeas.Utilities {
                 row["Email"] = item.Email;
                 row["Nuit"] = item.Nuit;
                 row["DepartamentoId"] = item.Departamento.Id;
-                row["CategoriaId"] = item.Categoria.Id;
+                row["CategoriaId"] = item.Categoria==null ? 0 : item.Categoria.Id;
 
                 table.Rows.Add(row);
             }
@@ -175,15 +176,21 @@ namespace mz.betainteractive.sigeas.Utilities {
             var table = dataSet.Tables["MonthlyAttCalcs"];
 
             foreach (var item in monthlyAttCalcs) {
-                var row = table.NewRow();                
+                var row = table.NewRow();
+                var func = item.Funcionario;
+                var dept = func.Departamento;
+                var catg = func.Categoria;
 
                 row["Id"] = item.Id;
                 row["FuncionarioId"] = item.Funcionario.Id;
                 row["MonthId"] = item.Month.Id;
+                row["DepartamentoId"] = dept==null ? 0 : dept.Id;
+                row["CategoriaId"] = catg==null ? 0 : catg.Id;
                 row["Year"] = item.Ano;
                 row["Order"] = item.Order;
                 row["First"] = item.First;
                 row["Last"] = item.Last;
+                row["Period"] = item.First.ToString("yyyy-MM-dd") + " á " + item.Last.ToString("yyyy-MM-dd");
                 row["Holidays"] = item.Holidays;
                 row["TotalWorkDays"] = item.TotalWorkDays;
                 row["TotalWorkHours"] = new Hora(item.TotalWorkHours, item.TotalWorkMins).ToString();
@@ -224,6 +231,56 @@ namespace mz.betainteractive.sigeas.Utilities {
                 row["IsAuthorizedAbsent"] = item.IsAusenciaAutorizada;
 
                 table.Rows.Add(row);
+            }
+        }
+
+        public static void AddMonthStatsByDept(ReportsModel dataSet, List<MonthlyAttCalcs> mAttCalcs) {
+            var monthWorks = mAttCalcs.Select(t => t.Month).Distinct().ToList();
+            var depts = mAttCalcs.Select(t => t.Funcionario.Departamento).Distinct().ToList();
+
+            //unfinished
+
+            var table = dataSet.Tables["MonthStats"];
+            int i = 0;
+
+            foreach (var monthWork in monthWorks) {                
+                foreach (var departament in depts){
+                    var monthCalcs = mAttCalcs.Where(t => t.Funcionario.Departamento.Id==departament.Id && t.Month.Id==monthWork.Id).ToList();
+
+                    int sumWorkDays = 0;
+                    int sumWorkHours = 0;
+                    int sumWorkedDays = 0;
+                    int sumWorkedHours = 0;
+                    int sumAbsentDays = 0;
+                    int sumAbsentHours = 0;
+                    int sumOvertimeHours = 0;
+
+                    foreach(var matt in monthCalcs){
+                        sumWorkDays += matt.TotalWorkDays;
+                        sumWorkHours += matt.TotalWorkHours;
+                        sumWorkedDays += matt.WorkedDays;
+                        sumWorkedHours += matt.WorkedHours;
+                        sumAbsentDays += matt.AbsentDays;
+                        sumAbsentHours += matt.AbsentHours;
+                        sumOvertimeHours += matt.TotalOvertimeHours;
+                    }
+
+                    var row = table.NewRow();
+
+                    row["Id"] = ++i;
+                    row["DepartamentoId"] = departament.Id;
+                    row["CategoriaId"] = 0;
+                    row["SumWorkDays"] = sumWorkDays;
+                    row["SumWorkHours"] = sumWorkHours;
+                    row["SumWorkedDays"] = sumWorkedDays;
+                    row["SumWorkedHours"] = sumWorkedHours;
+                    row["SumAbsentDays"] = sumAbsentDays;
+                    row["SumAbsentHours"] = sumAbsentHours;
+                    row["SumOvertimeHours"] = sumOvertimeHours;
+                    
+                    table.Rows.Add(row);
+
+                }
             }
         }
     }
