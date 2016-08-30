@@ -16,14 +16,14 @@ namespace mz.betainteractive.sigeas.ReportFiles {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class EmployeeMonthlyReport : ReportClass {
+    public class CategoryMonthlyReport : ReportClass {
         
-        public EmployeeMonthlyReport() {
+        public CategoryMonthlyReport() {
         }
         
         public override string ResourceName {
             get {
-                return "EmployeeMonthlyReport.rpt";
+                return "CategoryMonthlyReport.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace mz.betainteractive.sigeas.ReportFiles {
         
         public override string FullResourceName {
             get {
-                return "mz.betainteractive.sigeas.ReportFiles.EmployeeMonthlyReport.rpt";
+                return "mz.betainteractive.sigeas.ReportFiles.CategoryMonthlyReport.rpt";
             }
             set {
                 // Do nothing
@@ -106,9 +106,9 @@ namespace mz.betainteractive.sigeas.ReportFiles {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedEmployeeMonthlyReport : Component, ICachedReport {
+    public class CachedCategoryMonthlyReport : Component, ICachedReport {
         
-        public CachedEmployeeMonthlyReport() {
+        public CachedCategoryMonthlyReport() {
         }
         
         [Browsable(false)]
@@ -145,7 +145,7 @@ namespace mz.betainteractive.sigeas.ReportFiles {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            EmployeeMonthlyReport rpt = new EmployeeMonthlyReport();
+            CategoryMonthlyReport rpt = new CategoryMonthlyReport();
             rpt.Site = this.Site;
             return rpt;
         }
