@@ -232,10 +232,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ReportFiles\CategoryMonthlyReport.cs">
+      <DependentUpon>CategoryMonthlyReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ReportFiles\DepartmentMonthlyReport.cs">
+      <DependentUpon>DepartmentMonthlyReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="ReportFiles\EmployeeMonthlyReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EmployeeMonthlyReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportFiles\GeneralStatsReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GeneralStatsReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Utilities\AccessControlCalculations.cs" />
@@ -455,9 +473,21 @@
     <Compile Include="Views\UserManagment\UserManager.Designer.cs">
       <DependentUpon>UserManager.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportFiles\CategoryMonthlyReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CategoryMonthlyReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportFiles\DepartmentMonthlyReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DepartmentMonthlyReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportFiles\EmployeeMonthlyReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>EmployeeMonthlyReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportFiles\GeneralStatsReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GeneralStatsReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AccessControl\EditUserClockView.resx">
       <DependentUpon>EditUserClockView.cs</DependentUpon>
