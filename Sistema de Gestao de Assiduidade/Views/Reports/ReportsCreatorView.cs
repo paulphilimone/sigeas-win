@@ -44,10 +44,11 @@ namespace mz.betainteractive.sigeas.Views.Reports {
         private const int REPORT_ATTENDANCE_BY_EMPLOYEE = 0;
         private const int REPORT_ATTENDANCE_BY_DEPARTMENTS = 1;
         private const int REPORT_ATTENDANCE_BY_CATEGORIES = 2;
-        private const int REPORT_GENERAL_STATS = 3;
-        private const int REPORT_STATS_BY_EMPLOYEE = 4;
+        private const int REPORT_GENERAL_STATS = 3;        
+        private const int REPORT_STATS_BY_DEPARTMENTS = 4;
         private const int REPORT_STATS_BY_CATEGORIES = 5;
-        
+        private const int REPORT_STATS_BY_EMPLOYEE = 6;
+
         public ReportsCreatorView() {
             InitializeComponent();
         }
@@ -106,6 +107,9 @@ namespace mz.betainteractive.sigeas.Views.Reports {
             CBoxDepartamentos.Text = "";
             CBoxCategorias.Text = "";
             CBoxFuncionarios.Text = "";
+            CBoxDepartamentos.Enabled = true;
+            CBoxCategorias.Enabled = true;
+            CBoxFuncionarios.Enabled = true;
         }
 
         private void LoadDepartamentosToComboBox() {
@@ -155,12 +159,15 @@ namespace mz.betainteractive.sigeas.Views.Reports {
             Categoria categoria = null;
             Funcionario func = null;
 
+            if (CBoxFuncionarios.Enabled)
             if (CBoxFuncionarios.SelectedItem is Funcionario) {
                 func = CBoxFuncionarios.SelectedItem as Funcionario;
             }
+            if (CBoxCategorias.Enabled)
             if (CBoxCategorias.SelectedItem is Categoria) {
                 categoria = CBoxCategorias.SelectedItem as Categoria;
             }
+            if (CBoxDepartamentos.Enabled)
             if (CBoxDepartamentos.SelectedItem is Departamento) {
                 departamento = CBoxDepartamentos.SelectedItem as Departamento;
             }
@@ -236,13 +243,9 @@ namespace mz.betainteractive.sigeas.Views.Reports {
 
             if (categoria == null && departamento == null) {
                 funcionarios = context.Funcionario.ToList();
-            }
-
-            if (categoria == null) {
+            } else if (categoria == null) {
                 funcionarios.AddRange(context.Funcionario.Where(f => f.Departamento.Id == departamento.Id).ToList());
-            }
-
-            if (departamento == null) {
+            } else if (departamento == null) {
                 funcionarios.AddRange(context.Funcionario.Where(f => f.Categoria.Id == categoria.Id).ToList());
             }
 
@@ -284,6 +287,31 @@ namespace mz.betainteractive.sigeas.Views.Reports {
 
         }
 
+        private void cboReports_SelectedIndexChanged(object sender, EventArgs e) {
+            OnReportsSelectedValueChanged();
+        }
+
+        private void OnReportsSelectedValueChanged() {
+            int selectedIndex = cboReports.SelectedIndex;
+            bool depEnabled = true;
+            bool catEnabled = false;
+            bool funEnabled = false;
+
+            switch (selectedIndex) {
+                case 0: depEnabled = true; catEnabled = true; funEnabled = true; break;
+                case 1: depEnabled = true; catEnabled = true; funEnabled = false; break;
+                case 2: depEnabled = true; catEnabled = true; funEnabled = false; break;
+                case 3: depEnabled = true; catEnabled = true; funEnabled = true; break;
+                case 4: depEnabled = true; catEnabled = true; funEnabled = false; break;
+                case 5: depEnabled = true; catEnabled = true; funEnabled = false; break;
+                default: depEnabled = true; catEnabled = true; funEnabled = true; break;
+            }
+
+            CBoxDepartamentos.Enabled = depEnabled;
+            CBoxCategorias.Enabled = catEnabled;
+            CBoxFuncionarios.Enabled = funEnabled;
+        }
+
         private void OnCreateReportClicked() {
             //perform checks
 
@@ -303,7 +331,7 @@ namespace mz.betainteractive.sigeas.Views.Reports {
             0. Assiduidade por Funcionario no Mês
             1. Assiduidade Mensal por Departamentos
             2. Assiduidade Mensal por Categorias
-            3. Estatisticas de Assiduidade Geral
+            3. Estatisticas de Assiduidade Geral    
             4. Estatisticas de Assiduidade por Departamentos
             5. Estatisticas de Assiduidade por Categorias
             */
@@ -316,8 +344,20 @@ namespace mz.betainteractive.sigeas.Views.Reports {
             MonthWork monthWork = cboMonthWorks.SelectedItem as MonthWork;
 
             if (selectedReport == REPORT_ATTENDANCE_BY_EMPLOYEE){
-                CreateReportAttendanceByEmployee(monthWork, departamentos, categorias, funcionarios);            
-            }else{
+                CreateReportAttendanceByEmployee(monthWork, departamentos, categorias, funcionarios);
+            } else if (selectedReport == REPORT_ATTENDANCE_BY_DEPARTMENTS) {
+                CreateReportAttendanceByDepartments(monthWork, departamentos, categorias, funcionarios);
+            } else if (selectedReport == REPORT_ATTENDANCE_BY_CATEGORIES) {
+                CreateReportAttendanceByCategory(monthWork, departamentos, categorias, funcionarios);
+            } else if (selectedReport == REPORT_GENERAL_STATS) {
+                CreateReportGeneralStats(monthWork, departamentos, categorias, funcionarios);
+            } else if (selectedReport == REPORT_STATS_BY_DEPARTMENTS) {
+                MessageBox.Show("Not Implemented yet");
+            } else if (selectedReport == REPORT_STATS_BY_CATEGORIES) {
+                MessageBox.Show("Not Implemented yet");
+            } else if (selectedReport == REPORT_STATS_BY_EMPLOYEE) {
+                MessageBox.Show("Not Implemented yet");
+            } else {
                 MessageBox.Show("Not Implemented yet");
             }
         }
@@ -339,15 +379,73 @@ namespace mz.betainteractive.sigeas.Views.Reports {
             ReportsModelConverter.AddMonthlyAttCalcs(dataSet, monthAttCalcs);
             ReportsModelConverter.AddDailyAttCalcs(dataSet, dailyAttCalcs);
 
-            EmployeeMonthlyReport crReport = new EmployeeMonthlyReport();
-            
-            //CrystalReport1 report1 = new CrystalReport1();
-           // report1.SetDataSource(dataSet);
-                        
+            EmployeeMonthlyReport crReport = new EmployeeMonthlyReport();            
             crReport.SetDataSource(dataSet);
-
             crptViewer.ReportSource = crReport;
-           // crptViewer.ReportSource = report1;
+            crptViewer.RefreshReport();
+        }
+
+        private void CreateReportAttendanceByDepartments(MonthWork monthWork, List<Departamento> departamentos, List<Categoria> categorias, List<Funcionario> funcionarios) {
+
+            var funcIds = funcionarios.Select(t => t.Id);
+            List<MonthlyAttCalcs> monthAttCalcs = context.MonthlyAttCalcs.Where(t => funcIds.Contains(t.Funcionario.Id) && t.Month.Id == monthWork.Id).ToList();
+            //List<DailyAttCalcs> dailyAttCalcs = context.DailyAttCalcs.Where(t => funcIds.Contains(t.Funcionario.Id) && t.Month.Id == monthWork.Id).ToList();
+
+            ReportsModel dataSet = new ReportsModel();
+
+            ReportsModelConverter.AddDepartamento(dataSet, departamentos);
+            ReportsModelConverter.AddCategoria(dataSet, categorias);
+            ReportsModelConverter.AddFuncionario(dataSet, funcionarios);
+            ReportsModelConverter.AddMonthWork(dataSet, new List<MonthWork>() { monthWork });
+            ReportsModelConverter.AddMonthlyAttCalcs(dataSet, monthAttCalcs);
+            //ReportsModelConverter.AddDailyAttCalcs(dataSet, dailyAttCalcs);
+
+            
+            DepartmentMonthlyReport crReport = new DepartmentMonthlyReport();
+            crReport.SetDataSource(dataSet);
+            crptViewer.ReportSource = crReport;
+            crptViewer.RefreshReport();            
+        }
+
+        private void CreateReportAttendanceByCategory(MonthWork monthWork, List<Departamento> departamentos, List<Categoria> categorias, List<Funcionario> funcionarios) {
+
+            var funcIds = funcionarios.Select(t => t.Id);
+            List<MonthlyAttCalcs> monthAttCalcs = context.MonthlyAttCalcs.Where(t => funcIds.Contains(t.Funcionario.Id) && t.Month.Id == monthWork.Id).ToList();
+            //List<DailyAttCalcs> dailyAttCalcs = context.DailyAttCalcs.Where(t => funcIds.Contains(t.Funcionario.Id) && t.Month.Id == monthWork.Id).ToList();
+
+            ReportsModel dataSet = new ReportsModel();
+
+            ReportsModelConverter.AddDepartamento(dataSet, departamentos);
+            ReportsModelConverter.AddCategoria(dataSet, categorias);
+            ReportsModelConverter.AddFuncionario(dataSet, funcionarios);
+            ReportsModelConverter.AddMonthWork(dataSet, new List<MonthWork>() { monthWork });
+            ReportsModelConverter.AddMonthlyAttCalcs(dataSet, monthAttCalcs);
+            //ReportsModelConverter.AddDailyAttCalcs(dataSet, dailyAttCalcs);
+            
+            CategoryMonthlyReport crReport = new CategoryMonthlyReport();
+            crReport.SetDataSource(dataSet);
+            crptViewer.ReportSource = crReport;
+            crptViewer.RefreshReport();
+        }
+
+        private void CreateReportGeneralStats(MonthWork monthWork, List<Departamento> departamentos, List<Categoria> categorias, List<Funcionario> funcionarios) {
+
+            var funcIds = funcionarios.Select(t => t.Id);
+            List<MonthlyAttCalcs> monthAttCalcs = context.MonthlyAttCalcs.Where(t => funcIds.Contains(t.Funcionario.Id) && t.Month.Id == monthWork.Id).ToList();
+            //List<DailyAttCalcs> dailyAttCalcs = context.DailyAttCalcs.Where(t => funcIds.Contains(t.Funcionario.Id) && t.Month.Id == monthWork.Id).ToList();
+
+            ReportsModel dataSet = new ReportsModel();
+
+            ReportsModelConverter.AddDepartamento(dataSet, departamentos);
+            ReportsModelConverter.AddCategoria(dataSet, categorias);
+            ReportsModelConverter.AddFuncionario(dataSet, funcionarios);
+            ReportsModelConverter.AddMonthWork(dataSet, new List<MonthWork>() { monthWork });
+            ReportsModelConverter.AddMonthlyAttCalcs(dataSet, monthAttCalcs);
+            ReportsModelConverter.AddMonthStatsByDept(dataSet, monthAttCalcs);
+
+            GeneralStatsReport crReport = new GeneralStatsReport();
+            crReport.SetDataSource(dataSet);
+            crptViewer.ReportSource = crReport;
             crptViewer.RefreshReport();
         }
     }

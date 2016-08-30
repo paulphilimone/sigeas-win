@@ -258,6 +258,7 @@
             this.cboReports.Name = "cboReports";
             this.cboReports.Size = new System.Drawing.Size(440, 23);
             this.cboReports.TabIndex = 15;
+            this.cboReports.SelectedIndexChanged += new System.EventHandler(this.cboReports_SelectedIndexChanged);
             // 
             // label8
             // 
