@@ -753,6 +753,11 @@ namespace mz.betainteractive.sigeas.Views.Horarios {
                 LogErrors.AddErrorLog(ex, "Ocorreu erro ao tentar atualizar os horários dos funcionários na base de dados");
                 MessageBox.Show(this, "Ocorreu erro ao tentar atualizar os horários dos funcionários na base de dados.\nErro: " + ex.Message, "Erro grave", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btWeeklySchedule_Click(object sender, EventArgs e) {
+            FrmHorarioSemanal form = new FrmHorarioSemanal();
+            form.Show(this);
         }        
 
     }
