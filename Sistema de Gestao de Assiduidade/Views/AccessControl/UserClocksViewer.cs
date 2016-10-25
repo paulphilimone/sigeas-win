@@ -358,7 +358,7 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
                     //Pass 1 & 2
                     List<RawUserClock> rawClocks = null;
                     //Pass 1
-                    io.DownloadAttendanceData_TFT(out rawClocks);
+                    io.DownloadAttendanceData(out rawClocks);
                     //Pass 2
                     result = convertions.ConvertAttendanceDataToDatabase(context, rawClocks, out clocks);
                     //Pass 3
@@ -391,9 +391,7 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
          * 3 - Calculate History & descounts of the corrected downloaded user-clock list
          */
         private void SearchAndCorrectUserClocks() {
-            Device device = (Device)CBoxDevices.SelectedItem;
-            DeviceIO io = new DeviceIO(device);
-
+           
             var deviceUsers = context.DeviceUser.Count();
 
             if (deviceUsers == 0) {

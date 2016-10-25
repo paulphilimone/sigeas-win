@@ -335,7 +335,7 @@ namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
                 //Pass 1 & 2
                 List<RawUserClock> rawClocks = null;
                 //Pass 1
-                io.DownloadAttendanceData_TFT(out rawClocks);
+                io.DownloadAttendanceData(out rawClocks);
                 //Pass 2
                 result = convertions.ConvertAttendanceDataToDatabase(context, rawClocks, out clocks);
                 //Pass 3
