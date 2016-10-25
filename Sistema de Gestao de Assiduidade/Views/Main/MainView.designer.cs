@@ -41,6 +41,7 @@
             this.associarFuncionáriosÁsPortasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.atualizarFuncionariosNoBiometricoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMnuItemFeriasForm = new System.Windows.Forms.ToolStripMenuItem();
+            this.pedidoDeDispensaAusenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMnuItemEmpresaForm = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMnuItemFuncionarioView = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,7 +58,11 @@
             this.menuItemDeviceManager = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemUserManager = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMnuItemDeviceActivation = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemIExport = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemImportarExportarDados = new System.Windows.Forms.ToolStripMenuItem();
+            this.importarDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.conteúdosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusBar = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -74,28 +79,35 @@
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tssBiomConnect = new System.Windows.Forms.ToolStripStatusLabel();
             this.mainToolBar = new System.Windows.Forms.ToolStrip();
+            this.tsbtnDeviceManager = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbtnEmployeeMangaer = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbtnPlanSchedules = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.newToolStripButton = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbtnReports = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.timerHoras = new System.Windows.Forms.Timer(this.components);
-            this.tsbtnDeviceManager = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnEmployeeMangaer = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnPlanSchedules = new System.Windows.Forms.ToolStripButton();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.conteúdosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsbtnReports = new System.Windows.Forms.ToolStripButton();
-            this.leftPanel = new System.Windows.Forms.Panel();
-            this.menuItemIExport = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuItemImportarExportarDados = new System.Windows.Forms.ToolStripMenuItem();
-            this.importarDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pedidoDeDispensaAusenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.leftTaskPane = new XPExplorerBar.TaskPane();
+            this.expFuncDevs = new XPExplorerBar.Expando();
+            this.expAttendance = new XPExplorerBar.Expando();
+            this.expDispensas = new XPExplorerBar.Expando();
+            this.expTools = new XPExplorerBar.Expando();
+            this.expImportExport = new XPExplorerBar.Expando();
             this.mainMenu.SuspendLayout();
             this.statusBar.SuspendLayout();
             this.mainToolBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.leftTaskPane)).BeginInit();
+            this.leftTaskPane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.expFuncDevs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expAttendance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expDispensas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expTools)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expImportExport)).BeginInit();
             this.SuspendLayout();
             // 
             // mainMenu
@@ -207,6 +219,12 @@
             this.TSMnuItemFeriasForm.Text = "Planificação de Férias";
             this.TSMnuItemFeriasForm.Click += new System.EventHandler(this.TSMnuItemFeriasForm_Click);
             // 
+            // pedidoDeDispensaAusenciaToolStripMenuItem
+            // 
+            this.pedidoDeDispensaAusenciaToolStripMenuItem.Name = "pedidoDeDispensaAusenciaToolStripMenuItem";
+            this.pedidoDeDispensaAusenciaToolStripMenuItem.Size = new System.Drawing.Size(279, 22);
+            this.pedidoDeDispensaAusenciaToolStripMenuItem.Text = "Pedido de Dispensa/Ausência";
+            // 
             // funcionariosToolStripMenuItem
             // 
             this.funcionariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -220,21 +238,21 @@
             // TSMnuItemEmpresaForm
             // 
             this.TSMnuItemEmpresaForm.Name = "TSMnuItemEmpresaForm";
-            this.TSMnuItemEmpresaForm.Size = new System.Drawing.Size(231, 22);
+            this.TSMnuItemEmpresaForm.Size = new System.Drawing.Size(197, 22);
             this.TSMnuItemEmpresaForm.Text = "Definições da Empresa";
             this.TSMnuItemEmpresaForm.Click += new System.EventHandler(this.dadosDaEmpresToolStripMenuItem_Click);
             // 
             // TSMnuItemFuncionarioView
             // 
             this.TSMnuItemFuncionarioView.Name = "TSMnuItemFuncionarioView";
-            this.TSMnuItemFuncionarioView.Size = new System.Drawing.Size(231, 22);
+            this.TSMnuItemFuncionarioView.Size = new System.Drawing.Size(197, 22);
             this.TSMnuItemFuncionarioView.Text = "Gestão de Funcionários";
             this.TSMnuItemFuncionarioView.Click += new System.EventHandler(this.funcionáriosToolStripMenuItem_Click);
             // 
             // TSMnuItemFeriadosForm
             // 
             this.TSMnuItemFeriadosForm.Name = "TSMnuItemFeriadosForm";
-            this.TSMnuItemFeriadosForm.Size = new System.Drawing.Size(231, 22);
+            this.TSMnuItemFeriadosForm.Size = new System.Drawing.Size(197, 22);
             this.TSMnuItemFeriadosForm.Text = "Definição de Feriados";
             this.TSMnuItemFeriadosForm.Click += new System.EventHandler(this.TSMnuItemFeriadosForm_Click);
             // 
@@ -314,23 +332,44 @@
             // menuItemDeviceManager
             // 
             this.menuItemDeviceManager.Name = "menuItemDeviceManager";
-            this.menuItemDeviceManager.Size = new System.Drawing.Size(270, 22);
+            this.menuItemDeviceManager.Size = new System.Drawing.Size(255, 22);
             this.menuItemDeviceManager.Text = "Gestor de dispositivos biométricos";
             this.menuItemDeviceManager.Click += new System.EventHandler(this.gestorDeDispositivosToolStripMenuItem_Click);
             // 
             // menuItemUserManager
             // 
             this.menuItemUserManager.Name = "menuItemUserManager";
-            this.menuItemUserManager.Size = new System.Drawing.Size(270, 22);
+            this.menuItemUserManager.Size = new System.Drawing.Size(255, 22);
             this.menuItemUserManager.Text = "Gestor de Utilizadores do sistema";
             this.menuItemUserManager.Click += new System.EventHandler(this.gestorDeUtilizadoresToolStripMenuItem_Click);
             // 
             // TSMnuItemDeviceActivation
             // 
             this.TSMnuItemDeviceActivation.Name = "TSMnuItemDeviceActivation";
-            this.TSMnuItemDeviceActivation.Size = new System.Drawing.Size(270, 22);
+            this.TSMnuItemDeviceActivation.Size = new System.Drawing.Size(255, 22);
             this.TSMnuItemDeviceActivation.Text = "Activação de biométricos ";
             this.TSMnuItemDeviceActivation.Click += new System.EventHandler(this.activaçãoDeToolStripMenuItem_Click);
+            // 
+            // menuItemIExport
+            // 
+            this.menuItemIExport.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuItemImportarExportarDados,
+            this.importarDadosToolStripMenuItem});
+            this.menuItemIExport.Name = "menuItemIExport";
+            this.menuItemIExport.Size = new System.Drawing.Size(255, 22);
+            this.menuItemIExport.Text = "Importação/Exportação de dados";
+            // 
+            // menuItemImportarExportarDados
+            // 
+            this.menuItemImportarExportarDados.Name = "menuItemImportarExportarDados";
+            this.menuItemImportarExportarDados.Size = new System.Drawing.Size(270, 22);
+            this.menuItemImportarExportarDados.Text = "Importar/Exportar Dados Biometricos";
+            // 
+            // importarDadosToolStripMenuItem
+            // 
+            this.importarDadosToolStripMenuItem.Name = "importarDadosToolStripMenuItem";
+            this.importarDadosToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
+            this.importarDadosToolStripMenuItem.Text = "Importar Dados do RH apartir de XLS";
             // 
             // ajudaToolStripMenuItem
             // 
@@ -340,6 +379,14 @@
             this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
             this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.ajudaToolStripMenuItem.Text = "Ajuda";
+            // 
+            // conteúdosToolStripMenuItem
+            // 
+            this.conteúdosToolStripMenuItem.Enabled = false;
+            this.conteúdosToolStripMenuItem.Image = global::mz.betainteractive.sigeas.Properties.Resources.Journal;
+            this.conteúdosToolStripMenuItem.Name = "conteúdosToolStripMenuItem";
+            this.conteúdosToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.conteúdosToolStripMenuItem.Text = "Como usar???";
             // 
             // acercaDeToolStripMenuItem
             // 
@@ -498,15 +545,46 @@
             this.mainToolBar.TabIndex = 29;
             this.mainToolBar.Text = "toolStrip1";
             // 
+            // tsbtnDeviceManager
+            // 
+            this.tsbtnDeviceManager.Image = global::mz.betainteractive.sigeas.Properties.Resources.net_conn_medium;
+            this.tsbtnDeviceManager.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbtnDeviceManager.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnDeviceManager.Margin = new System.Windows.Forms.Padding(5, 1, 0, 2);
+            this.tsbtnDeviceManager.Name = "tsbtnDeviceManager";
+            this.tsbtnDeviceManager.Size = new System.Drawing.Size(161, 39);
+            this.tsbtnDeviceManager.Text = "Gestor de dispositivos";
+            this.tsbtnDeviceManager.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 42);
             // 
+            // tsbtnEmployeeMangaer
+            // 
+            this.tsbtnEmployeeMangaer.Image = global::mz.betainteractive.sigeas.Properties.Resources.users_icon_medium;
+            this.tsbtnEmployeeMangaer.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbtnEmployeeMangaer.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnEmployeeMangaer.Name = "tsbtnEmployeeMangaer";
+            this.tsbtnEmployeeMangaer.Size = new System.Drawing.Size(165, 39);
+            this.tsbtnEmployeeMangaer.Text = "Gestor de Funcionários";
+            this.tsbtnEmployeeMangaer.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 42);
+            // 
+            // tsbtnPlanSchedules
+            // 
+            this.tsbtnPlanSchedules.Image = global::mz.betainteractive.sigeas.Properties.Resources.timezone_medium;
+            this.tsbtnPlanSchedules.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbtnPlanSchedules.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnPlanSchedules.Name = "tsbtnPlanSchedules";
+            this.tsbtnPlanSchedules.Size = new System.Drawing.Size(164, 39);
+            this.tsbtnPlanSchedules.Text = "Planificar Horários       ";
+            this.tsbtnPlanSchedules.Click += new System.EventHandler(this.tsbtnPlanSchedules_Click);
             // 
             // toolStripLabel3
             // 
@@ -518,10 +596,29 @@
             this.newToolStripButton.Name = "newToolStripButton";
             this.newToolStripButton.Size = new System.Drawing.Size(6, 42);
             // 
+            // tsbtnReports
+            // 
+            this.tsbtnReports.Image = global::mz.betainteractive.sigeas.Properties.Resources.reports_medium;
+            this.tsbtnReports.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbtnReports.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnReports.Name = "tsbtnReports";
+            this.tsbtnReports.Size = new System.Drawing.Size(181, 39);
+            this.tsbtnReports.Text = "Relatórios de Assiduidade";
+            this.tsbtnReports.Click += new System.EventHandler(this.tsbtnReports_Click);
+            // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
             this.toolStripSeparator.Size = new System.Drawing.Size(6, 42);
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton1.Image = global::mz.betainteractive.sigeas.Properties.Resources.icon_door;
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 39);
+            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
             // 
             // toolStripSeparator6
             // 
@@ -540,97 +637,120 @@
             this.timerHoras.Interval = 1000;
             this.timerHoras.Tick += new System.EventHandler(this.timerHoras_Tick);
             // 
-            // tsbtnDeviceManager
+            // leftTaskPane
             // 
-            this.tsbtnDeviceManager.Image = global::mz.betainteractive.sigeas.Properties.Resources.net_conn_medium;
-            this.tsbtnDeviceManager.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbtnDeviceManager.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnDeviceManager.Margin = new System.Windows.Forms.Padding(5, 1, 0, 2);
-            this.tsbtnDeviceManager.Name = "tsbtnDeviceManager";
-            this.tsbtnDeviceManager.Size = new System.Drawing.Size(161, 39);
-            this.tsbtnDeviceManager.Text = "Gestor de dispositivos";
-            this.tsbtnDeviceManager.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.leftTaskPane.AutoScrollMargin = new System.Drawing.Size(12, 12);
+            this.leftTaskPane.CustomSettings.GradientEndColor = System.Drawing.Color.MintCream;
+            this.leftTaskPane.CustomSettings.GradientStartColor = System.Drawing.Color.White;
+            this.leftTaskPane.Dock = System.Windows.Forms.DockStyle.Left;
+            this.leftTaskPane.Expandos.AddRange(new XPExplorerBar.Expando[] {
+            this.expFuncDevs,
+            this.expAttendance,
+            this.expDispensas,
+            this.expTools,
+            this.expImportExport});
+            this.leftTaskPane.Location = new System.Drawing.Point(0, 66);
+            this.leftTaskPane.Name = "leftTaskPane";
+            this.leftTaskPane.Size = new System.Drawing.Size(250, 495);
+            this.leftTaskPane.TabIndex = 33;
+            this.leftTaskPane.MouseMove += new System.Windows.Forms.MouseEventHandler(this.leftTaskPane_MouseMove);
             // 
-            // tsbtnEmployeeMangaer
+            // expFuncDevs
             // 
-            this.tsbtnEmployeeMangaer.Image = global::mz.betainteractive.sigeas.Properties.Resources.users_icon_medium;
-            this.tsbtnEmployeeMangaer.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbtnEmployeeMangaer.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnEmployeeMangaer.Name = "tsbtnEmployeeMangaer";
-            this.tsbtnEmployeeMangaer.Size = new System.Drawing.Size(165, 39);
-            this.tsbtnEmployeeMangaer.Text = "Gestor de Funcionários";
-            this.tsbtnEmployeeMangaer.Click += new System.EventHandler(this.toolStripButton2_Click);
+            this.expFuncDevs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.expFuncDevs.Animate = true;
+            this.expFuncDevs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.expFuncDevs.Collapsed = true;
+            this.expFuncDevs.CustomHeaderSettings.NormalTitleColor = System.Drawing.Color.Black;
+            this.expFuncDevs.CustomHeaderSettings.NormalTitleHotColor = System.Drawing.Color.DarkOrchid;
+            this.expFuncDevs.CustomHeaderSettings.TitleFont = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expFuncDevs.CustomSettings.WatermarkAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.expFuncDevs.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expFuncDevs.Location = new System.Drawing.Point(12, 12);
+            this.expFuncDevs.MinimumSize = new System.Drawing.Size(226, 45);
+            this.expFuncDevs.Name = "expFuncDevs";
+            this.expFuncDevs.Size = new System.Drawing.Size(226, 45);
+            this.expFuncDevs.TabIndex = 0;
+            this.expFuncDevs.Text = "Funcionários nos dispositivos";
+            this.expFuncDevs.TitleImage = global::mz.betainteractive.sigeas.Properties.Resources.func_devices_medium_icon;
             // 
-            // tsbtnPlanSchedules
+            // expAttendance
             // 
-            this.tsbtnPlanSchedules.Image = global::mz.betainteractive.sigeas.Properties.Resources.timezone_medium;
-            this.tsbtnPlanSchedules.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbtnPlanSchedules.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnPlanSchedules.Name = "tsbtnPlanSchedules";
-            this.tsbtnPlanSchedules.Size = new System.Drawing.Size(164, 39);
-            this.tsbtnPlanSchedules.Text = "Planificar Horários       ";
+            this.expAttendance.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.expAttendance.Animate = true;
+            this.expAttendance.Collapsed = true;
+            this.expAttendance.CustomHeaderSettings.NormalBackColor = System.Drawing.Color.Transparent;
+            this.expAttendance.CustomHeaderSettings.NormalTitleColor = System.Drawing.Color.Black;
+            this.expAttendance.CustomHeaderSettings.NormalTitleHotColor = System.Drawing.Color.DarkOrchid;
+            this.expAttendance.CustomHeaderSettings.TitleFont = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expAttendance.Font = new System.Drawing.Font("Segoe MDL2 Assets", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expAttendance.Location = new System.Drawing.Point(12, 69);
+            this.expAttendance.MinimumSize = new System.Drawing.Size(226, 45);
+            this.expAttendance.Name = "expAttendance";
+            this.expAttendance.Size = new System.Drawing.Size(226, 45);
+            this.expAttendance.TabIndex = 1;
+            this.expAttendance.Text = "Assiduidade";
+            this.expAttendance.TitleImage = global::mz.betainteractive.sigeas.Properties.Resources.attendance_medium_icon;
             // 
-            // toolStripDropDownButton1
+            // expDispensas
             // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton1.Image = global::mz.betainteractive.sigeas.Properties.Resources.icon_door;
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 39);
-            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            this.expDispensas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.expDispensas.Animate = true;
+            this.expDispensas.Collapsed = true;
+            this.expDispensas.CustomHeaderSettings.NormalBackColor = System.Drawing.Color.Transparent;
+            this.expDispensas.CustomHeaderSettings.NormalTitleColor = System.Drawing.Color.Black;
+            this.expDispensas.CustomHeaderSettings.NormalTitleHotColor = System.Drawing.Color.DarkOrchid;
+            this.expDispensas.CustomHeaderSettings.TitleFont = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expDispensas.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expDispensas.Location = new System.Drawing.Point(12, 126);
+            this.expDispensas.MinimumSize = new System.Drawing.Size(226, 45);
+            this.expDispensas.Name = "expDispensas";
+            this.expDispensas.Size = new System.Drawing.Size(226, 45);
+            this.expDispensas.TabIndex = 2;
+            this.expDispensas.Text = "Dispensas ou Férias";
+            this.expDispensas.TitleImage = global::mz.betainteractive.sigeas.Properties.Resources.calendar_medium_icon;
             // 
-            // conteúdosToolStripMenuItem
+            // expTools
             // 
-            this.conteúdosToolStripMenuItem.Enabled = false;
-            this.conteúdosToolStripMenuItem.Image = global::mz.betainteractive.sigeas.Properties.Resources.Journal;
-            this.conteúdosToolStripMenuItem.Name = "conteúdosToolStripMenuItem";
-            this.conteúdosToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.conteúdosToolStripMenuItem.Text = "Como usar???";
+            this.expTools.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.expTools.Animate = true;
+            this.expTools.Collapsed = true;
+            this.expTools.CustomHeaderSettings.NormalBackColor = System.Drawing.Color.Transparent;
+            this.expTools.CustomHeaderSettings.NormalTitleColor = System.Drawing.Color.Black;
+            this.expTools.CustomHeaderSettings.NormalTitleHotColor = System.Drawing.Color.DarkOrchid;
+            this.expTools.CustomHeaderSettings.TitleFont = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expTools.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expTools.Location = new System.Drawing.Point(12, 183);
+            this.expTools.MinimumSize = new System.Drawing.Size(226, 45);
+            this.expTools.Name = "expTools";
+            this.expTools.Size = new System.Drawing.Size(226, 45);
+            this.expTools.TabIndex = 3;
+            this.expTools.Text = "Ferramentas";
+            this.expTools.TitleImage = global::mz.betainteractive.sigeas.Properties.Resources.utilities_medium_icon;
             // 
-            // tsbtnReports
+            // expImportExport
             // 
-            this.tsbtnReports.Image = global::mz.betainteractive.sigeas.Properties.Resources.reports_medium;
-            this.tsbtnReports.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbtnReports.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnReports.Name = "tsbtnReports";
-            this.tsbtnReports.Size = new System.Drawing.Size(181, 39);
-            this.tsbtnReports.Text = "Relatórios de Assiduidade";
-            // 
-            // leftPanel
-            // 
-            this.leftPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.leftPanel.Location = new System.Drawing.Point(0, 66);
-            this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(222, 495);
-            this.leftPanel.TabIndex = 31;
-            // 
-            // menuItemIExport
-            // 
-            this.menuItemIExport.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuItemImportarExportarDados,
-            this.importarDadosToolStripMenuItem});
-            this.menuItemIExport.Name = "menuItemIExport";
-            this.menuItemIExport.Size = new System.Drawing.Size(255, 22);
-            this.menuItemIExport.Text = "Importação/Exportação de dados";
-            // 
-            // menuItemImportarExportarDados
-            // 
-            this.menuItemImportarExportarDados.Name = "menuItemImportarExportarDados";
-            this.menuItemImportarExportarDados.Size = new System.Drawing.Size(270, 22);
-            this.menuItemImportarExportarDados.Text = "Importar/Exportar Dados Biometricos";
-            // 
-            // importarDadosToolStripMenuItem
-            // 
-            this.importarDadosToolStripMenuItem.Name = "importarDadosToolStripMenuItem";
-            this.importarDadosToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
-            this.importarDadosToolStripMenuItem.Text = "Importar Dados do RH apartir de XLS";
-            // 
-            // pedidoDeDispensaAusenciaToolStripMenuItem
-            // 
-            this.pedidoDeDispensaAusenciaToolStripMenuItem.Name = "pedidoDeDispensaAusenciaToolStripMenuItem";
-            this.pedidoDeDispensaAusenciaToolStripMenuItem.Size = new System.Drawing.Size(279, 22);
-            this.pedidoDeDispensaAusenciaToolStripMenuItem.Text = "Pedido de Dispensa/Ausência";
+            this.expImportExport.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.expImportExport.Animate = true;
+            this.expImportExport.Collapsed = true;
+            this.expImportExport.CustomHeaderSettings.NormalBackColor = System.Drawing.Color.Transparent;
+            this.expImportExport.CustomHeaderSettings.NormalTitleColor = System.Drawing.Color.Black;
+            this.expImportExport.CustomHeaderSettings.NormalTitleHotColor = System.Drawing.Color.DarkOrchid;
+            this.expImportExport.CustomHeaderSettings.TitleFont = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expImportExport.CustomHeaderSettings.TitleRadius = 10;
+            this.expImportExport.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expImportExport.Location = new System.Drawing.Point(12, 240);
+            this.expImportExport.MinimumSize = new System.Drawing.Size(226, 45);
+            this.expImportExport.Name = "expImportExport";
+            this.expImportExport.Size = new System.Drawing.Size(226, 45);
+            this.expImportExport.TabIndex = 4;
+            this.expImportExport.Text = "Importar/Exportar Dados";
+            this.expImportExport.TitleImage = global::mz.betainteractive.sigeas.Properties.Resources.export_medium_icon;
             // 
             // MainView
             // 
@@ -638,7 +758,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1044, 585);
-            this.Controls.Add(this.leftPanel);
+            this.Controls.Add(this.leftTaskPane);
             this.Controls.Add(this.mainToolBar);
             this.Controls.Add(this.mainMenu);
             this.Controls.Add(this.statusBar);
@@ -647,7 +767,6 @@
             this.Name = "MainView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Gestão de Assiduidades (Sigeas)";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.Shown += new System.EventHandler(this.MainView_Shown);
@@ -658,6 +777,13 @@
             this.statusBar.PerformLayout();
             this.mainToolBar.ResumeLayout(false);
             this.mainToolBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.leftTaskPane)).EndInit();
+            this.leftTaskPane.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.expFuncDevs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expAttendance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expDispensas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expTools)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expImportExport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -724,11 +850,16 @@
         private System.Windows.Forms.ToolStripMenuItem TSMnuItemFeriadosForm;
         private System.Windows.Forms.ToolStripButton tsbtnPlanSchedules;
         private System.Windows.Forms.ToolStripButton tsbtnReports;
-        private System.Windows.Forms.Panel leftPanel;
         private System.Windows.Forms.ToolStripMenuItem menuItemIExport;
         private System.Windows.Forms.ToolStripMenuItem menuItemImportarExportarDados;
         private System.Windows.Forms.ToolStripMenuItem importarDadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pedidoDeDispensaAusenciaToolStripMenuItem;
+        private XPExplorerBar.TaskPane leftTaskPane;
+        private XPExplorerBar.Expando expFuncDevs;
+        private XPExplorerBar.Expando expAttendance;
+        private XPExplorerBar.Expando expDispensas;
+        private XPExplorerBar.Expando expTools;
+        private XPExplorerBar.Expando expImportExport;
     }
 }
 

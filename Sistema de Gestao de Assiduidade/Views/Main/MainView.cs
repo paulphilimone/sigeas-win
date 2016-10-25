@@ -14,6 +14,7 @@ using mz.betainteractive.utilities.module.Components;
 using mz.betainteractive.sigeas.Views.FuncionarioDevices;
 using mz.betainteractive.sigeas.Views.ImportExport;
 using mz.betainteractive.sigeas.Views.Reports;
+using XPExplorerBar;
 
 
 namespace mz.betainteractive.sigeas.Views.Main {
@@ -524,6 +525,24 @@ namespace mz.betainteractive.sigeas.Views.Main {
         private void relátoriosDeAsseduidadeToolStripMenuItem_Click(object sender, EventArgs e) {
             this.reportsCreatorView.Visible = true;
         }
+
+        private void tsbtnPlanSchedules_Click(object sender, EventArgs e) {
+            PlanificacaoHorarioForm.Show(this);
+        }
+
+        private void tsbtnReports_Click(object sender, EventArgs e) {
+            this.reportsCreatorView.Visible = true;
+        }
+
+        private void leftTaskPane_MouseMove(object sender, MouseEventArgs e) {
+            foreach (Expando exp in leftTaskPane.Expandos)
+            {
+                //exp.Refresh();
+            }
+            
+        }
+
+
 
      
     }
