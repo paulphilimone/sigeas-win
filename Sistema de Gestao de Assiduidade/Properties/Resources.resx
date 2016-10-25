@@ -142,9 +142,6 @@
   <data name="HAND4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\HAND4.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MISC_Fingerprint_Biometric_DSU_lg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\MISC_Fingerprint_Biometric_DSU_lg.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="fptext" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\fptext.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -172,20 +169,11 @@
   <data name="fingerprint" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\fingerprint.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_4374282_fingerprint_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\4374282-fingerprint-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="users_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\users-icon2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="untitled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\untitled.PNG;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="door_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\door_icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="embassy_security_enroll_fingerprints1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\embassy-security-enroll-fingerprints1.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="users_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\users-icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,23 +196,14 @@
   <data name="fp_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\fp-icon2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="stock_photo_finger_print_on_black_background_49973497" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\stock-photo-finger-print-on-black-background-49973497.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="fingerprint4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\fingerprint4.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Imagem_de_um_glogo_terrestre_num_ambiente_azul1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\Imagem-de-um-glogo-terrestre-num-ambiente-azul1.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Discovery_City_Lights_Globe" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\Discovery-City-Lights-Globe.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="HAND1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\HAND.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SuperStock_1566_447486" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\SuperStock_1566-447486.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="globe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\globe.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -273,5 +252,20 @@
   </data>
   <data name="feriados" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\externaldata\feriados.xlsx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="df8ceb91" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\df8ceb91.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="net_conn_medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\net-conn-medium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reports_medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\reports-medium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="timezone_medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\timezone-medium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="users_icon_medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\users-icon-medium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

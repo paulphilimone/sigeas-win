@@ -73,16 +73,6 @@ namespace mz.betainteractive.sigeas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _4374282_fingerprint_background {
-            get {
-                object obj = ResourceManager.GetObject("_4374282_fingerprint_background", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap beta {
             get {
                 object obj = ResourceManager.GetObject("beta", resourceCulture);
@@ -143,6 +133,16 @@ namespace mz.betainteractive.sigeas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap df8ceb91 {
+            get {
+                object obj = ResourceManager.GetObject("df8ceb91", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dialog {
             get {
                 object obj = ResourceManager.GetObject("dialog", resourceCulture);
@@ -193,16 +193,6 @@ namespace mz.betainteractive.sigeas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Discovery_City_Lights_Globe {
-            get {
-                object obj = ResourceManager.GetObject("Discovery_City_Lights_Globe", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap door_icon {
             get {
                 object obj = ResourceManager.GetObject("door_icon", resourceCulture);
@@ -216,16 +206,6 @@ namespace mz.betainteractive.sigeas.Properties {
         internal static System.Drawing.Bitmap DoorIcon_RGB_72 {
             get {
                 object obj = ResourceManager.GetObject("DoorIcon_RGB_72", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap embassy_security_enroll_fingerprints1 {
-            get {
-                object obj = ResourceManager.GetObject("embassy_security_enroll_fingerprints1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -471,16 +451,6 @@ namespace mz.betainteractive.sigeas.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap MISC_Fingerprint_Biometric_DSU_lg {
-            get {
-                object obj = ResourceManager.GetObject("MISC_Fingerprint_Biometric_DSU_lg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] mozambique {
@@ -503,9 +473,29 @@ namespace mz.betainteractive.sigeas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap net_conn_medium {
+            get {
+                object obj = ResourceManager.GetObject("net_conn_medium", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Network_ConnectTo {
             get {
                 object obj = ResourceManager.GetObject("Network_ConnectTo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reports_medium {
+            get {
+                object obj = ResourceManager.GetObject("reports_medium", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -523,19 +513,9 @@ namespace mz.betainteractive.sigeas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap stock_photo_finger_print_on_black_background_49973497 {
+        internal static System.Drawing.Bitmap timezone_medium {
             get {
-                object obj = ResourceManager.GetObject("stock_photo_finger_print_on_black_background_49973497", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap SuperStock_1566_447486 {
-            get {
-                object obj = ResourceManager.GetObject("SuperStock_1566_447486", resourceCulture);
+                object obj = ResourceManager.GetObject("timezone_medium", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -553,9 +533,9 @@ namespace mz.betainteractive.sigeas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap untitled {
+        internal static System.Drawing.Bitmap users_icon {
             get {
-                object obj = ResourceManager.GetObject("untitled", resourceCulture);
+                object obj = ResourceManager.GetObject("users_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -563,9 +543,9 @@ namespace mz.betainteractive.sigeas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap users_icon {
+        internal static System.Drawing.Bitmap users_icon_medium {
             get {
-                object obj = ResourceManager.GetObject("users_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("users_icon_medium", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
