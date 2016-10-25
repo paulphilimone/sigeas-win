@@ -833,6 +833,8 @@ namespace mz.betainteractive.sigeas.Views.DeviceManagement {
             string prodCode = "";
             string SN = "";
             string firmVer = "";
+            string fpAlg = "";
+            string tftBw = "";
 
             int capFps = 0;
             int capUsers = 0;
@@ -855,6 +857,8 @@ namespace mz.betainteractive.sigeas.Views.DeviceManagement {
                 deviceIO.GetProductCode(out prodCode);
                 deviceIO.GetSerialNumber(out SN);
                 deviceIO.GetFirmwareVersion(ref firmVer);
+                tftBw = deviceIO.IsTFTMachine() ? "TFT" : "B&w";
+                fpAlg = deviceIO.GetFPVersion();
 
                 deviceIO.GetDeviceStatus(1, ref nAdmins);
                 deviceIO.GetDeviceStatus(2, ref nUsers);
@@ -876,6 +880,8 @@ namespace mz.betainteractive.sigeas.Views.DeviceManagement {
                 txtInfoBio_ProdCode.Text = prodCode;
                 txtInfoBio_SN.Text = SN;
                 txtInfoBio_FirmVer.Text = firmVer;
+                txtInfoBio_FPVer.Text = fpAlg;
+                txtInfoBio_TftOrBw.Text = tftBw;
 
                 lbInfoBio_nAdmins.Text = nAdmins.ToString();
                 lbInfoBio_nUsers.Text = nUsers.ToString();

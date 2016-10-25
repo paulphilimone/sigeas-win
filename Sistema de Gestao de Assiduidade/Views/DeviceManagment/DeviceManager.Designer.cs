@@ -241,6 +241,10 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.BtnAddDevice = new System.Windows.Forms.Button();
+            this.txtInfoBio_FPVer = new System.Windows.Forms.TextBox();
+            this.label57 = new System.Windows.Forms.Label();
+            this.txtInfoBio_TftOrBw = new System.Windows.Forms.TextBox();
+            this.label58 = new System.Windows.Forms.Label();
             this.TreeDeviceContextMenuStrip.SuspendLayout();
             this.tabControlDevMan.SuspendLayout();
             this.tabPorta.SuspendLayout();
@@ -357,7 +361,7 @@
             this.toolStripSeparator4,
             this.tsMenuTree_Cancelar});
             this.TreeDeviceContextMenuStrip.Name = "contextMenuStrip1";
-            this.TreeDeviceContextMenuStrip.Size = new System.Drawing.Size(186, 176);
+            this.TreeDeviceContextMenuStrip.Size = new System.Drawing.Size(186, 154);
             this.TreeDeviceContextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.TreeDeviceContextMenuStrip_Opening);
             // 
             // tsMenuTree_Atualizar
@@ -454,9 +458,9 @@
             // 
             // tabControlDevMan
             // 
-            this.tabControlDevMan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControlDevMan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControlDevMan.Controls.Add(this.tabPorta);
             this.tabControlDevMan.Controls.Add(this.tabLocals);
             this.tabControlDevMan.Controls.Add(this.tabUnlocatedDevice);
@@ -625,7 +629,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(113, 14);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 13);
+            this.label6.Size = new System.Drawing.Size(77, 13);
             this.label6.TabIndex = 12;
             this.label6.Text = "Taxa de trans.";
             // 
@@ -701,7 +705,7 @@
             this.RbDoorDeviceUSB1.Enabled = false;
             this.RbDoorDeviceUSB1.Location = new System.Drawing.Point(204, 31);
             this.RbDoorDeviceUSB1.Name = "RbDoorDeviceUSB1";
-            this.RbDoorDeviceUSB1.Size = new System.Drawing.Size(47, 17);
+            this.RbDoorDeviceUSB1.Size = new System.Drawing.Size(46, 17);
             this.RbDoorDeviceUSB1.TabIndex = 2;
             this.RbDoorDeviceUSB1.Text = "USB";
             this.RbDoorDeviceUSB1.UseVisualStyleBackColor = true;
@@ -712,7 +716,7 @@
             this.RbDoorDeviceRS1.Enabled = false;
             this.RbDoorDeviceRS1.Location = new System.Drawing.Point(101, 31);
             this.RbDoorDeviceRS1.Name = "RbDoorDeviceRS1";
-            this.RbDoorDeviceRS1.Size = new System.Drawing.Size(81, 17);
+            this.RbDoorDeviceRS1.Size = new System.Drawing.Size(79, 17);
             this.RbDoorDeviceRS1.TabIndex = 1;
             this.RbDoorDeviceRS1.Text = "RS232/485";
             this.RbDoorDeviceRS1.UseVisualStyleBackColor = true;
@@ -724,7 +728,7 @@
             this.RbDoorDeviceTCP1.Enabled = false;
             this.RbDoorDeviceTCP1.Location = new System.Drawing.Point(24, 31);
             this.RbDoorDeviceTCP1.Name = "RbDoorDeviceTCP1";
-            this.RbDoorDeviceTCP1.Size = new System.Drawing.Size(61, 17);
+            this.RbDoorDeviceTCP1.Size = new System.Drawing.Size(58, 17);
             this.RbDoorDeviceTCP1.TabIndex = 0;
             this.RbDoorDeviceTCP1.TabStop = true;
             this.RbDoorDeviceTCP1.Text = "TCP/IP";
@@ -913,7 +917,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(113, 14);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(78, 13);
+            this.label12.Size = new System.Drawing.Size(77, 13);
             this.label12.TabIndex = 12;
             this.label12.Text = "Taxa de trans.";
             // 
@@ -989,7 +993,7 @@
             this.RbDoorDeviceUSB2.Enabled = false;
             this.RbDoorDeviceUSB2.Location = new System.Drawing.Point(204, 31);
             this.RbDoorDeviceUSB2.Name = "RbDoorDeviceUSB2";
-            this.RbDoorDeviceUSB2.Size = new System.Drawing.Size(47, 17);
+            this.RbDoorDeviceUSB2.Size = new System.Drawing.Size(46, 17);
             this.RbDoorDeviceUSB2.TabIndex = 2;
             this.RbDoorDeviceUSB2.Text = "USB";
             this.RbDoorDeviceUSB2.UseVisualStyleBackColor = true;
@@ -1000,7 +1004,7 @@
             this.RbDoorDeviceRS2.Enabled = false;
             this.RbDoorDeviceRS2.Location = new System.Drawing.Point(101, 31);
             this.RbDoorDeviceRS2.Name = "RbDoorDeviceRS2";
-            this.RbDoorDeviceRS2.Size = new System.Drawing.Size(81, 17);
+            this.RbDoorDeviceRS2.Size = new System.Drawing.Size(79, 17);
             this.RbDoorDeviceRS2.TabIndex = 1;
             this.RbDoorDeviceRS2.Text = "RS232/485";
             this.RbDoorDeviceRS2.UseVisualStyleBackColor = true;
@@ -1012,7 +1016,7 @@
             this.RbDoorDeviceTCP2.Enabled = false;
             this.RbDoorDeviceTCP2.Location = new System.Drawing.Point(24, 31);
             this.RbDoorDeviceTCP2.Name = "RbDoorDeviceTCP2";
-            this.RbDoorDeviceTCP2.Size = new System.Drawing.Size(61, 17);
+            this.RbDoorDeviceTCP2.Size = new System.Drawing.Size(58, 17);
             this.RbDoorDeviceTCP2.TabIndex = 0;
             this.RbDoorDeviceTCP2.TabStop = true;
             this.RbDoorDeviceTCP2.Text = "TCP/IP";
@@ -1178,7 +1182,7 @@
             this.LabelDoorDevice1.AutoSize = true;
             this.LabelDoorDevice1.Location = new System.Drawing.Point(14, 21);
             this.LabelDoorDevice1.Name = "LabelDoorDevice1";
-            this.LabelDoorDevice1.Size = new System.Drawing.Size(155, 13);
+            this.LabelDoorDevice1.Size = new System.Drawing.Size(153, 13);
             this.LabelDoorDevice1.TabIndex = 21;
             this.LabelDoorDevice1.Text = "Biométrico 1 (Entrada/Saida)";
             // 
@@ -1225,7 +1229,7 @@
             this.RBtnDoor_TwoDevices.AutoSize = true;
             this.RBtnDoor_TwoDevices.Location = new System.Drawing.Point(138, 23);
             this.RBtnDoor_TwoDevices.Name = "RBtnDoor_TwoDevices";
-            this.RBtnDoor_TwoDevices.Size = new System.Drawing.Size(88, 17);
+            this.RBtnDoor_TwoDevices.Size = new System.Drawing.Size(95, 17);
             this.RBtnDoor_TwoDevices.TabIndex = 1;
             this.RBtnDoor_TwoDevices.Text = "2 Biométricos";
             this.RBtnDoor_TwoDevices.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1237,7 +1241,7 @@
             this.RBtnDoor_OneDevice.Checked = true;
             this.RBtnDoor_OneDevice.Location = new System.Drawing.Point(29, 23);
             this.RBtnDoor_OneDevice.Name = "RBtnDoor_OneDevice";
-            this.RBtnDoor_OneDevice.Size = new System.Drawing.Size(83, 17);
+            this.RBtnDoor_OneDevice.Size = new System.Drawing.Size(88, 17);
             this.RBtnDoor_OneDevice.TabIndex = 0;
             this.RBtnDoor_OneDevice.TabStop = true;
             this.RBtnDoor_OneDevice.Text = "1 Biométrico";
@@ -1595,7 +1599,7 @@
             this.label40.AutoSize = true;
             this.label40.Location = new System.Drawing.Point(113, 14);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(78, 13);
+            this.label40.Size = new System.Drawing.Size(77, 13);
             this.label40.TabIndex = 12;
             this.label40.Text = "Taxa de trans.";
             // 
@@ -1671,7 +1675,7 @@
             this.RbLocalDeviceUSB.Enabled = false;
             this.RbLocalDeviceUSB.Location = new System.Drawing.Point(204, 31);
             this.RbLocalDeviceUSB.Name = "RbLocalDeviceUSB";
-            this.RbLocalDeviceUSB.Size = new System.Drawing.Size(47, 17);
+            this.RbLocalDeviceUSB.Size = new System.Drawing.Size(46, 17);
             this.RbLocalDeviceUSB.TabIndex = 2;
             this.RbLocalDeviceUSB.Text = "USB";
             this.RbLocalDeviceUSB.UseVisualStyleBackColor = true;
@@ -1682,7 +1686,7 @@
             this.RbLocalDeviceRS.Enabled = false;
             this.RbLocalDeviceRS.Location = new System.Drawing.Point(101, 31);
             this.RbLocalDeviceRS.Name = "RbLocalDeviceRS";
-            this.RbLocalDeviceRS.Size = new System.Drawing.Size(81, 17);
+            this.RbLocalDeviceRS.Size = new System.Drawing.Size(79, 17);
             this.RbLocalDeviceRS.TabIndex = 1;
             this.RbLocalDeviceRS.Text = "RS232/485";
             this.RbLocalDeviceRS.UseVisualStyleBackColor = true;
@@ -1694,7 +1698,7 @@
             this.RbLocalDeviceTCP.Enabled = false;
             this.RbLocalDeviceTCP.Location = new System.Drawing.Point(24, 31);
             this.RbLocalDeviceTCP.Name = "RbLocalDeviceTCP";
-            this.RbLocalDeviceTCP.Size = new System.Drawing.Size(61, 17);
+            this.RbLocalDeviceTCP.Size = new System.Drawing.Size(58, 17);
             this.RbLocalDeviceTCP.TabIndex = 0;
             this.RbLocalDeviceTCP.TabStop = true;
             this.RbLocalDeviceTCP.Text = "TCP/IP";
@@ -1905,7 +1909,7 @@
             this.label50.AutoSize = true;
             this.label50.Location = new System.Drawing.Point(113, 14);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(78, 13);
+            this.label50.Size = new System.Drawing.Size(77, 13);
             this.label50.TabIndex = 12;
             this.label50.Text = "Taxa de trans.";
             // 
@@ -1981,7 +1985,7 @@
             this.RbDeviceUSB.Enabled = false;
             this.RbDeviceUSB.Location = new System.Drawing.Point(377, 21);
             this.RbDeviceUSB.Name = "RbDeviceUSB";
-            this.RbDeviceUSB.Size = new System.Drawing.Size(47, 17);
+            this.RbDeviceUSB.Size = new System.Drawing.Size(46, 17);
             this.RbDeviceUSB.TabIndex = 2;
             this.RbDeviceUSB.Text = "USB";
             this.RbDeviceUSB.UseVisualStyleBackColor = true;
@@ -1992,7 +1996,7 @@
             this.RbDeviceRS.Enabled = false;
             this.RbDeviceRS.Location = new System.Drawing.Point(197, 21);
             this.RbDeviceRS.Name = "RbDeviceRS";
-            this.RbDeviceRS.Size = new System.Drawing.Size(81, 17);
+            this.RbDeviceRS.Size = new System.Drawing.Size(79, 17);
             this.RbDeviceRS.TabIndex = 1;
             this.RbDeviceRS.Text = "RS232/485";
             this.RbDeviceRS.UseVisualStyleBackColor = true;
@@ -2004,7 +2008,7 @@
             this.RbDeviceTCP.Enabled = false;
             this.RbDeviceTCP.Location = new System.Drawing.Point(65, 21);
             this.RbDeviceTCP.Name = "RbDeviceTCP";
-            this.RbDeviceTCP.Size = new System.Drawing.Size(61, 17);
+            this.RbDeviceTCP.Size = new System.Drawing.Size(58, 17);
             this.RbDeviceTCP.TabIndex = 0;
             this.RbDeviceTCP.TabStop = true;
             this.RbDeviceTCP.Text = "TCP/IP";
@@ -2071,7 +2075,7 @@
             // BtnGetInfoBio
             // 
             this.BtnGetInfoBio.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGetInfoBio.Location = new System.Drawing.Point(465, 397);
+            this.BtnGetInfoBio.Location = new System.Drawing.Point(465, 407);
             this.BtnGetInfoBio.Name = "BtnGetInfoBio";
             this.BtnGetInfoBio.Size = new System.Drawing.Size(163, 25);
             this.BtnGetInfoBio.TabIndex = 6;
@@ -2089,7 +2093,7 @@
             this.grpBioInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpBioInfo.Location = new System.Drawing.Point(8, 10);
             this.grpBioInfo.Name = "grpBioInfo";
-            this.grpBioInfo.Size = new System.Drawing.Size(630, 371);
+            this.grpBioInfo.Size = new System.Drawing.Size(630, 391);
             this.grpBioInfo.TabIndex = 5;
             this.grpBioInfo.TabStop = false;
             // 
@@ -2113,6 +2117,10 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.txtInfoBio_TftOrBw);
+            this.groupBox4.Controls.Add(this.label58);
+            this.groupBox4.Controls.Add(this.txtInfoBio_FPVer);
+            this.groupBox4.Controls.Add(this.label57);
             this.groupBox4.Controls.Add(this.txtInfoBio_FirmVer);
             this.groupBox4.Controls.Add(this.txtInfoBio_SN);
             this.groupBox4.Controls.Add(this.txtInfoBio_ProdCode);
@@ -2122,16 +2130,16 @@
             this.groupBox4.Controls.Add(this.label17);
             this.groupBox4.Controls.Add(this.label20);
             this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(9, 67);
+            this.groupBox4.Location = new System.Drawing.Point(9, 54);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(293, 140);
+            this.groupBox4.Size = new System.Drawing.Size(293, 184);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Informação do produto";
             // 
             // txtInfoBio_FirmVer
             // 
-            this.txtInfoBio_FirmVer.Location = new System.Drawing.Point(126, 102);
+            this.txtInfoBio_FirmVer.Location = new System.Drawing.Point(135, 102);
             this.txtInfoBio_FirmVer.Name = "txtInfoBio_FirmVer";
             this.txtInfoBio_FirmVer.ReadOnly = true;
             this.txtInfoBio_FirmVer.Size = new System.Drawing.Size(144, 22);
@@ -2139,7 +2147,7 @@
             // 
             // txtInfoBio_SN
             // 
-            this.txtInfoBio_SN.Location = new System.Drawing.Point(126, 77);
+            this.txtInfoBio_SN.Location = new System.Drawing.Point(135, 77);
             this.txtInfoBio_SN.Name = "txtInfoBio_SN";
             this.txtInfoBio_SN.ReadOnly = true;
             this.txtInfoBio_SN.Size = new System.Drawing.Size(144, 22);
@@ -2147,7 +2155,7 @@
             // 
             // txtInfoBio_ProdCode
             // 
-            this.txtInfoBio_ProdCode.Location = new System.Drawing.Point(126, 52);
+            this.txtInfoBio_ProdCode.Location = new System.Drawing.Point(135, 52);
             this.txtInfoBio_ProdCode.Name = "txtInfoBio_ProdCode";
             this.txtInfoBio_ProdCode.ReadOnly = true;
             this.txtInfoBio_ProdCode.Size = new System.Drawing.Size(144, 22);
@@ -2155,7 +2163,7 @@
             // 
             // txtInfoBio_VendorName
             // 
-            this.txtInfoBio_VendorName.Location = new System.Drawing.Point(126, 27);
+            this.txtInfoBio_VendorName.Location = new System.Drawing.Point(135, 27);
             this.txtInfoBio_VendorName.Name = "txtInfoBio_VendorName";
             this.txtInfoBio_VendorName.ReadOnly = true;
             this.txtInfoBio_VendorName.Size = new System.Drawing.Size(144, 22);
@@ -2166,7 +2174,7 @@
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(14, 105);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(107, 13);
+            this.label19.Size = new System.Drawing.Size(106, 13);
             this.label19.TabIndex = 3;
             this.label19.Text = "Versão do firmware";
             // 
@@ -2215,7 +2223,7 @@
             this.groupBox12.Controls.Add(this.label32);
             this.groupBox12.Controls.Add(this.label33);
             this.groupBox12.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox12.Location = new System.Drawing.Point(312, 67);
+            this.groupBox12.Location = new System.Drawing.Point(312, 54);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(308, 284);
             this.groupBox12.TabIndex = 0;
@@ -2433,7 +2441,7 @@
             this.groupBox11.Controls.Add(this.label21);
             this.groupBox11.Controls.Add(this.label22);
             this.groupBox11.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox11.Location = new System.Drawing.Point(9, 213);
+            this.groupBox11.Location = new System.Drawing.Point(9, 244);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(293, 138);
             this.groupBox11.TabIndex = 2;
@@ -2557,6 +2565,40 @@
             this.BtnAddDevice.Text = "Adicionar Biométrico";
             this.BtnAddDevice.UseVisualStyleBackColor = true;
             this.BtnAddDevice.Click += new System.EventHandler(this.BtnAddDevice_Click);
+            // 
+            // txtInfoBio_FPVer
+            // 
+            this.txtInfoBio_FPVer.Location = new System.Drawing.Point(135, 127);
+            this.txtInfoBio_FPVer.Name = "txtInfoBio_FPVer";
+            this.txtInfoBio_FPVer.ReadOnly = true;
+            this.txtInfoBio_FPVer.Size = new System.Drawing.Size(144, 22);
+            this.txtInfoBio_FPVer.TabIndex = 9;
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(14, 130);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(112, 13);
+            this.label57.TabIndex = 8;
+            this.label57.Text = "Ver. do Algoritmo FP";
+            // 
+            // txtInfoBio_TftOrBw
+            // 
+            this.txtInfoBio_TftOrBw.Location = new System.Drawing.Point(135, 152);
+            this.txtInfoBio_TftOrBw.Name = "txtInfoBio_TftOrBw";
+            this.txtInfoBio_TftOrBw.ReadOnly = true;
+            this.txtInfoBio_TftOrBw.Size = new System.Drawing.Size(144, 22);
+            this.txtInfoBio_TftOrBw.TabIndex = 11;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(14, 155);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(85, 13);
+            this.label58.TabIndex = 10;
+            this.label58.Text = "Tipo de Display";
             // 
             // DeviceManager
             // 
@@ -2895,5 +2937,9 @@
         private System.Windows.Forms.ComboBox CBoxDoorType;
         private System.Windows.Forms.ComboBox CBoxDepartamento;
         private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.TextBox txtInfoBio_TftOrBw;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.TextBox txtInfoBio_FPVer;
+        private System.Windows.Forms.Label label57;
     }
 }
