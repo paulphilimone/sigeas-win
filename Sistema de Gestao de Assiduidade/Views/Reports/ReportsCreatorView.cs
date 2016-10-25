@@ -444,6 +444,7 @@ namespace mz.betainteractive.sigeas.Views.Reports {
             ReportsModelConverter.AddMonthStatsByDept(dataSet, monthAttCalcs);
 
             GeneralStatsReport crReport = new GeneralStatsReport();
+            //CrystalReport1 crReport = new CrystalReport1();
             crReport.SetDataSource(dataSet);
             crptViewer.ReportSource = crReport;
             crptViewer.RefreshReport();
