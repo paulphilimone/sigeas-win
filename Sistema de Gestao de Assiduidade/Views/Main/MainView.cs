@@ -1,34 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Collections;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Windows.Forms;
-using XPExplorerBar;
-using mz.betainteractive.sigeas;
-using mz.betainteractive.sigeas.settings;
-using mz.betainteractive.sigeas.Utilities;
-using mz.betainteractive.sigeas.model.ca;
 using mz.betainteractive.sigeas.Models.Entities;
-using mz.betainteractive.sigeas.Views;
 using mz.betainteractive.sigeas.Views.DeviceManagement;
 using mz.betainteractive.sigeas.Models;
-using mz.betainteractive.sigeas.Views.Main;
 using mz.betainteractive.sigeas.Views.Empresas;
 using mz.betainteractive.sigeas.Views.Funcionarios;
 using mz.betainteractive.sigeas.Views.Horarios;
 using mz.betainteractive.sigeas.Views.AccessControl;
 using mz.betainteractive.sigeas.Views.UserManagment;
-using mz.betainteractive.utilities.module.BackgroundFeatures;
 using mz.betainteractive.utilities.module.Components;
 using mz.betainteractive.sigeas.Views.FuncionarioDevices;
 using mz.betainteractive.sigeas.Views.ImportExport;
-using mz.betainteractive.sigeas.utilities;
 using mz.betainteractive.sigeas.Views.Reports;
 
 
@@ -182,12 +166,12 @@ namespace mz.betainteractive.sigeas.Views.Main {
         private void SecureMenuItemsAndButtons() {                        
                                     
             //this.UserManagement.FormCode = 0x0101;
-            TSBtnUserMangaer.Enabled = this.UserManagement.AllowView;
-            TSMnuItemUserManager.Enabled = this.UserManagement.AllowView;
+            tsbtnEmployeeMangaer.Enabled = this.UserManagement.AllowView;
+            menuItemUserManager.Enabled = this.UserManagement.AllowView;
             
             //this.DeviceManager.FormCode = 0x0102;
-            TSBtnDeviceManager.Enabled = this.DeviceManager.AllowView;
-            TSMnuItemDeviceManager.Enabled = this.DeviceManager.AllowView;
+            tsbtnDeviceManager.Enabled = this.DeviceManager.AllowView;
+            menuItemDeviceManager.Enabled = this.DeviceManager.AllowView;
             
             //this.DeviceActivation.FormCode = 0x0103;
             TSMnuItemDeviceActivation.Enabled = this.DeviceActivation.AllowView;
@@ -259,7 +243,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
                 
         private void FormMain_Load(object sender, EventArgs e) {                       
             UpdateFormDevices();
-            UpdateLayout();
+            //UpdateLayout();
             timerHoras.Start();         
         }                
 
@@ -293,27 +277,9 @@ namespace mz.betainteractive.sigeas.Views.Main {
 
 
         private void barraDeToolStripMenuItem_Click(object sender, EventArgs e){
-            taskPaneMain.Visible = barraDeToolStripMenuItem.Checked;
+            //taskPaneMain.Visible = barraDeToolStripMenuItem.Checked;
         }
-
-        private void taskPaneMain_TaskPaneCloseClick(object sender, EventArgs e){
-            taskPaneMain.Visible = false;
-            barraDeToolStripMenuItem.Checked = false;
-        }        
-
-        private void taskItem1_Click(object sender, EventArgs e) {
-            //this.AccessBioForm.Visible = true;           
-        }
-
-        private void expando1_Resize(object sender, EventArgs e) {
-            OnExpandoResize(expando1, expando2);
-            //OnExpandoResize(expando2, expando3);
-        }                
-
-        private void taskItem4_Click(object sender, EventArgs e) {
-            DeviceManager.Visible = true;
-        }
-
+        
         private void logOffUserMenuItem_Click(object sender, EventArgs e) {
             LogOffUser();
         }               
@@ -326,66 +292,6 @@ namespace mz.betainteractive.sigeas.Views.Main {
             UpdateFormDevices();
         }
 
-        private void ListDeviceCcontextMenuStrip_Opening(object sender, CancelEventArgs e) {
-            if (listViewDevices.SelectedItems.Count > 0) {
-                if (listViewDevices.SelectedItems[0] is ListViewItemDevice) {
-                    ListViewItemDevice ldev = (ListViewItemDevice)listViewDevices.SelectedItems[0];
-                    tsMenuList_Atualizar.Enabled = true;
-                    tsMenuList_Conectar.Enabled = !ldev.Value.Connected;
-                    tsMenuList_Desconectar.Enabled = ldev.Value.Connected;             
-                } else {
-                    tsMenuList_Atualizar.Enabled = true;
-                    tsMenuList_Conectar.Enabled = false;
-                    tsMenuList_Desconectar.Enabled = false;
-                }
-            } else {
-                tsMenuList_Atualizar.Enabled = true;
-                tsMenuList_Conectar.Enabled = false;
-                tsMenuList_Desconectar.Enabled = false;
-            }
-        }
-
-        private void tsMenuList_Conectar_Click(object sender, EventArgs e) {
-            ListViewItemDevice item = (ListViewItemDevice)listViewDevices.SelectedItems[0];
-            //item.Value.Connect();
-            //UpdateListDevices();
-        }
-
-        private void tsMenuList_Desconectar_Click(object sender, EventArgs e) {
-            ListViewItemDevice item = (ListViewItemDevice)listViewDevices.SelectedItems[0];
-            item.Value.Disconnect();
-            //UpdateListDevices();
-        }
-
-        private void cboPrimaryDevice_SelectedIndexChanged(object sender, EventArgs e) {            
-            int i = cboPrimaryDevice.SelectedIndex;
-
-            //var SDB = FrmMainProgram.SystemDatabase;
-
-            //SDB.SelectedDevice = SDB.ConnectedDevices.ElementAt(i);
-            //Console.WriteLine("cbo sel index = " + SDB.SelectedDevice);
-
-            if (i != TCBoxEmpresa.SelectedIndex) {
-                TCBoxEmpresa.SelectedIndex = i;
-            }            
-        }
-
-        private void tsCboPrimaryDevice_SelectedIndexChanged(object sender, EventArgs e) {
-            int i = TCBoxEmpresa.SelectedIndex;
-            Console.WriteLine("tsCbo sel index = " + i);
-            if (i != cboPrimaryDevice.SelectedIndex) {
-                cboPrimaryDevice.SelectedIndex = i;
-            }   
-        }
-
-        private void toolStripLabel2_Click(object sender, EventArgs e) {
-            //this.AccessBioForm.Visible = true;           
-        }
-
-        private void taskItem5_Click(object sender, EventArgs e) {
-            //this.DeviceManager.Visible = true;
-        }
-
         private void activaçãoDeToolStripMenuItem_Click(object sender, EventArgs e) {
             DeviceActivation.ShowDialog();
         }
@@ -393,24 +299,6 @@ namespace mz.betainteractive.sigeas.Views.Main {
         private void timerHoras_Tick(object sender, EventArgs e) {
             SetTime();
         }               
-
-        private void taskPaneMain_Resize(object sender, EventArgs e) {
-            OnExpandoResize(expando1, expando2);
-            //OnExpandoResize(expando2, expando3);
-        }
-
-        private void UpdateLayout() {
-            OnExpandoResize(expando1, expando2);
-            //OnExpandoResize(expando2, expando3);
-        }
-
-        private void OnExpandoResize(Expando exp1, Expando exp2) {
-            int x = exp1.Location.X;
-            int y = exp1.Location.Y;
-            int h = exp1.Size.Height;
-            int d = 7;
-            exp2.Location = new Point(x, y + h + d);
-        }
 
         public void LogOffUser() {
             DialogResult answer = MessageBox.Show("Tem certeza que deseja terminar a sessão?", "Terminar sessão", MessageBoxButtons.YesNo);
@@ -522,7 +410,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e) {
-            UserManagement.ShowDialog();
+            FuncionarioForm.Visible = true;
         }
 
         private void dadosDaEmpresToolStripMenuItem_Click(object sender, EventArgs e) {
