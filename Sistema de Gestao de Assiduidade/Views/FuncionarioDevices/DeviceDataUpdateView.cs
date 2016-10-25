@@ -208,6 +208,7 @@ namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
                 deviceIO.GetBasicUserInfo(out existingUsers);
                 deviceIO.GetAvaiableUsersID(out avaiablesUsersId, out maxUsers);
 
+                /* // THIS CODE IS NOT NECESSARY - WE DONT NEED TO DELETE DATA
                 //get list of users to delete
                 List<string> usersToDelete = new List<string>();
                 foreach (var ruser in existingUsers) {
@@ -225,6 +226,7 @@ namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
                 foreach (var userId in usersToDelete) {
                     deviceIO.DeleteUserInfo(userId);
                 }
+                */
 
                 deviceIO.RefreshData();
 
@@ -233,7 +235,7 @@ namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
                     Funcionario func = devUser.Funcionario;
                     string enrollNumber = devUser.EnrollNumber.ToString();
 
-                    if (devUser.EnrollNumber == 0) { //Not registered
+                    if (devUser.EnrollNumber == 0) { //Not registered - give a free ID
                         int userId = avaiableIds.First();
                         avaiableIds.Remove(userId);
                         enrollNumber = userId.ToString();

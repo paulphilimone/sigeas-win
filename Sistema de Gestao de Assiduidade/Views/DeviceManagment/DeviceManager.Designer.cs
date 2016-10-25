@@ -196,6 +196,10 @@
             this.label34 = new System.Windows.Forms.Label();
             this.CBoxConnectedDevices = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtInfoBio_TftOrBw = new System.Windows.Forms.TextBox();
+            this.label58 = new System.Windows.Forms.Label();
+            this.txtInfoBio_FPVer = new System.Windows.Forms.TextBox();
+            this.label57 = new System.Windows.Forms.Label();
             this.txtInfoBio_FirmVer = new System.Windows.Forms.TextBox();
             this.txtInfoBio_SN = new System.Windows.Forms.TextBox();
             this.txtInfoBio_ProdCode = new System.Windows.Forms.TextBox();
@@ -241,10 +245,7 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.BtnAddDevice = new System.Windows.Forms.Button();
-            this.txtInfoBio_FPVer = new System.Windows.Forms.TextBox();
-            this.label57 = new System.Windows.Forms.Label();
-            this.txtInfoBio_TftOrBw = new System.Windows.Forms.TextBox();
-            this.label58 = new System.Windows.Forms.Label();
+            this.btDelAllUsers = new System.Windows.Forms.Button();
             this.TreeDeviceContextMenuStrip.SuspendLayout();
             this.tabControlDevMan.SuspendLayout();
             this.tabPorta.SuspendLayout();
@@ -2137,6 +2138,40 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Informação do produto";
             // 
+            // txtInfoBio_TftOrBw
+            // 
+            this.txtInfoBio_TftOrBw.Location = new System.Drawing.Point(135, 152);
+            this.txtInfoBio_TftOrBw.Name = "txtInfoBio_TftOrBw";
+            this.txtInfoBio_TftOrBw.ReadOnly = true;
+            this.txtInfoBio_TftOrBw.Size = new System.Drawing.Size(144, 22);
+            this.txtInfoBio_TftOrBw.TabIndex = 11;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(14, 155);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(85, 13);
+            this.label58.TabIndex = 10;
+            this.label58.Text = "Tipo de Display";
+            // 
+            // txtInfoBio_FPVer
+            // 
+            this.txtInfoBio_FPVer.Location = new System.Drawing.Point(135, 127);
+            this.txtInfoBio_FPVer.Name = "txtInfoBio_FPVer";
+            this.txtInfoBio_FPVer.ReadOnly = true;
+            this.txtInfoBio_FPVer.Size = new System.Drawing.Size(144, 22);
+            this.txtInfoBio_FPVer.TabIndex = 9;
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(14, 130);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(112, 13);
+            this.label57.TabIndex = 8;
+            this.label57.Text = "Ver. do Algoritmo FP";
+            // 
             // txtInfoBio_FirmVer
             // 
             this.txtInfoBio_FirmVer.Location = new System.Drawing.Point(135, 102);
@@ -2207,6 +2242,7 @@
             // 
             // groupBox12
             // 
+            this.groupBox12.Controls.Add(this.btDelAllUsers);
             this.groupBox12.Controls.Add(this.btDelAllUserClock);
             this.groupBox12.Controls.Add(this.panel18);
             this.groupBox12.Controls.Add(this.panel19);
@@ -2225,7 +2261,7 @@
             this.groupBox12.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox12.Location = new System.Drawing.Point(312, 54);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(308, 284);
+            this.groupBox12.Size = new System.Drawing.Size(308, 328);
             this.groupBox12.TabIndex = 0;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Informação de registros";
@@ -2234,7 +2270,7 @@
             // 
             this.btDelAllUserClock.Location = new System.Drawing.Point(39, 225);
             this.btDelAllUserClock.Name = "btDelAllUserClock";
-            this.btDelAllUserClock.Size = new System.Drawing.Size(230, 23);
+            this.btDelAllUserClock.Size = new System.Drawing.Size(230, 30);
             this.btDelAllUserClock.TabIndex = 18;
             this.btDelAllUserClock.Text = "Apagar Todos Regs. de entrada/saida";
             this.btDelAllUserClock.UseVisualStyleBackColor = true;
@@ -2566,39 +2602,15 @@
             this.BtnAddDevice.UseVisualStyleBackColor = true;
             this.BtnAddDevice.Click += new System.EventHandler(this.BtnAddDevice_Click);
             // 
-            // txtInfoBio_FPVer
+            // btDelAllUsers
             // 
-            this.txtInfoBio_FPVer.Location = new System.Drawing.Point(135, 127);
-            this.txtInfoBio_FPVer.Name = "txtInfoBio_FPVer";
-            this.txtInfoBio_FPVer.ReadOnly = true;
-            this.txtInfoBio_FPVer.Size = new System.Drawing.Size(144, 22);
-            this.txtInfoBio_FPVer.TabIndex = 9;
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(14, 130);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(112, 13);
-            this.label57.TabIndex = 8;
-            this.label57.Text = "Ver. do Algoritmo FP";
-            // 
-            // txtInfoBio_TftOrBw
-            // 
-            this.txtInfoBio_TftOrBw.Location = new System.Drawing.Point(135, 152);
-            this.txtInfoBio_TftOrBw.Name = "txtInfoBio_TftOrBw";
-            this.txtInfoBio_TftOrBw.ReadOnly = true;
-            this.txtInfoBio_TftOrBw.Size = new System.Drawing.Size(144, 22);
-            this.txtInfoBio_TftOrBw.TabIndex = 11;
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(14, 155);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(85, 13);
-            this.label58.TabIndex = 10;
-            this.label58.Text = "Tipo de Display";
+            this.btDelAllUsers.Location = new System.Drawing.Point(40, 267);
+            this.btDelAllUsers.Name = "btDelAllUsers";
+            this.btDelAllUsers.Size = new System.Drawing.Size(230, 30);
+            this.btDelAllUsers.TabIndex = 19;
+            this.btDelAllUsers.Text = "Apagar Todos Usuarios";
+            this.btDelAllUsers.UseVisualStyleBackColor = true;
+            this.btDelAllUsers.Click += new System.EventHandler(this.btDelAllUsers_Click);
             // 
             // DeviceManager
             // 
@@ -2941,5 +2953,6 @@
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.TextBox txtInfoBio_FPVer;
         private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Button btDelAllUsers;
     }
 }

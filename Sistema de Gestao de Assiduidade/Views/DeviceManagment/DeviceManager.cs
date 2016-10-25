@@ -660,6 +660,8 @@ namespace mz.betainteractive.sigeas.Views.DeviceManagement {
             txtInfoBio_ProdCode.Text = "";
             txtInfoBio_SN.Text = "";
             txtInfoBio_FirmVer.Text = "";
+            txtInfoBio_FPVer.Text = "";
+            txtInfoBio_TftOrBw.Text = "";
 
             lbInfoBio_nAdmins.Text = "";
             lbInfoBio_nUsers.Text = "";
@@ -857,7 +859,7 @@ namespace mz.betainteractive.sigeas.Views.DeviceManagement {
                 deviceIO.GetProductCode(out prodCode);
                 deviceIO.GetSerialNumber(out SN);
                 deviceIO.GetFirmwareVersion(ref firmVer);
-                tftBw = deviceIO.IsTFTMachine() ? "TFT" : "B&w";
+                tftBw = deviceIO.IsTFTMachine() ? "TFT" : "B&W";
                 fpAlg = deviceIO.GetFPVersion();
 
                 deviceIO.GetDeviceStatus(1, ref nAdmins);
@@ -1624,6 +1626,24 @@ namespace mz.betainteractive.sigeas.Views.DeviceManagement {
             
         }
 
+        private void btDelAllUsers_Click(object sender, EventArgs e) {
+            if (CBoxConnectedDevices.Items.Count == 0) {
+                MessageBox.Show(this, "Não exitesm dispositivos conectados no momento!");
+                CBoxConnectedDevices.Focus();
+                return;
+            }
+
+            if (CBoxConnectedDevices.SelectedIndex == -1) {
+                MessageBox.Show(this, "Selecione um dos dispositivos conectados!");
+                CBoxConnectedDevices.Focus();
+                return;
+            }
+
+            Device device = CBoxConnectedDevices.SelectedItem as Device;
+
+            DeleteAllUsersOnDevice(device);
+        }
+
         private void DeleteAllUserClocksOnDevice(Device device) {
 
             if (device.Connected == false) {
@@ -1657,6 +1677,38 @@ namespace mz.betainteractive.sigeas.Views.DeviceManagement {
             background.StartExecute();
         }
 
+        private void DeleteAllUsersOnDevice(Device device) {
+
+            if (device.Connected == false) {
+                MessageBox.Show(this, "O biométrico não esta conectado, conecte-o para poder todos dados dos usuarios");
+                return;
+            }
+
+            DialogResult result = MessageBox.Show(this, "Deseja apagar os dados de todos usuarios que estão no biométrico?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == System.Windows.Forms.DialogResult.No) {
+                return;
+            }
+
+            DeviceIO io = new DeviceIO(device);
+
+            OnExecuteDialog background = new OnExecuteDialog("Apagar registos...", "Apagando dados de todos usuarios do biométrico...");
+            bool erased = false;
+
+            background.OnExecute += delegate() {
+                erased = io.DeleteAllUserData();
+            };
+
+            background.OnPostExecute += delegate() {
+                if (erased == true) {
+                    MessageBox.Show(this, "Os dados dos usuarios foram apagados com sucesso", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                } else {
+                    MessageBox.Show(this, "Não foi possivel apagar os dados dos usuarios", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            };
+
+            background.StartExecute();
+        }
         /*
         private void BtnAddLocal_Click(object sender, EventArgs e) {
             AddLocal();
@@ -2153,6 +2205,8 @@ namespace mz.betainteractive.sigeas.Views.DeviceManagement {
             }
 
         }
+
+        
 
     }
 }

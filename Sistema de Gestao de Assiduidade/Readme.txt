@@ -1,7 +1,7 @@
 ﻿Developers
 - Install Nuget Package Manager on VS2010
   eg. install-package EPPlus
-- Install Crystal Reports for VS - CRforVS_13_0_17.exe
+- Install Crystal Reports for VS - CRforVS_13_0_17.exe (dont forget to install the Runtime - extract the .exe first)
 - Install NET Connector - mysql-connector-net-6.9.8.msi
 - Install and register ZK SDK - Communication Protocol SDK(64Bit Ver6.2.4.1)
   - can be downloaded from https://paulphilimone@bitbucket.org/betainteractive/zk-sdk.git
