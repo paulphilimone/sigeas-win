@@ -73,6 +73,16 @@ namespace mz.betainteractive.sigeas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap attendance_medium_icon {
+            get {
+                object obj = ResourceManager.GetObject("attendance_medium_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap beta {
             get {
                 object obj = ResourceManager.GetObject("beta", resourceCulture);
@@ -86,6 +96,26 @@ namespace mz.betainteractive.sigeas.Properties {
         internal static System.Drawing.Bitmap Boo_s_20Door_20Icon {
             get {
                 object obj = ResourceManager.GetObject("Boo_s_20Door_20Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap button1_pressed {
+            get {
+                object obj = ResourceManager.GetObject("button1_pressed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap calendar_medium_icon {
+            get {
+                object obj = ResourceManager.GetObject("calendar_medium_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -211,6 +241,16 @@ namespace mz.betainteractive.sigeas.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap export_medium_icon {
+            get {
+                object obj = ResourceManager.GetObject("export_medium_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] feriados {
@@ -326,6 +366,16 @@ namespace mz.betainteractive.sigeas.Properties {
         internal static System.Drawing.Bitmap fptext {
             get {
                 object obj = ResourceManager.GetObject("fptext", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap func_devices_medium_icon {
+            get {
+                object obj = ResourceManager.GetObject("func_devices_medium_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -483,6 +533,16 @@ namespace mz.betainteractive.sigeas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap net_conn_medium1 {
+            get {
+                object obj = ResourceManager.GetObject("net_conn_medium1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Network_ConnectTo {
             get {
                 object obj = ResourceManager.GetObject("Network_ConnectTo", resourceCulture);
@@ -496,6 +556,16 @@ namespace mz.betainteractive.sigeas.Properties {
         internal static System.Drawing.Bitmap reports_medium {
             get {
                 object obj = ResourceManager.GetObject("reports_medium", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reports_medium1 {
+            get {
+                object obj = ResourceManager.GetObject("reports_medium1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -523,9 +593,39 @@ namespace mz.betainteractive.sigeas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap timezone_medium1 {
+            get {
+                object obj = ResourceManager.GetObject("timezone_medium1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tools_medium_icon {
+            get {
+                object obj = ResourceManager.GetObject("tools_medium_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap top {
             get {
                 object obj = ResourceManager.GetObject("top", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap users_dev_icon_medium {
+            get {
+                object obj = ResourceManager.GetObject("users_dev_icon_medium", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -553,9 +653,39 @@ namespace mz.betainteractive.sigeas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap users_icon_medium1 {
+            get {
+                object obj = ResourceManager.GetObject("users_icon_medium1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap users_icon2 {
             get {
                 object obj = ResourceManager.GetObject("users_icon2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap utilities_medium_icon {
+            get {
+                object obj = ResourceManager.GetObject("utilities_medium_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap utilities_medium_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("utilities_medium_icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -662,6 +662,15 @@
     <None Include="images\timezone-medium.png" />
     <None Include="images\df8ceb91.png" />
     <None Include="images\reports-medium.png" />
+    <None Include="images\empty-10x10.png" />
+    <None Include="images\calendar-medium-icon.png" />
+    <None Include="images\tools-medium-icon.png" />
+    <None Include="images\attendance-medium-icon.png" />
+    <None Include="images\func_devices-medium-icon.png" />
+    <None Include="images\export-medium-icon.png" />
+    <None Include="images\utilities-medium-icon.png" />
+    <None Include="images\users-dev-icon-medium.png" />
+    <None Include="images\button1_pressed.png" />
     <Content Include="sisga.ico" />
   </ItemGroup>
   <ItemGroup>

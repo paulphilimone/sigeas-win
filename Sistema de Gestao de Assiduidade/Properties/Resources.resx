@@ -118,154 +118,193 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="icon_door" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\icon-door.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mynet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\mynet.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HAND_rec" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\HAND_rec.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="net_conn_medium1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\net-conn-medium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dialog" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\dialog.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dialog11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\dialog1.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="info2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\info2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fp_icon_disconnected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\fp-icon-disconnected.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HAND4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\HAND4.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fptext" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\fptext.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_1338365792" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\1338365792.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Journal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\Journal.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="DoorIcon_RGB_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\DoorIcon_RGB_72.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fp_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\fp-icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="info" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\info.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="top" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\top.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="HAND3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\HAND3.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Fingerprint_Recognition_Time_1_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\Fingerprint-Recognition-Time-1-icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fingerprint" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\fingerprint.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fp_icon_disconnected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\fp-icon-disconnected.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="users_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\users-icon2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="door_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\door_icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="users_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\users-icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="users_icon_medium1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\users-icon-medium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fp_icon_connected" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\fp-icon-connected.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Network_ConnectTo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\Network_ConnectTo.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HAND2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\HAND2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Boo_s_20Door_20Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\Boo's%20Door%20Icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="stepfinal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\stepfinal.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fp_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\fp-icon2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fingerprint4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\fingerprint4.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Imagem_de_um_glogo_terrestre_num_ambiente_azul1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\Imagem-de-um-glogo-terrestre-num-ambiente-azul1.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HAND1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\HAND.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="globe" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\globe.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Device" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\Device.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dialog_use" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\dialog_use.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fingerprint3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\fingerprint3.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dialog1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\dialog.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HAND3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\HAND3.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HAND" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\HAND.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fingerprint2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\fingerprint2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dialog2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\dialog2.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mozambique" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\externaldata\localization\mozambique.data;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Connection_Manager" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\Connection_Manager.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fingerprint1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\fingerprint.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DoorIcon_RGB_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\DoorIcon_RGB_72.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="beta" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\beta.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="HAND" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\HAND.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_door" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\icon-door.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="func_devices_medium_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\func_devices-medium-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fp_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\fp-icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HAND_rec" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\HAND_rec.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="calendar_medium_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\calendar-medium-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="countries" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\externaldata\localization\countries.data;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="mozambique" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\externaldata\localization\mozambique.data;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="fingerprint4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\fingerprint4.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cross_pointer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cross_pointer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="beta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\beta.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="feriados" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\externaldata\feriados.xlsx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="users_icon_medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\users-icon-medium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="df8ceb91" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\df8ceb91.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="net_conn_medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\net-conn-medium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="reports_medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\reports-medium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fingerprint3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\fingerprint3.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="timezone_medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\timezone-medium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="users_icon_medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\users-icon-medium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dialog2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\dialog2.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="users_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\users-icon2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HAND2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\HAND2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reports_medium1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\reports-medium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fingerprint2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\fingerprint2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Device" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\Device.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="df8ceb91" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\df8ceb91.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HAND1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\HAND.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Journal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\Journal.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mynet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\mynet.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="globe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\globe.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="feriados" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\externaldata\feriados.xlsx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="net_conn_medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\net-conn-medium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dialog_use" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\dialog_use.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reports_medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\reports-medium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="top" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\top.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stepfinal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\stepfinal.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="door_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\door_icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dialog1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\dialog.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fingerprint" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\fingerprint.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HAND4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\HAND4.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boo_s_20Door_20Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\Boo's%20Door%20Icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="users_dev_icon_medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\users-dev-icon-medium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Imagem_de_um_glogo_terrestre_num_ambiente_azul1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\Imagem-de-um-glogo-terrestre-num-ambiente-azul1.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="timezone_medium1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\timezone-medium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="utilities_medium_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\utilities-medium-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="info" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\info.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cross_pointer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cross_pointer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="users_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\users-icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tools_medium_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\tools-medium-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="info2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\info2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Network_ConnectTo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\Network_ConnectTo.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fingerprint1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\fingerprint.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fp_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\fp-icon2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fptext" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\fptext.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dialog11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\dialog1.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="attendance_medium_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\attendance-medium-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="export_medium_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\export-medium-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_1338365792" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\1338365792.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="utilities_medium_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\utilities-medium-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button1_pressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\button1_pressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
