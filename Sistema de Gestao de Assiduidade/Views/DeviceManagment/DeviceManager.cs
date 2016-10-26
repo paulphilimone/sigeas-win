@@ -553,7 +553,7 @@ namespace mz.betainteractive.sigeas.Views.DeviceManagement {
 
             ShowData(door);
 
-            BtnRemoveCar.Enabled = AllowDelete;//true;
+            BtnRemoveDoor.Enabled = AllowDelete;//true;
         }
 
         private void OnSelectUnlocatedDevice(Device tdevice) {
@@ -573,8 +573,8 @@ namespace mz.betainteractive.sigeas.Views.DeviceManagement {
         }
 
         private void CleanAll() {
-            BtnRemoveCar.Enabled = false;
-            BtnAddCar.Enabled = AllowAdd;//true;            
+            BtnRemoveDoor.Enabled = false;
+            BtnAddDoor.Enabled = AllowAdd;//true;            
             BtnAddDevice.Enabled = AllowAdd;//true;
             BtnRemoveDevice.Enabled = false;
 
@@ -993,8 +993,9 @@ namespace mz.betainteractive.sigeas.Views.DeviceManagement {
         private void DisableDoorDevice() {
             bool value = false;
 
+            BtnAddDoor.Enabled = !value;
             BtnSaveDoor.Enabled = value;
-            BtnRemoveCar.Enabled = value;
+            BtnRemoveDoor.Enabled = value;
             BtnDoorCancelUpdate.Enabled = value;
 
             TxtDoorName.ReadOnly = !value;
@@ -1076,8 +1077,8 @@ namespace mz.betainteractive.sigeas.Views.DeviceManagement {
             tabControlDevMan.SelectedIndex = 0;
 
             EnableDoorDevice();
-            BtnAddCar.Enabled = false;
-            BtnRemoveCar.Enabled = false;
+            BtnAddDoor.Enabled = false;
+            BtnRemoveDoor.Enabled = false;
             LoadDevicesToChangeDoor();
             //LoadParceirosToChangeCar();
         }

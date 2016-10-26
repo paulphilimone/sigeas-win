@@ -25,8 +25,8 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeviceManager));
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Portas", 6, 0);
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Dispositivos não alocados", 3, 3);
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Portas", 6, 0);
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Dispositivos não alocados", 3, 3);
             this.TreeImageList = new System.Windows.Forms.ImageList(this.components);
             this.TViewDevicesTree = new System.Windows.Forms.TreeView();
             this.TreeDeviceContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -39,8 +39,8 @@
             this.tsMenuTree_GetInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.tsMenuTree_Cancelar = new System.Windows.Forms.ToolStripMenuItem();
-            this.BtnAddCar = new System.Windows.Forms.Button();
-            this.BtnRemoveCar = new System.Windows.Forms.Button();
+            this.BtnAddDoor = new System.Windows.Forms.Button();
+            this.BtnRemoveDoor = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControlDevMan = new System.Windows.Forms.TabControl();
             this.tabPorta = new System.Windows.Forms.TabPage();
@@ -209,6 +209,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.btDelAllUsers = new System.Windows.Forms.Button();
             this.btDelAllUserClock = new System.Windows.Forms.Button();
             this.panel18 = new System.Windows.Forms.Panel();
             this.lbInfoBio_nFaces = new System.Windows.Forms.Label();
@@ -245,7 +246,6 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.BtnAddDevice = new System.Windows.Forms.Button();
-            this.btDelAllUsers = new System.Windows.Forms.Button();
             this.TreeDeviceContextMenuStrip.SuspendLayout();
             this.tabControlDevMan.SuspendLayout();
             this.tabPorta.SuspendLayout();
@@ -329,19 +329,19 @@
             this.TViewDevicesTree.ImageList = this.TreeImageList;
             this.TViewDevicesTree.Location = new System.Drawing.Point(12, 29);
             this.TViewDevicesTree.Name = "TViewDevicesTree";
-            treeNode3.ImageIndex = 6;
-            treeNode3.Name = "NodeAutoCarros";
-            treeNode3.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            treeNode3.SelectedImageIndex = 0;
-            treeNode3.Text = "Portas";
-            treeNode4.ImageIndex = 3;
-            treeNode4.Name = "NodeDevicesWithout";
-            treeNode4.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            treeNode4.SelectedImageIndex = 3;
-            treeNode4.Text = "Dispositivos não alocados";
+            treeNode1.ImageIndex = 6;
+            treeNode1.Name = "NodeAutoCarros";
+            treeNode1.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            treeNode1.SelectedImageIndex = 0;
+            treeNode1.Text = "Portas";
+            treeNode2.ImageIndex = 3;
+            treeNode2.Name = "NodeDevicesWithout";
+            treeNode2.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            treeNode2.SelectedImageIndex = 3;
+            treeNode2.Text = "Dispositivos não alocados";
             this.TViewDevicesTree.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3,
-            treeNode4});
+            treeNode1,
+            treeNode2});
             this.TViewDevicesTree.SelectedImageIndex = 0;
             this.TViewDevicesTree.ShowNodeToolTips = true;
             this.TViewDevicesTree.ShowRootLines = false;
@@ -426,26 +426,26 @@
             this.tsMenuTree_Cancelar.Size = new System.Drawing.Size(185, 22);
             this.tsMenuTree_Cancelar.Text = "Cancelar";
             // 
-            // BtnAddCar
+            // BtnAddDoor
             // 
-            this.BtnAddCar.Location = new System.Drawing.Point(12, 409);
-            this.BtnAddCar.Name = "BtnAddCar";
-            this.BtnAddCar.Size = new System.Drawing.Size(129, 34);
-            this.BtnAddCar.TabIndex = 2;
-            this.BtnAddCar.Text = "Adicionar Porta";
-            this.BtnAddCar.UseVisualStyleBackColor = true;
-            this.BtnAddCar.Click += new System.EventHandler(this.BtnAdd_Click);
+            this.BtnAddDoor.Location = new System.Drawing.Point(12, 409);
+            this.BtnAddDoor.Name = "BtnAddDoor";
+            this.BtnAddDoor.Size = new System.Drawing.Size(129, 34);
+            this.BtnAddDoor.TabIndex = 2;
+            this.BtnAddDoor.Text = "Adicionar Porta";
+            this.BtnAddDoor.UseVisualStyleBackColor = true;
+            this.BtnAddDoor.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
-            // BtnRemoveCar
+            // BtnRemoveDoor
             // 
-            this.BtnRemoveCar.Enabled = false;
-            this.BtnRemoveCar.Location = new System.Drawing.Point(147, 409);
-            this.BtnRemoveCar.Name = "BtnRemoveCar";
-            this.BtnRemoveCar.Size = new System.Drawing.Size(130, 34);
-            this.BtnRemoveCar.TabIndex = 3;
-            this.BtnRemoveCar.Text = "Remover Porta";
-            this.BtnRemoveCar.UseVisualStyleBackColor = true;
-            this.BtnRemoveCar.Click += new System.EventHandler(this.BtnRemoveCar_Click);
+            this.BtnRemoveDoor.Enabled = false;
+            this.BtnRemoveDoor.Location = new System.Drawing.Point(147, 409);
+            this.BtnRemoveDoor.Name = "BtnRemoveDoor";
+            this.BtnRemoveDoor.Size = new System.Drawing.Size(130, 34);
+            this.BtnRemoveDoor.TabIndex = 3;
+            this.BtnRemoveDoor.Text = "Remover Porta";
+            this.BtnRemoveDoor.UseVisualStyleBackColor = true;
+            this.BtnRemoveDoor.Click += new System.EventHandler(this.BtnRemoveCar_Click);
             // 
             // label1
             // 
@@ -2266,6 +2266,16 @@
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Informação de registros";
             // 
+            // btDelAllUsers
+            // 
+            this.btDelAllUsers.Location = new System.Drawing.Point(40, 267);
+            this.btDelAllUsers.Name = "btDelAllUsers";
+            this.btDelAllUsers.Size = new System.Drawing.Size(230, 30);
+            this.btDelAllUsers.TabIndex = 19;
+            this.btDelAllUsers.Text = "Apagar Todos Usuarios";
+            this.btDelAllUsers.UseVisualStyleBackColor = true;
+            this.btDelAllUsers.Click += new System.EventHandler(this.btDelAllUsers_Click);
+            // 
             // btDelAllUserClock
             // 
             this.btDelAllUserClock.Location = new System.Drawing.Point(39, 225);
@@ -2602,16 +2612,6 @@
             this.BtnAddDevice.UseVisualStyleBackColor = true;
             this.BtnAddDevice.Click += new System.EventHandler(this.BtnAddDevice_Click);
             // 
-            // btDelAllUsers
-            // 
-            this.btDelAllUsers.Location = new System.Drawing.Point(40, 267);
-            this.btDelAllUsers.Name = "btDelAllUsers";
-            this.btDelAllUsers.Size = new System.Drawing.Size(230, 30);
-            this.btDelAllUsers.TabIndex = 19;
-            this.btDelAllUsers.Text = "Apagar Todos Usuarios";
-            this.btDelAllUsers.UseVisualStyleBackColor = true;
-            this.btDelAllUsers.Click += new System.EventHandler(this.btDelAllUsers_Click);
-            // 
             // DeviceManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2621,8 +2621,8 @@
             this.Controls.Add(this.tabControlDevMan);
             this.Controls.Add(this.BtnAddDevice);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.BtnAddCar);
-            this.Controls.Add(this.BtnRemoveCar);
+            this.Controls.Add(this.BtnAddDoor);
+            this.Controls.Add(this.BtnRemoveDoor);
             this.Controls.Add(this.TViewDevicesTree);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -2737,8 +2737,8 @@
 
         private System.Windows.Forms.ImageList TreeImageList;
         private System.Windows.Forms.TreeView TViewDevicesTree;
-        private System.Windows.Forms.Button BtnAddCar;
-        private System.Windows.Forms.Button BtnRemoveCar;
+        private System.Windows.Forms.Button BtnAddDoor;
+        private System.Windows.Forms.Button BtnRemoveDoor;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControlDevMan;
         private System.Windows.Forms.TabPage tabPorta;

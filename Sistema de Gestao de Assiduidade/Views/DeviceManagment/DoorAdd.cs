@@ -60,7 +60,7 @@ namespace mz.betainteractive.sigeas.Views.DeviceManagement {
             
             
 
-            DialogResult dr = MessageBox.Show(this, "Tem certeza que deseja adicionar o autocarro(" + nome + ")?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dr = MessageBox.Show(this, "Tem certeza que deseja adicionar a porta(" + nome + ")?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (dr == DialogResult.No) {
                 return;
