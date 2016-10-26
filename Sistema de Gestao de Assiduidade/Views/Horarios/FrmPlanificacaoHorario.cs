@@ -32,6 +32,7 @@ namespace mz.betainteractive.sigeas.Views.Horarios {
         public bool AllowAdd { get; set; }
 
         public static string MENU_HORARIO_REMOVER = "Remover Horário";
+        public static string MENU_HORARIO_REMOVE_SELECTED = "Remover Horários Selecionados";
         public static string MENU_HORARIO_CANCELAR = "Cancelar";
 
         private bool startedMove = false;
@@ -92,13 +93,14 @@ namespace mz.betainteractive.sigeas.Views.Horarios {
             ToolStripSeparator separator1 = new ToolStripSeparator();
             ToolStripSeparator separator2 = new ToolStripSeparator();
             ToolStripMenuItem ppdItemRemove = new ToolStripMenuItem(MENU_HORARIO_REMOVER);
+            ToolStripMenuItem ppdItemRemoveSel = new ToolStripMenuItem(MENU_HORARIO_REMOVE_SELECTED);
             ToolStripMenuItem ppdItemCancelar = new ToolStripMenuItem(MENU_HORARIO_CANCELAR);
 
             foreach (var horario in context.HorarioSemana.ToList()) {
                 menu.Items.Add(new ToolStripMenuItemGeneric<HorarioSemana>(horario));
             }
 
-            menu.Items.AddRange(new ToolStripItem[] { separator1, ppdItemRemove, separator2, ppdItemCancelar });
+            menu.Items.AddRange(new ToolStripItem[] { separator1, ppdItemRemove, ppdItemRemoveSel, separator2, ppdItemCancelar });
             menu.ItemClicked += PopupMenuHorariosAction;
             menu.Closed += new ToolStripDropDownClosedEventHandler(HorarioMenuClosed);
 
@@ -154,6 +156,17 @@ namespace mz.betainteractive.sigeas.Views.Horarios {
                 cell.SetTextUsingValue();
             }
 
+            if (item.Text == MENU_HORARIO_REMOVE_SELECTED) {
+                
+                foreach (var objCell in contextMenu.Value.DataGridView.SelectedCells) {
+                    if (objCell is DataGridViewTextBoxCellGeneric<HorarioSemana>) {
+                        var cell = objCell as DataGridViewTextBoxCellGeneric<HorarioSemana>;
+                        cell.GenericValue = null;
+                        cell.SetTextUsingValue();
+                    }
+                }
+            }
+
             //var column = contextMenu.Value;
 
             Console.WriteLine("sender " + sender);
@@ -168,9 +181,11 @@ namespace mz.betainteractive.sigeas.Views.Horarios {
 
             var rect = this.DGViewFuncionarioHorario.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, false);
 
-            var itemRemove = this.menuStripHorario.Items[this.menuStripHorario.Items.Count - 3] as ToolStripMenuItem;
+            var itemRemove = this.menuStripHorario.Items[this.menuStripHorario.Items.Count - 4] as ToolStripMenuItem;
+            var itemRemoveSel = this.menuStripHorario.Items[this.menuStripHorario.Items.Count - 3] as ToolStripMenuItem;
 
             itemRemove.Enabled = cell.GenericValue != null;
+            itemRemoveSel.Enabled = cell.DataGridView.SelectedCells.Count > 1;
 
             this.menuStripHorario.Value = cell;
             this.menuStripHorario.Show(cell.DataGridView, new Point(rect.X, rect.Y + rect.Height));
@@ -193,7 +208,7 @@ namespace mz.betainteractive.sigeas.Views.Horarios {
 
         private void HorarioCellMouseDown(object sender, DataGridViewCellMouseEventArgs e) {
             var cell = GetHorarioCell(e.RowIndex, e.ColumnIndex);
-            if (cell != null && cell.GenericValue != null) {
+            if (cell != null && cell.GenericValue != null && e.Button==MouseButtons.Left) {
                 DGViewFuncionarioHorario.Cursor = Cursors.PanSE;
                 selectedHorario = cell.GenericValue;
                 startedMove = true;
@@ -211,7 +226,34 @@ namespace mz.betainteractive.sigeas.Views.Horarios {
                 var cell = GetHorarioCell(e.RowIndex, e.ColumnIndex);
                 var rect = this.DGViewFuncionarioHorario.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, false);
                 popMenuSelectionDecision.Show(cell.DataGridView, rect.X + e.X, rect.Y + e.Y);
+                return;
             }
+
+            //right click event
+            
+            if (e.Button == MouseButtons.Right) {
+                var cell = GetHorarioCell(e.RowIndex, e.ColumnIndex);
+                if (cell == null) return;
+
+                cell.Selected = true;
+
+                startedMove = false;
+
+                var rect = this.DGViewFuncionarioHorario.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, false);
+                var itemRemove = this.menuStripHorario.Items[this.menuStripHorario.Items.Count - 4] as ToolStripMenuItem;
+                var itemRemoveSel = this.menuStripHorario.Items[this.menuStripHorario.Items.Count - 3] as ToolStripMenuItem;
+                
+                if (itemRemoveSel != null){
+                    itemRemoveSel.Enabled = cell.DataGridView.SelectedCells.Count > 1;
+                }
+                if (itemRemove != null){
+                    itemRemove.Enabled = cell.GenericValue != null;
+                }
+
+                this.menuStripHorario.Value = cell;
+                this.menuStripHorario.Show(cell.DataGridView, new Point(rect.X, rect.Y + rect.Height));
+            }
+            
         }
 
         private void RemoveCurrentSelection(bool cancelOrIgnore, bool overwrite) {
