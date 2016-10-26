@@ -11,6 +11,7 @@ using mz.betainteractive.sigeas.DeviceSystem;
 using mz.betainteractive.utilities.module.BackgroundFeatures;
 using mz.betainteractive.sigeas.Models;
 using mz.betainteractive.sigeas.Utilities;
+using User = Microsoft.VisualBasic.ApplicationServices.User;
 
 namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
     public partial class DeviceDataUpdateView : Form, mz.betainteractive.utilities.module.Components.AuthorizableComponent {
@@ -239,6 +240,7 @@ namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
                         int userId = avaiableIds.First();
                         avaiableIds.Remove(userId);
                         enrollNumber = userId.ToString();
+                        devUser.EnrollNumber = userId;
                     }
 
                     bool fase2 = deviceIO.SetUserInfo(enrollNumber, func.Cardnumber, func.Username, func.Password, func.Privilege.Value, func.Enabled.Value);
