@@ -302,7 +302,7 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
             //Apagar os dados registrados                       - Done
 
             if (TxtUserId.Text.Length == 0) {
-                MessageBox.Show(this, "O beneficiario não possui codigo temporario para registo, Conecte o dispositivo para obter o código primeiro!");
+                MessageBox.Show(this, "O funcionario não possui codigo temporario para registo, Conecte o dispositivo para obter o código primeiro!");
                 //BtnRegisterUser.Focus();
                 BtConnectDevice.Focus();
                 return;
@@ -357,7 +357,7 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
             }
                         
             if (avaiable == -1) {
-                MessageBox.Show(this, "O biométrico atingiu número máximo de registos de beneficiarios, não será possivel registar mais funcionários");
+                MessageBox.Show(this, "O biométrico atingiu número máximo de registos de funcionarios, não será possivel registar mais funcionários");
                 TxtUserId.Text = "";
                 return;
             } else {                
@@ -594,13 +594,13 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
                         
             //Biometrico
             if (TxtUserName.Text == "") {
-                MessageBox.Show(this, "Introduza o nickname do beneficiario", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(this, "Introduza o nickname do funcionario", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tabFuncionario.SelectedIndex = 2;
                 TxtUserName.Focus();
                 return false;
             }
             if (TxtPassword.Text == "") {
-                MessageBox.Show(this, "Introduza a password do beneficiario", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(this, "Introduza a password do funcionario", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tabFuncionario.SelectedIndex = 2;
                 TxtPassword.Focus();
                 return false;

@@ -210,7 +210,7 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
             //Apagar os dados registrados                       - Done
 
             if (TxtUserId.Text.Length == 0) {
-                MessageBox.Show(this, "O beneficiario não possui codigo temporario para registo, Conecte o dispositivo para obter o código primeiro!");
+                MessageBox.Show(this, "O funcionario não possui codigo temporario para registo, Conecte o dispositivo para obter o código primeiro!");
                 //BtnRegisterUser.Focus();
                 BtConnectDevice.Focus();
                 return;
@@ -272,7 +272,7 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
             }
                         
             if (avaiable == -1) {
-                MessageBox.Show(this, "O biométrico atingiu número máximo de registos de beneficiarios, não será possivel registar mais funcionários");
+                MessageBox.Show(this, "O biométrico atingiu número máximo de registos de funcionarios, não será possivel registar mais funcionários");
                 TxtUserId.Text = "";
                 return;
             } else {                
@@ -449,13 +449,14 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
                 CBoxEstadoCivil.Focus();
                 return false;
             }
+            /*
             if (CBoxTipoDocumento.SelectedIndex == -1) {
                 MessageBox.Show(this, "Selecione o documento de identificação, por favor", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tabFuncionario.SelectedIndex = 0;
                 CBoxTipoDocumento.Focus();
                 return false;
-            }
-            if (TxtNumeroID.Text == "") {
+            }*/
+            if (CBoxTipoDocumento.SelectedIndex != -1 && TxtNumeroID.Text == "") {
                 MessageBox.Show(this, "Introduza o número do(a) " + CBoxTipoDocumento.SelectedText, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tabFuncionario.SelectedIndex = 0;
                 TxtNumeroID.Focus();
@@ -477,13 +478,14 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
              */
             //Contacto
             //introduzir pelo menos 1 contacto
-
+            /*
             if (TxtEmail.Text=="" && TxtTelefone.Text == "") {
                 MessageBox.Show(this, "Introduza o pelo menos um contacto (Email / Telefone)", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tabFuncionario.SelectedIndex = 1;
                 TxtEmail.Focus();
                 return false;
             }
+            */
 
             if (TxtEmail.Text != "" && StringUtilities.ValidateEmail(TxtEmail.Text) == false) {
                 MessageBox.Show(this, "Introduza correctamente o email ex: (exemplo@companhia.com)!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -491,8 +493,8 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
                 TxtEmail.Focus();
                 return false;
             }
-            
-            if (StringUtilities.ValidateInteger(TxtNumeroCasa.Text) == false) {
+
+            if (TxtNumeroCasa.Text != "" && StringUtilities.ValidateInteger(TxtNumeroCasa.Text) == false) {
                 MessageBox.Show(this, "Introduza correctamente o numero da casa: (Introduza um numero inteiro)!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tabFuncionario.SelectedIndex = 1;
                 TxtNumeroCasa.Focus();
@@ -501,6 +503,7 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
             
 
             //Biometrico
+            /* //Hiding this restrictions
             if (TxtUserName.Text == "") {
                 MessageBox.Show(this, "Introduza o nickname do beneficiário", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tabFuncionario.SelectedIndex = 2;
@@ -519,7 +522,7 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
                 CboxPrevilege.Focus();
                 return false;
             }
-            /*
+            
             if (TxtCardNumber.Text == "") {
                 MessageBox.Show(this, "Registe o cartão do usuário primeiro!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tabFuncionario.SelectedIndex = 2;

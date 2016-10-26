@@ -17,6 +17,7 @@ using mz.betainteractive.sigeas.Models;
 using mz.betainteractive.sigeas.Views.Funcionarios;
 using mz.betainteractive.utilities.module.Components;
 using mz.betainteractive.sigeas.utilities;
+using mz.betainteractive.utilities.module.General;
 
 namespace mz.betainteractive.sigeas.Views.Funcionarios {
     public partial class FrmFuncionario : Form, AuthorizableComponent {
@@ -198,6 +199,7 @@ namespace mz.betainteractive.sigeas.Views.Funcionarios {
                 LoadFuncionariosToTree(selectedEmpresa);
 
             } catch (Exception ex) {
+                LogErrors.AddErrorLog(ex, "Erro");
                 MessageBox.Show(this, "" + ex.Message, "Erro:");
             }
 
