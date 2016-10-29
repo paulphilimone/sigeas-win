@@ -243,7 +243,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
         }
                 
         private void FormMain_Load(object sender, EventArgs e) {                       
-            UpdateFormDevices();
+            UpdateMainLayoutComponents();
             //UpdateLayout();
             timerHoras.Start();         
         }                
@@ -290,7 +290,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
         }               
 
         private void tsMenuList_Atualizar_Click(object sender, EventArgs e) {
-            UpdateFormDevices();
+            UpdateMainLayoutComponents();
         }
 
         private void activaçãoDeToolStripMenuItem_Click(object sender, EventArgs e) {
@@ -322,58 +322,17 @@ namespace mz.betainteractive.sigeas.Views.Main {
         }
 
         public void UpdateMainDevices() {
-            /*
-            var SDB = FrmMainProgram.SystemDatabase;                        
-
-            listViewDevices.Items.Clear();
-
-            foreach (var dr in SDB.Doors_And_Devices) {
-                string door = dr.Key.Name;
-
-                foreach (var dev in dr.Value) {
-                    //Console.WriteLine("device: " + dev.Name);
-                    ListViewItemDevice item = new ListViewItemDevice(dev);
-                    listViewDevices.Items.Add(item);
-                }
-            }
-
-            Device sel_dev = (Device)cboPrimaryDevice.SelectedItem;
-
-            cboPrimaryDevice.Items.Clear();
-            tsCboPrimaryDevice.Items.Clear();
-
-            cboPrimaryDevice.Text = "";
-            tsCboPrimaryDevice.Text = "";
-            
-            //SDB.SelectedDevice = null;                     
-
-            cboPrimaryDevice.Items.AddRange(SDB.ConnectedDevices.ToArray());
-            tsCboPrimaryDevice.Items.AddRange(SDB.ConnectedDevices.ToArray());
-
-            if (SDB.ConnectedDevices.Count > 0) {
-                if (sel_dev != null && SDB.ConnectedDevices.Contains(sel_dev)) {
-                    cboPrimaryDevice.SelectedItem = sel_dev;
-                    tsCboPrimaryDevice.SelectedItem = sel_dev;
-                    SDB.SelectedDevice = sel_dev;
-                } else {
-                    cboPrimaryDevice.SelectedIndex = 0;
-                    tsCboPrimaryDevice.SelectedIndex = 0;
-                    SDB.SelectedDevice = SDB.ConnectedDevices.ElementAt(0);
-                }
-                tssBiomConnect.Text = SDB.ConnectedDevices.Count.ToString();
-            } else {
-                tssBiomConnect.Text = "Desconectado(s)";
-            }
-
-            */
+           
         }
 
-        public void UpdateFormDevices() {
-            /*
-            var SDB = FrmMainProgram.SystemDatabase;
-            SDB.GetDevicesFromDatabase();
-            */
-
+        public void UpdateMainLayoutComponents() {
+            //Collapse expandos
+            expAttendance.Collapsed = true;
+            expDispensas.Collapsed = true;
+            expFuncDevs.Collapsed = true;
+            expImportExport.Collapsed = true;
+            expTools.Collapsed = true;
+            
             UpdateMainDevices();                        
         }
 

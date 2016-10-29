@@ -11,7 +11,6 @@ using mz.betainteractive.sigeas.DeviceSystem;
 using mz.betainteractive.utilities.module.BackgroundFeatures;
 using mz.betainteractive.sigeas.Models;
 using mz.betainteractive.sigeas.Utilities;
-using User = Microsoft.VisualBasic.ApplicationServices.User;
 
 namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
     public partial class DeviceDataUpdateView : Form, mz.betainteractive.utilities.module.Components.AuthorizableComponent {

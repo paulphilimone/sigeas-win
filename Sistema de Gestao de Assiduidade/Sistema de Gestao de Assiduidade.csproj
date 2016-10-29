@@ -632,6 +632,9 @@
     <None Include="images\utilities-medium-icon.png" />
     <None Include="images\users-dev-icon-medium.png" />
     <None Include="images\button1_pressed.png" />
+    <None Include="images\bullet-blue-icon.png" />
+    <None Include="images\bullet-green-icon.png" />
+    <None Include="images\favicon.ico" />
     <Content Include="sisga.ico" />
   </ItemGroup>
   <ItemGroup>
