@@ -12,6 +12,7 @@
 - Notes onn future development.  
   - Ter em conta Multiple Verification Modes, altera verifyMode number
   - Ao recalcular AttendanceData - permitir apagar ou nao
+  - (***) Para o futuro ver o que fazer quando houver clocks (num dia em que nao se trabalha, num feriado e no periodo de ferias)
 
 - New Features  
   - Novas Funcionalidades
@@ -25,20 +26,21 @@
 
 Fase 1 - antes da venda
  - Testar e corrigir bugs 
-   * - Metodos de insercao de dados (device model - devem acompanhar o tipo de dispositivo BW or TFT)              
-     - Executing this
-       - Detect every direct method used - not done
-       - Convert to Methods on SDM
- - (***) Para o futuro ver o que fazer quando houver clocks (num dia em que nao se trabalha, num feriado e no periodo de ferias)
- - Adicionar Reports
-    Generate Reports
-    - Mais faltosos por Departamentos
-    - Departamento com mais faltas
-
-Fase 2 - depois venda e update
+   * - Metodos de insercao de dados (device model - devem acompanhar o tipo de dispositivo BW or TFT) - Done!
+ - Adicionar Reports - Done!
  - Mudar as Views do programa (torna-lo mais user friendly)
+   - MainView melhorar - Done!
+   - Reagrupar os menus - ****
+   - Planear como cada Form deve abrir (MDI e Dialogs) - ****
+   - Segurança de Forms e bloqueio de buttons - ****
+
+Fase 2 - depois venda e update (vender 2 e fazer testes)
  - Optional (Faces e Multiple Verification Mode)
+ - Corrigir Bug's
 
 Fase 3
  - Web Application
  - SigeasDeviceModule - Server(app with rest web services) n Client(java)
+
+Forms/Views List and dependency
+-------------------------------

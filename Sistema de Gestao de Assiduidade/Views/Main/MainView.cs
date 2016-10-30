@@ -82,9 +82,14 @@ namespace mz.betainteractive.sigeas.Views.Main {
 
             DeviceManager.MdiParent = this;
             FuncionarioForm.MdiParent = this;
-
+            UserManagement.MdiParent = this;
+            AboutBox.MdiParent = this;
             InitSecurity();
+            InitFormsLayout();
+        }
 
+        private void InitFormsLayout() {
+            
         }
 
         private void InitSecurity() {

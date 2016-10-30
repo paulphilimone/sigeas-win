@@ -133,7 +133,7 @@
             this.textBoxDescription.TabIndex = 23;
             this.textBoxDescription.TabStop = false;
             this.textBoxDescription.Text = "Produzido pela Beta Interactive\r\n\r\nBeta Interactive:\r\n\r\n   Programadores:\r\n      " +
-                "  Paulo Filimone\r\n        \r\n";
+    "  Paulo Filimone\r\n        \r\n";
             // 
             // okButton
             // 

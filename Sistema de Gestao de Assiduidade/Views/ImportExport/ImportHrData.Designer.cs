@@ -464,7 +464,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(347, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Porta";
             // 
@@ -482,7 +482,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(21, 11);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 13);
+            this.label4.Size = new System.Drawing.Size(92, 13);
             this.label4.TabIndex = 0;
             this.label4.Text = "Número de Série";
             // 
@@ -491,7 +491,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(16, 33);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 13);
+            this.label5.Size = new System.Drawing.Size(63, 13);
             this.label5.TabIndex = 22;
             this.label5.Text = "Biométrico";
             // 
@@ -545,7 +545,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(20, 76);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 13);
+            this.label3.Size = new System.Drawing.Size(122, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Informação Importada";
             // 
@@ -554,7 +554,7 @@
             this.TxtImportedFile.Location = new System.Drawing.Point(23, 46);
             this.TxtImportedFile.Name = "TxtImportedFile";
             this.TxtImportedFile.ReadOnly = true;
-            this.TxtImportedFile.Size = new System.Drawing.Size(712, 20);
+            this.TxtImportedFile.Size = new System.Drawing.Size(712, 22);
             this.TxtImportedFile.TabIndex = 4;
             // 
             // label2
@@ -562,7 +562,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(20, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 13);
+            this.label2.Size = new System.Drawing.Size(156, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Nome do Ficheiro Importado";
             // 
@@ -574,11 +574,12 @@
             this.Controls.Add(this.BtnSaveImportedData);
             this.Controls.Add(this.BtnImportFile);
             this.Controls.Add(this.GBoxImportData);
+            this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "ImportHrData";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "ImportHrData";
+            this.Text = "Importar Dados dos Funcionarios apartir dum XLS";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ImportHrData_FormClosing);
             this.VisibleChanged += new System.EventHandler(this.ImportHrData_VisibleChanged);
             this.GBoxImportData.ResumeLayout(false);

@@ -153,7 +153,7 @@
             // 
             // TViewFuncionarios
             // 
-            this.TViewFuncionarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TViewFuncionarios.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TViewFuncionarios.FullRowSelect = true;
             this.TViewFuncionarios.ImageIndex = 0;
             this.TViewFuncionarios.ImageList = this.funcionarioImageList;
@@ -999,10 +999,9 @@
             this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.BtnChange);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "FrmFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Funcionários";
+            this.Text = "Gestão de Funcionários";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmFuncionario_FormClosing);
             this.VisibleChanged += new System.EventHandler(this.FrmFuncionario_VisibleChanged);
             this.tabFuncionario.ResumeLayout(false);

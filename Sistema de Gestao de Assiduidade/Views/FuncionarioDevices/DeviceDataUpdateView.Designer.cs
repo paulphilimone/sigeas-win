@@ -223,10 +223,11 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "DeviceDataUpdateView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Atualizar Usúarios no Dispositivo";
+            this.Text = "Registar Funcionários nos Dispositivos";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DeviceDataUpdateView_FormClosing);
             this.VisibleChanged += new System.EventHandler(this.DeviceDataUpdateView_VisibleChanged);
             this.panel1.ResumeLayout(false);

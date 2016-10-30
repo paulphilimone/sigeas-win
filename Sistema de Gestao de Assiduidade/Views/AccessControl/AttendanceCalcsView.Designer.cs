@@ -47,6 +47,7 @@
             this.DGViewAttCalcs = new System.Windows.Forms.DataGridView();
             this.MenuStripDGV = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.verRegistosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registarPedidoDeDispensaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.apagarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.cancelarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,7 +57,6 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.BtnMonthSearchCalc = new System.Windows.Forms.Button();
             this.BtnMonthSearch = new System.Windows.Forms.Button();
-            this.registarPedidoDeDispensaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -281,7 +281,7 @@
             this.toolStripSeparator1,
             this.cancelarToolStripMenuItem});
             this.MenuStripDGV.Name = "MenuStripDGV";
-            this.MenuStripDGV.Size = new System.Drawing.Size(223, 120);
+            this.MenuStripDGV.Size = new System.Drawing.Size(223, 98);
             this.MenuStripDGV.Opening += new System.ComponentModel.CancelEventHandler(this.MenuStripDGV_Opening);
             // 
             // verRegistosToolStripMenuItem
@@ -290,6 +290,13 @@
             this.verRegistosToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.verRegistosToolStripMenuItem.Text = "Ver registos";
             this.verRegistosToolStripMenuItem.Click += new System.EventHandler(this.verRegistosToolStripMenuItem_Click);
+            // 
+            // registarPedidoDeDispensaToolStripMenuItem
+            // 
+            this.registarPedidoDeDispensaToolStripMenuItem.Enabled = false;
+            this.registarPedidoDeDispensaToolStripMenuItem.Name = "registarPedidoDeDispensaToolStripMenuItem";
+            this.registarPedidoDeDispensaToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
+            this.registarPedidoDeDispensaToolStripMenuItem.Text = "Registar Pedido de Dispensa";
             // 
             // apagarToolStripMenuItem
             // 
@@ -376,13 +383,6 @@
             this.BtnMonthSearch.UseVisualStyleBackColor = true;
             this.BtnMonthSearch.Click += new System.EventHandler(this.BtnMonthSearch_Click);
             // 
-            // registarPedidoDeDispensaToolStripMenuItem
-            // 
-            this.registarPedidoDeDispensaToolStripMenuItem.Enabled = false;
-            this.registarPedidoDeDispensaToolStripMenuItem.Name = "registarPedidoDeDispensaToolStripMenuItem";
-            this.registarPedidoDeDispensaToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
-            this.registarPedidoDeDispensaToolStripMenuItem.Text = "Registar Pedido de Dispensa";
-            // 
             // AttendanceCalcsView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -399,7 +399,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MinimizeBox = false;
             this.Name = "AttendanceCalcsView";
-            this.Text = "Calculo de Assiduidade";
+            this.Text = "Cálculos de Assiduidade";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCalculoAsseduidade_FormClosing);
             this.VisibleChanged += new System.EventHandler(this.FrmCalculoAsseduidade_VisibleChanged);
             this.groupBox2.ResumeLayout(false);

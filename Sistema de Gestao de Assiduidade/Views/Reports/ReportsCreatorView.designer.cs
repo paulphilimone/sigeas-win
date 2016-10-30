@@ -369,7 +369,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MinimizeBox = false;
             this.Name = "ReportsCreatorView";
-            this.Text = "Formulário de Relatórios";
+            this.Text = "Relatórios de Assiduidade";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCalculoAsseduidade_FormClosing);
             this.VisibleChanged += new System.EventHandler(this.FrmCalculoAsseduidade_VisibleChanged);
             this.groupBox2.ResumeLayout(false);

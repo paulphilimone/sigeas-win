@@ -63,8 +63,8 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.popMenSelCancelar = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btWeeklySchedule = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btWeeklySchedule = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGViewFuncionarioHorario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NudAnos)).BeginInit();
@@ -444,16 +444,6 @@
             this.groupBox4.TabIndex = 24;
             this.groupBox4.TabStop = false;
             // 
-            // btWeeklySchedule
-            // 
-            this.btWeeklySchedule.Location = new System.Drawing.Point(163, 33);
-            this.btWeeklySchedule.Name = "btWeeklySchedule";
-            this.btWeeklySchedule.Size = new System.Drawing.Size(208, 33);
-            this.btWeeklySchedule.TabIndex = 1;
-            this.btWeeklySchedule.Text = "Horário Semanal";
-            this.btWeeklySchedule.UseVisualStyleBackColor = true;
-            this.btWeeklySchedule.Click += new System.EventHandler(this.btWeeklySchedule_Click);
-            // 
             // button1
             // 
             this.button1.Enabled = false;
@@ -463,6 +453,17 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Horário Quinzenal";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            // 
+            // btWeeklySchedule
+            // 
+            this.btWeeklySchedule.Location = new System.Drawing.Point(163, 33);
+            this.btWeeklySchedule.Name = "btWeeklySchedule";
+            this.btWeeklySchedule.Size = new System.Drawing.Size(208, 33);
+            this.btWeeklySchedule.TabIndex = 1;
+            this.btWeeklySchedule.Text = "Horário Semanal";
+            this.btWeeklySchedule.UseVisualStyleBackColor = true;
+            this.btWeeklySchedule.Click += new System.EventHandler(this.btWeeklySchedule_Click);
             // 
             // pictureBox1
             // 

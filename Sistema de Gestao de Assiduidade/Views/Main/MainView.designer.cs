@@ -112,6 +112,7 @@
             this.expImportExport = new XPExplorerBar.Expando();
             this.tskImportDataXls = new XPExplorerBar.TaskItem();
             this.tskCollectBioData = new XPExplorerBar.TaskItem();
+            this.mdiTabStrip1 = new MdiTabStrip.MdiTabStrip();
             this.mainMenu.SuspendLayout();
             this.statusBar.SuspendLayout();
             this.mainToolBar.SuspendLayout();
@@ -127,6 +128,7 @@
             this.expTools.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.expImportExport)).BeginInit();
             this.expImportExport.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mdiTabStrip1)).BeginInit();
             this.SuspendLayout();
             // 
             // mainMenu
@@ -410,8 +412,8 @@
             // acercaDeToolStripMenuItem
             // 
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.acercaDeToolStripMenuItem.Text = "Acerca de SISGA";
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.acercaDeToolStripMenuItem.Text = "Acerca de Sigeas";
             this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
             // statusBar
@@ -544,6 +546,7 @@
             // 
             // mainToolBar
             // 
+            this.mainToolBar.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.mainToolBar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.mainToolBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbtnDeviceManager,
@@ -561,6 +564,7 @@
             this.mainToolBar.Name = "mainToolBar";
             this.mainToolBar.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.mainToolBar.Size = new System.Drawing.Size(1044, 42);
+            this.mainToolBar.Stretch = true;
             this.mainToolBar.TabIndex = 29;
             this.mainToolBar.Text = "toolStrip1";
             // 
@@ -679,7 +683,6 @@
             this.expFuncDevs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.expFuncDevs.Animate = true;
-            this.expFuncDevs.Collapsed = true;
             this.expFuncDevs.CustomHeaderSettings.NormalTitleColor = System.Drawing.Color.Black;
             this.expFuncDevs.CustomHeaderSettings.NormalTitleHotColor = System.Drawing.Color.DarkOrchid;
             this.expFuncDevs.CustomHeaderSettings.TitleFont = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -692,7 +695,7 @@
             this.expFuncDevs.Location = new System.Drawing.Point(12, 12);
             this.expFuncDevs.MinimumSize = new System.Drawing.Size(226, 45);
             this.expFuncDevs.Name = "expFuncDevs";
-            this.expFuncDevs.Size = new System.Drawing.Size(226, 45);
+            this.expFuncDevs.Size = new System.Drawing.Size(226, 120);
             this.expFuncDevs.TabIndex = 0;
             this.expFuncDevs.Text = "Funcionários nos dispositivos";
             this.expFuncDevs.TitleImage = global::mz.betainteractive.sigeas.Properties.Resources.func_devices_medium_icon;
@@ -747,7 +750,7 @@
             this.tskViewUserClocks,
             this.tskViewAttCalcs,
             this.tskReports});
-            this.expAttendance.Location = new System.Drawing.Point(12, 69);
+            this.expAttendance.Location = new System.Drawing.Point(12, 144);
             this.expAttendance.MinimumSize = new System.Drawing.Size(226, 45);
             this.expAttendance.Name = "expAttendance";
             this.expAttendance.Size = new System.Drawing.Size(226, 45);
@@ -822,7 +825,7 @@
             this.tskFeriados,
             this.tskDispensas,
             this.tskPlanFerias});
-            this.expDispensas.Location = new System.Drawing.Point(12, 126);
+            this.expDispensas.Location = new System.Drawing.Point(12, 201);
             this.expDispensas.MinimumSize = new System.Drawing.Size(226, 45);
             this.expDispensas.Name = "expDispensas";
             this.expDispensas.Size = new System.Drawing.Size(226, 45);
@@ -897,7 +900,7 @@
             this.tskUserManager,
             this.tskDevManager,
             this.tskDevActivation});
-            this.expTools.Location = new System.Drawing.Point(12, 183);
+            this.expTools.Location = new System.Drawing.Point(12, 258);
             this.expTools.MinimumSize = new System.Drawing.Size(226, 45);
             this.expTools.Name = "expTools";
             this.expTools.Size = new System.Drawing.Size(226, 45);
@@ -971,7 +974,7 @@
             this.expImportExport.Items.AddRange(new System.Windows.Forms.Control[] {
             this.tskImportDataXls,
             this.tskCollectBioData});
-            this.expImportExport.Location = new System.Drawing.Point(12, 240);
+            this.expImportExport.Location = new System.Drawing.Point(12, 315);
             this.expImportExport.MinimumSize = new System.Drawing.Size(226, 45);
             this.expImportExport.Name = "expImportExport";
             this.expImportExport.Size = new System.Drawing.Size(226, 120);
@@ -1013,12 +1016,28 @@
             this.tskCollectBioData.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tskCollectBioData.UseVisualStyleBackColor = false;
             // 
+            // mdiTabStrip1
+            // 
+            this.mdiTabStrip1.ActiveTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mdiTabStrip1.AllowDrop = true;
+            this.mdiTabStrip1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.mdiTabStrip1.InactiveTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mdiTabStrip1.Location = new System.Drawing.Point(250, 66);
+            this.mdiTabStrip1.MinimumSize = new System.Drawing.Size(50, 33);
+            this.mdiTabStrip1.MouseOverTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mdiTabStrip1.Name = "mdiTabStrip1";
+            this.mdiTabStrip1.Padding = new System.Windows.Forms.Padding(5, 3, 20, 5);
+            this.mdiTabStrip1.Size = new System.Drawing.Size(794, 35);
+            this.mdiTabStrip1.TabIndex = 35;
+            this.mdiTabStrip1.Text = "mdiTabStrip1";
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1044, 585);
+            this.Controls.Add(this.mdiTabStrip1);
             this.Controls.Add(this.leftTaskPane);
             this.Controls.Add(this.mainToolBar);
             this.Controls.Add(this.mainMenu);
@@ -1050,6 +1069,7 @@
             this.expTools.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.expImportExport)).EndInit();
             this.expImportExport.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.mdiTabStrip1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1139,6 +1159,7 @@
         private XPExplorerBar.TaskItem tskUserManager;
         private XPExplorerBar.TaskItem tskDevManager;
         private XPExplorerBar.TaskItem tskDevActivation;
+        private MdiTabStrip.MdiTabStrip mdiTabStrip1;
     }
 }
 

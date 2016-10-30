@@ -36,9 +36,9 @@
             this.DGViewFuncDevices = new System.Windows.Forms.DataGridView();
             this.BtnClose = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BtnSaveOnDevices = new System.Windows.Forms.Button();
             this.BtnSaveAll = new System.Windows.Forms.Button();
             this.BtFechar = new System.Windows.Forms.Button();
-            this.BtnSaveOnDevices = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGViewFuncDevices)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -176,6 +176,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Funcionário - Portas/Biométricos";
             // 
+            // BtnSaveOnDevices
+            // 
+            this.BtnSaveOnDevices.Location = new System.Drawing.Point(227, 349);
+            this.BtnSaveOnDevices.Name = "BtnSaveOnDevices";
+            this.BtnSaveOnDevices.Size = new System.Drawing.Size(284, 26);
+            this.BtnSaveOnDevices.TabIndex = 8;
+            this.BtnSaveOnDevices.Text = "Atualizar Associações nos Biometricos";
+            this.BtnSaveOnDevices.UseVisualStyleBackColor = true;
+            this.BtnSaveOnDevices.Click += new System.EventHandler(this.BtnSaveOnDevices_Click);
+            // 
             // BtnSaveAll
             // 
             this.BtnSaveAll.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -198,16 +208,6 @@
             this.BtFechar.UseVisualStyleBackColor = true;
             this.BtFechar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // BtnSaveOnDevices
-            // 
-            this.BtnSaveOnDevices.Location = new System.Drawing.Point(227, 349);
-            this.BtnSaveOnDevices.Name = "BtnSaveOnDevices";
-            this.BtnSaveOnDevices.Size = new System.Drawing.Size(284, 26);
-            this.BtnSaveOnDevices.TabIndex = 8;
-            this.BtnSaveOnDevices.Text = "Atualizar Associações nos Biometricos";
-            this.BtnSaveOnDevices.UseVisualStyleBackColor = true;
-            this.BtnSaveOnDevices.Click += new System.EventHandler(this.BtnSaveOnDevices_Click);
-            // 
             // TableFuncionarioDeviceView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,12 +219,11 @@
             this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.groupBox2);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TableFuncionarioDeviceView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Relação entre Funcionários e Biometricos";
+            this.Text = "Associar Funcionários ás Portas/Biometricos";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TableFuncionarioDeviceView_FormClosing);
             this.VisibleChanged += new System.EventHandler(this.TableFuncionarioDeviceView_VisibleChanged);
             this.groupBox2.ResumeLayout(false);

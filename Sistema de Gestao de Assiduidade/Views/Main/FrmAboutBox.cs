@@ -81,8 +81,8 @@ namespace mz.betainteractive.sigeas.Views.Main {
         #endregion
 
         private void AboutBox_FormClosing(object sender, FormClosingEventArgs e) {
-            e.Cancel = true;
-            this.Hide();
+            //e.Cancel = true;
+            //this.Hide();
         }
     }
 }

@@ -44,6 +44,7 @@
             this.btSave = new System.Windows.Forms.Button();
             this.btCancel = new System.Windows.Forms.Button();
             this.lvAusencias = new System.Windows.Forms.ListView();
+            this.listUsersImageList = new System.Windows.Forms.ImageList(this.components);
             this.cboSearchFuncionarios = new System.Windows.Forms.ComboBox();
             this.dtpSearchFromDate = new System.Windows.Forms.DateTimePicker();
             this.dtpSearchToDate = new System.Windows.Forms.DateTimePicker();
@@ -53,7 +54,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btClean = new System.Windows.Forms.Button();
-            this.listUsersImageList = new System.Windows.Forms.ImageList(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -72,7 +72,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(19, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 13);
+            this.label1.Size = new System.Drawing.Size(66, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Funcionário";
             // 
@@ -81,7 +81,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(19, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 13);
+            this.label2.Size = new System.Drawing.Size(123, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tipo de Ausência/Falta";
             // 
@@ -114,7 +114,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(17, 57);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 13);
+            this.label4.Size = new System.Drawing.Size(58, 13);
             this.label4.TabIndex = 15;
             this.label4.Text = "Data Final";
             // 
@@ -123,7 +123,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(17, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.Size = new System.Drawing.Size(63, 13);
             this.label3.TabIndex = 14;
             this.label3.Text = "Data Inicial";
             // 
@@ -134,7 +134,7 @@
             this.dtpToTime.Location = new System.Drawing.Point(179, 54);
             this.dtpToTime.Name = "dtpToTime";
             this.dtpToTime.ShowUpDown = true;
-            this.dtpToTime.Size = new System.Drawing.Size(70, 20);
+            this.dtpToTime.Size = new System.Drawing.Size(70, 22);
             this.dtpToTime.TabIndex = 13;
             this.dtpToTime.Value = new System.DateTime(2012, 9, 8, 23, 59, 0, 0);
             // 
@@ -143,7 +143,7 @@
             this.dtpToDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpToDate.Location = new System.Drawing.Point(82, 54);
             this.dtpToDate.Name = "dtpToDate";
-            this.dtpToDate.Size = new System.Drawing.Size(91, 20);
+            this.dtpToDate.Size = new System.Drawing.Size(91, 22);
             this.dtpToDate.TabIndex = 12;
             // 
             // dtpFromTime
@@ -153,7 +153,7 @@
             this.dtpFromTime.Location = new System.Drawing.Point(179, 27);
             this.dtpFromTime.Name = "dtpFromTime";
             this.dtpFromTime.ShowUpDown = true;
-            this.dtpFromTime.Size = new System.Drawing.Size(70, 20);
+            this.dtpFromTime.Size = new System.Drawing.Size(70, 22);
             this.dtpFromTime.TabIndex = 11;
             this.dtpFromTime.Value = new System.DateTime(2012, 9, 8, 0, 0, 0, 0);
             // 
@@ -162,7 +162,7 @@
             this.dtpFromDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFromDate.Location = new System.Drawing.Point(82, 27);
             this.dtpFromDate.Name = "dtpFromDate";
-            this.dtpFromDate.Size = new System.Drawing.Size(91, 20);
+            this.dtpFromDate.Size = new System.Drawing.Size(91, 22);
             this.dtpFromDate.TabIndex = 10;
             this.dtpFromDate.Value = new System.DateTime(2016, 6, 22, 0, 0, 0, 0);
             // 
@@ -180,7 +180,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(19, 233);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 13);
+            this.label5.Size = new System.Drawing.Size(88, 13);
             this.label5.TabIndex = 6;
             this.label5.Text = "Motivo da Falta";
             // 
@@ -188,9 +188,9 @@
             // 
             this.chkJustificada.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.chkJustificada.AutoSize = true;
-            this.chkJustificada.Location = new System.Drawing.Point(27, 381);
+            this.chkJustificada.Location = new System.Drawing.Point(44, 381);
             this.chkJustificada.Name = "chkJustificada";
-            this.chkJustificada.Size = new System.Drawing.Size(267, 17);
+            this.chkJustificada.Size = new System.Drawing.Size(287, 17);
             this.chkJustificada.TabIndex = 7;
             this.chkJustificada.Text = "Falta Justificada (Não será considerado como falta)";
             this.chkJustificada.UseVisualStyleBackColor = true;
@@ -255,6 +255,15 @@
             this.lvAusencias.View = System.Windows.Forms.View.List;
             this.lvAusencias.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lvAusencias_MouseDoubleClick);
             // 
+            // listUsersImageList
+            // 
+            this.listUsersImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("listUsersImageList.ImageStream")));
+            this.listUsersImageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.listUsersImageList.Images.SetKeyName(0, "icon-door.png");
+            this.listUsersImageList.Images.SetKeyName(1, "role_icon2.png");
+            this.listUsersImageList.Images.SetKeyName(2, "users-icon.png");
+            this.listUsersImageList.Images.SetKeyName(3, "users-icon2.png");
+            // 
             // cboSearchFuncionarios
             // 
             this.cboSearchFuncionarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -270,7 +279,7 @@
             this.dtpSearchFromDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpSearchFromDate.Location = new System.Drawing.Point(16, 76);
             this.dtpSearchFromDate.Name = "dtpSearchFromDate";
-            this.dtpSearchFromDate.Size = new System.Drawing.Size(108, 20);
+            this.dtpSearchFromDate.Size = new System.Drawing.Size(108, 22);
             this.dtpSearchFromDate.TabIndex = 13;
             this.dtpSearchFromDate.Value = new System.DateTime(2016, 6, 22, 0, 0, 0, 0);
             // 
@@ -280,7 +289,7 @@
             this.dtpSearchToDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpSearchToDate.Location = new System.Drawing.Point(174, 76);
             this.dtpSearchToDate.Name = "dtpSearchToDate";
-            this.dtpSearchToDate.Size = new System.Drawing.Size(115, 20);
+            this.dtpSearchToDate.Size = new System.Drawing.Size(115, 22);
             this.dtpSearchToDate.TabIndex = 14;
             this.dtpSearchToDate.Value = new System.DateTime(2016, 6, 22, 0, 0, 0, 0);
             // 
@@ -340,7 +349,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(13, 16);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 13);
+            this.label6.Size = new System.Drawing.Size(66, 13);
             this.label6.TabIndex = 15;
             this.label6.Text = "Funcionario";
             // 
@@ -355,15 +364,6 @@
             this.btClean.UseVisualStyleBackColor = true;
             this.btClean.Click += new System.EventHandler(this.btClean_Click);
             // 
-            // listUsersImageList
-            // 
-            this.listUsersImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("listUsersImageList.ImageStream")));
-            this.listUsersImageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.listUsersImageList.Images.SetKeyName(0, "icon-door.png");
-            this.listUsersImageList.Images.SetKeyName(1, "role_icon2.png");
-            this.listUsersImageList.Images.SetKeyName(2, "users-icon.png");
-            this.listUsersImageList.Images.SetKeyName(3, "users-icon2.png");
-            // 
             // PedidoDispensaView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -374,6 +374,7 @@
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btSave);
             this.Controls.Add(this.groupBox2);
+            this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.MinimumSize = new System.Drawing.Size(717, 509);
             this.Name = "PedidoDispensaView";
             this.Text = "Pedido de Dispensa / Justificação de Faltas";
