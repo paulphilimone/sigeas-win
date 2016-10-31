@@ -71,8 +71,7 @@
     <Reference Include="IPAddressControlLib, Version=1.1.3039.21560, Culture=neutral, PublicKeyToken=55e96405d8fd6d61, processorArchitecture=MSIL">
       <HintPath>dll\forms\IPAddressControlLib.dll</HintPath>
     </Reference>
-    <Reference Include="MdiTabStrip, Version=1.0.6001.34366, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="MdiTabStrip">
       <HintPath>dll\forms\MdiTabStrip.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
