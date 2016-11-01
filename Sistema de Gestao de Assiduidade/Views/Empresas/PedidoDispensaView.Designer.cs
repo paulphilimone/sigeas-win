@@ -24,7 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Paulo Roberto Filimone - (2016-04-20  à 2016-04-20)", 0);
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Paulo Roberto Filimone - (2016-04-20  à 2016-04-20)", 0);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PedidoDispensaView));
             this.cboFuncionarios = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -244,7 +244,7 @@
             this.lvAusencias.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvAusencias.GridLines = true;
             this.lvAusencias.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.lvAusencias.LargeImageList = this.listUsersImageList;
             this.lvAusencias.Location = new System.Drawing.Point(16, 131);
             this.lvAusencias.Name = "lvAusencias";
@@ -377,6 +377,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.MinimumSize = new System.Drawing.Size(717, 509);
             this.Name = "PedidoDispensaView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pedido de Dispensa / Justificação de Faltas";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PedidoDispensaView_FormClosing);
             this.VisibleChanged += new System.EventHandler(this.PedidoDispensaView_VisibleChanged);

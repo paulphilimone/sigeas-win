@@ -399,6 +399,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MinimizeBox = false;
             this.Name = "AttendanceCalcsView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cálculos de Assiduidade";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCalculoAsseduidade_FormClosing);
             this.VisibleChanged += new System.EventHandler(this.FrmCalculoAsseduidade_VisibleChanged);

@@ -299,10 +299,12 @@ namespace mz.betainteractive.sigeas.Views.AccessControl {
         }
 
         private void DisconnectDevice() {
+            if ((CBoxDevices.SelectedItem as Device) == null) return;
+            
             Device device = (Device)CBoxDevices.SelectedItem;
             DeviceIO deviceIO = new DeviceIO(device);
 
-            if (device == null) return;
+            
 
             if (device.Connected) {
                 deviceIO.StartIdentify();

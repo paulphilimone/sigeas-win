@@ -24,7 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "1"),
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "B000-001"),
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "MICHELE"),
@@ -34,7 +34,7 @@
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "Saida"),
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "Entrada", System.Drawing.SystemColors.WindowText, System.Drawing.Color.Aqua, new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)))),
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "OK")}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "15",
             "RAYMOND ROLAND",
@@ -415,8 +415,8 @@
             this.LViewUserClocks.FullRowSelect = true;
             this.LViewUserClocks.GridLines = true;
             this.LViewUserClocks.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2});
+            listViewItem3,
+            listViewItem4});
             this.LViewUserClocks.Location = new System.Drawing.Point(11, 22);
             this.LViewUserClocks.MultiSelect = false;
             this.LViewUserClocks.Name = "LViewUserClocks";
@@ -506,6 +506,7 @@
             // 
             // BtnClose
             // 
+            this.BtnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnClose.Location = new System.Drawing.Point(768, 573);
             this.BtnClose.Name = "BtnClose";
             this.BtnClose.Size = new System.Drawing.Size(141, 23);

@@ -45,8 +45,11 @@ namespace mz.betainteractive.sigeas.Views.FuncionarioDevices {
                 context = null;         
             }
 
-            this.deviceDataUpdate.Dispose();
-            this.deviceDataUpdate = null;
+            if (this.deviceDataUpdate.Visible) {
+                this.deviceDataUpdate.Dispose();
+                this.deviceDataUpdate = null;    
+            }
+            
         }
 
         private void LoadContext() {

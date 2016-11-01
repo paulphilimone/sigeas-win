@@ -83,7 +83,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
             DeviceManager.MdiParent = this;
             FuncionarioForm.MdiParent = this;
             UserManagement.MdiParent = this;
-            AboutBox.MdiParent = this;
+            //AboutBox.MdiParent = this;
             InitSecurity();
             InitFormsLayout();
         }
@@ -173,53 +173,53 @@ namespace mz.betainteractive.sigeas.Views.Main {
                                     
             //this.UserManagement.FormCode = 0x0101;
             tsbtnEmployeeMangaer.Enabled = this.UserManagement.AllowView;
-            menuItemUserManager.Enabled = this.UserManagement.AllowView;
+            mnToolsUserManager.Enabled = this.UserManagement.AllowView;
             
             //this.DeviceManager.FormCode = 0x0102;
             tsbtnDeviceManager.Enabled = this.DeviceManager.AllowView;
-            menuItemDeviceManager.Enabled = this.DeviceManager.AllowView;
+            mnToolsDevManager.Enabled = this.DeviceManager.AllowView;
             
             //this.DeviceActivation.FormCode = 0x0103;
-            TSMnuItemDeviceActivation.Enabled = this.DeviceActivation.AllowView;
+            mnToolsDevActivation.Enabled = this.DeviceActivation.AllowView;
             
             //this.EmpresaForm.FormCode = 0x0104;
-            TSMnuItemEmpresaForm.Enabled = this.EmpresaForm.AllowView;
+            mnComSettings.Enabled = this.EmpresaForm.AllowView;
             
             //this.FuncionarioForm.FormCode = 0x0105;
-            TSMnuItemFuncionarioView.Enabled = this.FuncionarioForm.AllowView;
+            mnEmpManager.Enabled = this.FuncionarioForm.AllowView;
             
             //this.HorarioSemanalForm.FormCode = 0x0106;
-            TSMnuItemHorarioSemanal.Enabled = this.HorarioSemanalForm.AllowView;
+            mnAttSchHorSemanal.Enabled = this.HorarioSemanalForm.AllowView;
             
             //this.PlanificacaoHorarioForm.FormCode = 0x0107;
-            TSMnuItemPlanificacaoHorario.Enabled = this.PlanificacaoHorarioForm.AllowView;
+            mnAttSchedulePlan.Enabled = this.PlanificacaoHorarioForm.AllowView;
             
             //this.FeriadosForm.FormCode = 0x0108;
-            TSMnuItemFeriadosForm.Enabled = this.FeriadosForm.AllowView;
+            mnComFeriados.Enabled = this.FeriadosForm.AllowView;
             
             //this.FeriasForm.FormCode = 0x0109;
-            TSMnuItemFeriasForm.Enabled = this.FeriasForm.AllowView;
+            mnComFerias.Enabled = this.FeriasForm.AllowView;
 
             //this.UserClockViewerForm.FormCode = 0x0110;
-            TSMnuItemUserClocksViewer.Enabled = this.UserClockViewerForm.AllowView;
+            mnAttUserClocks.Enabled = this.UserClockViewerForm.AllowView;
 
             //this.AttendanceCalcsForm.FormCode = 0x0111;
-            TSMnuItemAttCalcsViewer.Enabled = this.AttendanceCalcsForm.AllowView;
+            mnAttCalcsViewer.Enabled = this.AttendanceCalcsForm.AllowView;
 
             //this.tableFuncionarioDeviceView.FormCode = 0x0112;
-            associarFuncionáriosÁsPortasToolStripMenuItem.Enabled = this.tableFuncionarioDeviceView.AllowView;
+            mnEmpFuncDoors.Enabled = this.tableFuncionarioDeviceView.AllowView;
             
             //this.deviceDataUpdateView.FormCode = 0x0113;
-            atualizarFuncionariosNoBiometricoToolStripMenuItem.Enabled = this.deviceDataUpdateView.AllowView;
+            mnEmpSaveDevUsers.Enabled = this.deviceDataUpdateView.AllowView;
             
             //this.importExportView.FormCode = 0x0114;
-            importarDadosToolStripMenuItem.Enabled = this.importExportView.AllowView;
+            mnToolsImportHR.Enabled = this.importExportView.AllowView;
 
             //this.pedidoDispensaView.FormCode = 0x0115;
-            pedidoDeDispensaAusenciaToolStripMenuItem.Enabled = this.pedidoDispensaView.AllowView;
+            mnEmpDispensas.Enabled = this.pedidoDispensaView.AllowView;
                         
             //this.reportsCreatorView.FormCode = 0x0116;
-            relatoriosToolStripMenuItem.Enabled = this.reportsCreatorView.AllowView;
+            mmiReports.Enabled = this.reportsCreatorView.AllowView;
 
 
         }
@@ -276,32 +276,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
                 }
             }
         }
-
-        public void UpdateUserSettings(ApplicationUser user) {
-            tssUserName.Text = user.ToString();
-        }
-
-
-        private void barraDeToolStripMenuItem_Click(object sender, EventArgs e){
-            //taskPaneMain.Visible = barraDeToolStripMenuItem.Checked;
-        }
         
-        private void logOffUserMenuItem_Click(object sender, EventArgs e) {
-            LogOffUser();
-        }               
-
-        private void toolStripButton1_Click(object sender, EventArgs e) {
-            DeviceManager.Visible = true;
-        }               
-
-        private void tsMenuList_Atualizar_Click(object sender, EventArgs e) {
-            UpdateMainLayoutComponents();
-        }
-
-        private void activaçãoDeToolStripMenuItem_Click(object sender, EventArgs e) {
-            DeviceActivation.ShowDialog();
-        }
-
         private void timerHoras_Tick(object sender, EventArgs e) {
             SetTime();
         }               
@@ -357,65 +332,13 @@ namespace mz.betainteractive.sigeas.Views.Main {
         }
 
         private void horasToolStripMenuItem_Click(object sender, EventArgs e) {
-            horasToolStripMenuItem.Checked = !horasToolStripMenuItem.Checked;
-            timerHoras.Enabled = horasToolStripMenuItem.Checked;
-            tssTime.Text = horasToolStripMenuItem.Checked ? DateTime.Now.ToString("HH:mm:ss") : "";
+            mnViewTime.Checked = !mnViewTime.Checked;
+            timerHoras.Enabled = mnViewTime.Checked;
+            tssTime.Text = mnViewTime.Checked ? DateTime.Now.ToString("HH:mm:ss") : "";
         }
 
-        private void expando2_Resize(object sender, EventArgs e) {
-            //OnExpandoResize(expando2, expando3);
-        }
-
-        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e) {
-            AboutBox.ShowDialog();
-        }
-
-        private void gestorDeUtilizadoresToolStripMenuItem_Click(object sender, EventArgs e) {
-            UserManagement.ShowDialog();
-        }
-
-        private void toolStripButton2_Click(object sender, EventArgs e) {
-            FuncionarioForm.Visible = true;
-        }
-
-        private void dadosDaEmpresToolStripMenuItem_Click(object sender, EventArgs e) {
-            EmpresaForm.ShowDialog();
-        }
-
-        private void departamentosToolStripMenuItem_Click(object sender, EventArgs e) {
-
-        }
-
-        private void funcionáriosToolStripMenuItem_Click(object sender, EventArgs e) {            
-            FuncionarioForm.Visible = true;
-        }                
-
-        private void definiçãoDeHoráriosToolStripMenuItem_Click(object sender, EventArgs e) {
-            HorarioSemanalForm.Show(this);
-        }
-
-        private void atribuirHorárioÁFuncionáriosToolStripMenuItem_Click(object sender, EventArgs e) {
-            PlanificacaoHorarioForm.Show(this);
-        }
-
-        private void definirFeriadosToolStripMenuItem_Click(object sender, EventArgs e) {
-            FeriadosForm.Show(this);
-        }
-
-        private void defToolStripMenuItem_Click(object sender, EventArgs e) {
-            FeriasForm.Show(this);
-        }
-
-        private void registosBiométricosToolStripMenuItem_Click(object sender, EventArgs e) {
-            UserClockViewerForm.Show(this);
-        }
-
-        private void cálculosDeAssiduidadeToolStripMenuItem_Click(object sender, EventArgs e) {
-            AttendanceCalcsForm.Show(this);
-        }
-
-        private void definirFeriadosToolStripMenuItem_Click_1(object sender, EventArgs e) {
-            FeriadosForm.Visible = true;
+        public void UpdateUserSettings(ApplicationUser user) {
+            tssUserName.Text = user.ToString();
         }
 
         private void MainView_VisibleChanged(object sender, EventArgs e) {
@@ -428,7 +351,6 @@ namespace mz.betainteractive.sigeas.Views.Main {
         private void Initialize() {
             TSLabelEmpresa.Text = "Não registada!";
 
-
             if (SystemManager.CurrentEmpresaId == -1) {
                 SelectEmpresaView selectEmpresa = new SelectEmpresaView();
                 selectEmpresa.ShowDialog();
@@ -437,7 +359,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
                     LogOffUserWithoutAsk();
                     return;
                 }
-                
+
                 SigeasDatabaseContext context = new SigeasDatabaseContext();
                 Empresa empresa = SystemManager.GetCurrentEmpresa(context);
                 TSLabelEmpresa.Text = empresa.Nome;
@@ -445,8 +367,6 @@ namespace mz.betainteractive.sigeas.Views.Main {
                 empresa = null;
                 context.Dispose();
             }
-
-
         }
 
         private void MainView_Shown(object sender, EventArgs e) {
@@ -454,60 +374,150 @@ namespace mz.betainteractive.sigeas.Views.Main {
             Initialize();
         }
 
-        private void gestorDeDispositivosToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void tsbtnDeviceManager_Click(object sender, EventArgs e) {
             DeviceManager.Visible = true;
         }
 
-        private void associarFuncionáriosÁsPortasToolStripMenuItem_Click(object sender, EventArgs e) {
-            tableFuncionarioDeviceView.Visible = true;
-        }
-
-        private void atualizarFuncionariosNoBiometricoToolStripMenuItem_Click(object sender, EventArgs e) {
-            deviceDataUpdateView.Visible = true;
-        }
-
-        private void importarDadosToolStripMenuItem_Click(object sender, EventArgs e) {
-            importHrData.Visible = true;
-        }
-
-        private void importarExportarDadosBiometricosToolStripMenuItem_Click(object sender, EventArgs e) {
-            importExportView.Visible = true;
-        }
-
-        private void TSMnuItemFeriasForm_Click(object sender, EventArgs e) {
-            this.FeriasForm.Visible = true;
-        }
-
-        private void TSMnuItemFeriadosForm_Click(object sender, EventArgs e) {
-            this.FeriadosForm.Visible = true;
-        }
-
-        private void pedidoDeDispensaAusenciaToolStripMenuItem_Click(object sender, EventArgs e) {
-            this.pedidoDispensaView.Visible = true;
-        }
-
-        private void relátoriosDeAsseduidadeToolStripMenuItem_Click(object sender, EventArgs e) {
-            this.reportsCreatorView.Visible = true;
+        private void tsbtnEmployeeMangaer_Click(object sender, EventArgs e) {
+            FuncionarioForm.Visible = true;
         }
 
         private void tsbtnPlanSchedules_Click(object sender, EventArgs e) {
-            PlanificacaoHorarioForm.Show(this);
+            PlanificacaoHorarioForm.Visible = true;
         }
 
         private void tsbtnReports_Click(object sender, EventArgs e) {
-            this.reportsCreatorView.Visible = true;
+            reportsCreatorView.Visible = true;
         }
 
-        private void leftTaskPane_MouseMove(object sender, MouseEventArgs e) {
-            foreach (Expando exp in leftTaskPane.Expandos)
-            {
-                //exp.Refresh();
-            }
-            
+        private void tskFuncsDoors_Click(object sender, EventArgs e) {
+            tableFuncionarioDeviceView.Visible = true;
         }
 
+        private void tskFuncsDevices_Click(object sender, EventArgs e) {
+            deviceDataUpdateView.ShowDialog();
+        }
 
+        private void tskViewUserClocks_Click(object sender, EventArgs e) {
+            UserClockViewerForm.Visible = true;
+        }
 
-     
+        private void tskViewAttCalcs_Click(object sender, EventArgs e) {
+            AttendanceCalcsForm.Visible = true;
+        }
+
+        private void tskReports_Click(object sender, EventArgs e) {
+            reportsCreatorView.Visible = true;
+        }
+
+        private void tskFeriados_Click(object sender, EventArgs e) {
+            FeriadosForm.ShowDialog();
+        }
+
+        private void tskDispensas_Click(object sender, EventArgs e) {
+            pedidoDispensaView.ShowDialog();
+        }
+
+        private void tskPlanFerias_Click(object sender, EventArgs e) {
+            PlanificacaoHorarioForm.Visible = true;
+        }
+
+        private void tskUserManager_Click(object sender, EventArgs e) {
+            UserManagement.Visible = true;
+        }
+
+        private void tskDevManager_Click(object sender, EventArgs e) {
+            DeviceManager.Visible = true;
+        }
+
+        private void tskDevActivation_Click(object sender, EventArgs e) {
+            DeviceActivation.ShowDialog();
+        }
+
+        private void tskImportDataXls_Click(object sender, EventArgs e) {
+            importHrData.ShowDialog();
+        }
+
+        private void tskCollectBioData_Click(object sender, EventArgs e) {
+            importExportView.ShowDialog();
+        }
+
+        private void mnEmpManager_Click(object sender, EventArgs e) {
+            FuncionarioForm.Visible = true;
+        }
+
+        private void mnEmpDispensas_Click(object sender, EventArgs e) {
+            pedidoDispensaView.ShowDialog();
+        }
+
+        private void mnEmpFuncDoors_Click(object sender, EventArgs e) {
+            tableFuncionarioDeviceView.Visible = true;
+        }
+
+        private void mnEmpSaveDevUsers_Click(object sender, EventArgs e) {
+            deviceDataUpdateView.ShowDialog();
+        }
+
+        private void mnComSettings_Click(object sender, EventArgs e) {
+            EmpresaForm.ShowDialog();
+        }
+
+        private void mnComFeriados_Click(object sender, EventArgs e) {
+            FeriadosForm.ShowDialog();
+        }
+
+        private void mnComFerias_Click(object sender, EventArgs e) {
+            pedidoDispensaView.ShowDialog();
+        }
+
+        private void mnAttSchHorSemanal_Click(object sender, EventArgs e) {
+            HorarioSemanalForm.ShowDialog();
+        }
+
+        private void mnAttSchedulePlan_Click(object sender, EventArgs e) {
+            PlanificacaoHorarioForm.Visible = true;
+        }
+
+        private void mnAttUserClocks_Click(object sender, EventArgs e) {
+            UserClockViewerForm.Visible = true;
+        }
+
+        private void mnAttCalcsViewer_Click(object sender, EventArgs e) {
+            AttendanceCalcsForm.Visible = true;
+        }
+
+        private void mnReports_Click(object sender, EventArgs e) {
+            reportsCreatorView.Visible = true;
+        }
+
+        private void mnToolsDevManager_Click(object sender, EventArgs e) {
+            DeviceManager.Visible = true;
+        }
+
+        private void mnToolsUserManager_Click(object sender, EventArgs e) {
+            UserManagement.Visible = true;
+        }
+
+        private void mnToolsDevActivation_Click(object sender, EventArgs e) {
+            DeviceActivation.ShowDialog();
+        }
+
+        private void mnToolsImportBioData_Click(object sender, EventArgs e) {
+            importExportView.ShowDialog();
+        }
+
+        private void mnToolsImportHR_Click(object sender, EventArgs e) {
+            importHrData.ShowDialog();
+        }
+
+        private void mnHelpHowTo_Click(object sender, EventArgs e) {
+            //nothing
+        }
+
+        private void mnHelpAbout_Click(object sender, EventArgs e)
+        {
+            AboutBox.ShowDialog();
+        }
+        
     }
 }

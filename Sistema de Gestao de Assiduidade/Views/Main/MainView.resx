@@ -130,6 +130,28 @@
     <value>457, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tskFuncsDoors.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAUBJREFUOE9jGIbAr36OVPmCQ1VQLulg0oEnL8+8//t/6tEXpyOLekSgwsSDpj0v
+        /59+9///CSCeffXXn9R5p5qgUsSB1HXP/y+8/f//IiCec/3//87z///Hr33+OWDGaWWoEvwgYOHD/8UH
+        //3PA+L0ff/+J+7+9z9i69//Pqt//HfsP70kN3ciO1QpduA26dz/yBUv/gcvff7fe+HT/25zH/9zmv3o
+        v93MB/9tZ9z/71u7YDlUKXZg1bT7v2Pfqf9WHcf+G7ce/W/QfPi/ftOh/zqNh/+7NazeOHNmPRdUKXag
+        W7T8v0bxmv/yucv+y2Uu/a+Uv+a/bt6ib54Vs9SgSvADhcRJ/0Wj+v4LR/T8F4+b8senoKcNKkUckA2p
+        e8XnV/9fNbLp1LqFk4WhwsSDtWsXS8YVNZdAuYMeMDAAAEL0n2U7OTgoAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="tskFuncsDevices.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAUBJREFUOE9jGIbAr36OVPmCQ1VQLulg0oEnL8+8//t/6tEXpyOLekSgwsSDpj0v
+        /59+9///CSCeffXXn9R5p5qgUsSB1HXP/y+8/f//IiCec/3//87z///Hr33+OWDGaWWoEvwgYOHD/8UH
+        //3PA+L0ff/+J+7+9z9i69//Pqt//HfsP70kN3ciO1QpduA26dz/yBUv/gcvff7fe+HT/25zH/9zmv3o
+        v93MB/9tZ9z/71u7YDlUKXZg1bT7v2Pfqf9WHcf+G7ce/W/QfPi/ftOh/zqNh/+7NazeOHNmPRdUKXag
+        W7T8v0bxmv/yucv+y2Uu/a+Uv+a/bt6ib54Vs9SgSvADhcRJ/0Wj+v4LR/T8F4+b8senoKcNKkUckA2p
+        e8XnV/9fNbLp1LqFk4WhwsSDtWsXS8YVNZdAuYMeMDAAAEL0n2U7OTgoAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="tskViewUserClocks.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -241,28 +263,6 @@
 </value>
   </data>
   <data name="tskCollectBioData.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAUBJREFUOE9jGIbAr36OVPmCQ1VQLulg0oEnL8+8//t/6tEXpyOLekSgwsSDpj0v
-        /59+9///CSCeffXXn9R5p5qgUsSB1HXP/y+8/f//IiCec/3//87z///Hr33+OWDGaWWoEvwgYOHD/8UH
-        //3PA+L0ff/+J+7+9z9i69//Pqt//HfsP70kN3ciO1QpduA26dz/yBUv/gcvff7fe+HT/25zH/9zmv3o
-        v93MB/9tZ9z/71u7YDlUKXZg1bT7v2Pfqf9WHcf+G7ce/W/QfPi/ftOh/zqNh/+7NazeOHNmPRdUKXag
-        W7T8v0bxmv/yucv+y2Uu/a+Uv+a/bt6ib54Vs9SgSvADhcRJ/0Wj+v4LR/T8F4+b8senoKcNKkUckA2p
-        e8XnV/9fNbLp1LqFk4WhwsSDtWsXS8YVNZdAuYMeMDAAAEL0n2U7OTgoAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="tskFuncsDoors.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAUBJREFUOE9jGIbAr36OVPmCQ1VQLulg0oEnL8+8//t/6tEXpyOLekSgwsSDpj0v
-        /59+9///CSCeffXXn9R5p5qgUsSB1HXP/y+8/f//IiCec/3//87z///Hr33+OWDGaWWoEvwgYOHD/8UH
-        //3PA+L0ff/+J+7+9z9i69//Pqt//HfsP70kN3ciO1QpduA26dz/yBUv/gcvff7fe+HT/25zH/9zmv3o
-        v93MB/9tZ9z/71u7YDlUKXZg1bT7v2Pfqf9WHcf+G7ce/W/QfPi/ftOh/zqNh/+7NazeOHNmPRdUKXag
-        W7T8v0bxmv/yucv+y2Uu/a+Uv+a/bt6ib54Vs9SgSvADhcRJ/0Wj+v4LR/T8F4+b8senoKcNKkUckA2p
-        e8XnV/9fNbLp1LqFk4WhwsSDtWsXS8YVNZdAuYMeMDAAAEL0n2U7OTgoAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="tskFuncsDevices.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAUBJREFUOE9jGIbAr36OVPmCQ1VQLulg0oEnL8+8//t/6tEXpyOLekSgwsSDpj0v
