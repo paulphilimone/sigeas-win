@@ -153,6 +153,8 @@
             // 
             // TViewFuncionarios
             // 
+            this.TViewFuncionarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.TViewFuncionarios.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TViewFuncionarios.FullRowSelect = true;
             this.TViewFuncionarios.ImageIndex = 0;
@@ -230,6 +232,9 @@
             // 
             // tabFuncionario
             // 
+            this.tabFuncionario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabFuncionario.Controls.Add(this.tabPagePersonalData);
             this.tabFuncionario.Controls.Add(this.tabPageAdress);
             this.tabFuncionario.Controls.Add(this.tabPageFpDevice);
@@ -255,6 +260,8 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox6.Controls.Add(this.CboxCategoria);
             this.groupBox6.Controls.Add(this.CboxDepartamento);
             this.groupBox6.Controls.Add(this.label18);
@@ -304,6 +311,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.picBoxFoto);
             this.groupBox4.Location = new System.Drawing.Point(354, 6);
             this.groupBox4.Name = "groupBox4";
@@ -326,6 +334,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.CBoxEstadoCivil);
@@ -399,6 +409,8 @@
             // 
             // TxtApelido
             // 
+            this.TxtApelido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtApelido.Enabled = false;
             this.TxtApelido.Location = new System.Drawing.Point(128, 49);
             this.TxtApelido.Name = "TxtApelido";
@@ -417,6 +429,8 @@
             // 
             // TxtNome
             // 
+            this.TxtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtNome.Location = new System.Drawing.Point(128, 20);
             this.TxtNome.Name = "TxtNome";
             this.TxtNome.ReadOnly = true;
@@ -434,6 +448,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.CBoxTipoDocumento);
             this.groupBox1.Controls.Add(this.TxtNumeroID);
             this.groupBox1.Controls.Add(this.label6);
@@ -495,6 +511,8 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox7.Controls.Add(this.CBoxNacionalidade);
             this.groupBox7.Controls.Add(this.label16);
             this.groupBox7.Location = new System.Drawing.Point(9, 6);
@@ -523,6 +541,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.TxtEmail);
             this.groupBox3.Controls.Add(this.TxtTelefone);
             this.groupBox3.Controls.Add(this.label9);
@@ -570,6 +590,8 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.Controls.Add(this.TxtBairro);
             this.groupBox5.Controls.Add(this.label25);
             this.groupBox5.Controls.Add(this.TxtNumero);
@@ -860,6 +882,7 @@
             // 
             // BtnRemover
             // 
+            this.BtnRemover.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnRemover.Enabled = false;
             this.BtnRemover.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnRemover.Location = new System.Drawing.Point(470, 449);
@@ -872,6 +895,7 @@
             // 
             // BtnLimpar
             // 
+            this.BtnLimpar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnLimpar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLimpar.Location = new System.Drawing.Point(576, 449);
             this.BtnLimpar.Name = "BtnLimpar";
@@ -883,6 +907,7 @@
             // 
             // BtnClose
             // 
+            this.BtnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnClose.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnClose.Location = new System.Drawing.Point(681, 449);
             this.BtnClose.Name = "BtnClose";
@@ -899,6 +924,7 @@
             // 
             // BtnAddFuncionario
             // 
+            this.BtnAddFuncionario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnAddFuncionario.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAddFuncionario.Location = new System.Drawing.Point(258, 449);
             this.BtnAddFuncionario.Name = "BtnAddFuncionario";
@@ -916,6 +942,7 @@
             // 
             // BtnChange
             // 
+            this.BtnChange.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnChange.Enabled = false;
             this.BtnChange.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnChange.Location = new System.Drawing.Point(364, 449);
@@ -947,6 +974,9 @@
             // 
             // GBoxFuncionario
             // 
+            this.GBoxFuncionario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GBoxFuncionario.Controls.Add(this.tabFuncionario);
             this.GBoxFuncionario.Location = new System.Drawing.Point(245, 5);
             this.GBoxFuncionario.Name = "GBoxFuncionario";
@@ -966,6 +996,7 @@
             // 
             // TxtSearchFuncionarios
             // 
+            this.TxtSearchFuncionarios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.TxtSearchFuncionarios.BackColor = System.Drawing.SystemColors.Info;
             this.TxtSearchFuncionarios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtSearchFuncionarios.Location = new System.Drawing.Point(15, 443);
@@ -975,6 +1006,8 @@
             // 
             // groupBox10
             // 
+            this.groupBox10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox10.Controls.Add(this.label19);
             this.groupBox10.Controls.Add(this.TxtSearchFuncionarios);
             this.groupBox10.Controls.Add(this.CBoxEmpresas);
@@ -999,6 +1032,7 @@
             this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.BtnChange);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MinimumSize = new System.Drawing.Size(812, 524);
             this.Name = "FrmFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Gestão de Funcionários";

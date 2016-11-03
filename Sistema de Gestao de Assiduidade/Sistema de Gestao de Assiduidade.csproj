@@ -261,11 +261,11 @@
     <Compile Include="Views\FuncionarioDevices\DeviceDataUpdateView.Designer.cs">
       <DependentUpon>DeviceDataUpdateView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FuncionarioDevices\TableFuncionarioDeviceView.cs">
+    <Compile Include="Views\FuncionarioDevices\FuncionarioDevicesView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\FuncionarioDevices\TableFuncionarioDeviceView.Designer.cs">
-      <DependentUpon>TableFuncionarioDeviceView.cs</DependentUpon>
+    <Compile Include="Views\FuncionarioDevices\FuncionarioDevicesView.Designer.cs">
+      <DependentUpon>FuncionarioDevicesView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\DeviceManagment\DoorAdd.cs">
       <SubType>Form</SubType>
@@ -470,8 +470,8 @@
     <EmbeddedResource Include="Views\FuncionarioDevices\DeviceDataUpdateView.resx">
       <DependentUpon>DeviceDataUpdateView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FuncionarioDevices\TableFuncionarioDeviceView.resx">
-      <DependentUpon>TableFuncionarioDeviceView.cs</DependentUpon>
+    <EmbeddedResource Include="Views\FuncionarioDevices\FuncionarioDevicesView.resx">
+      <DependentUpon>FuncionarioDevicesView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\DeviceManagment\DoorAdd.resx">
       <DependentUpon>DoorAdd.cs</DependentUpon>

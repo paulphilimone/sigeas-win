@@ -118,6 +118,9 @@
             // 
             // GBoxImportData
             // 
+            this.GBoxImportData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GBoxImportData.BackColor = System.Drawing.Color.White;
             this.GBoxImportData.Controls.Add(this.tabControl1);
             this.GBoxImportData.Controls.Add(this.label3);
@@ -132,6 +135,9 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
@@ -570,7 +576,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 600);
+            this.ClientSize = new System.Drawing.Size(760, 600);
             this.Controls.Add(this.BtnSaveImportedData);
             this.Controls.Add(this.BtnImportFile);
             this.Controls.Add(this.GBoxImportData);

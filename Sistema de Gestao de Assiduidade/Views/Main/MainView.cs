@@ -40,7 +40,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
         public UserClocksViewer UserClockViewerForm;
         public AttendanceCalcsView AttendanceCalcsForm;
         public UserManager UserManagement { get; set; }
-        public TableFuncionarioDeviceView tableFuncionarioDeviceView { get; set; }
+        public FuncionarioDevicesView tableFuncionarioDeviceView { get; set; }
         public DeviceDataUpdateView deviceDataUpdateView { get; set; }
         public ImportHrData importHrData { get; set; }
         public ImportExportView importExportView { get; set; }
@@ -73,7 +73,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
             FeriasForm = new FrmFerias();
             UserClockViewerForm = new UserClocksViewer();
             AttendanceCalcsForm = new AttendanceCalcsView();
-            tableFuncionarioDeviceView = new TableFuncionarioDeviceView();
+            tableFuncionarioDeviceView = new FuncionarioDevicesView();
             deviceDataUpdateView = new DeviceDataUpdateView();
             importHrData = new ImportHrData();
             importExportView = new ImportExportView();
@@ -419,7 +419,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
         }
 
         private void tskPlanFerias_Click(object sender, EventArgs e) {
-            PlanificacaoHorarioForm.Visible = true;
+            FeriasForm.ShowDialog();
         }
 
         private void tskUserManager_Click(object sender, EventArgs e) {

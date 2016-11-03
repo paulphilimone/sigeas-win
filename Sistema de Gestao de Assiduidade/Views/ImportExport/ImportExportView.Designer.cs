@@ -118,6 +118,9 @@
             // 
             // LViewImportedData
             // 
+            this.LViewImportedData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LViewImportedData.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader2,
             this.columnHeader1,
@@ -150,6 +153,9 @@
             // 
             // GBoxImportData
             // 
+            this.GBoxImportData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GBoxImportData.Controls.Add(this.label3);
             this.GBoxImportData.Controls.Add(this.TxtImportedFile);
             this.GBoxImportData.Controls.Add(this.label2);
@@ -174,6 +180,8 @@
             // 
             // TxtImportedFile
             // 
+            this.TxtImportedFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtImportedFile.Location = new System.Drawing.Point(23, 46);
             this.TxtImportedFile.Name = "TxtImportedFile";
             this.TxtImportedFile.ReadOnly = true;
@@ -191,6 +199,7 @@
             // 
             // TxtNumberUserClocks
             // 
+            this.TxtNumberUserClocks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.TxtNumberUserClocks.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNumberUserClocks.Location = new System.Drawing.Point(243, 320);
             this.TxtNumberUserClocks.Name = "TxtNumberUserClocks";
@@ -201,6 +210,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(20, 323);
             this.label1.Name = "label1";
@@ -210,6 +220,7 @@
             // 
             // BtnImportFile
             // 
+            this.BtnImportFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnImportFile.Location = new System.Drawing.Point(31, 387);
             this.BtnImportFile.Name = "BtnImportFile";
             this.BtnImportFile.Size = new System.Drawing.Size(139, 23);
@@ -220,6 +231,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.LViewExportData);
             this.groupBox2.Location = new System.Drawing.Point(11, 11);
@@ -240,6 +254,9 @@
             // 
             // LViewExportData
             // 
+            this.LViewExportData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LViewExportData.CheckBoxes = true;
             this.LViewExportData.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader7,
@@ -286,6 +303,7 @@
             // 
             // BtnExportToFile
             // 
+            this.BtnExportToFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnExportToFile.Location = new System.Drawing.Point(30, 388);
             this.BtnExportToFile.Name = "BtnExportToFile";
             this.BtnExportToFile.Size = new System.Drawing.Size(188, 23);
@@ -296,6 +314,9 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage4);
@@ -321,6 +342,7 @@
             // 
             // BtnSaveImportedData
             // 
+            this.BtnSaveImportedData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnSaveImportedData.Location = new System.Drawing.Point(176, 387);
             this.BtnSaveImportedData.Name = "BtnSaveImportedData";
             this.BtnSaveImportedData.Size = new System.Drawing.Size(210, 23);
@@ -356,6 +378,7 @@
             // 
             // BtnSaveCollectedUserInfo
             // 
+            this.BtnSaveCollectedUserInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnSaveCollectedUserInfo.Location = new System.Drawing.Point(179, 388);
             this.BtnSaveCollectedUserInfo.Name = "BtnSaveCollectedUserInfo";
             this.BtnSaveCollectedUserInfo.Size = new System.Drawing.Size(210, 23);
@@ -366,6 +389,7 @@
             // 
             // BtnImportUserInfo
             // 
+            this.BtnImportUserInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnImportUserInfo.Location = new System.Drawing.Point(34, 388);
             this.BtnImportUserInfo.Name = "BtnImportUserInfo";
             this.BtnImportUserInfo.Size = new System.Drawing.Size(139, 23);
@@ -376,6 +400,9 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.LViewCollectDataUsers);
             this.groupBox4.Controls.Add(this.label7);
             this.groupBox4.Controls.Add(this.TxtImportedUsersFile);
@@ -453,6 +480,8 @@
             // 
             // TxtImportedUsersFile
             // 
+            this.TxtImportedUsersFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtImportedUsersFile.Location = new System.Drawing.Point(23, 46);
             this.TxtImportedUsersFile.Name = "TxtImportedUsersFile";
             this.TxtImportedUsersFile.ReadOnly = true;
@@ -483,6 +512,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.BtnRemoveBeneficiario);
             this.groupBox3.Controls.Add(this.BtnRemoveAllBeneficiarios);
             this.groupBox3.Controls.Add(this.BtnAddBeneficiario);
@@ -501,6 +532,7 @@
             // 
             // BtnRemoveBeneficiario
             // 
+            this.BtnRemoveBeneficiario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnRemoveBeneficiario.Location = new System.Drawing.Point(229, 139);
             this.BtnRemoveBeneficiario.Name = "BtnRemoveBeneficiario";
             this.BtnRemoveBeneficiario.Size = new System.Drawing.Size(116, 23);
@@ -511,6 +543,7 @@
             // 
             // BtnRemoveAllBeneficiarios
             // 
+            this.BtnRemoveAllBeneficiarios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnRemoveAllBeneficiarios.Location = new System.Drawing.Point(229, 168);
             this.BtnRemoveAllBeneficiarios.Name = "BtnRemoveAllBeneficiarios";
             this.BtnRemoveAllBeneficiarios.Size = new System.Drawing.Size(116, 23);
@@ -521,6 +554,8 @@
             // 
             // BtnAddBeneficiario
             // 
+            this.BtnAddBeneficiario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnAddBeneficiario.Location = new System.Drawing.Point(229, 79);
             this.BtnAddBeneficiario.Name = "BtnAddBeneficiario";
             this.BtnAddBeneficiario.Size = new System.Drawing.Size(116, 23);
@@ -531,6 +566,7 @@
             // 
             // BtnAddAllFuncionarios
             // 
+            this.BtnAddAllFuncionarios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnAddAllFuncionarios.Location = new System.Drawing.Point(229, 108);
             this.BtnAddAllFuncionarios.Name = "BtnAddAllFuncionarios";
             this.BtnAddAllFuncionarios.Size = new System.Drawing.Size(116, 23);
@@ -541,6 +577,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(348, 24);
             this.label6.Name = "label6";
@@ -559,6 +596,8 @@
             // 
             // CBoxDepartamentos
             // 
+            this.CBoxDepartamentos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CBoxDepartamentos.FormattingEnabled = true;
             this.CBoxDepartamentos.Location = new System.Drawing.Point(19, 40);
             this.CBoxDepartamentos.Name = "CBoxDepartamentos";
@@ -568,6 +607,7 @@
             // 
             // LViewExportFuncionarios
             // 
+            this.LViewExportFuncionarios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LViewExportFuncionarios.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader12});
             this.LViewExportFuncionarios.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
@@ -592,6 +632,8 @@
             // 
             // LViewDepartFuncionarios
             // 
+            this.LViewDepartFuncionarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LViewDepartFuncionarios.BackColor = System.Drawing.Color.Bisque;
             this.LViewDepartFuncionarios.CheckBoxes = true;
             this.LViewDepartFuncionarios.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -621,6 +663,7 @@
             // 
             // BtnExportUsers
             // 
+            this.BtnExportUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnExportUsers.Location = new System.Drawing.Point(30, 391);
             this.BtnExportUsers.Name = "BtnExportUsers";
             this.BtnExportUsers.Size = new System.Drawing.Size(204, 23);
@@ -631,6 +674,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.LViewExportUserDevices);
             this.groupBox1.Location = new System.Drawing.Point(11, 11);
             this.groupBox1.Name = "groupBox1";
@@ -641,6 +687,9 @@
             // 
             // LViewExportUserDevices
             // 
+            this.LViewExportUserDevices.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LViewExportUserDevices.CheckBoxes = true;
             this.LViewExportUserDevices.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader8,
@@ -680,6 +729,7 @@
             // 
             // BtnClose
             // 
+            this.BtnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnClose.Location = new System.Drawing.Point(541, 474);
             this.BtnClose.Name = "BtnClose";
             this.BtnClose.Size = new System.Drawing.Size(115, 23);
@@ -699,6 +749,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(685, 545);
             this.Name = "ImportExportView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Importar e Exportar Ficheiros com dados biometricos";
