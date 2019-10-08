@@ -547,7 +547,7 @@ namespace mz.betainteractive.sigeas.Utilities {
 
                     calculado.Entrada = sepClocks[0].First().DateAndTime;
 
-                    if (sepClocks[1].Count == 0) {
+                    if (sepClocks[1].Count > 0) {
                         calculado.Saida = sepClocks[1].Last().DateAndTime;
                     }
                 } else {
