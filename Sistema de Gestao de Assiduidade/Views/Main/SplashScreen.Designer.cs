@@ -23,21 +23,20 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SplashScreen));
             this.MainLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.DetailsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.Copyright = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
             this.ProgressBar = new System.Windows.Forms.ProgressBar();
             this.ApplicationTitle = new System.Windows.Forms.Label();
             this.Version = new System.Windows.Forms.Label();
-            this.Copyright = new System.Windows.Forms.Label();
             this.MainLayoutPanel.SuspendLayout();
             this.DetailsLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainLayoutPanel
             // 
-            this.MainLayoutPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainLayoutPanel.BackgroundImage")));
+            this.MainLayoutPanel.BackgroundImage = global::mz.betainteractive.sigeas.Properties.Resources.betaSplashScreen;
             this.MainLayoutPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.MainLayoutPanel.ColumnCount = 2;
             this.MainLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 47F));
@@ -69,7 +68,7 @@
             this.DetailsLayoutPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DetailsLayoutPanel.BackColor = System.Drawing.Color.Transparent;
             this.DetailsLayoutPanel.ColumnCount = 1;
-            this.DetailsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 340F));
+            this.DetailsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 412F));
             this.DetailsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 142F));
             this.DetailsLayoutPanel.Controls.Add(this.Copyright, 0, 0);
             this.DetailsLayoutPanel.Location = new System.Drawing.Point(65, 138);
@@ -79,6 +78,18 @@
             this.DetailsLayoutPanel.Size = new System.Drawing.Size(412, 118);
             this.DetailsLayoutPanel.TabIndex = 3;
             this.DetailsLayoutPanel.UseWaitCursor = true;
+            // 
+            // Copyright
+            // 
+            this.Copyright.BackColor = System.Drawing.Color.Transparent;
+            this.Copyright.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Copyright.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.Copyright.Location = new System.Drawing.Point(3, 0);
+            this.Copyright.Name = "Copyright";
+            this.Copyright.Size = new System.Drawing.Size(334, 20);
+            this.Copyright.TabIndex = 3;
+            this.Copyright.Text = "Produzido e distribuido pela Philimone\'s Group";
+            this.Copyright.UseWaitCursor = true;
             // 
             // Label1
             // 
@@ -130,20 +141,8 @@
             this.Version.Name = "Version";
             this.Version.Size = new System.Drawing.Size(408, 20);
             this.Version.TabIndex = 1;
-            this.Version.Text = "Beta Interactive Lda - Sigeas 1.0";
+            this.Version.Text = "Philimone\'s Group - Sigeas 1.0";
             this.Version.UseWaitCursor = true;
-            // 
-            // Copyright
-            // 
-            this.Copyright.BackColor = System.Drawing.Color.Transparent;
-            this.Copyright.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Copyright.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.Copyright.Location = new System.Drawing.Point(3, 0);
-            this.Copyright.Name = "Copyright";
-            this.Copyright.Size = new System.Drawing.Size(334, 20);
-            this.Copyright.TabIndex = 3;
-            this.Copyright.Text = "Produzido e distribuido por Beta Interactive Lda";
-            this.Copyright.UseWaitCursor = true;
             // 
             // SplashScreen
             // 

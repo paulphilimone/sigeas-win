@@ -84,5 +84,13 @@ namespace mz.betainteractive.sigeas.Views.Main {
             //e.Cancel = true;
             //this.Hide();
         }
+
+        private void textBoxDescription_TextChanged(object sender, EventArgs e) {
+
+        }
+
+        private void logoPictureBox_Click(object sender, EventArgs e) {
+
+        }
     }
 }

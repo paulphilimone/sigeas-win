@@ -6,13 +6,13 @@ using System.Resources;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Sistema de Gestao de Assiduidade")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Sistema de Gestão de Assiduidade")]
+[assembly: AssemblyDescription("Gestão de Controle de Acesso Via Dispositivos Biométricos")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Beta Interactive Lda")]
-[assembly: AssemblyProduct("Sistema de Gestao de Assiduidade")]
-[assembly: AssemblyCopyright("Copyright Beta Interactive © 2013")]
-[assembly: AssemblyTrademark("Beta Interactive Lda")]
+[assembly: AssemblyCompany("Philimone's Group, Lda")]
+[assembly: AssemblyProduct("Sistema de Gestão de Assiduidade")]
+[assembly: AssemblyCopyright("Philimone's Group")]
+[assembly: AssemblyTrademark("Philimone's Group ® 2019")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
