@@ -584,7 +584,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "ImportHrData";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Importar Dados dos Funcionarios apartir dum XLS";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ImportHrData_FormClosing);
             this.VisibleChanged += new System.EventHandler(this.ImportHrData_VisibleChanged);

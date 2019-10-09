@@ -756,8 +756,8 @@ namespace mz.betainteractive.sigeas.Views.Horarios {
         }
 
         private void btWeeklySchedule_Click(object sender, EventArgs e) {
-            FrmHorarioSemanal form = new FrmHorarioSemanal();
-            form.Show(this);
+            var form = new FrmHorarioSemanal();
+            form.ShowDialog(this);
         }        
 
     }

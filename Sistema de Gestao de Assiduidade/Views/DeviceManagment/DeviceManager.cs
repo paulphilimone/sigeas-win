@@ -675,6 +675,8 @@ namespace mz.betainteractive.sigeas.Views.DeviceManagement {
             lbInfoBio_MaxUsers.Text = "";
             lbInfoBio_MaxLogs.Text = "";
             lbInfoBio_MaxFaces.Text = "";
+            btDelAllUserClock.Enabled = AllowDelete;
+            btDelAllUsers.Enabled = AllowDelete;
         }
 
         private void ShowData(Door door) {
@@ -993,7 +995,7 @@ namespace mz.betainteractive.sigeas.Views.DeviceManagement {
         private void DisableDoorDevice() {
             bool value = false;
 
-            BtnAddDoor.Enabled = !value;
+            BtnAddDoor.Enabled = AllowAdd;
             BtnSaveDoor.Enabled = value;
             BtnRemoveDoor.Enabled = value;
             BtnDoorCancelUpdate.Enabled = value;

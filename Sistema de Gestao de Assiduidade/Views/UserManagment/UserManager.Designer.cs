@@ -25,12 +25,12 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserManager));
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Sisga Programmers", 2);
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Paulo Filimone", 2);
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("Developers", 3);
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("Administrators", 3);
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("Sisga Programmers", 2);
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("Paulo Filimone", 2);
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Developers", 3);
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Administrators", 3);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.BtnAppUser_CleanForm = new System.Windows.Forms.Button();
@@ -69,6 +69,11 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.GBoxRoleAdd = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.DGViewPermissions = new System.Windows.Forms.DataGridView();
+            this.ColSelect = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ColFormCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColActionCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.TxtRole_Name = new System.Windows.Forms.TextBox();
@@ -84,11 +89,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.ListViewRoles = new System.Windows.Forms.ListView();
             this.Btn_Close = new System.Windows.Forms.Button();
-            this.DGViewPermissions = new System.Windows.Forms.DataGridView();
-            this.ColSelect = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ColFormCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColActionCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.GBoxUsers.SuspendLayout();
@@ -97,13 +97,16 @@
             this.tabPage2.SuspendLayout();
             this.GBoxRoleAdd.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGViewPermissions)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGViewPermissions)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -132,6 +135,7 @@
             // 
             // BtnAppUser_CleanForm
             // 
+            this.BtnAppUser_CleanForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnAppUser_CleanForm.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAppUser_CleanForm.Location = new System.Drawing.Point(692, 440);
             this.BtnAppUser_CleanForm.Name = "BtnAppUser_CleanForm";
@@ -143,6 +147,7 @@
             // 
             // BtnAppUser_Remove
             // 
+            this.BtnAppUser_Remove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnAppUser_Remove.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAppUser_Remove.Location = new System.Drawing.Point(541, 441);
             this.BtnAppUser_Remove.Name = "BtnAppUser_Remove";
@@ -154,6 +159,7 @@
             // 
             // BtnAppUser_Save
             // 
+            this.BtnAppUser_Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnAppUser_Save.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAppUser_Save.Location = new System.Drawing.Point(405, 441);
             this.BtnAppUser_Save.Name = "BtnAppUser_Save";
@@ -165,6 +171,9 @@
             // 
             // GBoxUsers
             // 
+            this.GBoxUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GBoxUsers.Controls.Add(this.groupBox2);
             this.GBoxUsers.Controls.Add(this.LBoxAppUser_Perfis);
             this.GBoxUsers.Controls.Add(this.label4);
@@ -424,14 +433,16 @@
             // 
             // ListViewAppUsers
             // 
+            this.ListViewAppUsers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.ListViewAppUsers.BackgroundImageTiled = true;
             this.ListViewAppUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListViewAppUsers.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.ListViewAppUsers.FullRowSelect = true;
             this.ListViewAppUsers.HideSelection = false;
             this.ListViewAppUsers.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3,
-            listViewItem4});
+            listViewItem5,
+            listViewItem6});
             this.ListViewAppUsers.LargeImageList = this.listUsersImageList;
             this.ListViewAppUsers.Location = new System.Drawing.Point(7, 41);
             this.ListViewAppUsers.MultiSelect = false;
@@ -470,6 +481,9 @@
             // 
             // GBoxRoleAdd
             // 
+            this.GBoxRoleAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GBoxRoleAdd.Controls.Add(this.groupBox4);
             this.GBoxRoleAdd.Controls.Add(this.groupBox3);
             this.GBoxRoleAdd.Location = new System.Drawing.Point(237, 57);
@@ -481,6 +495,9 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.DGViewPermissions);
             this.groupBox4.Location = new System.Drawing.Point(10, 84);
             this.groupBox4.Name = "groupBox4";
@@ -489,8 +506,65 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Permissões";
             // 
+            // DGViewPermissions
+            // 
+            this.DGViewPermissions.AllowUserToAddRows = false;
+            this.DGViewPermissions.AllowUserToDeleteRows = false;
+            this.DGViewPermissions.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGViewPermissions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.DGViewPermissions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGViewPermissions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColSelect,
+            this.ColFormCode,
+            this.ColActionCode,
+            this.ColName});
+            this.DGViewPermissions.EnableHeadersVisualStyles = false;
+            this.DGViewPermissions.Location = new System.Drawing.Point(6, 22);
+            this.DGViewPermissions.Name = "DGViewPermissions";
+            this.DGViewPermissions.RowHeadersVisible = false;
+            this.DGViewPermissions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGViewPermissions.Size = new System.Drawing.Size(570, 252);
+            this.DGViewPermissions.TabIndex = 21;
+            // 
+            // ColSelect
+            // 
+            this.ColSelect.FalseValue = "false";
+            this.ColSelect.HeaderText = "";
+            this.ColSelect.Name = "ColSelect";
+            this.ColSelect.TrueValue = "true";
+            this.ColSelect.Width = 30;
+            // 
+            // ColFormCode
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColFormCode.DefaultCellStyle = dataGridViewCellStyle4;
+            this.ColFormCode.HeaderText = "Código";
+            this.ColFormCode.Name = "ColFormCode";
+            // 
+            // ColActionCode
+            // 
+            this.ColActionCode.HeaderText = "Acção";
+            this.ColActionCode.Name = "ColActionCode";
+            // 
+            // ColName
+            // 
+            this.ColName.HeaderText = "Nome";
+            this.ColName.Name = "ColName";
+            this.ColName.Width = 340;
+            // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.TxtRole_Name);
             this.groupBox3.Location = new System.Drawing.Point(10, 22);
@@ -567,6 +641,7 @@
             // 
             // BtnRole_Limpar
             // 
+            this.BtnRole_Limpar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnRole_Limpar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnRole_Limpar.Location = new System.Drawing.Point(681, 437);
             this.BtnRole_Limpar.Name = "BtnRole_Limpar";
@@ -578,6 +653,7 @@
             // 
             // BtnRole_Remove
             // 
+            this.BtnRole_Remove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnRole_Remove.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnRole_Remove.Location = new System.Drawing.Point(530, 438);
             this.BtnRole_Remove.Name = "BtnRole_Remove";
@@ -589,6 +665,7 @@
             // 
             // BtnRole_Save
             // 
+            this.BtnRole_Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnRole_Save.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnRole_Save.Location = new System.Drawing.Point(394, 438);
             this.BtnRole_Save.Name = "BtnRole_Save";
@@ -610,14 +687,16 @@
             // 
             // ListViewRoles
             // 
+            this.ListViewRoles.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.ListViewRoles.BackgroundImageTiled = true;
             this.ListViewRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListViewRoles.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.ListViewRoles.FullRowSelect = true;
             this.ListViewRoles.HideSelection = false;
             this.ListViewRoles.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem5,
-            listViewItem6});
+            listViewItem1,
+            listViewItem2});
             this.ListViewRoles.LargeImageList = this.listUsersImageList;
             this.ListViewRoles.Location = new System.Drawing.Point(20, 65);
             this.ListViewRoles.MultiSelect = false;
@@ -630,6 +709,7 @@
             // 
             // Btn_Close
             // 
+            this.Btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Close.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Close.Location = new System.Drawing.Point(667, 539);
             this.Btn_Close.Name = "Btn_Close";
@@ -639,70 +719,17 @@
             this.Btn_Close.UseVisualStyleBackColor = true;
             this.Btn_Close.Click += new System.EventHandler(this.Btn_Close_Click);
             // 
-            // DGViewPermissions
-            // 
-            this.DGViewPermissions.AllowUserToAddRows = false;
-            this.DGViewPermissions.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGViewPermissions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.DGViewPermissions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGViewPermissions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColSelect,
-            this.ColFormCode,
-            this.ColActionCode,
-            this.ColName});
-            this.DGViewPermissions.EnableHeadersVisualStyles = false;
-            this.DGViewPermissions.Location = new System.Drawing.Point(6, 22);
-            this.DGViewPermissions.Name = "DGViewPermissions";
-            this.DGViewPermissions.RowHeadersVisible = false;
-            this.DGViewPermissions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGViewPermissions.Size = new System.Drawing.Size(570, 252);
-            this.DGViewPermissions.TabIndex = 21;
-            // 
-            // ColSelect
-            // 
-            this.ColSelect.FalseValue = "false";
-            this.ColSelect.HeaderText = "";
-            this.ColSelect.Name = "ColSelect";
-            this.ColSelect.TrueValue = "true";
-            this.ColSelect.Width = 30;
-            // 
-            // ColFormCode
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ColFormCode.DefaultCellStyle = dataGridViewCellStyle4;
-            this.ColFormCode.HeaderText = "Código";
-            this.ColFormCode.Name = "ColFormCode";
-            // 
-            // ColActionCode
-            // 
-            this.ColActionCode.HeaderText = "Acção";
-            this.ColActionCode.Name = "ColActionCode";
-            // 
-            // ColName
-            // 
-            this.ColName.HeaderText = "Nome";
-            this.ColName.Name = "ColName";
-            this.ColName.Width = 340;
-            // 
             // UserManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(852, 571);
+            this.ClientSize = new System.Drawing.Size(852, 570);
             this.Controls.Add(this.Btn_Close);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(868, 609);
+            this.MinimumSize = new System.Drawing.Size(868, 609);
             this.Name = "UserManager";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestor de Usuarios do Sistema";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UserManagment_FormClosing);
             this.VisibleChanged += new System.EventHandler(this.UserManagment_VisibleChanged);
@@ -719,11 +746,11 @@
             this.tabPage2.PerformLayout();
             this.GBoxRoleAdd.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DGViewPermissions)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGViewPermissions)).EndInit();
             this.ResumeLayout(false);
 
         }

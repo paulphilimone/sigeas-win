@@ -25,8 +25,8 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeviceManager));
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Portas", 6, 0);
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Dispositivos não alocados", 3, 3);
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Portas", 6, 0);
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Dispositivos não alocados", 3, 3);
             this.TreeImageList = new System.Windows.Forms.ImageList(this.components);
             this.TViewDevicesTree = new System.Windows.Forms.TreeView();
             this.TreeDeviceContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -329,19 +329,19 @@
             this.TViewDevicesTree.ImageList = this.TreeImageList;
             this.TViewDevicesTree.Location = new System.Drawing.Point(12, 29);
             this.TViewDevicesTree.Name = "TViewDevicesTree";
-            treeNode3.ImageIndex = 6;
-            treeNode3.Name = "NodeAutoCarros";
-            treeNode3.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            treeNode3.SelectedImageIndex = 0;
-            treeNode3.Text = "Portas";
-            treeNode4.ImageIndex = 3;
-            treeNode4.Name = "NodeDevicesWithout";
-            treeNode4.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            treeNode4.SelectedImageIndex = 3;
-            treeNode4.Text = "Dispositivos não alocados";
+            treeNode1.ImageIndex = 6;
+            treeNode1.Name = "NodeAutoCarros";
+            treeNode1.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            treeNode1.SelectedImageIndex = 0;
+            treeNode1.Text = "Portas";
+            treeNode2.ImageIndex = 3;
+            treeNode2.Name = "NodeDevicesWithout";
+            treeNode2.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            treeNode2.SelectedImageIndex = 3;
+            treeNode2.Text = "Dispositivos não alocados";
             this.TViewDevicesTree.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3,
-            treeNode4});
+            treeNode1,
+            treeNode2});
             this.TViewDevicesTree.SelectedImageIndex = 0;
             this.TViewDevicesTree.ShowNodeToolTips = true;
             this.TViewDevicesTree.ShowRootLines = false;
@@ -2625,10 +2625,9 @@
             this.Controls.Add(this.BtnRemoveDoor);
             this.Controls.Add(this.TViewDevicesTree);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MinimizeBox = false;
             this.Name = "DeviceManager";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Getsor de dispositivos biométricos";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DeviceManager_FormClosing);
             this.VisibleChanged += new System.EventHandler(this.DeviceManager_VisibleChanged);

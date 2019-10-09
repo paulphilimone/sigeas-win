@@ -47,17 +47,17 @@ namespace mz.betainteractive.sigeas.Models {
             return systemManager;
         }
 
-        public void addSystemManagerListener(SystemManagerListener sml) {
+        public void AddSystemManagerListener(SystemManagerListener sml) {
             this.listeners.Add(sml);
         }
 
-        private void fireOnLoadingDatabase(int progress) {
+        private void FireOnLoadingDatabase(int progress) {
             foreach (SystemManagerListener sml in listeners) {
                 sml.LoadingDatabase(progress);
             }
         }
 
-        private void fireOnFinishedLoading() {
+        private void FireOnFinishedLoading() {
             foreach (SystemManagerListener sml in listeners) {
                 sml.FinishedLoading();
             }
@@ -92,25 +92,25 @@ namespace mz.betainteractive.sigeas.Models {
         }
 
         private void InsertDefaultData() {
-            fireOnLoadingDatabase(0);
+            FireOnLoadingDatabase(0);
             
             InsertLocalizationData();
-            fireOnLoadingDatabase(20);            
+            FireOnLoadingDatabase(20);            
 
             InsertBasicModelData();
-            fireOnLoadingDatabase(40);
+            FireOnLoadingDatabase(40);
                         
             InsertUserManagerData();
-            fireOnLoadingDatabase(60);
+            FireOnLoadingDatabase(60);
                         
             InsertAccessControlData();
-            fireOnLoadingDatabase(80);
+            FireOnLoadingDatabase(80);
                         
             InsertAccountSystemData();
             InsertFeriados();
 
-            fireOnLoadingDatabase(100);
-            fireOnFinishedLoading();
+            FireOnLoadingDatabase(100);
+            FireOnFinishedLoading();
         }
 
         /*
@@ -120,15 +120,15 @@ namespace mz.betainteractive.sigeas.Models {
             SigeasDatabaseContext db = new SigeasDatabaseContext();
 
 
-            if (db.RolePermission.Count()==0){
+            if (!db.RolePermission.Any()){
 				//This is a special permission, esta opcao nao aparece no UserManager
                 db.RolePermission.Add(new RolePermission { FormCode = 0x0047, Name = "DO_EVERYTHING" });                                              
 
 				//this.UserManagement.FormCode = 0x0101;
-				db.RolePermission.Add(new RolePermission { FormCode = 0x0101, ActionCode = 1, Name = "Visualizar dados do Gestor de Usuários" });
-				db.RolePermission.Add(new RolePermission { FormCode = 0x0101, ActionCode = 2, Name = "Atualizar dados do Gestor de Usuários" });
-				db.RolePermission.Add(new RolePermission { FormCode = 0x0101, ActionCode = 3, Name = "Apagar dados do Gestor de Usuários" });
-				db.RolePermission.Add(new RolePermission { FormCode = 0x0101, ActionCode = 4, Name = "Adicionar dados do Gestor de Usuários" });
+				db.RolePermission.Add(new RolePermission { FormCode = 0x0101, ActionCode = 1, Name = "Visualizar dados do Gestor de Utilizadores" });
+                db.RolePermission.Add(new RolePermission { FormCode = 0x0101, ActionCode = 2, Name = "Atualizar dados do Gestor de Utilizadores" });
+                db.RolePermission.Add(new RolePermission { FormCode = 0x0101, ActionCode = 3, Name = "Apagar dados do Gestor de Utilizadores" });
+                db.RolePermission.Add(new RolePermission { FormCode = 0x0101, ActionCode = 4, Name = "Adicionar dados do Gestor de Utilizadores" });
 
                 //this.DeviceManager.FormCode = 0x0102;
 				db.RolePermission.Add(new RolePermission { FormCode = 0x0102, ActionCode = 1, Name = "Visualizar dados do Gestor de Dispositivos Biométricos" });
@@ -176,22 +176,32 @@ namespace mz.betainteractive.sigeas.Models {
 				db.RolePermission.Add(new RolePermission { FormCode = 0x0110, ActionCode = 4, Name = "Adicionar Registos de Picagens" });
 				
 				//this.AttendanceCalcsForm.FormCode = 0x0111;
-				db.RolePermission.Add(new RolePermission { FormCode = 0x0111, ActionCode = 1, Name = "Aceder ao formulário de Cálculos de Asseduidades" });				
-				db.RolePermission.Add(new RolePermission { FormCode = 0x0111, ActionCode = 2, Name = "Efectuar Calculos de Asseduidade" });
+				db.RolePermission.Add(new RolePermission { FormCode = 0x0111, ActionCode = 1, Name = "Visualizar Cálculos de Assiduidades" });				
+				db.RolePermission.Add(new RolePermission { FormCode = 0x0111, ActionCode = 2, Name = "Efectuar Cálculos de Assiduidades" });
 				
-                //this.tableFuncionarioDeviceView.FormCode = 0x0112;
-                db.RolePermission.Add(new RolePermission { FormCode = 0x0112, ActionCode = 1, Name = "Planificar Nivel de acesso as portas/biométricos, pelos Funcionarios" });
+                //this.FuncionarioDevicesView.FormCode = 0x0112;
+                db.RolePermission.Add(new RolePermission { FormCode = 0x0112, ActionCode = 1, Name = "Planificar o acesso as portas/biométricos pelos Funcionarios" });
 
                 //this.deviceDataUpdateView.FormCode = 0x0113;
-                db.RolePermission.Add(new RolePermission { FormCode = 0x0113, ActionCode = 1, Name = "Atualizar Dados dos Dispositivos Biométricos" });				
+                db.RolePermission.Add(new RolePermission { FormCode = 0x0113, ActionCode = 1, Name = "Registar/Atualizar Funcionários nos Biométricos" });
                 
-                //this.importExportView.FormCode = 0x0114; 
-
+                //this.ImportHrData.FormCode = 0x0114;
+                db.RolePermission.Add(new RolePermission { FormCode = 0x0114, ActionCode = 1, Name = "Importar dados dados RH apartir de XLS/x" });
+                
+                //this.importExportView.FormCode = 0x0115;
+                db.RolePermission.Add(new RolePermission { FormCode = 0x0115, ActionCode = 1, Name = "Importar/Exportar Dados biométricos para colheita de dados" });
+               
+                //this.pedidoDispensaView.FormCode = 0x0116;
+                db.RolePermission.Add(new RolePermission { FormCode = 0x0116, ActionCode = 1, Name = "Visualizar Formulário de Pedido de dispensa" });
+               
+                //this.reportsCreatorView.FormCode = 0x0117;
+                db.RolePermission.Add(new RolePermission { FormCode = 0x0117, ActionCode = 1, Name = "Visualizar e criar Relatórios de Assiduidade" });
+               
 
                 db.SaveChanges();
             }
 
-            if (db.Role.Count()==0) {
+            if (!db.Role.Any()) {
 
                 db.Role.Add(new Role { Name = "System Developers"});
                 db.SaveChanges();
@@ -224,7 +234,7 @@ namespace mz.betainteractive.sigeas.Models {
 				
             }
 
-            if (db.ApplicationUser.Count() == 0) {
+            if (!db.ApplicationUser.Any()) {
                 BetaEncryptation encoder = new BetaEncryptation();
 
                 //Set Developer
@@ -295,7 +305,7 @@ namespace mz.betainteractive.sigeas.Models {
              * Dados a serem confirmados
              */
             
-            if (db.PeriodoTempo.Count() == 0) {
+            if (!db.PeriodoTempo.Any()) {
                 db.PeriodoTempo.Add(new PeriodoTempo { Descricao = PeriodoTempo.DIARIO});
                 db.PeriodoTempo.Add(new PeriodoTempo { Descricao = PeriodoTempo.SEMANAL });
                 db.PeriodoTempo.Add(new PeriodoTempo { Descricao = PeriodoTempo.MENSAL });
@@ -398,7 +408,7 @@ namespace mz.betainteractive.sigeas.Models {
 
             SigeasDatabaseContext db = new SigeasDatabaseContext();
 
-            if (db.InOutMode.Count() == 0) {
+            if (!db.InOutMode.Any()) {
                 db.InOutMode.Add(new InOutMode { Number = InOutMode.CHECK_IN_NUMBER,      Name = InOutMode.CHECK_IN_NAME});
                 db.InOutMode.Add(new InOutMode { Number = InOutMode.CHECK_OUT_NUMBER,     Name = InOutMode.CHECK_OUT_NAME });
                 db.InOutMode.Add(new InOutMode { Number = InOutMode.BREAK_OUT_NUMBER,     Name = InOutMode.BREAK_OUT_NAME });
@@ -408,7 +418,7 @@ namespace mz.betainteractive.sigeas.Models {
                 db.SaveChanges();                                                         
             }                                                                              
 
-            if (db.VerifyMode.Count() == 0) {
+            if (!db.VerifyMode.Any()) {
                 db.VerifyMode.Add(new VerifyMode { Number = VerifyMode.PASSWORD_NUMBER,    Name = VerifyMode.PASSWORD_NAME});
                 db.VerifyMode.Add(new VerifyMode { Number = VerifyMode.FINGERPRINT_NUMBER, Name = VerifyMode.FINGERPRINT_NAME });
                 db.VerifyMode.Add(new VerifyMode { Number = VerifyMode.CARD_NUMBER,        Name = VerifyMode.CARD_NAME });
@@ -417,20 +427,20 @@ namespace mz.betainteractive.sigeas.Models {
 
 
             
-            if (db.DeviceType.Count() == 0) {
+            if (!db.DeviceType.Any()) {
                 db.DeviceType.Add(new DeviceType { TypeNumber = DeviceType.TYPE_IN,     Name = DeviceType.IN});
                 db.DeviceType.Add(new DeviceType { TypeNumber = DeviceType.TYPE_OUT,    Name = DeviceType.OUT});
                 db.DeviceType.Add(new DeviceType { TypeNumber = DeviceType.TYPE_IN_OUT, Name = DeviceType.IN_OUT});
                 db.SaveChanges();
             }
             
-            if (db.DoorType.Count() == 0) {
+            if (!db.DoorType.Any()) {
                 db.DoorType.Add(new DoorType { Nome = DoorType.GENERAL_ACCESS_CONTROL, Descricao = "Usado para calculos de asseduidade"});
                 db.DoorType.Add(new DoorType { Nome = DoorType.PRIVATE_ACCESS_CONTROL, Descricao = "Usado para controle de acesso aos departamentos" });
                 db.SaveChanges();
             }
 
-            if (db.TipoAusencia.Count() == 0) {
+            if (!db.TipoAusencia.Any()) {
                 db.TipoAusencia.Add(new TipoAusencia { Nome = TipoAusencia.CASAMENTO });
                 db.TipoAusencia.Add(new TipoAusencia { Nome = TipoAusencia.DOENCA_ACIDENTE });
                 db.TipoAusencia.Add(new TipoAusencia { Nome = TipoAusencia.FALECIMENTO });
@@ -488,7 +498,7 @@ namespace mz.betainteractive.sigeas.Models {
         private void InsertFeriados() {
             SigeasDatabaseContext db = new SigeasDatabaseContext();
 
-            if (db.Feriado.Count() > 0) return;
+            if (db.Feriado.Any()) return;
 
             byte[] bytes = mz.betainteractive.sigeas.Properties.Resources.feriados;
             Stream stream = new MemoryStream(bytes, false);
@@ -507,7 +517,11 @@ namespace mz.betainteractive.sigeas.Models {
 
 
                 var feriado = new Feriado();
-                feriado.Data = DateTime.ParseExact(row.ElementAt(0).Text, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+                var textDate = row.ElementAt(0).Value+"";
+
+                //Console.WriteLine("tx: " + textDate + ", value=" + row.ElementAt(0).Value);
+
+                feriado.Data = DateTime.ParseExact(textDate, "yyyy-MM-dd hh:mm:ss", CultureInfo.InvariantCulture);
                 feriado.Tipo = Feriado.TIPO_NACIONAL;
                 feriado.Nome = row.ElementAt(2).Text;                
                 feriado.Descricao = row.ElementAt(3).Text;
@@ -524,7 +538,7 @@ namespace mz.betainteractive.sigeas.Models {
             SigeasDatabaseContext db = new SigeasDatabaseContext();
             
             //Insert Countries
-            if (db.Continente.Count() == 0 || db.Countries.Count() == 0) {
+            if (!db.Continente.Any() || !db.Countries.Any()) {
 
                 //try {
 
@@ -561,7 +575,7 @@ namespace mz.betainteractive.sigeas.Models {
 
             //Insert Mozambique Localization
             //Insert Countries
-            if (db.Provincia.Count() == 0 || db.Localidade.Count() == 0) {
+            if (!db.Provincia.Any() || !db.Localidade.Any()) {
 
                 //try {
 
@@ -627,7 +641,7 @@ namespace mz.betainteractive.sigeas.Models {
 
             db.Database.CreateIfNotExists();
 
-            if (db.Continente.Count() > 0) {
+            if (db.Continente.Any()) {
                 var all = from c in db.Continente select c;
 
                 foreach (Continente cont in all) {
@@ -645,7 +659,7 @@ namespace mz.betainteractive.sigeas.Models {
 
             ApplicationUser firstUser = null;
 
-            if (db.ApplicationUser.Count() == 0) {
+            if (!db.ApplicationUser.Any()) {
 
                 ApplicationUser user = new ApplicationUser();
                 user.Firstname = "Paulo";

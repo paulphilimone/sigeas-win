@@ -38,23 +38,22 @@
             this.mmiView = new System.Windows.Forms.ToolStripMenuItem();
             this.mnViewToolBar = new System.Windows.Forms.ToolStripMenuItem();
             this.mnViewTime = new System.Windows.Forms.ToolStripMenuItem();
-            this.mmiEmployees = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnEmpManager = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnEmpDispensas = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnEmpFuncDoors = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnEmpSaveDevUsers = new System.Windows.Forms.ToolStripMenuItem();
             this.mmiCompany = new System.Windows.Forms.ToolStripMenuItem();
             this.mnComSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.mnComFeriados = new System.Windows.Forms.ToolStripMenuItem();
             this.mnComFerias = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnEmpDispensas = new System.Windows.Forms.ToolStripMenuItem();
+            this.mmiEmployees = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnEmpManager = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnEmpFuncDoors = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnEmpSaveDevUsers = new System.Windows.Forms.ToolStripMenuItem();
             this.mmiAttendance = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnAttSchedules = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnAttSchHorSemanal = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnAttSchedulePlan = new System.Windows.Forms.ToolStripMenuItem();
             this.mnAttUserClocks = new System.Windows.Forms.ToolStripMenuItem();
             this.mnAttCalcsViewer = new System.Windows.Forms.ToolStripMenuItem();
-            this.mmiReports = new System.Windows.Forms.ToolStripMenuItem();
             this.mnReports = new System.Windows.Forms.ToolStripMenuItem();
+            this.mmiSchedules = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnAttSchHorSemanal = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnAttSchedulePlan = new System.Windows.Forms.ToolStripMenuItem();
             this.mmiTools = new System.Windows.Forms.ToolStripMenuItem();
             this.mnToolsDevManager = new System.Windows.Forms.ToolStripMenuItem();
             this.mnToolsUserManager = new System.Windows.Forms.ToolStripMenuItem();
@@ -137,10 +136,10 @@
             this.mainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mmiApplication,
             this.mmiView,
-            this.mmiEmployees,
             this.mmiCompany,
+            this.mmiEmployees,
             this.mmiAttendance,
-            this.mmiReports,
+            this.mmiSchedules,
             this.mmiTools,
             this.mmiHelp});
             this.mainMenu.Location = new System.Drawing.Point(0, 0);
@@ -196,6 +195,7 @@
             this.mnViewToolBar.Name = "mnViewToolBar";
             this.mnViewToolBar.Size = new System.Drawing.Size(155, 22);
             this.mnViewToolBar.Text = "Barra de tarefas";
+            this.mnViewToolBar.Click += new System.EventHandler(this.mnViewToolBar_Click);
             // 
             // mnViewTime
             // 
@@ -206,11 +206,49 @@
             this.mnViewTime.Text = "Horas";
             this.mnViewTime.Click += new System.EventHandler(this.horasToolStripMenuItem_Click);
             // 
+            // mmiCompany
+            // 
+            this.mmiCompany.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnComSettings,
+            this.mnComFeriados,
+            this.mnComFerias,
+            this.mnEmpDispensas});
+            this.mmiCompany.Name = "mmiCompany";
+            this.mmiCompany.Size = new System.Drawing.Size(64, 20);
+            this.mmiCompany.Text = "Empresa";
+            // 
+            // mnComSettings
+            // 
+            this.mnComSettings.Name = "mnComSettings";
+            this.mnComSettings.Size = new System.Drawing.Size(230, 22);
+            this.mnComSettings.Text = "Definições da Empresa";
+            this.mnComSettings.Click += new System.EventHandler(this.mnComSettings_Click);
+            // 
+            // mnComFeriados
+            // 
+            this.mnComFeriados.Name = "mnComFeriados";
+            this.mnComFeriados.Size = new System.Drawing.Size(230, 22);
+            this.mnComFeriados.Text = "Definição de Feriados";
+            this.mnComFeriados.Click += new System.EventHandler(this.mnComFeriados_Click);
+            // 
+            // mnComFerias
+            // 
+            this.mnComFerias.Name = "mnComFerias";
+            this.mnComFerias.Size = new System.Drawing.Size(230, 22);
+            this.mnComFerias.Text = "Planificação de Férias";
+            this.mnComFerias.Click += new System.EventHandler(this.mnComFerias_Click);
+            // 
+            // mnEmpDispensas
+            // 
+            this.mnEmpDispensas.Name = "mnEmpDispensas";
+            this.mnEmpDispensas.Size = new System.Drawing.Size(230, 22);
+            this.mnEmpDispensas.Text = "Pedido de Dispensa/Ausência";
+            this.mnEmpDispensas.Click += new System.EventHandler(this.mnEmpDispensas_Click_1);
+            // 
             // mmiEmployees
             // 
             this.mmiEmployees.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnEmpManager,
-            this.mnEmpDispensas,
             this.mnEmpFuncDoors,
             this.mnEmpSaveDevUsers});
             this.mmiEmployees.Name = "mmiEmployees";
@@ -223,13 +261,6 @@
             this.mnEmpManager.Size = new System.Drawing.Size(279, 22);
             this.mnEmpManager.Text = "Gestão de Funcionários";
             this.mnEmpManager.Click += new System.EventHandler(this.mnEmpManager_Click);
-            // 
-            // mnEmpDispensas
-            // 
-            this.mnEmpDispensas.Name = "mnEmpDispensas";
-            this.mnEmpDispensas.Size = new System.Drawing.Size(279, 22);
-            this.mnEmpDispensas.Text = "Pedido de Dispensa/Ausência";
-            this.mnEmpDispensas.Click += new System.EventHandler(this.mnEmpDispensas_Click);
             // 
             // mnEmpFuncDoors
             // 
@@ -245,69 +276,15 @@
             this.mnEmpSaveDevUsers.Text = "Atualizar Funcionarios nos biometricos";
             this.mnEmpSaveDevUsers.Click += new System.EventHandler(this.mnEmpSaveDevUsers_Click);
             // 
-            // mmiCompany
-            // 
-            this.mmiCompany.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnComSettings,
-            this.mnComFeriados,
-            this.mnComFerias});
-            this.mmiCompany.Name = "mmiCompany";
-            this.mmiCompany.Size = new System.Drawing.Size(64, 20);
-            this.mmiCompany.Text = "Empresa";
-            // 
-            // mnComSettings
-            // 
-            this.mnComSettings.Name = "mnComSettings";
-            this.mnComSettings.Size = new System.Drawing.Size(193, 22);
-            this.mnComSettings.Text = "Definições da Empresa";
-            this.mnComSettings.Click += new System.EventHandler(this.mnComSettings_Click);
-            // 
-            // mnComFeriados
-            // 
-            this.mnComFeriados.Name = "mnComFeriados";
-            this.mnComFeriados.Size = new System.Drawing.Size(193, 22);
-            this.mnComFeriados.Text = "Definição de Feriados";
-            this.mnComFeriados.Click += new System.EventHandler(this.mnComFeriados_Click);
-            // 
-            // mnComFerias
-            // 
-            this.mnComFerias.Name = "mnComFerias";
-            this.mnComFerias.Size = new System.Drawing.Size(193, 22);
-            this.mnComFerias.Text = "Planificação de Férias";
-            this.mnComFerias.Click += new System.EventHandler(this.mnComFerias_Click);
-            // 
             // mmiAttendance
             // 
             this.mmiAttendance.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnAttSchedules,
             this.mnAttUserClocks,
-            this.mnAttCalcsViewer});
+            this.mnAttCalcsViewer,
+            this.mnReports});
             this.mmiAttendance.Name = "mmiAttendance";
             this.mmiAttendance.Size = new System.Drawing.Size(83, 20);
             this.mmiAttendance.Text = "Assiduidade";
-            // 
-            // mnAttSchedules
-            // 
-            this.mnAttSchedules.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnAttSchHorSemanal,
-            this.mnAttSchedulePlan});
-            this.mnAttSchedules.Name = "mnAttSchedules";
-            this.mnAttSchedules.Size = new System.Drawing.Size(252, 22);
-            this.mnAttSchedules.Text = "Horários";
-            // 
-            // mnAttSchHorSemanal
-            // 
-            this.mnAttSchHorSemanal.Name = "mnAttSchHorSemanal";
-            this.mnAttSchHorSemanal.Size = new System.Drawing.Size(202, 22);
-            this.mnAttSchHorSemanal.Text = "Perfis de horários";
-            this.mnAttSchHorSemanal.Click += new System.EventHandler(this.mnAttSchHorSemanal_Click);
-            // 
-            // mnAttSchedulePlan
-            // 
-            this.mnAttSchedulePlan.Name = "mnAttSchedulePlan";
-            this.mnAttSchedulePlan.Size = new System.Drawing.Size(202, 22);
-            this.mnAttSchedulePlan.Text = "Planificação de Horários";
-            this.mnAttSchedulePlan.Click += new System.EventHandler(this.mnAttSchedulePlan_Click);
             // 
             // mnAttUserClocks
             // 
@@ -323,20 +300,35 @@
             this.mnAttCalcsViewer.Text = "Visualizar Cálculos de assiduidade";
             this.mnAttCalcsViewer.Click += new System.EventHandler(this.mnAttCalcsViewer_Click);
             // 
-            // mmiReports
-            // 
-            this.mmiReports.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnReports});
-            this.mmiReports.Name = "mmiReports";
-            this.mmiReports.Size = new System.Drawing.Size(71, 20);
-            this.mmiReports.Text = "Relatórios";
-            // 
             // mnReports
             // 
             this.mnReports.Name = "mnReports";
-            this.mnReports.Size = new System.Drawing.Size(210, 22);
+            this.mnReports.Size = new System.Drawing.Size(252, 22);
             this.mnReports.Text = "Relatórios de asseduidade";
-            this.mnReports.Click += new System.EventHandler(this.mnReports_Click);
+            this.mnReports.Click += new System.EventHandler(this.mnReports_Click_1);
+            // 
+            // mmiSchedules
+            // 
+            this.mmiSchedules.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnAttSchHorSemanal,
+            this.mnAttSchedulePlan});
+            this.mmiSchedules.Name = "mmiSchedules";
+            this.mmiSchedules.Size = new System.Drawing.Size(64, 20);
+            this.mmiSchedules.Text = "Horários";
+            // 
+            // mnAttSchHorSemanal
+            // 
+            this.mnAttSchHorSemanal.Name = "mnAttSchHorSemanal";
+            this.mnAttSchHorSemanal.Size = new System.Drawing.Size(202, 22);
+            this.mnAttSchHorSemanal.Text = "Perfis de horários";
+            this.mnAttSchHorSemanal.Click += new System.EventHandler(this.mnAttSchHorSemanal_Click_1);
+            // 
+            // mnAttSchedulePlan
+            // 
+            this.mnAttSchedulePlan.Name = "mnAttSchedulePlan";
+            this.mnAttSchedulePlan.Size = new System.Drawing.Size(202, 22);
+            this.mnAttSchedulePlan.Text = "Planificação de Horários";
+            this.mnAttSchedulePlan.Click += new System.EventHandler(this.mnAttSchedulePlan_Click_1);
             // 
             // mmiTools
             // 
@@ -408,7 +400,7 @@
             this.mnHelpHowTo.Image = global::mz.betainteractive.sigeas.Properties.Resources.Journal;
             this.mnHelpHowTo.Name = "mnHelpHowTo";
             this.mnHelpHowTo.Size = new System.Drawing.Size(162, 22);
-            this.mnHelpHowTo.Text = "Como usar???";
+            this.mnHelpHowTo.Text = "Como usar?";
             this.mnHelpHowTo.Click += new System.EventHandler(this.mnHelpHowTo_Click);
             // 
             // mnHelpAbout
@@ -434,7 +426,7 @@
             this.tssUserName,
             this.toolStripStatusLabel3,
             this.tssBiomConnect});
-            this.statusBar.Location = new System.Drawing.Point(0, 561);
+            this.statusBar.Location = new System.Drawing.Point(0, 862);
             this.statusBar.Name = "statusBar";
             this.statusBar.Size = new System.Drawing.Size(1044, 24);
             this.statusBar.TabIndex = 20;
@@ -674,7 +666,7 @@
             this.expImportExport});
             this.leftTaskPane.Location = new System.Drawing.Point(0, 66);
             this.leftTaskPane.Name = "leftTaskPane";
-            this.leftTaskPane.Size = new System.Drawing.Size(250, 495);
+            this.leftTaskPane.Size = new System.Drawing.Size(250, 796);
             this.leftTaskPane.TabIndex = 33;
             // 
             // expFuncDevs
@@ -682,7 +674,6 @@
             this.expFuncDevs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.expFuncDevs.Animate = true;
-            this.expFuncDevs.Collapsed = true;
             this.expFuncDevs.CustomHeaderSettings.NormalTitleColor = System.Drawing.Color.Black;
             this.expFuncDevs.CustomHeaderSettings.NormalTitleHotColor = System.Drawing.Color.DarkOrchid;
             this.expFuncDevs.CustomHeaderSettings.TitleFont = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -695,7 +686,7 @@
             this.expFuncDevs.Location = new System.Drawing.Point(12, 12);
             this.expFuncDevs.MinimumSize = new System.Drawing.Size(226, 45);
             this.expFuncDevs.Name = "expFuncDevs";
-            this.expFuncDevs.Size = new System.Drawing.Size(226, 45);
+            this.expFuncDevs.Size = new System.Drawing.Size(226, 120);
             this.expFuncDevs.TabIndex = 0;
             this.expFuncDevs.Text = "Funcionários nos dispositivos";
             this.expFuncDevs.TitleImage = global::mz.betainteractive.sigeas.Properties.Resources.func_devices_medium_icon;
@@ -741,7 +732,6 @@
             this.expAttendance.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.expAttendance.Animate = true;
-            this.expAttendance.Collapsed = true;
             this.expAttendance.CustomHeaderSettings.NormalBackColor = System.Drawing.Color.Transparent;
             this.expAttendance.CustomHeaderSettings.NormalTitleColor = System.Drawing.Color.Black;
             this.expAttendance.CustomHeaderSettings.NormalTitleHotColor = System.Drawing.Color.DarkOrchid;
@@ -752,10 +742,10 @@
             this.tskViewUserClocks,
             this.tskViewAttCalcs,
             this.tskReports});
-            this.expAttendance.Location = new System.Drawing.Point(12, 69);
+            this.expAttendance.Location = new System.Drawing.Point(12, 144);
             this.expAttendance.MinimumSize = new System.Drawing.Size(226, 45);
             this.expAttendance.Name = "expAttendance";
-            this.expAttendance.Size = new System.Drawing.Size(226, 45);
+            this.expAttendance.Size = new System.Drawing.Size(226, 158);
             this.expAttendance.TabIndex = 1;
             this.expAttendance.Text = "Assiduidade";
             this.expAttendance.TitleImage = global::mz.betainteractive.sigeas.Properties.Resources.attendance_medium_icon;
@@ -829,7 +819,7 @@
             this.tskFeriados,
             this.tskDispensas,
             this.tskPlanFerias});
-            this.expDispensas.Location = new System.Drawing.Point(12, 126);
+            this.expDispensas.Location = new System.Drawing.Point(12, 314);
             this.expDispensas.MinimumSize = new System.Drawing.Size(226, 45);
             this.expDispensas.Name = "expDispensas";
             this.expDispensas.Size = new System.Drawing.Size(226, 158);
@@ -907,7 +897,7 @@
             this.tskUserManager,
             this.tskDevManager,
             this.tskDevActivation});
-            this.expTools.Location = new System.Drawing.Point(12, 296);
+            this.expTools.Location = new System.Drawing.Point(12, 484);
             this.expTools.MinimumSize = new System.Drawing.Size(226, 45);
             this.expTools.Name = "expTools";
             this.expTools.Size = new System.Drawing.Size(226, 45);
@@ -984,7 +974,7 @@
             this.expImportExport.Items.AddRange(new System.Windows.Forms.Control[] {
             this.tskImportDataXls,
             this.tskCollectBioData});
-            this.expImportExport.Location = new System.Drawing.Point(12, 353);
+            this.expImportExport.Location = new System.Drawing.Point(12, 541);
             this.expImportExport.MinimumSize = new System.Drawing.Size(226, 45);
             this.expImportExport.Name = "expImportExport";
             this.expImportExport.Size = new System.Drawing.Size(226, 120);
@@ -1030,25 +1020,25 @@
             // 
             // mainTabStrip
             // 
-            this.mainTabStrip.ActiveTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mainTabStrip.ActiveTabFont = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.mainTabStrip.AllowDrop = true;
             this.mainTabStrip.Dock = System.Windows.Forms.DockStyle.Top;
-            this.mainTabStrip.InactiveTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mainTabStrip.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mainTabStrip.InactiveTabFont = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.mainTabStrip.Location = new System.Drawing.Point(250, 66);
             this.mainTabStrip.MinimumSize = new System.Drawing.Size(50, 33);
-            this.mainTabStrip.MouseOverTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mainTabStrip.MouseOverTabFont = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.mainTabStrip.Name = "mainTabStrip";
             this.mainTabStrip.Padding = new System.Windows.Forms.Padding(5, 3, 20, 5);
             this.mainTabStrip.Size = new System.Drawing.Size(794, 35);
             this.mainTabStrip.TabIndex = 35;
-            this.mainTabStrip.Text = "mdiTabStrip1";
             // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1044, 585);
+            this.ClientSize = new System.Drawing.Size(1044, 886);
             this.Controls.Add(this.mainTabStrip);
             this.Controls.Add(this.leftTaskPane);
             this.Controls.Add(this.mainToolBar);
@@ -1056,6 +1046,7 @@
             this.Controls.Add(this.statusBar);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mainMenu;
+            this.MinimumSize = new System.Drawing.Size(1060, 624);
             this.Name = "MainView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Gestão de Assiduidades (Sigeas)";
@@ -1092,7 +1083,7 @@
         private System.Windows.Forms.MenuStrip mainMenu;
         private System.Windows.Forms.ToolStripMenuItem mmiApplication;
         private System.Windows.Forms.ToolStripMenuItem mnAppExit;
-        private System.Windows.Forms.ToolStripMenuItem mmiReports;
+        private System.Windows.Forms.ToolStripMenuItem mmiSchedules;
         private System.Windows.Forms.ToolStripMenuItem mmiHelp;
         private System.Windows.Forms.StatusStrip statusBar;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
@@ -1131,11 +1122,7 @@
         private System.Windows.Forms.ToolStripMenuItem mmiAttendance;
         private System.Windows.Forms.ToolStripMenuItem mnViewTime;
         private System.Windows.Forms.ToolStripMenuItem mnComSettings;
-        private System.Windows.Forms.ToolStripMenuItem mnAttSchedules;
-        private System.Windows.Forms.ToolStripMenuItem mnAttSchHorSemanal;
-        private System.Windows.Forms.ToolStripMenuItem mnAttSchedulePlan;
         private System.Windows.Forms.ToolStripMenuItem mnAttUserClocks;
-        private System.Windows.Forms.ToolStripMenuItem mnReports;
         private System.Windows.Forms.ToolStripMenuItem mnAttCalcsViewer;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel7;
         private System.Windows.Forms.ToolStripStatusLabel TSLabelEmpresa;
@@ -1170,8 +1157,11 @@
         private XPExplorerBar.TaskItem tskDevActivation;
         private MdiTabStrip.MdiTabStrip mainTabStrip;
         private System.Windows.Forms.ToolStripMenuItem mnEmpManager;
-        private System.Windows.Forms.ToolStripMenuItem mnEmpDispensas;
         private System.Windows.Forms.ToolStripMenuItem mnComFerias;
+        private System.Windows.Forms.ToolStripMenuItem mnReports;
+        private System.Windows.Forms.ToolStripMenuItem mnAttSchHorSemanal;
+        private System.Windows.Forms.ToolStripMenuItem mnAttSchedulePlan;
+        private System.Windows.Forms.ToolStripMenuItem mnEmpDispensas;
     }
 }
 

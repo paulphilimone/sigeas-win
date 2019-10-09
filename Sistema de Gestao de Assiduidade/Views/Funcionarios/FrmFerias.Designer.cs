@@ -23,7 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "01 de Fevereiro de 2012"),
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "29 de Fevereiro de 2012"),
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "28 dias"),
@@ -234,7 +234,7 @@
             this.listViewFerias.GridLines = true;
             this.listViewFerias.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listViewFerias.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.listViewFerias.Location = new System.Drawing.Point(16, 64);
             this.listViewFerias.MultiSelect = false;
             this.listViewFerias.Name = "listViewFerias";
@@ -344,7 +344,7 @@
             this.Controls.Add(this.groupBox2);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "FrmFerias";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Férias dos funcionários";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmFerias_FormClosing);
             this.VisibleChanged += new System.EventHandler(this.FrmFerias_VisibleChanged);

@@ -226,7 +226,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "DeviceDataUpdateView";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registar Funcionários nos Dispositivos";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DeviceDataUpdateView_FormClosing);
             this.VisibleChanged += new System.EventHandler(this.DeviceDataUpdateView_VisibleChanged);

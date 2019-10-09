@@ -27,7 +27,7 @@ namespace mz.betainteractive.sigeas {
             SystemManager manager = SystemManager.getManager();
 
             SplashScreenUpdater47 updater = new SplashScreenUpdater47(manager);
-            manager.addSystemManagerListener(updater);
+            manager.AddSystemManagerListener(updater);
 
 
             //Tests();

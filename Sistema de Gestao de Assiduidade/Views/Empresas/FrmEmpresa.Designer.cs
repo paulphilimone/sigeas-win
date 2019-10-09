@@ -46,7 +46,7 @@
             treeNode7,
             treeNode8});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEmpresa));
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "2016",
             "Janeiro",
@@ -1073,7 +1073,7 @@
             this.btPreviewMonthList.Name = "btPreviewMonthList";
             this.btPreviewMonthList.Size = new System.Drawing.Size(164, 23);
             this.btPreviewMonthList.TabIndex = 9;
-            this.btPreviewMonthList.Text = "Preview Months List";
+            this.btPreviewMonthList.Text = "Visualizar Lista de meses";
             this.btPreviewMonthList.UseVisualStyleBackColor = true;
             this.btPreviewMonthList.Click += new System.EventHandler(this.btPreviewMonthList_Click);
             // 
@@ -1083,7 +1083,7 @@
             this.btGenerateMonthsList.Name = "btGenerateMonthsList";
             this.btGenerateMonthsList.Size = new System.Drawing.Size(161, 23);
             this.btGenerateMonthsList.TabIndex = 5;
-            this.btGenerateMonthsList.Text = "Generate Months List";
+            this.btGenerateMonthsList.Text = "Registar Lista de Meses";
             this.btGenerateMonthsList.UseVisualStyleBackColor = true;
             this.btGenerateMonthsList.Click += new System.EventHandler(this.btGenerateMonthsList_Click);
             // 
@@ -1099,7 +1099,7 @@
             this.listViewMonths.FullRowSelect = true;
             this.listViewMonths.GridLines = true;
             this.listViewMonths.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3});
+            listViewItem1});
             this.listViewMonths.Location = new System.Drawing.Point(15, 147);
             this.listViewMonths.MultiSelect = false;
             this.listViewMonths.Name = "listViewMonths";
@@ -1162,7 +1162,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FrmEmpresa";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Definicões da Empresa";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmEmpresa_FormClosing);
             this.VisibleChanged += new System.EventHandler(this.FrmEmpresa_VisibleChanged);

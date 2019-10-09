@@ -314,7 +314,7 @@
             this.Controls.Add(this.groupBox2);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "FrmFeriados";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Feriados";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmFeriados_FormClosing);
             this.VisibleChanged += new System.EventHandler(this.FrmFeriados_VisibleChanged);

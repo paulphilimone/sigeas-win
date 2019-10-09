@@ -751,7 +751,7 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(685, 545);
             this.Name = "ImportExportView";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Importar e Exportar Ficheiros com dados biometricos";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ImportExportView_FormClosing);
             this.VisibleChanged += new System.EventHandler(this.ImportExportView_VisibleChanged);

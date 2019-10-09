@@ -28,9 +28,9 @@ namespace mz.betainteractive.sigeas.Views.Main {
         public LoginView LoginView { get; set; }
                 
         public FrmAboutBox AboutBox;
-        public DeviceManager DeviceManager;  
         public FrmDeviceActivaction DeviceActivation;
-        
+
+        public DeviceManager DeviceManager;  
         public FrmEmpresa EmpresaForm;
         public FrmFuncionario FuncionarioForm;
         public FrmHorarioSemanal HorarioSemanalForm;        
@@ -40,16 +40,16 @@ namespace mz.betainteractive.sigeas.Views.Main {
         public UserClocksViewer UserClockViewerForm;
         public AttendanceCalcsView AttendanceCalcsForm;
         public UserManager UserManagement { get; set; }
-        public FuncionarioDevicesView tableFuncionarioDeviceView { get; set; }
-        public DeviceDataUpdateView deviceDataUpdateView { get; set; }
-        public ImportHrData importHrData { get; set; }
-        public ImportExportView importExportView { get; set; }
-        public PedidoDispensaView pedidoDispensaView { get; set; }
-        public ReportsCreatorView reportsCreatorView { get; set; }
+        public FuncionarioDevicesView FuncionarioDevicesView { get; set; }
+        public DeviceDataUpdateView DeviceDataUpdateView { get; set; }
+        public ImportHrData ImportHrData { get; set; }
+        public ImportExportView ImportExportView { get; set; }
+        public PedidoDispensaView PedidoDispensaView { get; set; }
+        public ReportsCreatorView ReportsCreatorView { get; set; }
 
-        public static ToolStripLabel tssGeralSystemStatus;
+        public static ToolStripLabel TssGeralSystemStatus;
 
-        private Dictionary<int, AuthorizableComponent> securedComponents;
+        private Dictionary<int, AuthorizableComponent> _securedComponents;
 
         /*
          * My variables Ends
@@ -59,7 +59,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
 
             //MainProgram = this;
 
-            tssGeralSystemStatus = tssSystemStatus;            
+            TssGeralSystemStatus = tssSystemStatus;            
                         
             AboutBox = new FrmAboutBox();
             DeviceManager = new DeviceManager();
@@ -73,16 +73,22 @@ namespace mz.betainteractive.sigeas.Views.Main {
             FeriasForm = new FrmFerias();
             UserClockViewerForm = new UserClocksViewer();
             AttendanceCalcsForm = new AttendanceCalcsView();
-            tableFuncionarioDeviceView = new FuncionarioDevicesView();
-            deviceDataUpdateView = new DeviceDataUpdateView();
-            importHrData = new ImportHrData();
-            importExportView = new ImportExportView();
-            pedidoDispensaView = new PedidoDispensaView();
-            reportsCreatorView = new ReportsCreatorView();
+            FuncionarioDevicesView = new FuncionarioDevicesView();
+            DeviceDataUpdateView = new DeviceDataUpdateView();
+            ImportHrData = new ImportHrData();
+            ImportExportView = new ImportExportView();
+            PedidoDispensaView = new PedidoDispensaView();
+            ReportsCreatorView = new ReportsCreatorView();
 
             DeviceManager.MdiParent = this;
             FuncionarioForm.MdiParent = this;
             UserManagement.MdiParent = this;
+            AttendanceCalcsForm.MdiParent = this;
+            UserClockViewerForm.MdiParent = this;
+            FuncionarioDevicesView.MdiParent = this;
+            PlanificacaoHorarioForm.MdiParent = this;
+            ReportsCreatorView.MdiParent = this;
+
             //AboutBox.MdiParent = this;
             InitSecurity();
             InitFormsLayout();
@@ -93,7 +99,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
         }
 
         private void InitSecurity() {
-            this.securedComponents = new Dictionary<int, AuthorizableComponent>();
+            this._securedComponents = new Dictionary<int, AuthorizableComponent>();
 
             this.UserManagement.FormCode             = 0x0101;
             this.DeviceManager.FormCode              = 0x0102;
@@ -106,27 +112,28 @@ namespace mz.betainteractive.sigeas.Views.Main {
             this.FeriasForm.FormCode                 = 0x0109;            
             this.UserClockViewerForm.FormCode     = 0x0110;
             this.AttendanceCalcsForm.FormCode     = 0x0111;            
-            this.tableFuncionarioDeviceView.FormCode = 0x0112;
-            this.deviceDataUpdateView.FormCode       = 0x0113;
-            this.importExportView.FormCode = 0x0114;
-            this.pedidoDispensaView.FormCode = 0x0115;
-            this.reportsCreatorView.FormCode = 0x0116;
+            this.FuncionarioDevicesView.FormCode = 0x0112;
+            this.DeviceDataUpdateView.FormCode       = 0x0113;
+            this.ImportHrData.FormCode = 0x0114;
+            this.ImportExportView.FormCode = 0x0115;
+            this.PedidoDispensaView.FormCode = 0x0116;
+            this.ReportsCreatorView.FormCode = 0x0117;
 
-            this.securedComponents.Add(this.UserManagement.FormCode, this.UserManagement);
-            this.securedComponents.Add(this.DeviceManager.FormCode, this.DeviceManager);
-            this.securedComponents.Add(this.DeviceActivation.FormCode, this.DeviceActivation);
-            this.securedComponents.Add(this.EmpresaForm.FormCode, this.EmpresaForm);
-            this.securedComponents.Add(this.HorarioSemanalForm.FormCode, this.HorarioSemanalForm);
-            this.securedComponents.Add(this.PlanificacaoHorarioForm.FormCode, this.PlanificacaoHorarioForm);
-            this.securedComponents.Add(this.FeriadosForm.FormCode, this.FeriadosForm);
-            this.securedComponents.Add(this.FeriasForm.FormCode, this.FeriasForm);
-            this.securedComponents.Add(this.UserClockViewerForm.FormCode, this.UserClockViewerForm);
-            this.securedComponents.Add(this.AttendanceCalcsForm.FormCode, this.AttendanceCalcsForm);
-            this.securedComponents.Add(this.tableFuncionarioDeviceView.FormCode, this.tableFuncionarioDeviceView);
-            this.securedComponents.Add(this.deviceDataUpdateView.FormCode, this.deviceDataUpdateView);
-            this.securedComponents.Add(this.importExportView.FormCode, this.importExportView);
-            this.securedComponents.Add(this.pedidoDispensaView.FormCode, this.pedidoDispensaView);
-            this.securedComponents.Add(this.reportsCreatorView.FormCode, this.reportsCreatorView);
+            this._securedComponents.Add(this.UserManagement.FormCode, this.UserManagement);
+            this._securedComponents.Add(this.DeviceManager.FormCode, this.DeviceManager);
+            this._securedComponents.Add(this.DeviceActivation.FormCode, this.DeviceActivation);
+            this._securedComponents.Add(this.EmpresaForm.FormCode, this.EmpresaForm);
+            this._securedComponents.Add(this.HorarioSemanalForm.FormCode, this.HorarioSemanalForm);
+            this._securedComponents.Add(this.PlanificacaoHorarioForm.FormCode, this.PlanificacaoHorarioForm);
+            this._securedComponents.Add(this.FeriadosForm.FormCode, this.FeriadosForm);
+            this._securedComponents.Add(this.FeriasForm.FormCode, this.FeriasForm);
+            this._securedComponents.Add(this.UserClockViewerForm.FormCode, this.UserClockViewerForm);
+            this._securedComponents.Add(this.AttendanceCalcsForm.FormCode, this.AttendanceCalcsForm);
+            this._securedComponents.Add(this.FuncionarioDevicesView.FormCode, this.FuncionarioDevicesView);
+            this._securedComponents.Add(this.DeviceDataUpdateView.FormCode, this.DeviceDataUpdateView);
+            this._securedComponents.Add(this.ImportExportView.FormCode, this.ImportExportView);
+            this._securedComponents.Add(this.PedidoDispensaView.FormCode, this.PedidoDispensaView);
+            this._securedComponents.Add(this.ReportsCreatorView.FormCode, this.ReportsCreatorView);
         }
 
         public void SettingSecurity() {
@@ -140,7 +147,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
             }
 
             //Hack Code (For Developers)
-            if (permissions.Where(t => t.FormCode == 0x0047).Count() > 0) {
+            if (permissions.Count(t => t.FormCode == 0x0047) > 0) {
                 AllowAll();
                 return;
             }
@@ -153,7 +160,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
 
                 AuthorizableComponent aComponent = null;
 
-                securedComponents.TryGetValue(formCode, out aComponent);
+                _securedComponents.TryGetValue(formCode, out aComponent);
 
                 if (aComponent == null) continue;
 
@@ -169,63 +176,79 @@ namespace mz.betainteractive.sigeas.Views.Main {
             SecureMenuItemsAndButtons();
         }
 
-        private void SecureMenuItemsAndButtons() {                        
-                                    
+        private void SecureMenuItemsAndButtons() {
+
             //this.UserManagement.FormCode = 0x0101;
-            tsbtnEmployeeMangaer.Enabled = this.UserManagement.AllowView;
             mnToolsUserManager.Enabled = this.UserManagement.AllowView;
+            tskUserManager.Enabled = this.UserManagement.AllowView;
             
             //this.DeviceManager.FormCode = 0x0102;
             tsbtnDeviceManager.Enabled = this.DeviceManager.AllowView;
             mnToolsDevManager.Enabled = this.DeviceManager.AllowView;
+            tskDevManager.Enabled = this.DeviceManager.AllowView;
             
             //this.DeviceActivation.FormCode = 0x0103;
             mnToolsDevActivation.Enabled = this.DeviceActivation.AllowView;
+            tskDevActivation.Enabled = this.DeviceManager.AllowView;
             
             //this.EmpresaForm.FormCode = 0x0104;
             mnComSettings.Enabled = this.EmpresaForm.AllowView;
             
             //this.FuncionarioForm.FormCode = 0x0105;
             mnEmpManager.Enabled = this.FuncionarioForm.AllowView;
+            tsbtnEmployeeMangaer.Enabled = this.FuncionarioForm.AllowView;
             
             //this.HorarioSemanalForm.FormCode = 0x0106;
             mnAttSchHorSemanal.Enabled = this.HorarioSemanalForm.AllowView;
             
             //this.PlanificacaoHorarioForm.FormCode = 0x0107;
             mnAttSchedulePlan.Enabled = this.PlanificacaoHorarioForm.AllowView;
+            tsbtnPlanSchedules.Enabled = this.PlanificacaoHorarioForm.AllowView;
             
             //this.FeriadosForm.FormCode = 0x0108;
             mnComFeriados.Enabled = this.FeriadosForm.AllowView;
+            tskFeriados.Enabled = this.FeriadosForm.AllowView;
             
             //this.FeriasForm.FormCode = 0x0109;
             mnComFerias.Enabled = this.FeriasForm.AllowView;
+            tskPlanFerias.Enabled = this.FeriasForm.AllowView;
 
             //this.UserClockViewerForm.FormCode = 0x0110;
             mnAttUserClocks.Enabled = this.UserClockViewerForm.AllowView;
+            tskViewUserClocks.Enabled = this.UserClockViewerForm.AllowView;
 
             //this.AttendanceCalcsForm.FormCode = 0x0111;
             mnAttCalcsViewer.Enabled = this.AttendanceCalcsForm.AllowView;
+            tskViewAttCalcs.Enabled = this.AttendanceCalcsForm.AllowView;
 
-            //this.tableFuncionarioDeviceView.FormCode = 0x0112;
-            mnEmpFuncDoors.Enabled = this.tableFuncionarioDeviceView.AllowView;
+            //this.FuncionarioDevicesView.FormCode = 0x0112;
+            mnEmpFuncDoors.Enabled = this.FuncionarioDevicesView.AllowView;
+            tskFuncsDoors.Enabled = this.FuncionarioDevicesView.AllowView;
             
             //this.deviceDataUpdateView.FormCode = 0x0113;
-            mnEmpSaveDevUsers.Enabled = this.deviceDataUpdateView.AllowView;
-            
-            //this.importExportView.FormCode = 0x0114;
-            mnToolsImportHR.Enabled = this.importExportView.AllowView;
+            mnEmpSaveDevUsers.Enabled = this.DeviceDataUpdateView.AllowView;
+            tskFuncsDevices.Enabled = this.DeviceDataUpdateView.AllowView;
 
-            //this.pedidoDispensaView.FormCode = 0x0115;
-            mnEmpDispensas.Enabled = this.pedidoDispensaView.AllowView;
+            //this.ImportHrData.FormCode = 0x0114;
+            mnToolsImportHR.Enabled = this.ImportHrData.AllowView;
+            tskImportDataXls.Enabled = this.ImportHrData.AllowView;
+
+            //this.importExportView.FormCode = 0x0115;
+            mnToolsImportBioData.Enabled = this.ImportExportView.AllowView;
+            tskCollectBioData.Enabled = this.ImportExportView.AllowView;
+
+            //this.pedidoDispensaView.FormCode = 0x0116;
+            mnEmpDispensas.Enabled = this.PedidoDispensaView.AllowView;
+            tskDispensas.Enabled = this.PedidoDispensaView.AllowView;
                         
-            //this.reportsCreatorView.FormCode = 0x0116;
-            mmiReports.Enabled = this.reportsCreatorView.AllowView;
-
+            //this.reportsCreatorView.FormCode = 0x0117;
+            mmiSchedules.Enabled = this.ReportsCreatorView.AllowView;
+            tskReports.Enabled = this.ReportsCreatorView.AllowView;
 
         }
 
         private void BlockAll() {
-            foreach (AuthorizableComponent aComponent in securedComponents.Values) {
+            foreach (AuthorizableComponent aComponent in _securedComponents.Values) {
                 aComponent.AllowView = false;
                 aComponent.AllowUpdate = false;
                 aComponent.AllowDelete = false;
@@ -234,17 +257,12 @@ namespace mz.betainteractive.sigeas.Views.Main {
         }
 
         private void AllowAll() {
-            foreach (AuthorizableComponent aComponent in securedComponents.Values) {
+            foreach (AuthorizableComponent aComponent in _securedComponents.Values) {
                 aComponent.AllowView = true;
                 aComponent.AllowUpdate = true;
                 aComponent.AllowDelete = true;
                 aComponent.AllowAdd = true;
             }
-        }
-
-        public void InitSystem() {
-            //SystemDatabase.Init();            
-            //FuncionarioForm.InitData();
         }
                 
         private void FormMain_Load(object sender, EventArgs e) {                       
@@ -270,7 +288,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
         }
 
         private void CloseAllForms() {
-            foreach (var comp in securedComponents.Values) {
+            foreach (var comp in _securedComponents.Values) {
                 if (comp is Form) {
                     (comp as Form).Close();
                 }
@@ -300,20 +318,14 @@ namespace mz.betainteractive.sigeas.Views.Main {
             LoginView.ClearForms();
             LoginView.Visible = true;                                    
         }
-
-        public void UpdateMainDevices() {
-           
-        }
-
+        
         public void UpdateMainLayoutComponents() {
             //Collapse expandos
             expAttendance.Collapsed = true;
             expDispensas.Collapsed = true;
             expFuncDevs.Collapsed = true;
             expImportExport.Collapsed = true;
-            expTools.Collapsed = true;
-            
-            UpdateMainDevices();                        
+            expTools.Collapsed = true;           
         }
 
         private void SetTime() {
@@ -370,44 +382,43 @@ namespace mz.betainteractive.sigeas.Views.Main {
         }
 
         private void MainView_Shown(object sender, EventArgs e) {
-            Console.WriteLine("Shown");
             Initialize();
         }
 
         private void tsbtnDeviceManager_Click(object sender, EventArgs e) {
-            DeviceManager.Visible = true;
+            SetFormVisible(DeviceManager);
         }
 
         private void tsbtnEmployeeMangaer_Click(object sender, EventArgs e) {
-            FuncionarioForm.Visible = true;
+            SetFormVisible(FuncionarioForm);
         }
 
         private void tsbtnPlanSchedules_Click(object sender, EventArgs e) {
-            PlanificacaoHorarioForm.Visible = true;
+            SetFormVisible(PlanificacaoHorarioForm);
         }
 
         private void tsbtnReports_Click(object sender, EventArgs e) {
-            reportsCreatorView.Visible = true;
+            SetFormVisible(ReportsCreatorView);
         }
 
         private void tskFuncsDoors_Click(object sender, EventArgs e) {
-            tableFuncionarioDeviceView.Visible = true;
+            SetFormVisible(FuncionarioDevicesView);
         }
 
         private void tskFuncsDevices_Click(object sender, EventArgs e) {
-            deviceDataUpdateView.ShowDialog();
+            DeviceDataUpdateView.ShowDialog();
         }
 
         private void tskViewUserClocks_Click(object sender, EventArgs e) {
-            UserClockViewerForm.Visible = true;
+            SetFormVisible(UserClockViewerForm);
         }
 
         private void tskViewAttCalcs_Click(object sender, EventArgs e) {
-            AttendanceCalcsForm.Visible = true;
+            SetFormVisible(AttendanceCalcsForm);
         }
 
         private void tskReports_Click(object sender, EventArgs e) {
-            reportsCreatorView.Visible = true;
+            SetFormVisible(ReportsCreatorView);
         }
 
         private void tskFeriados_Click(object sender, EventArgs e) {
@@ -415,7 +426,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
         }
 
         private void tskDispensas_Click(object sender, EventArgs e) {
-            pedidoDispensaView.ShowDialog();
+            PedidoDispensaView.ShowDialog();
         }
 
         private void tskPlanFerias_Click(object sender, EventArgs e) {
@@ -423,11 +434,11 @@ namespace mz.betainteractive.sigeas.Views.Main {
         }
 
         private void tskUserManager_Click(object sender, EventArgs e) {
-            UserManagement.Visible = true;
+            SetFormVisible(UserManagement);
         }
 
         private void tskDevManager_Click(object sender, EventArgs e) {
-            DeviceManager.Visible = true;
+            SetFormVisible(DeviceManager);
         }
 
         private void tskDevActivation_Click(object sender, EventArgs e) {
@@ -435,27 +446,27 @@ namespace mz.betainteractive.sigeas.Views.Main {
         }
 
         private void tskImportDataXls_Click(object sender, EventArgs e) {
-            importHrData.ShowDialog();
+            ImportHrData.ShowDialog();
         }
 
         private void tskCollectBioData_Click(object sender, EventArgs e) {
-            importExportView.ShowDialog();
+            ImportExportView.ShowDialog();
         }
 
         private void mnEmpManager_Click(object sender, EventArgs e) {
-            FuncionarioForm.Visible = true;
+            SetFormVisible(FuncionarioForm);
         }
 
         private void mnEmpDispensas_Click(object sender, EventArgs e) {
-            pedidoDispensaView.ShowDialog();
+            PedidoDispensaView.ShowDialog();
         }
 
         private void mnEmpFuncDoors_Click(object sender, EventArgs e) {
-            tableFuncionarioDeviceView.Visible = true;
+            SetFormVisible(FuncionarioDevicesView);
         }
 
         private void mnEmpSaveDevUsers_Click(object sender, EventArgs e) {
-            deviceDataUpdateView.ShowDialog();
+            DeviceDataUpdateView.ShowDialog();
         }
 
         private void mnComSettings_Click(object sender, EventArgs e) {
@@ -467,7 +478,7 @@ namespace mz.betainteractive.sigeas.Views.Main {
         }
 
         private void mnComFerias_Click(object sender, EventArgs e) {
-            pedidoDispensaView.ShowDialog();
+            PedidoDispensaView.ShowDialog();
         }
 
         private void mnAttSchHorSemanal_Click(object sender, EventArgs e) {
@@ -475,27 +486,27 @@ namespace mz.betainteractive.sigeas.Views.Main {
         }
 
         private void mnAttSchedulePlan_Click(object sender, EventArgs e) {
-            PlanificacaoHorarioForm.Visible = true;
+            SetFormVisible(PlanificacaoHorarioForm);
         }
 
         private void mnAttUserClocks_Click(object sender, EventArgs e) {
-            UserClockViewerForm.Visible = true;
+            SetFormVisible(UserClockViewerForm);
         }
 
         private void mnAttCalcsViewer_Click(object sender, EventArgs e) {
-            AttendanceCalcsForm.Visible = true;
+            SetFormVisible(AttendanceCalcsForm);
         }
 
         private void mnReports_Click(object sender, EventArgs e) {
-            reportsCreatorView.Visible = true;
+            SetFormVisible(ReportsCreatorView);
         }
 
         private void mnToolsDevManager_Click(object sender, EventArgs e) {
-            DeviceManager.Visible = true;
+            SetFormVisible(DeviceManager);
         }
 
         private void mnToolsUserManager_Click(object sender, EventArgs e) {
-            UserManagement.Visible = true;
+            SetFormVisible(UserManagement);
         }
 
         private void mnToolsDevActivation_Click(object sender, EventArgs e) {
@@ -503,11 +514,11 @@ namespace mz.betainteractive.sigeas.Views.Main {
         }
 
         private void mnToolsImportBioData_Click(object sender, EventArgs e) {
-            importExportView.ShowDialog();
+            ImportExportView.ShowDialog();
         }
 
         private void mnToolsImportHR_Click(object sender, EventArgs e) {
-            importHrData.ShowDialog();
+            ImportHrData.ShowDialog();
         }
 
         private void mnHelpHowTo_Click(object sender, EventArgs e) {
@@ -518,6 +529,33 @@ namespace mz.betainteractive.sigeas.Views.Main {
         {
             AboutBox.ShowDialog();
         }
-        
+
+        private void mnEmpDispensas_Click_1(object sender, EventArgs e) {
+            PedidoDispensaView.ShowDialog();
+        }
+
+        private void mnReports_Click_1(object sender, EventArgs e) {
+            SetFormVisible(ReportsCreatorView);
+        }
+
+        private void mnAttSchHorSemanal_Click_1(object sender, EventArgs e) {
+            HorarioSemanalForm.ShowDialog();
+        }
+
+        private void mnAttSchedulePlan_Click_1(object sender, EventArgs e) {
+            SetFormVisible(PlanificacaoHorarioForm);
+        }
+
+        private void mnViewToolBar_Click(object sender, EventArgs e) {
+            leftTaskPane.Visible = mnViewToolBar.Checked;
+        }
+
+        private void SetFormVisible(Form form) {
+            if (form.Visible){
+                form.Activate();
+            } else {
+                form.Visible = true;
+            }
+        }
     }
 }

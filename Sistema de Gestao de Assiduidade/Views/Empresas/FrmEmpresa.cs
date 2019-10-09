@@ -369,6 +369,7 @@ namespace mz.betainteractive.sigeas.Views.Empresas {
             txtEmail.Text = "";
             txtTelefone.Text = "";
             txtFax.Text = "";
+            btGravar.Enabled = AllowAdd || AllowUpdate;
         }
 
         private void CleanAnoLaboral() {
@@ -376,6 +377,8 @@ namespace mz.betainteractive.sigeas.Views.Empresas {
             txtMonthDays.Text = "";
             txtMonthName.Text = "";
             listViewMonths.Items.Clear();
+            btPreviewMonthList.Enabled = AllowAdd || AllowUpdate;
+            btGenerateMonthsList.Enabled = AllowAdd || AllowUpdate;
         }
 
         private void btGravarDepartamento_Click(object sender, EventArgs e) {

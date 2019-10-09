@@ -2682,7 +2682,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FrmHorarioSemanal";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Perfil de Horário Semanal";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmHorarioSemanal_FormClosing);
             this.VisibleChanged += new System.EventHandler(this.FrmHorarioSemanal_VisibleChanged);
