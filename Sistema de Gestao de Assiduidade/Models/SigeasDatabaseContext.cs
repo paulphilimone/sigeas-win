@@ -16,7 +16,7 @@ namespace mz.betainteractive.sigeas.Models {
         }
 
         public SigeasDatabaseContext()
-            : base("Name=sigeas_database_context_mysql_kserver") { //postgres or mysql here we can change the connection string
+            : base("Name=sigeas_database_context_mysql") { //postgres or mysql here we can change the connection string
 
         }
 

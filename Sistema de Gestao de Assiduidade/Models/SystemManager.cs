@@ -519,9 +519,9 @@ namespace mz.betainteractive.sigeas.Models {
                 var feriado = new Feriado();
                 var textDate = row.ElementAt(0).Value+"";
 
-                //Console.WriteLine("tx: " + textDate + ", value=" + row.ElementAt(0).Value);
+                Console.WriteLine("tx: " + textDate + ", value=" + row.ElementAt(0).Text);
 
-                feriado.Data = DateTime.ParseExact(textDate, "yyyy-MM-dd hh:mm:ss", CultureInfo.InvariantCulture);
+                feriado.Data = DateTime.ParseExact(textDate, "yyyy-MM-dd", CultureInfo.InvariantCulture);
                 feriado.Tipo = Feriado.TIPO_NACIONAL;
                 feriado.Nome = row.ElementAt(2).Text;                
                 feriado.Descricao = row.ElementAt(3).Text;
@@ -530,7 +530,7 @@ namespace mz.betainteractive.sigeas.Models {
                 db.Feriado.Add(feriado);
             }
 
-            db.SaveChanges();
+            db.SaveChanges(); 
         }
 
         private void InsertLocalizationData() {
