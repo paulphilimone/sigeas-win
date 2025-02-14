@@ -1,0 +1,23 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+    <NoWarn>$(NoWarn);NU1507</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageVersion Include="CrystalReports.Engine" Version="13.0.4003" />
+    <PackageVersion Include="CrystalReports.ReportSource" Version="13.0.4003" />
+    <PackageVersion Include="CrystalReports.Windows.Forms" Version="13.0.4003" />
+    <PackageVersion Include="EntityFramework" Version="6.5.1" />
+    <PackageVersion Include="EntityFramework.CodeTemplates.CSharp" Version="6.2.0" />
+    <PackageVersion Include="EPPlus" Version="4.5.3.3" />
+    <PackageVersion Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageVersion Include="MySql.Data" Version="8.0.33" />
+    <PackageVersion Include="MySQL.Data.Entities" Version="6.8.3" />
+    <PackageVersion Include="MySql.Data.Entity" Version="6.10.8" />
+    <PackageVersion Include="MySql.Data.EntityFramework" Version="8.0.33" />
+    <PackageVersion Include="Npgsql" Version="2.0.14.1" />
+    <PackageVersion Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageVersion Include="System.Data.DataSetExtensions" Version="4.5.0" />
+  </ItemGroup>
+</Project>

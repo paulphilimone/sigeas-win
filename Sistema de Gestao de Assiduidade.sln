@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35806.99 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sistema de Gestao de Assiduidade", "Sistema de Gestao de Assiduidade\Sistema de Gestao de Assiduidade.csproj", "{A81AAD52-E744-4AB4-915E-44B3A14F82DD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SigeasDeviceModule", "..\sigeas-device-module\SigeasDeviceModule.csproj", "{DEA7E89B-FACE-47E6-9786-B95C87F1A05E}"

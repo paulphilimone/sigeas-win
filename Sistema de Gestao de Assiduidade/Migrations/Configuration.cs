@@ -1,11 +1,8 @@
-namespace mz.betainteractive.sigeas.Migrations
-{
-    using System;
-    using System.Data.Entity;
-    using System.Data.Entity.Migrations;
-    using System.Linq;
-    using MySql.Data.Entity;
+using System.Data.Entity.Migrations;
 
+namespace mz.betainteractive.sigeas.Migrations
+{   
+    
     internal sealed class Configuration : DbMigrationsConfiguration<mz.betainteractive.sigeas.Models.SigeasDatabaseContext>
     {
         public Configuration() {

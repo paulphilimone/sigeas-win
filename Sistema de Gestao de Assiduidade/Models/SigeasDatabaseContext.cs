@@ -1,22 +1,24 @@
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
+
 using mz.betainteractive.sigeas.Models.Configuration;
-using mz.betainteractive.sigeas.Models.Entities;
 using System;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Text.RegularExpressions;
 using System.Reflection;
 using mz.betainteractive.sigeas.Models.Override;
+using MySql.Data.EntityFramework;
+using System.Data.Entity;
+using mz.betainteractive.sigeas.Models.Entities;
 
 namespace mz.betainteractive.sigeas.Models {
-    [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
+    [DbConfigurationType(typeof(MySqlEFConfiguration))]
     public partial class SigeasDatabaseContext : DbContext {
         static SigeasDatabaseContext() {
+            DbConfiguration.SetConfiguration(new MySqlEFConfiguration());
             Database.SetInitializer<SigeasDatabaseContext>(new SigeasDatabaseInitializer());
         }
 
-        public SigeasDatabaseContext()
-            : base("Name=sigeas_database_context_mysql") { //postgres or mysql here we can change the connection string
+        public SigeasDatabaseContext() 
+            : base("Name=sigeas_database_context_mysql_kserver") { //postgres or mysql here we can change the connection string
 
         }
 

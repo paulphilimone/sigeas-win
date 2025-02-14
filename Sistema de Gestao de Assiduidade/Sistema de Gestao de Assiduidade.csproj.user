@@ -12,4 +12,111 @@
     <FallbackCulture>en-US</FallbackCulture>
     <VerifyUploadedFiles>false</VerifyUploadedFiles>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="Views\AccessControl\AttendanceCalcsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\AccessControl\EditUserClockView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\AccessControl\FrmViewFuncionarioAtt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\AccessControl\InsertOvertimeClockView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\AccessControl\UserClocksViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\DeviceManagment\DeviceActivactionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\DeviceManagment\DeviceAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\DeviceManagment\DeviceManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\DeviceManagment\DoorAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Empresas\CategoriaAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Empresas\DepartamentoAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Empresas\EmpresaAddView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Empresas\FrmEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Empresas\FrmFeriados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Empresas\PedidoDispensaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FormTests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FuncionarioDevices\DeviceDataUpdateView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FuncionarioDevices\FuncionarioDevicesView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Funcionarios\FrmFerias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Funcionarios\FrmFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Funcionarios\FuncionarioAddView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Funcionarios\FuncionarioEditView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Horarios\FrmHorarioSemanal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Horarios\FrmPlanificacaoHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\ImportExport\ImportExportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\ImportExport\ImportHrData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Main\FrmAboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Main\LoginView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Main\MainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Main\SelectEmpresaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Main\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Reports\ReportsCreatorView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\UserManagment\RoleAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\UserManagment\UserAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\UserManagment\UserManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
 </Project>
