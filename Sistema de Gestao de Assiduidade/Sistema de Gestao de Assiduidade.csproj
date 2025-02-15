@@ -26,6 +26,7 @@
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <PlatformTarget>x86</PlatformTarget>
+	<EmbeddedResourceUseDependentUponConvention>true</EmbeddedResourceUseDependentUponConvention>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="IPAddressControlLib, Version=1.1.3039.21560, Culture=neutral, PublicKeyToken=55e96405d8fd6d61, processorArchitecture=MSIL">
@@ -164,23 +165,5 @@
     <PackageReference Include="System.ComponentModel.Annotations" />
     <PackageReference Include="System.Data.DataSetExtensions" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Remove="backup\ca\AttendanceCalculations.cs" />
-    <Compile Remove="backup\ca\Device.cs" />
-    <Compile Remove="backup\ca\Door.cs" />
-    <Compile Remove="backup\ca\Funcionario.cs" />
-    <Compile Remove="backup\ca\InfoDownload.cs" />
-    <Compile Remove="Views\AccessControl\FrmRegistosBiometrico.cs" />
-    <Compile Remove="Views\AccessControl\FrmRegistosBiometrico.Designer.cs" />
-    <Compile Remove="Views\DeviceManagment\Form1.cs" />
-    <Compile Remove="Views\DeviceManagment\Form1.Designer.cs" />
-    <Compile Remove="Views\DeviceManagment\LocalAdd.cs" />
-    <Compile Remove="Views\DeviceManagment\LocalAdd.Designer.cs" />
-    <Compile Remove="Views\Horarios\FrmPeriodosAno.cs" />
-    <Compile Remove="Views\Horarios\FrmPeriodosAno.Designer.cs" />
-    <EmbeddedResource Remove="Views\AccessControl\FrmRegistosBiometrico.resx" />
-    <EmbeddedResource Remove="Views\DeviceManagment\Form1.resx" />
-    <EmbeddedResource Remove="Views\DeviceManagment\LocalAdd.resx" />
-    <EmbeddedResource Remove="Views\Horarios\FrmPeriodosAno.resx" />
-  </ItemGroup>
+  	
 </Project>
